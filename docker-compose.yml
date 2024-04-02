@@ -1,0 +1,45 @@
+version: '3.1'
+services:
+  db:
+    container_name: postgresql
+    image: postgres:15
+    user: root
+    environment:
+      - POSTGRES_USER=icomm_crm
+      - POSTGRES_PASSWORD=icomm_2023      
+      - POSTGRES_DB=postgres
+    ports:
+      - "5432:5432"
+    restart: always             # run as a service
+    volumes:
+        - db-erp:/var/lib/postgresql/data
+
+  odoo16:
+    image: odoo:16
+    container_name: odoo16
+    user: root
+    depends_on:
+      - db
+    ports:
+      - "8069:8069"
+      - "20016:8072" # live chat
+    tty: true
+    command: --
+    environment:
+      - HOST=db
+      - USER=icomm_crm
+      - PASSWORD=icomm_2023
+    volumes:
+      #- /etc/timezone:/etc/timezone:ro
+      #- /etc/localtime:/etc/localtime:ro
+#      - ./entrypoint.sh:/entrypoint.sh   # if you want to install additional Python packages, uncomment this line!
+      - ./addons:/mnt/extra-addons
+      - ./hrms_dashboard:/mnt/hrm-addons
+      - ./planning:/mnt/planning-addons
+      - ./addons_crm:/mnt/crm-addons
+      - ./etc:/etc/odoo
+      - odoo-web-data:/var/lib/odoo
+    restart: always             # run as a service
+volumes:
+  db-erp:
+  odoo-web-data:
