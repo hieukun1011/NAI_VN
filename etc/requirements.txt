@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 jwt==1.3.1
 simplejson==3.19.1
 openpyxl==3.1.2
@@ -9,14 +9,6 @@ jsonschema==3.2.0
 google_auth==2.23.2
 unidecode
 BeautifulSoup4
-=======
-jwt==1.3.1
-simplejson==3.19.1
-openpyxl==3.1.2
-PyJWT==2.8.0
-bravado_core==6.1.0
-swagger_spec_validator==3.0.3
-jsonschema==3.2.0
-google_auth==2.23.2
 qrcode
->>>>>>> 1edc56903ab79c74a4459e1792ad6ae33a23a2ad
+
+
