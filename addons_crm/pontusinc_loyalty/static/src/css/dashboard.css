@@ -1,0 +1,105 @@
+
+p, span, a, ul, li, button {
+    font-size: inherit;
+	font-weight: inherit;
+	line-height: inherit;
+}
+
+strong {
+	font-weight: 600;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	line-height: 1.5em;
+	font-weight: 300;	
+}
+
+strong {
+  font-weight: 400;
+}
+
+.sub_title {
+	font-size: 14px;
+}
+
+.sub_title div span {
+	font-weight: 600;
+}
+
+.chart #canvas_graph {
+	height: 400px !important;
+}
+
+.highcharts-background {
+	fill: none;
+}
+
+.container-shipping-dashboard {
+  display: flex;
+  gap: 20px;
+  justify-content: center
+}
+
+.box-shipping {
+  padding: 12px 0;
+  background-color: #D7D7D7;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 193px;
+}
+
+.title-box-shipping {
+  max-width: 100%;
+  font-size: 15px;
+  text-align: center;
+}
+
+.num-shipping {
+  font-size: 40px;
+  font-weight: 500;
+}
+
+.group-shipping {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+
+.group-shipping-text {
+    margin-bottom: 0;
+}
+
+.group_text {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+
+
+.group_text2 {
+  font-size: 14px;
+  align-self: flex-end;
+  margin-bottom: 0;
+}
+.group_box_order {
+    display: flex;
+    gap: 20px;
+    justify-content: center
+}
+
+.box_order {
+    width: 25%;
+    height: 25%;
+    background: white;
+    border-radius: 10px;
+    border: 1px #CBC3C3 solid;
+    text-align: center;
+    padding: inherit;
+}
+.text_box_order {
+    padding: inherit;
+}

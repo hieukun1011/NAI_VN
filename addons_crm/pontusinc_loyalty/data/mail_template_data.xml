@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="sign_mail">
+            <div style="font-size: 11px; color: grey;">
+                -----------------------
+                <br/>
+                <b>
+                    <t t-out="object.loyalty_id.company_id.name or '...'"></t>
+                </b>
+                <br/>
+                E:
+                <b>
+                    <t t-out="object.loyalty_id.company_id.email or '...'"></t>
+                </b>
+                <br/>
+                P:
+                <b>
+                    <t t-out="object.loyalty_id.company_id.phone or object.loyalty_id.company_id.mobile or '...'"></t>
+                </b>
+                <br/>
+                A:
+                <b>
+                    <t t-out="object.loyalty_id.company_id.street or object.loyalty_id.company_id.street2 or '...'"></t>
+                </b>
+                <br/>
+                W:
+                <b>
+                    <t t-out="object.loyalty_id.company_id.website or '...'"></t>
+                </b>
+            </div>
+        </template>
+
+        <record id="email_template_data_activated_card" model="mail.template">
+            <field name="name">Thông báo kích hoạt thẻ khách hàng thân thiết</field>
+            <field name="model_id" ref="pontusinc_loyalty.model_popup_rewards"/>
+            <field name="subject">Thông báo kích hoạt thẻ khách hàng thân thiết</field>
+            <field name="email_to">{{ object.loyalty_id.partner_id.email}}</field>
+            <field name="body_html" type="html">
+                <table border="0" cellpadding="0" cellspacing="0"
+                       style="min-width: 590px; background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;">
+                    <tr>
+                        <td valign="top">
+                            <div style="font-size: 15px; margin: 0px; padding: 0px;">
+                                <br/>
+                                Kính gửi quý khách hàng
+                                <b>
+                                    <t t-out="object.loyalty_id.name or '...'"></t>
+                                </b>,
+                                <br/>
+                                Công ty
+                                <b>
+                                    <t t-out="object.loyalty_id.company_id.name or '...'"></t>
+                                </b>
+                                trân trọng thông báo thẻ thành viên hạng
+                                <b>
+                                    <t t-out="object.loyalty_id.rank_id.name or '...'"></t>
+                                </b>
+                                của quý khách vừa được kích hoạt thành công.
+                                <br/>
+                                Cảm ơn quý khách đã tin tưởng sản phẩm của công ty chúng tôi. Chúc quý khách có những trải nghiệm mua sắm tuyệt vời.
+                                <br/>
+                                <br/>
+                                Trân Trọng!
+                                <br/>
+                                <br/>
+                                <div t-call="pontusinc_loyalty.sign_mail"/>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </field>
+        </record>
+
+        <record id="email_template_data_exclude_card" model="mail.template">
+            <field name="name">Thông báo loại trừ thẻ khách hàng thân thiết</field>
+            <field name="model_id" ref="pontusinc_loyalty.model_popup_rewards"/>
+            <field name="subject">Thông báo loại trừ thẻ khách hàng thân thiết</field>
+            <field name="email_to">{{ object.loyalty_id.partner_id.email}}</field>
+            <field name="body_html" type="html">
+                <table border="0" cellpadding="0" cellspacing="0"
+                       style="min-width: 590px; background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;">
+                    <tr>
+                        <td valign="top">
+                            <div style="font-size: 15px; margin: 0px; padding: 0px;">
+                                <br/>
+                                Kính gửi quý khách hàng
+                                <b>
+                                    <t t-out="object.loyalty_id.name or '...'"></t>
+                                </b>,
+                                <br/>
+                                Công ty
+                                <b>
+                                    <t t-out="object.loyalty_id.company_id.name or '...'"></t>
+                                </b>
+                                trân trọng thông báo thẻ thành viên hạng
+                                <b>
+                                    <t t-out="object.loyalty_id.rank_id.name or '...'"></t>
+                                </b>
+                                của quý khách vừa bị loại trừ.
+                                <br/>
+                                Chúng tôi rất tiếc vì quyết định loại trừ thẻ của quý khách.
+                                <br/>
+                                Chúng tôi hy vọng quý khách sẽ tiếp tục tin tưởng sản phẩm của công ty chúng tôi. Chúc quý khách có những trải nghiệm mua sắm tuyệt vời.
+                                <br/>
+                                <br/>
+                                Trân Trọng!
+                                <br/>
+                                <br/>
+                                <div t-call="pontusinc_loyalty.sign_mail"/>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </field>
+        </record>
+
+        <record id="email_template_data_donate_score" model="mail.template">
+            <field name="name">Thông báo tặng điểm thẻ khách hàng thân thiết</field>
+            <field name="model_id" ref="pontusinc_loyalty.model_popup_rewards"/>
+            <field name="subject">Thông báo tặng điểm thẻ khách hàng thân thiết</field>
+            <field name="email_to">{{ object.loyalty_id.partner_id.email}}</field>
+            <field name="body_html" type="html">
+                <table border="0" cellpadding="0" cellspacing="0"
+                       style="min-width: 590px; background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;">
+                    <tr>
+                        <td valign="top">
+                            <div style="font-size: 15px; margin: 0px; padding: 0px;">
+                                <br/>
+                                Kính gửi quý khách hàng
+                                <b>
+                                    <t t-out="object.loyalty_id.name or '...'"></t>
+                                </b>,
+                                <br/>
+                                Công ty
+                                <b>
+                                    <t t-out="object.loyalty_id.company_id.name or '...'"></t>
+                                </b>
+                                trân trọng thông báo thẻ thành viên hạng
+                                <b>
+                                    <t t-out="object.loyalty_id.rank_id.name or '...'"></t>
+                                </b>
+                                của quý khách vừa được cộng
+                                <b>
+                                    <t t-out="object.score or '...'"></t>
+                                </b>
+                                điểm thưởng.
+                                <br/>
+                                Chúng tôi xin chân thành cảm ơn quý khách đã tin tưởng sản phẩm của công ty chúng tôi. Chúc quý khách có những trải nghiệm mua sắm tuyệt vời.
+                                <br/>
+                                <br/>
+                                Trân Trọng!
+                                <br/>
+                                <br/>
+                                <div t-call="pontusinc_loyalty.sign_mail"/>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </field>
+        </record>
+
+        <record id="email_template_data_up_rank" model="mail.template">
+            <field name="name">Thông báo thăng hạng thẻ khách hàng thân thiết</field>
+            <field name="model_id" ref="pontusinc_loyalty.model_popup_rewards"/>
+            <field name="subject">Thông báo thăng hạng thẻ khách hàng thân thiết</field>
+            <field name="email_to">{{ object.loyalty_id.partner_id.email}}</field>
+            <field name="body_html" type="html">
+                <table border="0" cellpadding="0" cellspacing="0"
+                       style="min-width: 590px; background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;">
+                    <tr>
+                        <td valign="top">
+                            <div style="font-size: 15px; margin: 0px; padding: 0px;">
+                                <br/>
+                                Kính gửi quý khách hàng
+                                <b>
+                                    <t t-out="object.loyalty_id.name or '...'"></t>
+                                </b>,
+                                <br/>
+                                Công ty
+                                <b>
+                                    <t t-out="object.loyalty_id.company_id.name or '...'"></t>
+                                </b>
+                                trân trọng thông báo thẻ thành viên hạng
+                                <b>
+                                    <t t-out="object.loyalty_id.rank_id.name or '...'"></t>
+                                </b>
+                                của quý khách vừa được nâng lên hạng
+                                <b>
+                                    <t t-out="object.rank_id.name or '...'"></t>
+                                </b>.
+                                <br/>
+                                Chúng tôi xin chân thành cảm ơn quý khách đã tin tưởng sản phẩm của công ty chúng tôi. Chúc quý khách có những trải nghiệm mua sắm tuyệt vời.
+                                <br/>
+                                <br/>
+                                Trân Trọng!
+                                <br/>
+                                <br/>
+                                <div t-call="pontusinc_loyalty.sign_mail"/>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </field>
+        </record>
+
+    </data>
+</odoo>
