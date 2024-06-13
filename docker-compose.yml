@@ -9,7 +9,7 @@ services:
       - POSTGRES_PASSWORD=icomm_2023
       - POSTGRES_DB=postgres
     ports:
-      - "5432:5432"
+      - "5423:5432"
     restart: always             # run as a service
     volumes:
       - db-erp:/var/lib/postgresql/data
