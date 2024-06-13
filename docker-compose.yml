@@ -5,7 +5,7 @@ services:
     image: postgres:15
     user: root
     environment:
-      - POSTGRES_USER=phoenix_crm
+      - POSTGRES_USER=icomm_crm
       - POSTGRES_PASSWORD=icomm_2023
       - POSTGRES_DB=postgres
     ports:
@@ -24,7 +24,7 @@ services:
     command: --
     environment:
       - HOST=db
-      - USER=phoenix_crm
+      - USER=icomm_crm
       - PASSWORD=icomm_2023
     volumes:
       #- /etc/timezone:/etc/timezone:ro
