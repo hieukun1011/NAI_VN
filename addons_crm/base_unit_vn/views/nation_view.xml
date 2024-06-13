@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="nation_tree_view" model="ir.ui.view">
+            <field name="name">Nation Tree View</field>
+            <field name="model">nation</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="code"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="nation_form_view" model="ir.ui.view">
+            <field name="name">Nation Form View</field>
+            <field name="model">nation</field>
+            <field name="arch" type="xml">
+                <form >
+                    <sheet>
+                        <field name="name"/>
+                        <field name="code"/>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="open_view_nation">
+            <field name="name">Nation</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">nation</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <field name="context">{}</field>
+        </record>
+    </data>
+</odoo>
+
