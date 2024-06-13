@@ -1,0 +1,41 @@
+# -*- coding: utf-8 -*-  
+
+{
+    'name': 'Pontusinc Loyalty',
+    'description': 'Pontusinc Loyalty',
+    'summary': '',
+    'category': '',
+    "sequence": 4,
+    'version': '1.0.0',
+    'author': 'Duong Trung Hieu',
+    'company': 'Pontusinc',
+    'website': "",
+    'depends': ['pontusinc_crm', 'loyalty'],
+    'data': [
+        'data/loyalty_reason_rank_data.xml',
+        'data/mail_template_data.xml',
+        'security/ir.model.access.csv',
+        'views/loyalty_log_view.xml',
+        'views/loyalty_customer_view.xml',
+        'views/loyalty_rank_view.xml',
+        'views/loyalty_program_view.xml',
+        'views/res_config_setting_view.xml',
+        'wizard/popup_rewards_view.xml',
+        'views/menu_item.xml',
+    ],
+    'assets': {
+        'web.assets_backend': [
+            # 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css',
+            # 'pontusinc_loyalty/static/src/css/style.css',
+            # 'pontusinc_loyalty/static/src/css/dashboard_views.scss',
+            # 'pontusinc_loyalty/static/src/css/dashboard.css',
+            # 'pontusinc_loyalty/static/src/css/style.scss',
+            # 'pontusinc_loyalty/static/src/css/material-gauge.css',
+            # 'pontusinc_loyalty/static/src/js/dashboard_view.js',
+            # 'pontusinc_loyalty/static/src/xml/dashboard_view.xml',
+        ],
+    },
+    'installable': True,
+    'auto_install': False,
+    'application': True,
+}

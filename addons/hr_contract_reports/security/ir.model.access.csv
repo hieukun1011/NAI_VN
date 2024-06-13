@@ -1,2 +1,7 @@
+<<<<<<< HEAD
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_hr_contract_employee_report_manager,hr.contract.employee.report,model_hr_contract_employee_report,hr_contract.group_hr_contract_manager,1,0,0,0
+=======
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_hr_contract_employee_report_manager,hr.contract.employee.report,model_hr_contract_employee_report,hr_contract.group_hr_contract_manager,1,0,0,0
+>>>>>>> 1edc56903ab79c74a4459e1792ad6ae33a23a2ad

@@ -1,6 +1,15 @@
+<<<<<<< HEAD
 External ID,Name,Parent Category/External ID
 a1,Expenses,product.product_category_all
 a2,Other Products,product.product_category_all
 a3,Sellable Products,product.product_category_all
 a4,Tables,a1
 a5,Seating furniture,a2
+=======
+External ID,Name,Parent Category/External ID
+a1,Expenses,product.product_category_all
+a2,Other Products,product.product_category_all
+a3,Sellable Products,product.product_category_all
+a4,Tables,a1
+a5,Seating furniture,a2
+>>>>>>> 1edc56903ab79c74a4459e1792ad6ae33a23a2ad

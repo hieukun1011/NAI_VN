@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="res_config_settings_view_form" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.inherit.loyalty</field>
+        <field name="model">res.config.settings</field>
+        <field name="priority" eval="5"/>
+        <field name="inherit_id" ref="base.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//form" position="inside">
+                <div class="app_settings_block" data-string="Loyalty" string="Loyalty" data-key="pontusinc_loyalty"
+                     groups="base.group_user">
+                    <div class="app_settings_header pt-1 pb-1 bg-warning bg-opacity-25" groups="base.group_multi_company">
+                        <div class="col-xs-12 col-md-6 ms-0 o_setting_box">
+                            <div class="o_setting_right_pane border-start-0 ms-0 ps-0">
+                                <div class="content-group">
+                                    <div class="row flex-row flex-nowrap mt8 align-items-center">
+                                        <label class="col text-nowrap ml8 flex-nowrap" string="Company" for="company_id"/>
+                                        <field name="company_id" class="w-50" options="{'no_open': True, 'no_create': True}"/>
+                                        <button name="action_company_create_new" type="object" string="+ New company" class="col btn-link ms-2 text-nowrap" style="line-height: 0.5;"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <h2>Activate loyalty card</h2>
+                    <div class="row mt16 o_settings_container">
+                        <div class="col-lg-6 o_setting_box">
+                            <div class="o_setting_left_pane">
+                                <field name="have_orders"/>
+                            </div>
+                            <div class="o_setting_right_pane">
+                                <label for="have_orders"/>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 o_setting_box">
+                            <div class="o_setting_left_pane">
+                                <field name="auto_activate_card"/>
+                            </div>
+                            <div class="o_setting_right_pane">
+                                <label for="auto_activate_card"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt16 o_settings_container">
+                        <div class="o_col col-lg-6" style="display: inline-flex;align-items: baseline;">
+                            <separator string="Proviso" style="margin-right: 40px; font-size: inherit;"/>
+                            <field name="proviso" class="oe_inline" widget="radio" options="{'horizontal': true}"
+                                   required="True"/>
+                        </div>
+                    </div>
+                    <div class="row mt16 o_settings_container">
+                        <label for="minimum_quantity" string="Minimum quantity:" class="col-2"/>
+                        <field name="minimum_quantity" class="text-center oe_inline"/>
+                        <field name="type_minimum_quantity" class="oe_inline" widget="radio" options="{'horizontal': true}"
+                           required="True" style="margin-left: 5%;"/>
+                    </div>
+                    <div class="row mt16 o_settings_container">
+                        <label for="minimum_spending" string="Minimum spending:" class="col-2"/>
+                        <field name="minimum_spending" widget="monetary" options="{'currency_field': 'currency_id'}" class="text-center oe_inline"/>
+                        <span class="oe_inline">Tax included</span>
+                    </div>
+                    <h2>Score deadline</h2>
+                    <div class="row mt16 o_settings_container">
+                        <label for="score_deadline" string="Score deadline:" class="col-2"/>
+                        <field name="score_deadline" class="text-center oe_inline"/>
+                        <span class="oe_inline">Months</span>
+                        <field name="option_score_deadline" widget="radio" style="margin: 2% 0rem 0rem 15%;"/>
+                    </div>
+                </div>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="loyalty_config_settings_action" model="ir.actions.act_window">
+        <field name="name">Settings</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">res.config.settings</field>
+        <field name="view_id" ref="res_config_settings_view_form"/>
+        <field name="view_mode">form</field>
+        <field name="target">inline</field>
+        <field name="context">{'module' : 'pontusinc_loyalty', 'bin_size': False}</field>
+    </record>
+
+</odoo>

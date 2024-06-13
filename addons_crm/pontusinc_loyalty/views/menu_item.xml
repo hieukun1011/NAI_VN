@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="action_loyalty_dashboard" model="ir.actions.client">
+        <field name="name">Dashboard</field>
+        <field name="tag">loyalty_dashboard</field>
+    </record>
+
+    <menuitem name="Loyalty"
+        id="menu_loyalty"
+        sequence="10"
+        web_icon="pontusinc_loyalty,static/description/icon.png"/>
+
+<!--        <menuitem id="menu_dashboard_loyalty"-->
+<!--            name="Dashboard"-->
+<!--            parent="menu_loyalty"-->
+<!--            action="action_loyalty_dashboard"-->
+<!--            sequence="0"/>-->
+
+        <menuitem id="menu_member"
+            name="Member"
+            parent="menu_loyalty"
+            sequence="1"/>
+
+            <menuitem id="menu_member_loyalty"
+                name="Member Loyalty"
+                parent="menu_member"
+                action="pontusinc_loyalty.act_loyalty_customer_view"
+                sequence="0"/>
+
+        <menuitem id="menu_product_loyalty"
+            name="Product loyalty"
+            parent="menu_loyalty"
+            sequence="2"/>
+
+            <menuitem id="menu_discount_loyalty"
+                name="Discount &amp; loyalty"
+                parent="menu_product_loyalty"
+                action="pontusinc_loyalty.pontusinc_loyalty_program_discount_loyalty_action"
+                sequence="0"/>
+
+            <menuitem id="menu_gift_card_loyalty"
+                action="loyalty.loyalty_program_gift_ewallet_action"
+                name="Gift cards &amp; eWallet"
+                parent="menu_product_loyalty"
+                sequence="1"/>
+
+        <menuitem id="menu_config_loyalty"
+            name="Configuration"
+            parent="menu_loyalty"/>
+
+            <menuitem id="menu_config_redeem_rewards"
+                name="Redeem rewards"
+                parent="menu_config_loyalty"
+                action="pontusinc_crm.act_res_partner_state_view"
+                sequence="0"/>
+
+            <menuitem id="menu_rank_member_loyalty"
+                name="Rank member"
+                parent="menu_config_loyalty"
+                action="pontusinc_loyalty.act_loyalty_rank_view"
+                sequence="1"/>
+
+            <menuitem
+                id="loyalty_config_settings_menu"
+                name="Settings"
+                parent="menu_config_loyalty"
+                action="pontusinc_loyalty.loyalty_config_settings_action"
+                groups="base.group_system"
+                sequence="2"/>
+</odoo>

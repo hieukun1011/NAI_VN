@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+=======
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+>>>>>>> 1edc56903ab79c74a4459e1792ad6ae33a23a2ad

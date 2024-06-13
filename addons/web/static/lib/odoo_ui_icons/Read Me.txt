@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Odoo UI Icons - v1.2
 
 Credits
@@ -7,3 +8,14 @@ Credits
 
 
 Created by SRI using IconMoon (https://icomoon.io/)
+=======
+Odoo UI Icons - v1.2
+
+Credits
+- https://www.carbondesignsystem.com/guidelines/icons/library/
+- https://github.com/carbon-design-system/carbon-icons
+- https://github.com/google/material-design-icons
+
+
+Created by SRI using IconMoon (https://icomoon.io/)
+>>>>>>> 1edc56903ab79c74a4459e1792ad6ae33a23a2ad

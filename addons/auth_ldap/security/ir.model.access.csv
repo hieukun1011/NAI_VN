@@ -1,2 +1,7 @@
+<<<<<<< HEAD
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_res_company_ldap,res_company_ldap,model_res_company_ldap,base.group_system,1,1,1,1
+=======
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_res_company_ldap,res_company_ldap,model_res_company_ldap,base.group_system,1,1,1,1
+>>>>>>> 1edc56903ab79c74a4459e1792ad6ae33a23a2ad
