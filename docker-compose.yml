@@ -1,5 +1,18 @@
 version: '3.1'
-services: 
+services:
+  db:
+    container_name: postgresql_phoenix_crm
+    image: postgres:15
+    user: root
+    environment:
+      - POSTGRES_USER=phoenix_crm
+      - POSTGRES_PASSWORD=icomm_2023
+      - POSTGRES_DB=postgres
+    ports:
+      - "5432:5432"
+    restart: always             # run as a service
+    volumes:
+      - db-erp:/var/lib/postgresql/data
   odoo17:
     image: odoo:17
     container_name: odoo17_enterprise
@@ -11,10 +24,8 @@ services:
     command: --
     environment:
       - HOST=db
-      - USER=icomm_crm
+      - USER=phoenix_crm
       - PASSWORD=icomm_2023
-    networks:
-          - odoo-16-docker-compose_default
     volumes:
       #- /etc/timezone:/etc/timezone:ro
       #- /etc/localtime:/etc/localtime:ro
@@ -22,7 +33,8 @@ services:
       - ./addons:/mnt/extra-addons
       - ./addons_crm:/mnt/crm-addons
       - ./etc:/etc/odoo
+      - odoo-web-data:/var/lib/odoo
     restart: always             # run as a service
-networks:
-  odoo-16-docker-compose_default:
-    external: true
+volumes:
+  db-erp:
+  odoo-web-data:
