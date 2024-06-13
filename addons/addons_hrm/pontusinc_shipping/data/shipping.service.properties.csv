@@ -1,6 +1,0 @@
-"id","service_id:id","code","name"
-service_properties_01,pontusinc_shipping.shipping_service_08,"PROP0026","Giá trị khai giá"
-service_properties_02,pontusinc_shipping.shipping_service_01,"PROP0023N","Ngày hoá đơn"
-service_properties_03,pontusinc_shipping.shipping_service_01,"PROP0023S","Số hoá đơn"
-service_properties_04,pontusinc_shipping.shipping_service_02,"PROP0018","Số tiền COD"
-service_properties_05,pontusinc_shipping.shipping_service_06,"PROP0078","Tổng tiền phí Hủy đơn hàng"

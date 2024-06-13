@@ -1,8 +1,0 @@
-id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_partner_rank_group_user,access_partner_rank_group_user,model_rank_partner,base.group_system,1,1,1,1
-access_partner_rank_history_group_user,access_partner_rank_history_group_user,model_partner_rank_history,base.group_system,1,1,1,1
-access_rank_level_group_user,access_rank_level_group_user,model_rank_level,base.group_system,1,1,1,1
-access_res_partner_state_group_user,access_res_partner_state_group_user,model_res_partner_state,base.group_system,1,1,1,1
-access_spending_diary_group_user,access_spending_diary_group_user,model_spending_diary,base.group_system,1,1,1,1
-access_interactive_diary_group_user,access_interactive_diary_group_user,model_interactive_diary,base.group_system,1,1,1,1
-access_campaign_history_group_user,access_campaign_history_group_user,model_campaign_history,base.group_system,1,1,1,1

@@ -1,3 +1,0 @@
-id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_timesheet_penalty_calculation_group_user,access_timesheet_penalty_calculation_group_user,model_timesheet_penalty_calculation,project.group_project_user,1,1,1,0
-access_popup_report_timesheet_group_user,access_popup_report_timesheet_group_user,model_popup_report_timesheet,base.group_user,1,1,1,0
