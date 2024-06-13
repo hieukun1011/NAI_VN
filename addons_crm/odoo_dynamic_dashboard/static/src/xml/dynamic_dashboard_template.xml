@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+    <t t-name="owl.dynamic_dashboard" owl="1">
+        <div style="height: -webkit-fill-available;">
+            <iframe width="100%" height="100%" frameborder="0"
+                class="o_iframe"/>
+<!--            <iframe src="https://staging.pontusinc.com/sbeat/global-news-dashboard?token=eyJhbGciOiJSUzI1NiIsImtpZCI6IjgyOTMzMTc2MUM0MjA2NUY2NTgwMERBRDE0MDkwNzc4IiwidHlwIjoiYXQrand0In0.eyJpc3MiOiJodHRwOi8vMTAuOS4zLjM1OjMxMjU4IiwibmJmIjoxNzExMTQ3ODQzLCJpYXQiOjE3MTExNDc4NDMsImV4cCI6MTcxMTc1MjY0MywiYXVkIjoiQWRtaW5DbGllbnRJZF9hcGkiLCJzY29wZSI6WyJBZG1pbkNsaWVudElkX2FwaSIsInJvbGVzIiwib2ZmbGluZV9hY2Nlc3MiXSwiYW1yIjpbInB3ZCJdLCJjbGllbnRfaWQiOiJBZG1pbkNsaWVudElkIiwic3ViIjoiZTcyNWI0YTAtNjgzOC00YTNmLWE4NjAtMDVmZDJmYjU0N2IzIiwiYXV0aF90aW1lIjoxNzExMTQ3ODQzLCJpZHAiOiJsb2NhbCIsIm5hbWUiOiJxdWFuZy5waHVuZyJ9.AsBq8H3wYWvbLI9k5DyvXEwUloPujWBbo1fGvkqCaR5buEXn_njqOBSpbaATzmrPt6F8ZBlI1w0ZPjfKxnu96-Dt8L9kZQYFg1YvqE9Dgf7ubE7Aax_G0av1JEfkoPMe1ghv2b-8Nlo5eRRiV9CioZOal-cntCPaGsgd5El95IfGkT_wWc8mwn975nlPibIye7jdRH64RZjzFbya__yowPxwDgMlVZudiVb_V-iPr5VageiDFjFijsXX1woymFMc42UEknLQs9q0R_VDUYnL-FJc_YqGuKyhAg1th5JKmR6l-ZwSl73NkGxdRZpj4soPCm5r7BMu78stwdFRKYSKaA" ></iframe>-->
+        </div>
+
+<!--        <div class="container" style="width:100%;height:100%" >-->
+
+<!--&lt;!&ndash;            <div class="button-container">&ndash;&gt;-->
+<!--&lt;!&ndash;                <button class="btn btn-primary" data-type="tile"&ndash;&gt;-->
+<!--&lt;!&ndash;                        type="button" t-on-click="_onClick_add_block">Add Block&ndash;&gt;-->
+<!--&lt;!&ndash;                </button>&ndash;&gt;-->
+<!--&lt;!&ndash;                <button class="btn btn-primary add_block" data-type="graph"&ndash;&gt;-->
+<!--&lt;!&ndash;                        type="button" t-on-click="_onClick_add_block">Add Graph&ndash;&gt;-->
+<!--&lt;!&ndash;                </button>&ndash;&gt;-->
+<!--&lt;!&ndash;            </div>&ndash;&gt;-->
+<!--&lt;!&ndash;            <div class="o_dynamic_dashboard row">&ndash;&gt;-->
+<!--&lt;!&ndash;                &ndash;&gt;-->
+<!--&lt;!&ndash;                <div class="o_dynamic_tile row">&ndash;&gt;-->
+<!--&lt;!&ndash;                </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                <div class="o_dynamic_graph w3-container row">&ndash;&gt;-->
+<!--&lt;!&ndash;                </div>&ndash;&gt;-->
+<!--&lt;!&ndash;            </div>&ndash;&gt;-->
+<!--        </div>-->
+    </t>
+</templates>
