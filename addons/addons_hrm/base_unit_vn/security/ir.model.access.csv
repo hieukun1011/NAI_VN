@@ -1,0 +1,7 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+internal_user_access_country_district,name_internal_user_read_access_district,model_res_country_district,base.group_user,1,0,0,0
+manager_access_country_district,name_manager_access_district,model_res_country_district,base.group_erp_manager,1,1,1,1
+internal_user_access_country_ward,name_internal_user_read_access_ward,model_res_country_ward,base.group_user,1,0,0,0
+manager_user_access_country_ward,name_manager_access_ward,model_res_country_ward,base.group_erp_manager,1,1,1,1
+internal_user_access_nation,internal_user_access_nation,model_nation,base.group_user,1,0,0,0
+manager_user_access_nation,manager_user_access_nation,model_nation,base.group_erp_manager,1,1,1,1

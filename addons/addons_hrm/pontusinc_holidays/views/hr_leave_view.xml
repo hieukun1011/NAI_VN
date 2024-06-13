@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="hr_holidays.hr_leave_action_my" model="ir.actions.act_window">
+        <field name="domain">['|', ('employee_public_id.user_id', '=', uid), ('user_id', '=', uid),
+            ('employee_company_id', 'in', allowed_company_ids)]
+        </field>
+    </record>
+
+    <record id="pontusinc_hr_leave_view_search" model="ir.ui.view">
+        <field name="name">pontusinc.hr.holidays.view.search</field>
+        <field name="model">hr.leave</field>
+        <field name="inherit_id" ref="hr_holidays.hr_leave_view_search_manager"/>
+        <field name="mode">primary</field>
+        <field name="priority">32</field>
+        <field name="arch" type="xml">
+            <xpath expr="//filter[@name='my_team']" position="after">
+                <filter string="Date" name="create_date_filter" date="create_date" default_period="this_month"/>
+            </xpath>
+            <xpath expr="//filter[@name='approve']" position="attributes">
+                <attribute name="domain">[('state','=','confirm')]</attribute>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="hr_holidays.hr_leave_action_action_approve_department" model="ir.actions.act_window">
+        <field name="search_view_id" ref="pontusinc_hr_leave_view_search"/>
+        <field name="context">{
+            'search_default_approve': 1,
+            'search_default_create_date_filter': True,
+            'search_default_active_employee': 3,
+            'search_default_active_time_off': 4,
+            'hide_employee_name': 1,
+            'holiday_status_name_get': False}
+        </field>
+    </record>
+
+    <record id="pontusinc_hr_my_leave_view_kanban" model="ir.ui.view">
+        <field name="name">pontusinc.hr.my.leave.view.kanban</field>
+        <field name="inherit_id" ref="hr_holidays.hr_leave_view_kanban"/>
+        <field name="model">hr.leave</field>
+        <field name="arch" type="xml">
+            <xpath expr="//kanban" position="attributes">
+                <attribute name="create">1</attribute>
+            </xpath>
+            <xpath expr="//div[hasclass('o_leave_kanban_name')]" position='before'>
+                <div>
+                    <span class="text-muted">Nhân sự hỗ trợ:</span>
+                    <field name="employee_public_id" widget="many2one_avatar_employee"/>
+                    <t t-esc="record.employee_public_id.value"/>
+                </div>
+                <div>
+                    <span class="text-muted">Create date:</span>
+                    <field name="create_date"/>
+                </div>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="pontusinc_hr_leave_view_tree_inherit" model="ir.ui.view">
+        <field name="name">Pontusinc hr leave view tree inherit</field>
+        <field name="model">hr.leave</field>
+        <field name="inherit_id" ref="hr_holidays.hr_leave_view_tree"/>
+        <field name="mode">primary</field>
+        <field name="arch" type="xml">
+            <xpath expr="//tree" position="inside">
+                <field name="create_date"/>
+            </xpath>
+            <xpath expr="//tree" position="attributes">
+                <attribute name="class">text-wrap-description</attribute>
+            </xpath>
+            <xpath expr="//field[@name='all_employee_ids']" position="after">
+                <field name="manager_id"/>
+            </xpath>
+            <xpath expr="//field[@name='name']" position="after">
+                <field name="employee_public_id"/>
+            </xpath>
+            <!--            <button string="Refuse" name="action_refuse" type="object"-->
+            <!--                    icon="fa-times"-->
+            <!--                    states="confirm,validate1"-->
+            <!--                    groups="hr_holidays.group_hr_holidays_user"/>-->
+            <xpath expr="//button[@name='action_refuse']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//field[@name='state']" position="after">
+                <field name="active" invisible="1"/>
+                <field name="can_approve" invisible="1"/>
+                <button string="Refuse" name="action_note_refuse" type="object" icon="fa-times"
+                        attrs="{'invisible': ['|', '|', ('active', '=', False), ('can_approve', '=', False), ('state', 'not in', ('confirm','validate1','validate'))]}"/>
+            </xpath>
+<!--            <xpath expr="//field[@name='duration_display']">-->
+<!--                <attribute name="invisible">1</attribute>-->
+<!--            </xpath>-->
+        </field>
+    </record>
+
+
+    <record id="hr_leave_view_search_my_inherit" model="ir.ui.view">
+        <field name="name">hr.holidays.filter.inherit</field>
+        <field name="model">hr.leave</field>
+        <field name="inherit_id" ref="hr_holidays.view_hr_holidays_filter"/>
+        <field name="arch" type="xml">
+            <xpath expr="//search" position="inside">
+                <filter string="leave_type_date_detail" name="leave_type_date_detail"
+                        domain="[('create_date', '&gt;=', context.get('date_from', False)),('create_date', '&lt;=', context.get('date_to', False)), ('holiday_status_id', '=', context.get('leave_type_id', False))]"/>
+                <filter string="emp_only_fil_top_max_leave" name="emp_only_fil_top_max_leave"
+                        domain="[('create_date', '&gt;=', context.get('date_from', False)),('create_date', '&lt;=', context.get('date_to', False)), ('employee_id', '=', context.get('emp_id', False))]"/>
+            </xpath>
+            <xpath expr="//filter[@name='leave_type_date_detail']" position="attributes">
+					<attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//filter[@name='emp_only_fil_top_max_leave']" position="attributes">
+					<attribute name="invisible">1</attribute>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="hr_holidays.action_view_tree_manager_approve" model="ir.actions.act_window.view">
+        <field name="view_id" ref="pontusinc_hr_leave_view_tree_inherit"/>
+    </record>
+
+</odoo>
+

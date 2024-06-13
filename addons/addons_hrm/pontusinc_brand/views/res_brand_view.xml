@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="res_brand_tree_view" model="ir.ui.view">
+        <field name="name">Res brand tree view</field>
+        <field name="model">res.brand</field>
+        <field name="arch" type="xml">
+            <tree editable="top">
+                <field name="code"/>
+                <field name="name"/>
+                <field name="company_ids" widget="many2many_tags"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="res_brand_inherit_company_view_form" model="ir.ui.view">
+        <field name="name">Res brand inherit company view form</field>
+        <field name="model">res.company</field>
+        <field name="inherit_id" ref="base.view_company_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='email']" position="after">
+                <field name="brand_id"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="action_res_brand_view" model="ir.actions.act_window">
+        <field name="name">Brand</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">res.brand</field>
+        <field name="view_mode">tree</field>
+    </record>
+
+    <menuitem
+        action="action_res_brand_view"
+        id="menu_res_brand"
+        parent="base.menu_users"
+        name="Brand"/>
+</odoo>

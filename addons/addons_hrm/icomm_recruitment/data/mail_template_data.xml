@@ -1,0 +1,491 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+
+        <!-- Applicant notification email template-->
+        <record id="email_template_data_applicant_new" model="mail.template">
+            <field name="name">Thông báo khi có ứng viên mới</field>
+            <field name="model_id" ref="hr_recruitment.model_hr_applicant"/>
+            <field name="subject">Ứng viên {{ object.partner_name }} ứng tuyển vị trí {{ object.name }}</field>
+            <field name="email_to">{{ object._get_interviewer_emails() }}</field>
+            <field name="body_html" type="html">
+                <table border="0" cellpadding="0" cellspacing="0"
+                       style="min-width: 590px; background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;">
+                    <tr>
+                        <td valign="top">
+                            <div style="font-size: 15px; margin: 0px; padding: 0px;">
+                                <br/>
+                                Chào anh/chị
+                                <br/>
+                                Anh chị có 1 CV ứng tuyển vị trí
+                                <b>
+                                    <t t-out="object.name or '...'"></t>
+                                </b>
+                                Anh chị vui lòng xem chi tiết CV
+                                <b>
+                                    <a t-att-href="object.base_url">tại đây</a>
+                                </b>
+                                và đặt lịch phỏng vấn nếu CV phù hợp.
+                                <br/>
+                                Bộ phận HR ICOMM sẽ chủ động sắp xếp lịch hẹn từ các anh/chị để thông báo tới ứng viên
+                                và phản hồi lại lịch chính xác cho anh/chị sau.
+                                <br/>
+                                Trân trọng.
+                                <div style="color: grey;">
+                                    ---------------------------
+                                    <br/>
+                                    <strong></strong>
+                                    <br/>
+                                    <strong></strong>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </field>
+        </record>
+
+        <!-- Templates for interest / refusing applicants -->
+        <record id="email_template_data_applicant_refuse" model="mail.template">
+            <field name="name">Recruitment: Refuse</field>
+            <field name="model_id" ref="hr_recruitment.model_hr_applicant"/>
+            <field name="subject">Your Job Application: {{ object.job_id.name }}</field>
+            <field name="email_to">{{ (not object.partner_id and object.email_from or '') }}</field>
+            <field name="partner_to">{{ object.partner_id.id or '' }}</field>
+            <field name="description">When you refuse an application, you can choose this template</field>
+            <field name="body_html" type="html">
+                <table border="0" cellpadding="0" cellspacing="0" width="590"
+                       style="min-width: 590px; background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;">
+                    <tr>
+                        <td valign="top">
+                            <div style="font-size: 13px; margin: 0px; padding: 0px;">
+                                Chào bạn
+                                <b>
+                                    <t t-out="object.partner_name or ''">,</t>
+                                </b>
+                                <br/>
+                                <br/>
+                                Đầu tiên,
+                                <b>
+                                    <t t-out="object.company_id.name or ''"></t>
+                                </b>
+                                xin gửi lời cảm ơn tới bạn vì đã quan tâm tới cơ hội việc làm tại Công ty chúng tôi.
+                                <br/>
+                                Công ty đánh giá rất cao những kỹ năng và kinh nghiệm của bạn, tuy nhiên, với lượng ứng
+                                viên phong phú và dày kinh nghiệm cùng tham gia đợt tuyển,
+                                <br/>
+                                chúng tôi rất tiếc phải thông báo rằng ở thời điểm hiện tại bạn chưa hoàn toàn phù hợp
+                                với vị trí mà chúng tôi đang tuyển.
+                                <br/>
+                                Chúng tôi hy vọng có thể hợp tác với bạn trong một cơ hội khác để hai bên cùng đồng hành
+                                phát triển.
+                                <br/>
+                                <br/>
+                                Xin lưu ý rằng hồ sơ của bạn đã được lưu tại hệ thống của
+                                <b>
+                                    <t t-out="object.company_id.name or ''"></t>
+                                </b>
+                                , Công ty sẽ liên hệ với bạn nếu có bất kì công việc nào phù hợp với bạn trong tương
+                                lai.
+                                <br/>
+                                <br/>
+                                Chân thành cảm ơn sự quan tâm của bạn dành cho
+                                <b>
+                                    <t t-out="object.company_id.name or ''"></t>
+                                </b>
+                                và chúc bạn luôn thành công với mọi dự định sắp tới!
+                                <br/>
+                                <br/>
+                                Trân trọng.
+                                <div style="font-size: 11px; color: grey;">
+                                    ---------------------------
+                                    <br/>
+                                    HR Team |
+                                    <strong t-out="object.company_id.name or ''"></strong>
+                                    <br/>
+                                    Email:
+                                    <t t-out="object.job_id.alias_name or ''"></t>
+                                    <br/>
+                                    Phone:
+                                    <t t-out="object.user_id.phone or ''"></t>
+                                    <t t-if="object.get_company()">
+                                        <br/>
+                                        A: 24th floor, Viwaseen Tower, 48 To Huu str., Nam Tu Liem Dist., Hanoi.
+                                        <br/>
+                                        W: icomm.vn | socialbeat.vn | congnghe.vn | flexdistro.vn | actionabledata.vn
+                                    </t>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </field>
+            <field name="auto_delete" eval="True"/>
+            <field name="lang">{{ object.partner_id.lang or '' }}</field>
+        </record>
+
+        <!-- Applicant notification email template-->
+        <record id="email_template_data_interview_schedule" model="mail.template">
+            <field name="name">Hẹn lịch phỏng vấn</field>
+            <field name="model_id" ref="calendar.model_calendar_event"/>
+            <field name="subject">ICOMM - THƯ MỜI PHỎNG VẤN</field>
+            <field name="email_to">{{ object.applicant_id._get_interviewer_emails() }}</field>
+            <field name="body_html" type="html">
+                <table border="0" cellpadding="0" cellspacing="0"
+                       style="min-width: 590px; background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;">
+                    <tr>
+                        <td valign="top">
+                            <div style="font-size: 15px; margin: 0px; padding: 0px;">
+                                <br/>
+                                Chào bạn
+                                <b>
+                                    <t t-out="object.applicant_id.partner_name or '...'"></t>
+                                </b>
+                                <br/>
+                                Cảm ơn bạn đã quan tâm tới vị trí
+                                <b>
+                                    <t t-out="object.applicant_id.job_id.name or '...'"></t>
+                                </b>
+                                Công ty Cổ phần Truyền thông và Công nghệ ICOMM Việt Nam (ICOMM).
+                                <br/>
+                                ICOMM đánh giá cao CV của bạn và trân trọng mời bạn tham gia phỏng vấn theo nội dung bên
+                                dưới:
+                                <br/>
+                                - Thời gian:
+                                <t t-out='format_datetime(dt=object.start, tz=object.mail_tz, lang_code=object.env.lang) or ""'></t>
+                                <br/>
+                                - Địa chỉ: Tầng 24, Tòa Viwaseen, số 48 Tố Hữu, Trung Văn, Nam Từ Liêm, Hà Nội
+                                <br/>
+                                - Người phỏng vấn:
+                                <b>
+                                    <t t-out="object.applicant_id._get_interviewer_name()"></t>
+                                </b>
+                                <br/>
+                                ĐỂ BUỔI PHỎNG VẤN HIỆU QUẢ HƠN, ỨNG VIÊN VUI LÒNG CHUẨN BỊ:
+                                <br/>
+                                1. Tìm hiểu trước về Công ty và đọc kĩ JD trong file đính kèm.
+                                <br/>
+                                2. Trong buổi phỏng vấn, chúng tôi sẽ trao đổi với bạn nhiều hơn về công việc, về văn
+                                hoá môi trường tại
+                                ICOMM cũng như mong muốn tìm hiểu những kỳ vọng của bạn khi ứng tuyển vị trí này.
+                                Hi vọng sẽ được gặp một ứng viên nhiệt huyết, ham học hỏi, nghiêm túc với công việc.
+                                Trên tất cả, chúng tôi luôn mong muốn nhìn thấy được tiềm năng phát triển của bạn qua
+                                buổi trao đổi.
+                                <br/>
+                                <br/>
+                                Bạn hãy xác nhận tham gia bằng các phản hồi email này trước Giờ - ngày tháng năm để
+                                phòng HCNS có sự sắp xếp bạn nhé.
+                                <br/>
+                                Khi đến vui lòng liên hệ
+                                <t t-out="object.applicant_id.user_id.name or '...'"></t>
+                                - <t t-out="object.applicant_id.user_id.phone or '...'"></t> để được hỗ trợ và đón tiếp.
+                                <br/>
+                                <br/>
+                                Và đừng quên cập nhật thường xuyên các thông tin tuyển dụng mới nhất tại ICOMM VN bằng
+                                cách:
+                                <br/>
+                                - Connect linkedIn HR ICOMM (Huyền Thu):
+                                https://www.linkedin.com/in/huyen-thu-joycee-75178b238/
+                                <br/>
+                                - Trao đổi, chia sẻ thêm về công việc tại ICOMM VN:
+                                <br/>
+                                Zalo/Telegram/call: 0947292597 /
+                                <br/>
+                                Facebook: https://www.facebook.com/thuhuyen.hoang/
+                                <br/>
+                                <br/>
+                                Cảm ơn và hẹn gặp bạn tại buổi phỏng vấn!
+                                <br/>
+                                <br/>
+                                <div style="font-size: 11px; color: grey;">
+                                    -----------------------
+                                    <br/>
+                                    HR Team | ICOMM Media and Tech Jsc
+                                    <br/>
+                                    E: jobs@icomm.vn
+                                    <br/>
+                                    P: (+84)24.3203.0168
+                                    <br/>
+                                    A: 24th floor, Viwaseen Tower, 48 To Huu str., Nam Tu Liem Dist., Hanoi.
+                                    <br/>
+                                    W: icomm.vn | socialbeat.vn | congnghe.vn | flexdistro.vn | actionabledata.vn
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </field>
+        </record>
+
+        <!-- Email template notify candidates periodically-->
+        <record id="email_template_data_notification_manager" model="mail.template">
+            <field name="name">Thông báo khi có ứng viên mới</field>
+            <field name="model_id" ref="hr_recruitment.model_hr_job"/>
+            <field name="subject">Tổng hợp thông tin ứng tuyển vị trí {{ object.name }}</field>
+            <field name="email_to">{{ object._get_interviewer_emails() }}</field>
+            <field name="body_html" type="html">
+                <table border="0" cellpadding="0" cellspacing="0"
+                       style="min-width: 590px; background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;">
+                    <tr>
+                        <td valign="top">
+                            <div style="font-size: 15px; margin: 0px; padding: 0px;">
+                                <br/>
+                                Chào anh chị,
+                                <br/>
+                                Hệ thống ghi nhận có
+                                <b>
+                                    <t t-out="object.count_application_draft or '...'"></t>
+                                </b>
+                                hồ sơ cho vị trí
+                                <b>
+                                    <t t-out="object.name or '...'"></t>
+                                </b>
+                                chưa được phản hồi.
+                                <br/>
+                                Vui lòng kiểm tra
+                                <b>
+                                    <a t-att-href="object.base_url">tại đây</a>
+                                </b>
+                                để xem chi tiết và phản hồi tránh trường hợp các ứng viên tiềm năng bị bỏ lỡ nhé ạ!
+                                <br/>
+                                <br/>
+                                Trân Trọng,
+                                <br/>
+                                <br/>
+                                <div style="font-size: 11px; color: grey;">
+                                    -----------------------
+                                    <br/>
+                                    HR Team | ICOMM Media and Tech Jsc
+                                    <br/>
+                                    E: jobs@icomm.vn
+                                    <br/>
+                                    P: (+84)24.3203.0168
+                                    <br/>
+                                    A: 24th floor, Viwaseen Tower, 48 To Huu str., Nam Tu Liem Dist., Hanoi.
+                                    <br/>
+                                    W: icomm.vn | socialbeat.vn | congnghe.vn | flexdistro.vn | actionabledata.vn
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </field>
+        </record>
+
+        <!-- Summary of CV information for an interview appointment but not yet scheduled-->
+        <record id="email_template_data_information_applicant_not_scheduled" model="mail.template">
+            <field name="name">Tổng hợp thông tin CV hẹn phòng vấn nhưng chưa được xếp lịch</field>
+            <field name="model_id" ref="hr_recruitment.model_hr_applicant"/>
+            <field name="subject">Tổng hợp thông tin ứng tuyển vị trí {{ object.job_id.name }}</field>
+            <field name="email_to">{{ object.user_id.email }}</field>
+            <field name="body_html" type="html">
+                <table border="0" cellpadding="0" cellspacing="0"
+                       style="min-width: 590px; background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;">
+                    <tr>
+                        <td valign="top">
+                            <div style="font-size: 15px; margin: 0px; padding: 0px;">
+                                Chào anh chị,
+                                <br/>
+                                Hệ thống ghi nhận ứng viên
+                                <b>
+                                    <t t-out="object.partner_name or '...'"></t>
+                                </b>
+                                chưa được đặt lịch phỏng vấn.
+                                <br/>
+                                Vui lòng kiểm tra
+                                <b>
+                                    <a t-att-href="object.base_url">tại đây</a>
+                                </b>
+                                để xem chi tiết và phản hồi tránh trường hợp các ứng viên tiềm năng bị bỏ lỡ nhé!
+                                <br/>
+                                <br/>
+                                Trân Trọng
+                                <br/>
+                                <br/>
+                                <div style="font-size: 11px; color: grey;">
+                                    -----------------------
+                                    <br/>
+                                    HR Team | ICOMM Media and Tech Jsc
+                                    <br/>
+                                    E: jobs@icomm.vn
+                                    <br/>
+                                    P: (+84)24.3203.0168
+                                    <br/>
+                                    A: 24th floor, Viwaseen Tower, 48 To Huu str., Nam Tu Liem Dist., Hanoi.
+                                    <br/>
+                                    W: icomm.vn | socialbeat.vn | congnghe.vn | flexdistro.vn | actionabledata.vn
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </field>
+        </record>
+
+        <!-- Schedule an interview appointment email template-->
+        <record id="email_template_data_schedule_interview_appointment" model="mail.template">
+            <field name="name">Đặt lịch hẹn phỏng vấn {{ object.partner_name }}</field>
+            <field name="model_id" ref="hr_recruitment.model_hr_applicant"/>
+            <field name="subject">Thông báo ứng viên định kỳ</field>
+            <field name="email_to">{{ object.write_uid.email }}</field>
+            <field name="body_html" type="html">
+                <table border="0" cellpadding="0" cellspacing="0"
+                       style="min-width: 590px; background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;">
+                    <tr>
+                        <td valign="top">
+                            <div style="font-size: 15px; margin: 0px; padding: 0px;">
+                                <br/>
+                                Chào anh chị,
+                                <br/>
+                                Hệ thống ghi nhận ứng viên
+                                <b>
+                                    <t t-out="object.partner_name or '...'"></t>
+                                </b>
+                                được anh/chi
+                                <b>
+                                    <t t-out="object.write_uid.name or '...'"></t>
+                                </b>
+                                đặt lịch hẹn phỏng vấn.
+                                <br/>
+                                Vui lòng kiểm tra
+                                <b>
+                                    <a t-att-href="object.base_url">tại đây</a>
+                                </b>
+                                thông báo tới ứng viên và phản hồi lại lịch chính xác cho người phỏng vấn nhé!
+                                <br/>
+                                <br/>
+                                Trân Trọng,
+                                <br/>
+                                <br/>
+                                <div style="font-size: 11px; color: grey;">
+                                    -----------------------
+                                    <br/>
+                                    HR Team | ICOMM Media and Tech Jsc
+                                    <br/>
+                                    E: jobs@icomm.vn
+                                    <br/>
+                                    P: (+84)24.3203.0168
+                                    <br/>
+                                    A: 24th floor, Viwaseen Tower, 48 To Huu str., Nam Tu Liem Dist., Hanoi.
+                                    <br/>
+                                    W: icomm.vn | socialbeat.vn | congnghe.vn | flexdistro.vn | actionabledata.vn
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </field>
+        </record>
+
+        <!-- Evaluate candidate interviews-->
+        <record id="email_template_data_evaluate_candidate_interviews" model="mail.template">
+            <field name="name">Đánh giá phỏng vấn ứng viên</field>
+            <field name="model_id" ref="hr_recruitment.model_hr_applicant"/>
+            <field name="subject">Đánh giá phỏng vấn ứng viên {{ object.partner_name }} - {{ object.job_id.name }}</field>
+            <field name="email_to">{{ object._get_interviewer_emails() }}</field>
+            <field name="attachment_ids" eval="[(6, 0, [ref('icomm_recruitment.evaluate_candidates_template')])]"/>
+            <field name="body_html" type="html">
+                <table border="0" cellpadding="0" cellspacing="0"
+                       style="min-width: 590px; background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;">
+                    <tr>
+                        <td valign="top">
+                            <div style="font-size: 15px; margin: 0px; padding: 0px;">
+                                <br/>
+                                Chào anh chị,
+                                <br/>
+                                Chúng ta vừa tham gia phỏng vấn ứng viên
+                                <b>
+                                    <t t-out="object.partner_name or '...'"></t>
+                                </b>
+                                -
+                                <b>
+                                    <t t-out="object.job_id.name or '...'"></t>
+                                </b>
+                                Theo quy trình tuyển dụng anh chị vui lòng hoàn thiện đánh giá ứng viên và gửi lại bộ
+                                phận Nhân sự bằng bản cứng hoặc bản mềm trong vòng 1 ngày làm việc từ sau buổi phỏng vấn nhé ạ!
+                                <br/>
+                                <br/>
+                                Trân Trọng,
+                                <br/>
+                                <br/>
+                                <div style="font-size: 11px; color: grey;">
+                                    -----------------------
+                                    <br/>
+                                    HR Team | ICOMM Media and Tech Jsc
+                                    <br/>
+                                    E: jobs@icomm.vn
+                                    <br/>
+                                    P: (+84)24.3203.0168
+                                    <br/>
+                                    A: 24th floor, Viwaseen Tower, 48 To Huu str., Nam Tu Liem Dist., Hanoi.
+                                    <br/>
+                                    W: icomm.vn | socialbeat.vn | congnghe.vn | flexdistro.vn | actionabledata.vn
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </field>
+        </record>
+
+        <!-- Notification of candidates accepting jobs-->
+        <record id="email_template_data_notification_candidates_accepting_jobs" model="mail.template">
+            <field name="name">Thông báo ứng viên xác nhận làm việc </field>
+            <field name="model_id" ref="hr_recruitment.model_hr_applicant"/>
+            <field name="subject">Ứng viên {{ object.partner_name }} - {{ object.job_id }} xác nhận nhận việc</field>
+            <field name="email_to">{{ object._get_interviewer_emails() }}</field>
+            <field name="body_html" type="html">
+                <table border="0" cellpadding="0" cellspacing="0"
+                       style="min-width: 590px; background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;">
+                    <tr>
+                        <td valign="top">
+                            <div style="font-size: 15px; margin: 0px; padding: 0px;">
+                                <br/>
+                                Chúc mừng anh chị,
+                                <br/>
+                                Ứng viên
+                                <b>
+                                    <t t-out="object.partner_name or '...'"></t>
+                                </b>
+                                trúng tuyển cho vị trí
+                                <b>
+                                    <t t-out="object.job_id.name or '...'"></t>
+                                </b>
+                                đã đồng ý nhận offer và xác nhận có thể bắt đầu tiếp nhận công việc từ ngày
+                                <b>
+                                    <t t-out="object.availability or '...'"></t>
+                                </b>
+                                <br/>
+                                Để quá trình tiếp nhận nhân sự mới diễn ra đúng quy trình, anh/chị vui lòng thông báo
+                                lại thời gian có thể tiếp nhận nhân sự ngay khi nhận được thông báo này và gửi lại team
+                                KPI thử việc 2 tháng của nhân sự trước ngày
+                                <b>
+                                    <t t-out="object.availability or '...'"></t>
+                                </b>
+                                <br/>
+                                <br/>
+                                Trân Trọng,
+                                <br/>
+                                <br/>
+                                <div style="font-size: 11px; color: grey;">
+                                    -----------------------
+                                    <br/>
+                                    HR Team | ICOMM Media and Tech Jsc
+                                    <br/>
+                                    E: jobs@icomm.vn
+                                    <br/>
+                                    P: (+84)24.3203.0168
+                                    <br/>
+                                    A: 24th floor, Viwaseen Tower, 48 To Huu str., Nam Tu Liem Dist., Hanoi.
+                                    <br/>
+                                    W: icomm.vn | socialbeat.vn | congnghe.vn | flexdistro.vn | actionabledata.vn
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </field>
+        </record>
+
+    </data>
+</odoo>

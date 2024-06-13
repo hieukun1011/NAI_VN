@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <menuitem id="project.menu_main_pm"
+            web_icon="pontusinc_project,static/description/icon.png"/>
+
+    <menuitem
+        id="menu_report_months"
+        name="Report months"
+        parent="project.menu_project_report"
+        action="pontusinc_project.report_months_action"
+        sequence="1"/>
+</odoo>

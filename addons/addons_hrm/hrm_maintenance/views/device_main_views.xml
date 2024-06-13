@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_hr_device_main_form_2" model="ir.ui.view">
+            <field name="name">view_hr_device_main_form_2</field>
+            <field name="model">hr.device.main</field>
+            <field name="inherit_id" ref="hr_device.view_hr_device_main_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='image_1920']" position="before">
+                    <div class="oe_button_box" name="button_box">
+                        <button name="%(hr_equipment_request_action_from_equipment)d"
+                            type="action"
+                            class="oe_stat_button"
+                            icon="fa-ticket">
+                            <field string="Yêu cầu sửa chữa" name="maintenance_count" widget="statinfo"/>
+                        </button>
+                        <button name="%(hr_equipment_request_action_from_equipment_2)d"
+                            type="action"
+                            class="oe_stat_button"
+                            icon="fa-laptop">
+                            <field string="Bảo dưỡng định kỳ" name="certificate_count" widget="statinfo"/>
+                        </button>
+                    </div>
+                </xpath>
+                <xpath expr="//field[@name='company_id']" position="before">
+                    <field name="category_id" options="{'no_create':True}"></field>
+                    <field name="team_id" options="{'no_create':True}"></field>
+                </xpath>
+                <xpath expr="//page[@name='des_img']" position="after">
+                    <page name="des_custody" string="Quá trình sử dụng">
+                        <field name="custody_ids" options="{'no_create':True}" readonly="1">
+                            <tree limit="10" class="tree_no_open">
+                                <field name="type" string="Loại phiếu"/>
+                                <field name="department_id"/>
+                                <field name="parent_id"/>
+                                <field name="employee_id" string="Người bàn giao"/>
+                                <field name="employee_use" string="Nhân sự sử dụng"/>
+                                <field name="export_date"/>
+                                <button string="Nhận hàng" type="object" name="approve"
+                                class="oe_highlight"
+                                attrs="{'invisible': [('type','!=','import')]}"/>
+                            </tree>
+                        </field>
+                    </page>
+                 </xpath>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_device_main_tree">
+            <field name="name">hr.device.main.tree.2</field>
+            <field name="model">hr.device.main</field>
+            <field name="inherit_id" ref="hr_device.view_hr_device_main_tree"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='department_id']" position="before">
+                    <field name="category_id"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

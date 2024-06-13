@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record model="ir.module.category" id="module_device_maintenance">
+        <field name="name">Quyền quản lý vật tư</field>
+        <field name="description">.</field>
+        <field name="sequence">9</field>
+    </record>
+
+    <record id="group_device_user" model="res.groups">
+        <field name="name">Vật tư - Nhân viên</field>
+        <field name="category_id" ref="module_device_maintenance"/>
+        <field name="comment">The user will be able to manage equipments.</field>
+    </record>
+
+    <record id="group_device_manager" model="res.groups">
+        <field name="name">Vật tư - Quản lý</field>
+        <field name="category_id" ref="module_device_maintenance"/>
+        <field name="comment">The user will be able to manage equipments.</field>
+    </record>
+
+    <record id="group_device_public" model="res.groups">
+        <field name="name"> Vật tư - Người xem</field>
+        <field name="category_id" ref="module_device_maintenance"/>
+    </record>
+</odoo>

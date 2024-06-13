@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="popup_report_timesheet_penalty_calculation">
+            <field name="name">popup.report.timesheet.penalty.calculation</field>
+            <field name="model">popup.report.timesheet</field>
+            <field name="arch" type="xml">
+                <form string="Timesheet - Penalty calculation">
+                    <group>
+                        <field name="month"/>
+                    </group>
+                    <footer>
+                        <button name="cron_report_timesheet_penalty_calculation" type="object" string="Report" class="oe_highlight"/>
+                        <button special="cancel" string="Cancel" class="btn btn-secondary" data-hotkey="w"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+    </data>
+</odoo>

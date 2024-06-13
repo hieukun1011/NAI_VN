@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="popup_profiling_form_view" model="ir.ui.view">
+        <field name="name">Popup Profiling Form View</field>
+        <field name="model">search.profiling</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <field name="tag_ids" required="1"/>
+<!--                    <field name="field_search" widget="many2many_tags"/>-->
+                    <field name="partner_id" invisible="1"/>
+                </group>
+                <notebook>
+                    <page name="input_search" string="Input">
+                        <field name="input" widget="html" required="1"/>
+                    </page>
+                </notebook>
+                <footer>
+                    <button name="action_search_profiling" string="Search" type="object" class="btn-primary" icon="fa-search-plus"/>
+                    <button string="Cancel" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="popup_result_profiling_tree_view" model="ir.ui.view">
+        <field name="name">Popup Result Profiling Tree View</field>
+        <field name="model">result.profiling</field>
+        <field name="arch" type="xml">
+            <tree create="0" editable="bottom" js_class="update_info_partner">
+                <field name="partner_id" invisible="1"/>
+                <field name="name" />
+                <field name="detail" />
+            </tree>
+        </field>
+    </record>
+
+</odoo>

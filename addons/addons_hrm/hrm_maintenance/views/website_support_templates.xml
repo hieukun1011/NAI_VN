@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+<!--        <record id="support_page_link" model="website.menu">-->
+<!--            <field name="name">Gửi hỗ trợ</field>-->
+<!--            <field name="url">/support/help</field>-->
+<!--            <field name="parent_id" ref="website.main_menu" />-->
+<!--            <field name="sequence" type="int">99</field>-->
+<!--        </record>-->
+
+        <template id="support_help_submit_ticket" name="Submit Support Ticket">
+          <div t-call="website.layout">
+              <div class="container" style="center">
+                  <h1 class="o_lhvct" style="text-align: center;">
+                      Gửi yêu cầu hỗ trợ
+                  </h1>
+
+                  <form action="/support/ticket/process" method="POST" class="form-horizontal mt32" enctype="multipart/form-data">
+                      <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                      <input style="display:none;" name="my_gold" value="256"/>
+                      <div t-attf-class="form-group row #{error and 'person_name' in error and 'has-error' or ''}">
+                          <label class="control-label col-md-2"></label>
+                          <label class="control-label col-md-2" for="person_name">Họ và Tên</label>
+                          <input type="text" class="form-control col-md-8" name="person_name" required="True" t-attf-value="#{person_name or ''}"/>
+                      </div>
+                      <div name="email_from_container" t-attf-class="form-group row #{error and 'email' in error and 'has-error' or ''}">
+                          <label class="control-label col-md-2"></label>
+                          <label class="control-label col-md-2" for="email">Email</label>
+                          <input type="email" class="form-control col-md-8" name="email" required="True" t-attf-value="#{email or ''}"/>
+                      </div>
+                      <script>
+                          $(document).ready(function() {
+                              $('#file').change(function(){
+                                  if(this.files.length > <t t-esc="setting_max_ticket_attachments"/>) {
+                                      alert("You can only upload " + <t t-esc="setting_max_ticket_attachments"/> + " files");
+                                  }
+
+                                  for (var x in this.files) {
+                                      if (this.files[x].size / 1024 > <t t-esc="setting_max_ticket_attachment_filesize"/>) {
+                                          alert(this.files[x].name + " exceeds the " + <t t-esc="setting_max_ticket_attachment_filesize"/> + "KB file size limit");
+                                          $('#file').val('');
+                                      }
+                                  }
+                              });
+
+                          });
+                      </script>
+                      <div t-attf-class="form-group row #{error and 'category' in error and 'has-error' or ''}">
+                           <label class="control-label col-md-2"></label>
+                          <label class="control-label col-md-2" for="name">Phòng ban/Bộ phận</label>
+                          <input type="text" class="form-control col-md-8" name="department" required="True" t-attf-value="#{department or ''}"/>
+                      </div>
+                       <div t-attf-class="form-group row #{error and 'category' in error and 'has-error' or ''}">
+                           <label class="control-label col-md-2"></label>
+                          <label class="control-label col-md-2" for="name">Số điện thoại</label>
+                          <input type="text" class="form-control col-md-8" name="phone" required="True" t-attf-value="#{phone or ''}"/>
+                      </div>
+                      <div t-attf-class="form-group row #{error and 'category' in error and 'has-error' or ''}">
+                          <label class="control-label col-md-2"></label>
+                          <label class="control-label col-md-2" for="name">Bộ phận hỗ trợ</label>
+                          <select class="form-control col-md-8" id="category" name="category">
+                              <t t-foreach="categories" t-as="category">
+                                  <option t-attf-value="#{category.id}"><t t-esc="category.name"/></option>
+                              </t>
+                          </select>
+                      </div>
+                      <div name="subject_container" t-attf-class="form-group row #{error and 'subject' in error and 'has-error' or ''}">
+                          <label class="control-label col-md-2"></label>
+                          <label class="control-label col-md-2" for="subject">Chủ đề</label>
+                           <input type="subject" class="form-control col-md-8" name="subject" required="True"/>
+                      </div>
+                      <div name="file_container" t-attf-class="form-group row #{error and 'file' in error and 'has-error' or ''}">
+                          <label class="control-label col-md-2"></label>
+                          <label class="control-label col-md-2" for="file">Tệp đính kèm</label>
+                          <label class="custom-file col-md-8">
+                              <input name="file" id="file" type="file" multiple="multiple"/>
+                              <span class="custom-file-control"/>
+                          </label>
+                      </div>
+                      <div t-attf-class="form-group row #{error and 'description' in error and 'has-error' or ''}">
+                          <label class="control-label col-md-2"></label>
+                          <label class="control-label col-md-2" for="description">Mô tả</label>
+                          <textarea  class="form-control col-md-8" name="description" rows="6" required="True"></textarea>
+                      </div>
+                      <div class="form-group" style="text-align: center;">
+                          <button class="btn btn-primary btn-lg">Gửi hỗ trợ</button>
+                      </div>
+                  </form>
+
+                </div>
+          </div>
+        </template>
+
+        <template id="support_thank_you" name="Support Ticket Thank You">
+            <t t-call="website.layout">
+                <div id="wrap" class="oe_structure oe_empty">
+                    <div class="container mt16">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <img src="/hrm_maintenance/static/src/img/788.jpg" style="width:100%"/>
+<!--                                    <h1 class="text-center">Thank You!</h1>-->
+<!--                                    <h3 class="text-muted text-center">Chúng tôi sẽ ghi nhận những đóng góp của bạn!!!</h3>-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </t>
+        </template>
+
+        <template id="support_ticket_survey_page" name="Support Ticket Survey">
+            <t t-call="website.layout">
+                <div class="container">
+
+                    <div class="mt16 mb16">
+                        <h1 class="text-center" style="font-family:Tapestry; font-size:55px"><b style="color:#2785a1">Ban CNTT đang </b> <b style="color:#2785a1">lắng nghe</b> </h1>
+                    </div>
+
+                    <blockquote>Nội dung yêu cầu: <t t-raw="support_ticket.name"/></blockquote>
+
+                    <form method="POST" t-attf-action="/support/survey/process/#{support_ticket.portal_access_key}">
+                        <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+
+                        <style>
+                        label > input{ /* HIDE RADIO */
+                          visibility: hidden; /* Makes input not-clickable */
+                          position: absolute; /* Remove input from document flow */
+                        }
+
+                        label > input + img{ /* IMAGE STYLES */
+                          cursor:pointer;
+                          border:2px solid transparent;
+                        }
+
+                        label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
+                          border:2px solid #f00;
+                        }
+                        .hide {
+                            clear: both;
+                          display: none;
+                        }
+                        </style>
+                        <script>
+                        function show1(){
+                          document.getElementById('div1').style.display ='block';
+                          document.getElementById('div5').style.display ='none';
+                        }
+                        function show5(){
+                          document.getElementById('div1').style.display ='none';
+                          document.getElementById('div5').style.display ='block';
+                        }
+                        </script>
+                        <div style="text-align: center;">
+                            <div>
+                                <label class="text" onclick="show5();">
+                                    <input type="radio" name="rating" value="5"/>
+                                    <img src="/hrm_maintenance/static/src/img/5-star.jpg"/>
+                                    <div class="text-s">
+                                        <div style="color:#2785a1">Rất tốt</div>
+                                    </div>
+                                </label>
+
+                                <label class="text" onclick="show5();">
+                                    <input type="radio" name="rating" value="4" />
+                                    <img src="/hrm_maintenance/static/src/img/4-star.jpg"/>
+                                    <div class="text-s">
+                                        <div style="color:#2785a1">Tốt</div>
+                                    </div>
+                                </label>
+
+                                <label class="text" onclick="show1();">
+                                    <input type="radio" name="rating" value="3" />
+                                    <img src="/hrm_maintenance/static/src/img/3-star.jpg"/>
+                                    <div class="text-s">
+                                        <div style="color:#2785a1">Trung bình</div>
+                                    </div>
+                                </label>
+
+                                <label class="text" onclick="show1();">
+                                    <input type="radio" name="rating" value="2" />
+                                    <img src="/hrm_maintenance/static/src/img/2-star.jpg"/>
+                                    <div class="text-s">
+                                        <div style="color:#2785a1">Kém</div>
+                                    </div>
+                                </label>
+
+                                <label class="text" onclick="show1();">
+                                    <input type="radio" name="rating" value="1" />
+                                    <img src="/hrm_maintenance/static/src/img/1-star.jpg"/>
+                                    <div class="text-s">
+                                        <div style="color:#2785a1">Rất kém</div>
+                                    </div>
+                                </label>
+                            </div>
+                            <div>
+                            <div class="hide" id="div1" style="color:#e32b2b">Ban Công nghệ thông tin xin lỗi vì chưa làm anh/chị hài lòng, vui lòng cho biết lý do để Ban Công nghệ thông tin cải tiến dịch vụ tốt hơn</div>
+                            <div class="hide" id="div5" style="color:#2785a1">Ban Công nghệ thông tin cảm ơn anh/chị đã sử dụng dịch vụ hỗ trợ!</div>
+                            </div>
+                            <br/>
+                            <div class="form-group">
+                                <textarea class="form-control" rows="5" name="comment" placeholder="Thêm ý kiến đóng góp của anh chị về dịch vụ hỗ trợ.."></textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <button class="btn btn-primary btn-lg">Gửi đánh giá</button>
+                            </div>
+                         </div>
+                    </form>
+
+                </div>
+            </t>
+        </template>
+
+        <template id="support_survey_thank_you" name="Support Ticket Survey Thank You">
+            <t t-call="website.layout">
+                <div id="wrap" class="oe_structure oe_empty">
+                    <section>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <img src="/hrm_maintenance/static/src/img/img.jpg" style="width:100%"/>
+<!--                                    <h1 class="text-center">Thank You!</h1>-->
+<!--                                    <h3 class="text-muted text-center">Chúng tôi sẽ ghi nhận những đóng góp của bạn!!!</h3>-->
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </t>
+        </template>
+    </data>
+</odoo>

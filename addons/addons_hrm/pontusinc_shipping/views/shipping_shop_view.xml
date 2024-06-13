@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="shipping_shop_tree_view" model="ir.ui.view">
+        <field name="name">Shipping shop tree view</field>
+        <field name="model">shipping.shop</field>
+        <field name="arch" type="xml">
+            <tree editable="bottom">
+                <field name="name"/>
+                <field name="user_id"/>
+                <field name="shop_id"/>
+                <field name="phone"/>
+                <field name="address"/>
+                <field name="city_id"/>
+                <field name="district_id"/>
+                <field name="ward_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_shipping_config" model="ir.actions.act_window">
+        <field name="name">Shipping config</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">shipping.config</field>
+        <field name="view_mode">tree</field>
+        <field name="domain"></field>
+    </record>
+
+</odoo>

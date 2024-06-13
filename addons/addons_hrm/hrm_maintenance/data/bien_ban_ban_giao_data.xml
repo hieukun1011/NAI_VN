@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model="temp.creation" id="bien_ban_ban_giao">
+            <field name="template" type="base64" file="hrm_maintenance/data/BBBG.docx"/>
+            <field name="name">Biên bản bàn giao</field>
+            <field name="max_samples">3</field>
+            <field name="template_name">BBBG.docx</field>
+            <field name="table_marks">eq_name, note</field>
+            <field name="main_model" model="ir.model" search="[('model', '=', 'ems.equipment.export')]"/>
+        </record>
+        <record model="fields.line" id="bien_ban_ban_giao_fields_line_1">
+            <field name="line" ref="bien_ban_ban_giao"/>
+            <field name="python_code">export_date</field>
+            <field name="replacement_format">{'time_format': 'Ngày %d tháng %m năm %Y'}</field>
+            <field name="temp_mark">date</field>
+        </record>
+        <record model="fields.line" id="bien_ban_ban_giao_fields_line_2">
+            <field name="line" ref="bien_ban_ban_giao"/>
+            <field name="python_code">category_id</field>
+            <field name="temp_mark">dept</field>
+        </record>
+        <record model="fields.line" id="bien_ban_ban_giao_fields_line_3">
+            <field name="line" ref="bien_ban_ban_giao"/>
+            <field name="python_code">employee_id.name</field>
+            <field name="temp_mark">give</field>
+        </record>
+<!--        <record model="fields.line" id="bien_ban_ban_giao_fields_line_4">-->
+<!--            <field name="line" ref="bien_ban_ban_giao"/>-->
+<!--            <field name="python_code">employee_id.job_id.name</field>-->
+<!--            <field name="temp_mark">give_job</field>-->
+<!--        </record>-->
+        <record model="fields.line" id="bien_ban_ban_giao_fields_line_5">
+            <field name="line" ref="bien_ban_ban_giao"/>
+            <field name="python_code">employee_use.name</field>
+            <field name="temp_mark">get</field>
+        </record>
+        <record model="fields.line" id="bien_ban_ban_giao_fields_line_6">
+            <field name="line" ref="bien_ban_ban_giao"/>
+            <field name="python_code">employee_use.job_id.name</field>
+            <field name="temp_mark">get_job</field>
+        </record>
+<!--        <record model="fields.line" id="bien_ban_ban_giao_fields_line_10">-->
+<!--            <field name="line" ref="bien_ban_ban_giao"/>-->
+<!--            <field name="python_code">device_ids.stt</field>-->
+<!--            <field name="temp_mark">STT</field>-->
+<!--        </record>-->
+<!--        <record model="fields.line" id="bien_ban_ban_giao_fields_line_11">-->
+<!--            <field name="line" ref="bien_ban_ban_giao"/>-->
+<!--            <field name="python_code">device_ids.list_price</field>-->
+<!--            <field name="temp_mark">amount</field>-->
+<!--        </record>-->
+        <record model="fields.line" id="bien_ban_ban_giao_fields_line_7">
+            <field name="line" ref="bien_ban_ban_giao"/>
+            <field name="python_code">device_ids.name</field>
+            <field name="temp_mark">eq_name</field>
+        </record>
+        <!--        <record model="fields.line" id="bien_ban_ban_giao_fields_line_8">-->
+        <!--            <field name="line" ref="bien_ban_ban_giao"/>-->
+        <!--            <field name="python_code">device_ids.note</field>-->
+        <!--            <field name="temp_mark">note</field>-->
+        <!--        </record>-->
+<!--        <record model="fields.line" id="bien_ban_ban_giao_fields_line_9">-->
+<!--            <field name="line" ref="bien_ban_ban_giao"/>-->
+<!--            <field name="python_code">device_ids.uom_id.name</field>-->
+<!--            <field name="temp_mark">unit</field>-->
+<!--        </record>-->
+<!--        <record model="ir.actions.act_window" id="act_bien_ban_ban_giao">-->
+<!--            <field name="name">Biên bản bàn giao</field>-->
+<!--            <field name="type">ir.actions.act_window</field>-->
+<!--            <field name="res_model">temp.wizard</field>-->
+<!--            <field name="view_mode">tree,form</field>-->
+<!--            <field name="target">inline</field>-->
+<!--            <field name="view_id" ref="ms_templates.report_wizard"/>-->
+<!--            <field name="binding_model_id" model="ir.model" search="[('model', '=', 'ems.equipment.export')]"/>-->
+<!--            <field name="context" eval="{'default_template_id': ref('bien_ban_ban_giao')}"/>-->
+<!--        </record>-->
+    </data>
+</odoo>

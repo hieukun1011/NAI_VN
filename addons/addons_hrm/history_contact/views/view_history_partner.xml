@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="res_partner_view_form_inherit" model="ir.ui.view">
+        <field name="name">res.partner.view.form.inherit.history.contact</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//sheet" position="before">
+                <header>
+                    <button name="action_open_imint" type="object" class="btn-primary" icon="fa-search" string="Search imint"/>
+                </header>
+            </xpath>
+            <div name="button_box" position="inside">
+                <button name="action_view_traces" type="object" class="oe_stat_button" icon="fa-envelope">
+                    <div class="o_field_widget o_stat_info">
+                        <span class="o_stat_text">Email marketing</span>
+                    </div>
+                </button>
+                <button name="action_open_shipping" type="object" class="oe_stat_button" icon="fa-truck">
+                    <div class="o_field_widget o_stat_info">
+                        <span class="o_stat_text">Shipping</span>
+                    </div>
+                </button>
+                <button name="action_open_update_partner" type="object" class="oe_stat_button" icon="fa-save">
+                    <div class="o_field_widget o_stat_info">
+                        <span class="o_stat_text">Update info</span>
+                    </div>
+                </button>
+                <button name="action_popup_history_tracking" type="object" class="oe_stat_button" icon="fa-id-card-o">
+                    <div class="o_field_widget o_stat_info">
+                        <span class="o_stat_text">History action</span>
+                    </div>
+                </button>
+                <button name="action_open_popup_profiling" type="object" class="oe_stat_button" icon="fa-globe">
+                    <div class="o_field_widget o_stat_info">
+                        <span class="o_stat_text">Search profiling</span>
+                    </div>
+                </button>
+            </div>
+            <notebook position="inside">
+                <page name="info_partner" string="Information">
+                    <group>
+                        <field name="source_name"/>
+                        <field name="nick_name"/>
+                        <field name="facebook_id"/>
+                        <field name="company_name"/>
+                        <field name="school_name"/>
+                        <field name="province"/>
+                        <field name="hometown"/>
+                        <field name="checkin_location"/>
+                    </group>
+                </page>
+            </notebook>
+        </field>
+    </record>
+
+</odoo>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="report_attendance_template" model="ir.attachment">
+            <field name="name">BÁO CÁO CHẤM CÔNG</field>
+            <field name="type">binary</field>
+            <field name="datas" type="base64"
+                   file="to_attendance_device/static/xls/bao_cao_cham_cong.xlsx"/>
+<!--            <field name="datas_fname">bao_cao_vat_tu_theo_khoa_hoc.xlsx</field>-->
+        </record>
+
+    </data>
+</odoo>

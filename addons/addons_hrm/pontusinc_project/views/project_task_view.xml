@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="pontusinc_view_task_form2">
+            <field name="name">project.task.form.inherited</field>
+            <field name="model">project.task</field>
+            <field name="inherit_id" ref="project.view_task_form2"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='personal_stage_type_id']" position="attributes">
+                    <attribute name="attrs">{'invisible': ['|', ('project_id', '!=', False), ('no_project', '!=',
+                        False)]}
+                    </attribute>
+                </xpath>
+                <xpath expr="//field[@name='project_id']" position="attributes">
+                    <attribute name="attrs">{'invisible': ['|', ('parent_id', '!=', False), ('no_project', '!=',
+                        False)]}
+                    </attribute>
+                </xpath>
+                <xpath expr="//field[@name='user_ids']" position="attributes">
+                    <attribute name="required">1</attribute>
+                </xpath>
+                <xpath expr="//page[@name='extra_info']" position="attributes">
+                    <attribute name="groups">project.group_project_user</attribute>
+                </xpath>
+                <xpath expr="//page/group/group/field[@name='parent_id']" position="attributes">
+                    <attribute name="groups">project.group_project_user</attribute>
+                </xpath>
+                <xpath expr="//field[@name='email_from']" position="attributes">
+                    <attribute name="groups">project.group_project_user</attribute>
+                </xpath>
+                <xpath expr="//field[@name='email_cc']" position="attributes">
+                    <attribute name="groups">project.group_project_user</attribute>
+                </xpath>
+                <xpath expr="//field[@name='displayed_image_id']" position="attributes">
+                    <attribute name="groups">project.group_project_user</attribute>
+                </xpath>
+                <xpath expr="//field[@name='date_assign']" position="attributes">
+                    <attribute name="groups">project.group_project_user</attribute>
+                </xpath>
+                <xpath expr="//field[@name='date_last_stage_update']" position="attributes">
+                    <attribute name="groups">project.group_project_user</attribute>
+                </xpath>
+                <xpath expr="//field[@name='display_project_id']" position="after">
+                    <field name="no_project"
+                           attrs="{'invisible': [('project_id', '=', True), ('project_id', '=', %(pontusinc_project.project_internal)s)]}"/>
+                </xpath>
+                <xpath expr="//field[@name='user_ids']" position="after">
+                    <field name="point" attrs="{'readonly' :[('is_confirm_point', '=', True)]}"/>
+                    <field name="is_confirm_point" invisible="1"/>
+                    <field name="show_button" invisible="1"/>
+                    <label for="employee_point"/>
+                    <div class="o_address_format">
+                        <div class="o_row">
+                            <field name="employee_point" attrs="{'readonly' :[('is_confirm_point', '=', True)]}"/>
+                            <field name="is_confirm_point" readonly="1"
+                                   attrs="{'invisible' :[('show_button', '=', True)]}"/>
+                            <button name="confirm_point" type="object"
+                                    string="Confirm" class="btn-apply" icon="fa-check"
+                                    attrs="{'invisible' :['|', ('show_button', '=', True), ('is_confirm_point', '=', True)]}"
+                                    groups="pontusinc_project.group_project_manager"/>
+                            <button name="return_confirm_point" type="object"
+                                    string="Cancel" class="btn-warning" icon="fa-rotate-left"
+                                    attrs="{'invisible' :[('is_confirm_point', '=', False)]}"
+                                    groups="pontusinc_project.group_project_manager"/>
+                        </div>
+                    </div>
+                </xpath>
+
+                <xpath expr="//div[hasclass('oe_button_box')]" position="inside">
+                    <button class="oe_stat_button" type="object" string="History change state" name="action_open_log"
+                            icon="fa-rotate-left">
+                    </button>
+                </xpath>
+                <xpath expr="//field[@name='milestone_id']" position="after">
+                    <!--                    <field name="backlog_id" required="1" attrs="{'invisible': [('project_id', '=', False)]}" options="{'no_create': True, 'no_open': True}"/>-->
+                    <field name="type_task" required="1"/>
+                </xpath>
+                <xpath expr="//field[@name='child_ids']/tree/field[@name='milestone_id']" position="attributes">
+                    <attribute name="optional">show</attribute>
+                    <field name="point"/>
+                    <field name="employee_point"/>
+                </xpath>
+                <xpath expr="//field[@name='child_ids']/tree/field[@name='milestone_id']" position="after">
+                    <field name="point" decoration-success="not is_confirm_point"/>
+                    <field name="employee_point" decoration-success="is_confirm_point"/>
+                    <field name="show_button" invisible="1"/>
+                    <field name="is_confirm_point" invisible="1"/>
+                    <button name="confirm_point" type="object" string="Confirm" class="btn-apply" icon="fa-check"
+                            attrs="{'invisible' :['|', ('show_button', '=', True), ('is_confirm_point', '=', True)]}"
+                            groups="pontusinc_project.group_project_manager"/>
+                    <button name="return_confirm_point" type="object" string="Cancel" class="btn-warning"
+                            icon="fa-rotate-left" attrs="{'invisible' :[('is_confirm_point', '=', False)]}"
+                            groups="pontusinc_project.group_project_manager"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="project.view_task_kanban_inherit_my_task" model="ir.ui.view">
+            <field name="name">project.task.kanban.inherit.my.task</field>
+            <field name="model">project.task</field>
+            <field name="inherit_id" ref="project.view_task_kanban"/>
+            <field name="mode">primary</field>
+            <field name="arch" type="xml">
+                <xpath expr="//kanban" position="attributes">
+                    <attribute name="default_group_by">personal_stage_type_ids</attribute>
+                </xpath>
+                <xpath expr="//div[hasclass('o_kanban_record_headings')]/span" position="after">
+                    <div>
+                        <b class="text-muted">point:</b>
+                        <field name="point"/>
+                    </div>
+                    <div>
+                        <b class="text-muted">Nhân sự đánh point:</b>
+                        <field name="employee_point"/>
+                    </div>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="pontusinc_view_form_project_task" model="ir.ui.view">
+            <field name="name">Pontusinc project task view form</field>
+            <field name="model">project.task</field>
+            <field name="inherit_id" ref="hr_timesheet.view_task_form2_inherited"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='timesheet_ids']/tree//field[@name='unit_amount']" position="before">
+                    <field name="point" sum="Total point"/>
+                </xpath>
+                <xpath expr="//field[@name='timesheet_ids']/tree//field[@name='name']" position="attributes">
+                    <attribute name="widget">html</attribute>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="project.quick_create_task_form" model="ir.ui.view">
+            <field name="name">project.task.form.quick_create</field>
+            <field name="model">project.task</field>
+            <field name="priority">1000</field>
+            <field name="arch" type="xml">
+                <form class="o_form_project_tasks">
+                    <group>
+                        <field name="name" string="Task Title" placeholder="e.g. Send Invitations"/>
+                        <field name="project_id" widget="project_private_task"
+                               invisible="context.get('default_project_id', False)" placeholder="Private"
+                               class="o_project_task_project_field"/>
+                        <field name="user_ids" options="{'no_open': True, 'no_quick_create': True}"
+                               domain="[('share', '=', False), ('active', '=', True)]"
+                               widget="many2many_avatar_user"/>
+                        <field name="company_id" invisible="1"/>
+                        <field name="parent_id" invisible="1" groups="base.group_no_one"/>
+                        <field name="description" invisible="1"/>
+                        <field name="point"/>
+                        <field name="employee_point"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <record id="pontusinc_view_task_kanban_inherit_my_task" model="ir.ui.view">
+            <field name="name">project.task.kanban.inherit.my.task</field>
+            <field name="model">project.task</field>
+            <field name="inherit_id" ref="project.view_task_kanban"/>
+            <field name="mode">primary</field>
+            <field name="arch" type="xml">
+                <!--                <xpath expr="//kanban" position="attributes">-->
+                <!--                    <attribute name="quick_create_view">pontusinc_quick_create_task_form</attribute>-->
+                <!--                </xpath>-->
+                <xpath expr="//div[hasclass('o_kanban_record_headings')]/span" position="after">
+                    <div>
+                        <b class="text-muted">point:</b>
+                        <field name="point"/>
+                    </div>
+                    <div>
+                        <b class="text-muted">Nhân sự đánh point:</b>
+                        <field name="employee_point"/>
+                    </div>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="pontusinc_view_task_tree2_inherited" model="ir.ui.view">
+            <field name="name">pontusinc.project.task.tree.inherited</field>
+            <field name="model">project.task</field>
+            <field name="inherit_id" ref="project.view_task_tree2"/>
+            <field eval="2" name="priority"/>
+            <field name="arch" type="xml">
+                <field name="tag_ids" position="before">
+                    <field name="point_done" string="Point"/>
+                </field>
+            </field>
+        </record>
+
+        <record id="pontusinc_view_task_search_form_extended" model="ir.ui.view">
+            <field name="name">project.task.search.form.extended</field>
+            <field name="model">project.task</field>
+            <field name="inherit_id" ref="project.view_task_search_form_extended"></field>
+            <field name="mode">primary</field>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='user_ids']" position='after'>
+                    <filter string="Last Stage Update" context="{'group_by':'date_last_stage_update:week'}"
+                            name="date_last_stage_update"/>
+                    <filter string="Department" context="{'group_by':'department_ids'}"
+                            name="group_department"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="project.action_view_all_task" model="ir.actions.act_window">
+            <field name="search_view_id" ref="pontusinc_view_task_search_form_extended"/>
+            <field name="context">{
+                'search_default_my_tasks': 1,
+                'search_default_stage': 1,
+                'search_default_date_last_stage_update': 1,
+                'all_task': 0,
+                'default_user_ids': [(4, uid)]}
+            </field>
+        </record>
+
+        <!--        <record id="project.act_project_project_2_project_task_all" model="ir.actions.act_window">-->
+        <!--            <field name="name">Tasks</field>-->
+        <!--            <field name="res_model">project.task</field>-->
+        <!--            <field name="view_mode">kanban,tree,form,calendar,pivot,graph,activity</field>-->
+        <!--            <field name="domain">[('display_project_id', '=', active_id)]</field>-->
+        <!--            <field name="context">{-->
+        <!--                'default_project_id': active_id,-->
+        <!--                'show_project_update': True,-->
+        <!--            }</field>-->
+        <!--            <field name="search_view_id" ref="view_task_search_form"/>-->
+        <!--            <field name="help" type="html">-->
+        <!--                <p class="o_view_nocontent_smiling_face">-->
+        <!--                    No tasks found. Let's create one!-->
+        <!--                </p>-->
+        <!--                <p>-->
+        <!--                    Keep track of the progress of your tasks from creation to completion.<br/>-->
+        <!--                    Collaborate efficiently by chatting in real-time or via email.-->
+        <!--                </p>-->
+        <!--            </field>-->
+        <!--        </record>-->
+
+        <record id="project.project_task_kanban_action_view" model="ir.actions.act_window.view">
+            <field name="view_id" ref="pontusinc_project.pontusinc_view_task_kanban_inherit_my_task"/>
+        </record>
+
+    </data>
+</odoo>

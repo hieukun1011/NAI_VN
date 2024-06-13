@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates id="shipping_template" xml:space="preserve">
+    <t t-name="Shippingdashboard">
+         <div class="oh_dashboards">
+            <div class="container-fluid my-5 o_hr_dashboard"/>
+        </div>
+    </t>
+    <t t-name="LoginUser">
+        <section class="dashboard_main_section" id="main_section_login">
+            <div class="row">
+                <div class="col-sm-12 mb-4">
+                    <div class="row">
+                        <div class="col-12 col-sm-12 col-md-8">
+                            <h2 class="section-header">Dashboard</h2>
+                        </div>
+                    </div>
+                    <hr/>
+                </div>
+            </div>
+        </section>
+    </t>
+    <t t-name="Managercrm">
+        <section class="dashboard_main_section" id="main_section_manager">
+            <div class="crm_dash_cards row">
+                <div class="container-shipping-dashboard">
+                    <div class="box-shipping">
+                        <p class="title-box-shipping">Chỉ số đáp ứng đơn hàng</p>
+                        <p class="num-shipping">12</p>
+                        <div class="group-shipping">
+                            <div class="group_text">
+                                <svg class="o-cf-icon arrow-up" width="20" height="20" focusable="false" viewBox="0 0 448 512">
+                                    <path
+                                            fill="#00A04A"
+                                            t-att-style="color"
+                                            d="M34.9 289.5l-22.2-22.2c-9.4-9.4-9.4-24.6 0-33.9L207 39c9.4-9.4 24.6-9.4 33.9 0l194.3 194.3c9.4 9.4 9.4 24.6 0 33.9L413 289.4c-9.5 9.5-25 9.3-34.3-.4L264 168.6V456c0 13.3-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24V168.6L69.2 289.1c-9.3 9.8-24.8 10-34.3.4z"
+                                    />
+                                </svg>
+                                <p class="group-shipping-text">20%</p>
+                            </div>
+                            <p class="group_text2">Kể từ giai đoạn trước</p>
+                        </div>
+                    </div>
+                    <div class="box-shipping">
+                        <p class="title-box-shipping">Chỉ số thời gian giao hàng</p>
+                        <p class="num-shipping">12</p>
+                        <div class="group-shipping">
+                            <div class="group_text">
+                                <svg class="o-cf-icon arrow-up" width="20" height="20" focusable="false" viewBox="0 0 448 512">
+                                    <path
+                                            fill="#00A04A"
+                                            t-att-style="color"
+                                            d="M34.9 289.5l-22.2-22.2c-9.4-9.4-9.4-24.6 0-33.9L207 39c9.4-9.4 24.6-9.4 33.9 0l194.3 194.3c9.4 9.4 9.4 24.6 0 33.9L413 289.4c-9.5 9.5-25 9.3-34.3-.4L264 168.6V456c0 13.3-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24V168.6L69.2 289.1c-9.3 9.8-24.8 10-34.3.4z"
+                                    />
+                                </svg>
+                                <p class="group-shipping-text">20%</p>
+                            </div>
+                            <p class="group_text2">Kể từ giai đoạn trước</p>
+                        </div>
+                    </div>
+                    <div class="box-shipping">
+                        <p class="title-box-shipping">Chỉ số tồn kho</p>
+                        <p class="num-shipping">12</p>
+                        <div class="group-shipping">
+                            <div class="group_text">
+                                <svg class="o-cf-icon arrow-up" width="20" height="20" focusable="false" viewBox="0 0 448 512">
+                                    <path
+                                            fill="#00A04A"
+                                            t-att-style="color"
+                                            d="M34.9 289.5l-22.2-22.2c-9.4-9.4-9.4-24.6 0-33.9L207 39c9.4-9.4 24.6-9.4 33.9 0l194.3 194.3c9.4 9.4 9.4 24.6 0 33.9L413 289.4c-9.5 9.5-25 9.3-34.3-.4L264 168.6V456c0 13.3-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24V168.6L69.2 289.1c-9.3 9.8-24.8 10-34.3.4z"
+                                    />
+                                </svg>
+                                <p class="group-shipping-text">20%</p>
+                            </div>
+                            <p class="group_text2">Kể từ giai đoạn trước</p>
+                        </div>
+                    </div>
+                    <div class="box-shipping">
+                        <p class="title-box-shipping">Chỉ số độ chính xác vận chuyển</p>
+                        <p class="num-shipping">12</p>
+                        <div class="group-shipping">
+                            <div class="group_text">
+                                <svg class="o-cf-icon arrow-up" width="20" height="20" focusable="false" viewBox="0 0 448 512">
+                                    <path
+                                            fill="#00A04A"
+                                            t-att-style="color"
+                                            d="M34.9 289.5l-22.2-22.2c-9.4-9.4-9.4-24.6 0-33.9L207 39c9.4-9.4 24.6-9.4 33.9 0l194.3 194.3c9.4 9.4 9.4 24.6 0 33.9L413 289.4c-9.5 9.5-25 9.3-34.3-.4L264 168.6V456c0 13.3-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24V168.6L69.2 289.1c-9.3 9.8-24.8 10-34.3.4z"
+                                    />
+                                </svg>
+                                <p class="group-shipping-text">20%</p>
+                            </div>
+                            <p class="group_text2">Kể từ giai đoạn trước</p>
+                        </div>
+                    </div>
+                    <div class="box-shipping">
+                        <p class="title-box-shipping">Chỉ số chi phí vận chuyển</p>
+                        <p class="num-shipping">12</p>
+                        <div class="group-shipping">
+                            <div class="group_text">
+                                <svg class="o-cf-icon arrow-up" width="20" height="20" focusable="false" viewBox="0 0 448 512">
+                                    <path
+                                            fill="#00A04A"
+                                            t-att-style="color"
+                                            d="M34.9 289.5l-22.2-22.2c-9.4-9.4-9.4-24.6 0-33.9L207 39c9.4-9.4 24.6-9.4 33.9 0l194.3 194.3c9.4 9.4 9.4 24.6 0 33.9L413 289.4c-9.5 9.5-25 9.3-34.3-.4L264 168.6V456c0 13.3-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24V168.6L69.2 289.1c-9.3 9.8-24.8 10-34.3.4z"
+                                    />
+                                </svg>
+                                <p class="group-shipping-text">20%</p>
+                            </div>
+                            <p class="group_text2">Kể từ giai đoạn trước</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div style="width: 100%; height: 100%; color: #7F4282; font-size: 24px; font-family: Roboto; font-weight: 700; word-wrap: break-word">Tình hình giao hàng và đối soát</div>
+                <div class="funnel_chart_div col-sm-12 col-md-6">
+                    <div class="chart-container card-shadow">
+                        <h2>TÌNH HÌNH GIAO HÀNG</h2>
+                        <p>Dữ liệu được tổng hợp trong 30 ngày gần nhất</p>
+                        <hr/>
+                        <div class="group_box_order">
+                            <div class="box_order">
+                                <img class="image_box" src="/pontusinc_shipping/static/description/open-box.png" />
+                                <p class="text_box_order">Chờ đóng gói</p>
+                                <p class="text_box_order">0 Đơn</p>
+                            </div>
+                            <div class="box_order">
+                                <img class="image_box" src="/pontusinc_shipping/static/description/open-box.png" />
+                                <p class="text_box_order">Chờ đóng gói</p>
+                                <p class="text_box_order">0 Đơn</p>
+                            </div>
+                            <div class="box_order">
+                                <img class="image_box" src="/pontusinc_shipping/static/description/open-box.png" />
+                                <p class="text_box_order">Chờ đóng gói</p>
+                                <p class="text_box_order">0 Đơn</p>
+                            </div>
+                            <div class="box_order">
+                                <img class="image_box" src="/pontusinc_shipping/static/description/open-box.png" />
+                                <p class="text_box_order">Chờ đóng gói</p>
+                                <p class="text_box_order">0 Đơn</p>
+                            </div>
+                            <div class="box_order">
+                                <img class="image_box" src="/pontusinc_shipping/static/description/open-box.png" />
+                                <p class="text_box_order">Chờ đóng gói</p>
+                                <p class="text_box_order">0 Đơn</p>
+                            </div>
+                            <div class="box_order">
+                                <img class="image_box" src="/pontusinc_shipping/static/description/open-box.png" />
+                                <p class="text_box_order">Chờ đóng gói</p>
+                                <p class="text_box_order">0 Đơn</p>
+                            </div>
+                            <div class="box_order">
+                                <img class="image_box" src="/pontusinc_shipping/static/description/open-box.png" />
+                                <p class="text_box_order">Chờ đóng gói</p>
+                                <p class="text_box_order">0 Đơn</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="year_to_date_graph_div col-sm-12 col-md-6">
+                    <div class="chart-container card-shadow">
+                        <h2>TÌNH HÌNH ĐỐI SOÁT</h2>
+                        <p>Dữ liệu được tổng hợp trong 30 ngày gần nhất</p>
+                        <hr/>
+                        <div class="graph_canvas" style="margin-top: 30px;">
+                            <canvas class="annual_target" width="340px" height="400px"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-5">
+                <div class="upcoming_activities_div col-12 col-sm-12 col-md-6">
+                    <div class="chart-container card-shadow">
+                        <h3 class="h5">Upcoming Activities</h3>
+                        <hr/>
+                        <div class="crm_scroll_table">
+                            <div class="items-table">
+                                <div class="item-container">
+                                    <t t-foreach="widget.upcoming_events" t-as="activity">
+                                    <div class="item-header">
+                                        <div class="count-container">
+                                            <t t-esc="activity[1]"/>
+                                        </div>
+                                        <div class="item-title pl-3">
+                                            <div class="item-content">
+                                                <ul>
+                                                    <li>
+                                                        <t t-set="lang_cu" t-value="widget.current_lang"/>
+                                                        <t t-if="lang_cu in activity[4]">
+                                                        Activity:
+                                                        <span style="font-size: 16px;color: #4c4c4c;">
+                                                            <t t-esc="activity[4][lang_cu]"/>
+                                                        </span>
+                                                        </t>
+                                                    </li>
+                                                    <li>
+                                                        Name:
+                                                        <span style="font-size: 15px;color: #4c4c4c;">
+                                                            <t t-esc="activity[3]"/>
+                                                        </span>
+                                                    </li>
+                                                    <li t-if="activity[2]">Summary:
+                                                        <span style="font-size: 13px;color: #4c4c4c;">
+                                                            <t t-esc="activity[2]"/>
+                                                        </span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    </t>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="revenue_count_pie_div col-12 col-sm-12 col-md-6">
+                     <div class="chart-container card-shadow">
+                        <h3 class="h5">Total Revenue by Salesperson</h3>
+                         <hr/>
+                         <div class="graph_canvas">
+                            <canvas class="revenue_count_pie_canvas" width="200" height="120"/>
+                         </div>
+                     </div>
+                 </div>
+            </div>
+        </section>
+    </t>
+
+</templates>

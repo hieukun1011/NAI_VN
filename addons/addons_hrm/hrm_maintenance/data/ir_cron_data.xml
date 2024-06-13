@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="ir_cron_data_device_update_maintenance" model="ir.cron">
+            <field name="name">Device: update maintenance</field>
+            <field name="model_id" ref="model_hr_device_main"/>
+            <field name="type">ir.actions.server</field>
+            <field name="state">code</field>
+            <field name="code">model.update_maintenance()</field>
+            <field name="interval_number">1</field>
+            <field name="interval_type">days</field>
+            <field name="numbercall">-1</field>
+        </record>
+
+        <record id="seq_maintenance_code_action" model="ir.sequence">
+            <field name="name">HR maintenance Code</field>
+            <field name="code">maintenance.code.action</field>
+            <field name="prefix">YC%(y)s</field>
+            <field name="padding">6</field>
+            <field name="company_id" eval="False"/>
+        </record>
+    </data>
+</odoo>

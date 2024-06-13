@@ -1,0 +1,2065 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* diligo_device
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-03-25 03:55+0000\n"
+"PO-Revision-Date: 2020-03-25 03:55+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: diligo_device
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device__product_variant_count
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_extra__product_variant_count
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main__product_variant_count
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_parts_in__product_variant_count
+msgid "# Product Variants"
+msgstr "SL Biến thể Sản phẩm"
+
+#. module: diligo_device
+#: model_terms:ir.ui.view,arch_db:diligo_device.device_extra_kanban_view
+msgid "<span>Linh kiện/phụ kiện</span>"
+msgstr ""
+
+#. module: diligo_device
+#: model_terms:ir.ui.view,arch_db:diligo_device.view_device_main_kanban
+msgid "<span>Thiết bị phụ tùng</span>"
+msgstr ""
+
+#. module: diligo_device
+#: model_terms:ir.ui.view,arch_db:diligo_device.view_diligo_device_extra_form
+#: model_terms:ir.ui.view,arch_db:diligo_device.view_diligo_device_parts_in_form
+msgid "<strong>Description:</strong>"
+msgstr "<strong>Mô tả</strong>"
+
+#. module: diligo_device
+#: model_terms:ir.ui.view,arch_db:diligo_device.device_extra_kanban_view
+#: model_terms:ir.ui.view,arch_db:diligo_device.device_parts_in_kanban_view
+#: model_terms:ir.ui.view,arch_db:diligo_device.view_device_main_kanban
+msgid "<strong>Mã:</strong>"
+msgstr ""
+
+#. module: diligo_device
+#: model_terms:ir.ui.view,arch_db:diligo_device.view_diligo_device_main_form
+msgid "<strong>Mô tả:</strong>"
+msgstr ""
+
+#. module: diligo_device
+#: model_terms:ir.ui.view,arch_db:diligo_device.view_device_main_kanban
+msgid "<strong>Nhân viên:</strong>"
+msgstr ""
+
+#. module: diligo_device
+#: model_terms:ir.ui.view,arch_db:diligo_device.view_device_main_kanban
+msgid "<strong>Phòng ban:</strong>"
+msgstr ""
+
+#. module: diligo_device
+#: model:ir.model.fields,help:diligo_device.field_diligo_device__description_sale
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_extra__description_sale
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_main__description_sale
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_parts_in__description_sale
+msgid "A description of the Product that you want to communicate to your customers. This description will be copied to every Sales Order, Delivery Order and Customer Invoice/Credit Note"
+msgstr "Mô tả Sản phẩm mà bạn muốn giao tiếp với khách hàng của mình. Mô tả này sẽ được sao chép vào mọi Đơn đặt hàng, Đơn hàng Giao hàng và Hóa đơn Khách hàng / Ghi chú Tín dụng"
+
+#. module: diligo_device
+#: model:ir.model.fields,help:diligo_device.field_diligo_device__type
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_extra__type
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_main__type
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_parts_in__type
+msgid "A storable product is a product for which you manage stock. The Inventory app has to be installed.\n"
+"A consumable product is a product for which stock is not managed.\n"
+"A service is a non-material product you provide."
+msgstr "Sản phẩm lưu kho là sản phẩm bạn muốn quản lý lượng tồn kho của nó. Hệ thống sẽ cần cài thêm phân hệ Kho.\n"
+"Sản phẩm tiêu dùng là sản phẩm bạn không cần quản lý lượng tồn kho.\n"
+"Sản phẩm dịch vụ là sản phẩm bạn cung cấp.Sản phẩm lưu kho là sản phẩm bạn muốn quản lý lượng tồn kho của nó. Hệ thống sẽ cần cài thêm phân hệ Kho.\n"
+"Sản phẩm tiêu dùng là sản phẩm bạn không cần quản lý lượng tồn kho.\n"
+"Sản phẩm dịch vụ là sản phẩm bạn cung cấp.Sản phẩm lưu kho là sản phẩm bạn muốn quản lý lượng tồn kho của nó. Hệ thống sẽ cần cài thêm phân hệ Kho.\n"
+"Sản phẩm tiêu dùng là sản phẩm bạn không cần quản lý lượng tồn kho.\n"
+"Sản phẩm dịch là sản phẩm bạn cung cấp."
+
+#. module: diligo_device
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device__message_needaction
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_extra__message_needaction
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main__message_needaction
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_parts_in__message_needaction
+msgid "Action Needed"
+msgstr "Cần có Hành động"
+
+#. module: diligo_device
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device__active
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_extra__active
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main__active
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_parts_in__active
+#: model_terms:ir.ui.view,arch_db:diligo_device.view_diligo_device_extra_search
+#: model_terms:ir.ui.view,arch_db:diligo_device.view_diligo_device_parts_in_search
+msgid "Active"
+msgstr "Có hiệu lực"
+
+#. module: diligo_device
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device__activity_ids
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_extra__activity_ids
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main__activity_ids
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_parts_in__activity_ids
+msgid "Activities"
+msgstr "Các hoạt động"
+
+#. module: diligo_device
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device__activity_state
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_extra__activity_state
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main__activity_state
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_parts_in__activity_state
+msgid "Activity State"
+msgstr "Tình trạng hoạt động"
+
+#. module: diligo_device
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device__message_attachment_count
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_extra__message_attachment_count
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main__message_attachment_count
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_parts_in__message_attachment_count
+msgid "Attachment Count"
+msgstr "Số đính kèm"
+
+#. module: diligo_device
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device__attribute_value_ids
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_extra__attribute_value_ids
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main__attribute_value_ids
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_parts_in__attribute_value_ids
+msgid "Attribute Values"
+msgstr "Giá trị Thuộc tính"
+
+#. module: diligo_device
+#: model_terms:ir.ui.view,arch_db:diligo_device.view_diligo_device_main_search
+msgid "BP quản lý/bảo trì"
+msgstr ""
+
+#. module: diligo_device
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device__barcode
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_extra__barcode
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main__barcode
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_parts_in__barcode
+msgid "Barcode"
+msgstr "Mã vạch"
+
+#. module: diligo_device
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device__image
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_extra__image
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main__image
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_parts_in__image
+msgid "Big-sized image"
+msgstr "Hình cỡ lớn"
+
+#. module: diligo_device
+#: model:ir.actions.act_window,name:diligo_device.act_bien_ban_ban_giao
+msgid "Biên bản bàn giao"
+msgstr ""
+
+#. module: diligo_device
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main__last_maintenance
+msgid "Bảo dưỡng lần cuối"
+msgstr ""
+
+#. module: diligo_device
+#: model_terms:ir.ui.view,arch_db:diligo_device.view_diligo_device_main_form
+msgid "Bảo dưỡng định kỳ"
+msgstr ""
+
+#. module: diligo_device
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device__period
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_extra__period
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main__period
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_parts_in__period
+msgid "Bảo hành(Tháng)"
+msgstr ""
+
+#. module: diligo_device
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device__can_be_expensed
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_extra__can_be_expensed
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main__can_be_expensed
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_parts_in__can_be_expensed
+msgid "Can be Expensed"
+msgstr "Có thể là Chi tiêu/Chi phí"
+
+#. module: diligo_device
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device__purchase_ok
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_extra__purchase_ok
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main__purchase_ok
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_parts_in__purchase_ok
+msgid "Can be Purchased"
+msgstr "Có thể Mua được"
+
+#. module: diligo_device
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device__rental
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_extra__rental
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main__rental
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_parts_in__rental
+msgid "Can be Rent"
+msgstr "Có thể (được) cho thuê"
+
+#. module: diligo_device
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device__sale_ok
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_extra__sale_ok
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main__sale_ok
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_parts_in__sale_ok
+msgid "Can be Sold"
+msgstr "Có thể Bán được"
+
+#. module: diligo_device
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device__route_from_categ_ids
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_extra__route_from_categ_ids
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main__route_from_categ_ids
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_parts_in__route_from_categ_ids
+msgid "Category Routes"
+msgstr "Tuyến theo Nhóm SP"
+
+#. module: diligo_device
+#: model_terms:ir.ui.view,arch_db:diligo_device.view_diligo_device_main_search
+#: selection:sci.device,activate:0
+#: selection:sci.device.extra,activate:0
+#: selection:sci.device.main,activate:0
+#: selection:sci.device.parts.in,activate:0
+msgid "Chưa sử dụng"
+msgstr ""
+
+#. module: diligo_device
+#: model_terms:ir.ui.view,arch_db:diligo_device.view_diligo_device_main_search
+#: selection:sci.device,activate:0
+#: selection:sci.device.extra,activate:0
+#: selection:sci.device.main,activate:0
+#: selection:sci.device.parts.in,activate:0
+msgid "Chờ thanh lý"
+msgstr ""
+
+#. module: diligo_device
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device__color
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_extra__color
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main__color
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_parts_in__color
+msgid "Color Index"
+msgstr "Mã màu"
+
+#. module: diligo_device
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device__company_id
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_extra__company_id
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main__company_id
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_parts_in__company_id
+msgid "Company"
+msgstr "Công ty"
+
+#. module: diligo_device
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device__standard_price
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_extra__standard_price
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main__standard_price
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_parts_in__standard_price
+msgid "Cost"
+msgstr "Giá vốn"
+
+#. module: diligo_device
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device__cost_currency_id
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_extra__cost_currency_id
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main__cost_currency_id
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_parts_in__cost_currency_id
+msgid "Cost Currency"
+msgstr ""
+
+#. module: diligo_device
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device__cost_method
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_extra__cost_method
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main__cost_method
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_parts_in__cost_method
+msgid "Cost Method"
+msgstr "Phương pháp Giá vốn"
+
+#. module: diligo_device
+#: model:ir.model.fields,help:diligo_device.field_diligo_device__standard_price
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_extra__standard_price
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_main__standard_price
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_parts_in__standard_price
+msgid "Cost used for stock valuation in standard price and as a first price to set in average/fifo. Also used as a base price for pricelists. Expressed in the default unit of measure of the product."
+msgstr "Giá vốn được sử dụng cho mục đích định giá tồn kho theo phương thức giá vốn 'Giá tiêu chuẩn' và được coi như là số liệu đầu tiên để thiết lập giá vốn trong phương pháp Trung bình hoặc FIFO. Nó cũng được sử dụng như là giá cơ bản cho các bảng giá. Giá vốn này là đơn giá theo Đơn vị tính mặc định của sản phẩm."
+
+#. module: diligo_device
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device__property_cost_method
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_extra__property_cost_method
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main__property_cost_method
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_parts_in__property_cost_method
+msgid "Costing Method"
+msgstr "Phương pháp giá vốn"
+
+#. module: diligo_device
+#: model:ir.model.fields,field_description:diligo_device.field_hr_department__count_main_device
+msgid "Count Main Device"
+msgstr ""
+
+#. module: diligo_device
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device__create_uid
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_extra__create_uid
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_extra_image__create_uid
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_image__create_uid
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main__create_uid
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main_image__create_uid
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_parts_in__create_uid
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_parts_in_image__create_uid
+msgid "Created by"
+msgstr "Tạo bởi"
+
+#. module: diligo_device
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device__create_date
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_extra__create_date
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_extra_image__create_date
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_image__create_date
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main__create_date
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main_image__create_date
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_parts_in__create_date
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_parts_in_image__create_date
+msgid "Created on"
+msgstr "Tạo vào"
+
+#. module: diligo_device
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device__currency_id
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_extra__currency_id
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main__currency_id
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_parts_in__currency_id
+msgid "Currency"
+msgstr "Tiền tệ"
+
+#. module: diligo_device
+#: model:ir.model.fields,help:diligo_device.field_diligo_device__qty_available
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_extra__qty_available
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_main__qty_available
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_parts_in__qty_available
+msgid "Current quantity of products.\n"
+"In a context with a single Stock Location, this includes goods stored at this Location, or any of its children.\n"
+"In a context with a single Warehouse, this includes goods stored in the Stock Location of this Warehouse, or any of its children.\n"
+"stored in the Stock Location of the Warehouse of this Shop, or any of its children.\n"
+"Otherwise, this includes goods stored in any Stock Location with 'internal' type."
+msgstr "Số lượng hiện tại của sản phẩm.\n"
+"Trong ngữ cảnh với một Địa điểm Lưu trữ, nó bao gồm hàng hoá được lưu trữ tại địa điểm này, hoặc bất kỳ địa điểm con nào của nó.\n"
+"Trong ngữ cảnh với một Nhà kho, nó bao gồm hàng hoá được lưu trữ trong Địa điểm Lưu trữ của Nhà kho này, hoặc bất kỳ địa điểm con nào của nó.\n"
+"được lưu trữ trong Địa điểm Lưu trữ của Nhà kho của Cửa hàng này, hoặc bất kỳ địa điểm con nào của nó.\n"
+"Nếu không, nó bao gồm hàng hoá được lưu trữ trong bất kỳ Địa điểm Kho nào có kiểu là 'Nội bộ'."
+
+#. module: diligo_device
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device__sale_delay
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_extra__sale_delay
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main__sale_delay
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_parts_in__sale_delay
+msgid "Customer Lead Time"
+msgstr "Thời gian giao hàng"
+
+#. module: diligo_device
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device__partner_ref
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_extra__partner_ref
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main__partner_ref
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_parts_in__partner_ref
+msgid "Customer Ref"
+msgstr "Tham chiếu khách hàng"
+
+#. module: diligo_device
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device__taxes_id
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_extra__taxes_id
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main__taxes_id
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_parts_in__taxes_id
+msgid "Customer Taxes"
+msgstr "Thuế bán hàng"
+
+#. module: diligo_device
+#: model:ir.actions.act_window,name:diligo_device.act_open_diligo_device_dashboard_view
+#: model:ir.ui.menu,name:diligo_device.menu_diligo_device_dashboard
+msgid "Dashboard"
+msgstr "Bảng thông tin"
+
+#. module: diligo_device
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main__maintenance_deadline_type
+msgid "Date Type"
+msgstr ""
+
+#. module: diligo_device
+#: model:ir.model.fields,help:diligo_device.field_diligo_device__supplier_taxes_id
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_extra__supplier_taxes_id
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_main__supplier_taxes_id
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_parts_in__supplier_taxes_id
+msgid "Default taxes used when buying the product."
+msgstr ""
+
+#. module: diligo_device
+#: model:ir.model.fields,help:diligo_device.field_diligo_device__taxes_id
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_extra__taxes_id
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_main__taxes_id
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_parts_in__taxes_id
+msgid "Default taxes used when selling the product."
+msgstr ""
+
+#. module: diligo_device
+#: model:ir.model.fields,help:diligo_device.field_diligo_device__uom_id
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_extra__uom_id
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_main__uom_id
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_parts_in__uom_id
+msgid "Default unit of measure used for all stock operations."
+msgstr "Đơn vị đo mặc định dùng cho tất cả hoạt động kho."
+
+#. module: diligo_device
+#: model:ir.model.fields,help:diligo_device.field_diligo_device__uom_po_id
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_extra__uom_po_id
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_main__uom_po_id
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_parts_in__uom_po_id
+msgid "Default unit of measure used for purchase orders. It must be in the same category as the default unit of measure."
+msgstr ""
+
+#. module: diligo_device
+#: model:ir.model.fields,help:diligo_device.field_diligo_device__seller_ids
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_extra__seller_ids
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_main__seller_ids
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_parts_in__seller_ids
+msgid "Define vendor pricelists."
+msgstr ""
+
+#. module: diligo_device
+#: model:ir.model.fields,help:diligo_device.field_diligo_device__sale_delay
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_extra__sale_delay
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_main__sale_delay
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_parts_in__sale_delay
+msgid "Delivery lead time, in days. It's the number of days, promised to the customer, between the confirmation of the sales order and the delivery."
+msgstr ""
+
+#. module: diligo_device
+#: model:ir.model.fields,help:diligo_device.field_diligo_device__route_ids
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_extra__route_ids
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_main__route_ids
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_parts_in__route_ids
+msgid "Depending on the modules installed, this will allow you to define the route of the product: whether it will be bought, manufactured, MTO, etc."
+msgstr ""
+
+#. module: diligo_device
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_extra_image__description
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_image__description
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main_image__description
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_parts_in_image__description
+msgid "Description"
+msgstr "Miêu tả"
+
+#. module: diligo_device
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device__description_pickingout
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_extra__description_pickingout
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main__description_pickingout
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_parts_in__description_pickingout
+msgid "Description on Delivery Orders"
+msgstr "Mô tả cho Phiếu Giao hàng"
+
+#. module: diligo_device
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device__description_picking
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_extra__description_picking
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main__description_picking
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_parts_in__description_picking
+msgid "Description on Picking"
+msgstr "Mô tả trên Phiếu giao nhận"
+
+#. module: diligo_device
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device__description_pickingin
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_extra__description_pickingin
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main__description_pickingin
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_parts_in__description_pickingin
+msgid "Description on Receptions"
+msgstr "Mô tả cho Phiếu Nhận hàng"
+
+#. module: diligo_device
+#: model:ir.model,name:diligo_device.model_sci_device
+msgid "Device"
+msgstr "Thiết bị"
+
+#. module: diligo_device
+#: model:ir.model,name:diligo_device.model_sci_device_image
+msgid "Device Image"
+msgstr "Ảnh thiết bị"
+
+#. module: diligo_device
+#: model:ir.module.category,name:diligo_device.group_device_category
+msgid "Device Management"
+msgstr "Quản lý thiết bị"
+
+#. module: diligo_device
+#: model:ir.actions.act_window,name:diligo_device.act_diligo_device_parts_in_view
+msgid "Device Parts In"
+msgstr "Linh kiện/Phụ kiện"
+
+#. module: diligo_device
+#: model:ir.model,name:diligo_device.model_sci_device_extra
+msgid "Device Type"
+msgstr "Loại thiết bị"
+
+#. module: diligo_device
+#: model:ir.model.fields,field_description:diligo_device.field_product_product__device_ids
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device__device_ids
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_extra__device_ids
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main__device_ids
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_parts_in__device_ids
+msgid "Device_id"
+msgstr ""
+
+#. module: diligo_device
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device__display_name
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_extra__display_name
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_extra_image__display_name
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_image__display_name
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main__display_name
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main_image__display_name
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_parts_in__display_name
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_parts_in_image__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: diligo_device
+#: model:res.groups,name:diligo_device.employee_group
+msgid "Employee"
+msgstr "Nhân viên"
+
+#. module: diligo_device
+#: model:ir.model.fields,help:diligo_device.field_diligo_device__tracking
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_extra__tracking
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_main__tracking
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_parts_in__tracking
+msgid "Ensure the traceability of a storable product in your warehouse."
+msgstr "Đảm bảo truy xuất nguồn gốc của một sản phẩm có thể lưu trữ trong kho của bạn."
+
+#. module: diligo_device
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device__equipment_domain
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_extra__equipment_domain
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main__equipment_domain
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_parts_in__equipment_domain
+msgid "Equipment Domain"
+msgstr ""
+
+#. module: diligo_device
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device__property_account_expense_id
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_extra__property_account_expense_id
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main__property_account_expense_id
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_parts_in__property_account_expense_id
+msgid "Expense Account"
+msgstr "Tài khoản chi phí"
+
+#. module: diligo_device
+#: model:ir.actions.act_window,name:diligo_device.act_diligo_device_extra_view
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_extra_image__extra_device_id
+msgid "Extra Device"
+msgstr "Thiết bị phụ tùng"
+
+#. module: diligo_device
+#: model:ir.model,name:diligo_device.model_sci_device_extra_image
+msgid "Extra Device Image"
+msgstr "Ảnh thiết bị phụ tùng"
+
+#. module: diligo_device
+#: model_terms:ir.ui.view,arch_db:diligo_device.view_diligo_device_extra_form
+msgid "Extra Device Images"
+msgstr ""
+
+#. module: diligo_device
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device__message_follower_ids
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_extra__message_follower_ids
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main__message_follower_ids
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_parts_in__message_follower_ids
+msgid "Followers"
+msgstr "Theo dõi"
+
+#. module: diligo_device
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device__message_channel_ids
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_extra__message_channel_ids
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main__message_channel_ids
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_parts_in__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "Người theo dõi (Các kênh)"
+
+#. module: diligo_device
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device__message_partner_ids
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_extra__message_partner_ids
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main__message_partner_ids
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_parts_in__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Người theo dõi (Các đối tác)"
+
+#. module: diligo_device
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device__virtual_available
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_extra__virtual_available
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main__virtual_available
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_parts_in__virtual_available
+msgid "Forecast Quantity"
+msgstr "Số lượng dự kiến"
+
+#. module: diligo_device
+#: model:ir.model.fields,help:diligo_device.field_diligo_device__virtual_available
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_extra__virtual_available
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_main__virtual_available
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_parts_in__virtual_available
+msgid "Forecast quantity (computed as Quantity On Hand - Outgoing + Incoming)\n"
+"In a context with a single Stock Location, this includes goods stored in this location, or any of its children.\n"
+"In a context with a single Warehouse, this includes goods stored in the Stock Location of this Warehouse, or any of its children.\n"
+"Otherwise, this includes goods stored in any Stock Location with 'internal' type."
+msgstr "Số lượng dự kiến (được tính bằng Số lượng thực tế - Số lượng sẽ xuất + Số lượng sắp về)\n"
+"Trong ngữ cảnh một Địa điểm Kho, nó bao gồm số lượng được lưu trữ trong địa điểm này, hoặc các địa điểm con của nó.\n"
+"Trong ngữ cảnh một Nhà kho, nó bao gồm số lượng được lưu trữ trong Địa điểm Kho của Nhà kho này, hoặc các địa điểm con của nó.\n"
+"Nếu không, nó bao gồm số lượng được lữu trữ trong bất kỳ Địa điểm Kho nào có kiểu là 'Nội bộ'."
+
+#. module: diligo_device
+#: model:ir.model.fields,help:diligo_device.field_diligo_device__packaging_ids
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_extra__packaging_ids
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_main__packaging_ids
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_parts_in__packaging_ids
+msgid "Gives the different ways to package the same product."
+msgstr ""
+
+#. module: diligo_device
+#: model:ir.model.fields,help:diligo_device.field_diligo_device__sequence
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_extra__sequence
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_main__sequence
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_parts_in__sequence
+msgid "Gives the sequence order when displaying a product list"
+msgstr "Cung cấp trình tự khi hiển thị một danh mục sản phẩm"
+
+#. module: diligo_device
+#: model_terms:ir.ui.view,arch_db:diligo_device.view_diligo_device_extra_form
+#: model_terms:ir.ui.view,arch_db:diligo_device.view_diligo_device_main_form
+#: model_terms:ir.ui.view,arch_db:diligo_device.view_diligo_device_parts_in_form
+msgid "Giá bán"
+msgstr ""
+
+#. module: diligo_device
+#: model_terms:ir.ui.view,arch_db:diligo_device.view_diligo_device_main_search
+msgid "Group By"
+msgstr "Nhóm theo"
+
+#. module: diligo_device
+#: model:ir.model,name:diligo_device.model_hr_department
+msgid "HR Department"
+msgstr "Bộ phận Nhân sự"
+
+#. module: diligo_device
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_extra__description_images_ids
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main__description_images_ids
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_parts_in__description_images_ids
+#: model_terms:ir.ui.view,arch_db:diligo_device.view_diligo_device_extra_form
+#: model_terms:ir.ui.view,arch_db:diligo_device.view_diligo_device_main_form
+#: model_terms:ir.ui.view,arch_db:diligo_device.view_diligo_device_parts_in_form
+msgid "Hình ảnh mô tả"
+msgstr ""
+
+#. module: diligo_device
+#: selection:sci.device,activate:0
+#: selection:sci.device.extra,activate:0
+#: selection:sci.device.main,activate:0
+#: selection:sci.device.parts.in,activate:0
+msgid "Hết bảo hành"
+msgstr ""
+
+#. module: diligo_device
+#: model_terms:ir.ui.view,arch_db:diligo_device.view_diligo_device_main_search
+msgid "Hỏng"
+msgstr ""
+
+#. module: diligo_device
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device__id
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_extra__id
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_extra_image__id
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_image__id
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main__id
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main_image__id
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_parts_in__id
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_parts_in_image__id
+msgid "ID"
+msgstr ""
+
+#. module: diligo_device
+#: model:ir.model.fields,help:diligo_device.field_diligo_device__message_unread
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_extra__message_unread
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_main__message_unread
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_parts_in__message_unread
+msgid "If checked new messages require your attention."
+msgstr "Nếu đánh dấu chọn, các thông điệp mới yêu cầu sự có mặt của bạn."
+
+#. module: diligo_device
+#: model:ir.model.fields,help:diligo_device.field_diligo_device__message_needaction
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_extra__message_needaction
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_main__message_needaction
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_parts_in__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "Nếu đánh dấu chọn, các thông điệp mới yêu cầu sự có mặt của bạn."
+
+#. module: diligo_device
+#: model:ir.model.fields,help:diligo_device.field_diligo_device__message_has_error
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_extra__message_has_error
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_main__message_has_error
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_parts_in__message_has_error
+msgid "If checked, some messages have a delivery error."
+msgstr "Nếu chọn, sẽ hiển thị thông báo lỗi."
+
+#. module: diligo_device
+#: model:ir.model.fields,help:diligo_device.field_diligo_device__active
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_extra__active
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_main__active
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_parts_in__active
+msgid "If unchecked, it will allow you to hide the product without removing it."
+msgstr "Nếu bỏ đánh dấu, nó sẽ cho phép bạn ẩn sản phẩm mà không cần xóa bỏ nó."
+
+#. module: diligo_device
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_extra_image__image
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_image__image
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main_image__image
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_parts_in_image__image
+#: model_terms:ir.ui.view,arch_db:diligo_device.device_parts_in_kanban_view
+msgid "Image"
+msgstr "Hình ảnh"
+
+#. module: diligo_device
+#: model:ir.model.fields,help:diligo_device.field_diligo_device__image
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_extra__image
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_main__image
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_parts_in__image
+msgid "Image of the product variant (Big-sized image of product template if false). It is automatically resized as a 1024x1024px image, with aspect ratio preserved."
+msgstr "Hình ảnh của biến thể sản phẩm (Nếu không thiết lập, hệ thống sẽ sử dụng hình ảnh với kích thước lớn của sản phẩm). Nó sẽ tự động thay đổi kích thước thành 1024x10024 mà vẫn giữ nguyên tỷ lệ."
+
+#. module: diligo_device
+#: model:ir.model.fields,help:diligo_device.field_diligo_device__image_medium
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_extra__image_medium
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_main__image_medium
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_parts_in__image_medium
+msgid "Image of the product variant (Medium-sized image of product template if false)."
+msgstr "Hình ảnh của biến thể sản phẩm (Nếu không thiết lập, hệ thống sẽ sử dụng hình ảnh với kích thước vừa phải của sản phẩm)."
+
+#. module: diligo_device
+#: model:ir.model.fields,help:diligo_device.field_diligo_device__image_small
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_extra__image_small
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_main__image_small
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_parts_in__image_small
+msgid "Image of the product variant (Small-sized image of product template if false)."
+msgstr "Hình ảnh của biến thể sản phẩm (Nếu không thiết lập, hệ thống sẽ sử dụng hình ảnh với kích thước nhỏ của sản phẩm)."
+
+#. module: diligo_device
+#: model_terms:ir.ui.view,arch_db:diligo_device.view_diligo_device_extra_search
+#: model_terms:ir.ui.view,arch_db:diligo_device.view_diligo_device_parts_in_search
+msgid "Inactive"
+msgstr "Không hiệu lực"
+
+#. module: diligo_device
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device__property_account_income_id
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_extra__property_account_income_id
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main__property_account_income_id
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_parts_in__property_account_income_id
+msgid "Income Account"
+msgstr "Tài khoản doanh thu"
+
+#. module: diligo_device
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device__incoming_qty
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_extra__incoming_qty
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main__incoming_qty
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_parts_in__incoming_qty
+msgid "Incoming"
+msgstr "Sắp về"
+
+#. module: diligo_device
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device__default_code
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_extra__default_code
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main__default_code
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_parts_in__default_code
+msgid "Internal Reference"
+msgstr "Mã thiết bị"
+
+#. module: diligo_device
+#: model:ir.model.fields,help:diligo_device.field_diligo_device__barcode
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_extra__barcode
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_main__barcode
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_parts_in__barcode
+msgid "International Article Number used for product identification."
+msgstr "Mã số quốc tế được sử dụng để xác định sản phẩm"
+
+#. module: diligo_device
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device__property_stock_inventory
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_extra__property_stock_inventory
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main__property_stock_inventory
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_parts_in__property_stock_inventory
+msgid "Inventory Location"
+msgstr "Địa điểm Kiểm kê"
+
+#. module: diligo_device
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device__property_valuation
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_extra__property_valuation
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main__property_valuation
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_parts_in__property_valuation
+msgid "Inventory Valuation"
+msgstr "Định giá Tồn kho"
+
+#. module: diligo_device
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device__message_is_follower
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_extra__message_is_follower
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main__message_is_follower
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_parts_in__message_is_follower
+msgid "Is Follower"
+msgstr "Trở thành người theo dõi"
+
+#. module: diligo_device
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device__is_product_variant
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_extra__is_product_variant
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main__is_product_variant
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_parts_in__is_product_variant
+msgid "Is Product Variant"
+msgstr ""
+
+#. module: diligo_device
+#: model:ir.model.fields,help:diligo_device.field_diligo_device__property_account_income_id
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_extra__property_account_income_id
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_main__property_account_income_id
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_parts_in__property_account_income_id
+msgid "Keep this field empty to use the default value from the product category."
+msgstr "Để trống trường này để dùng giá trị mặc định trong danh mục sản phẩm."
+
+#. module: diligo_device
+#: model:ir.model.fields,help:diligo_device.field_diligo_device__property_account_expense_id
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_extra__property_account_expense_id
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_main__property_account_expense_id
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_parts_in__property_account_expense_id
+msgid "Keep this field empty to use the default value from the product category. If anglo-saxon accounting with automated valuation method is configured, the expense account on the product category will be used."
+msgstr ""
+
+#. module: diligo_device
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device__stock_location
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_extra__stock_location
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main__stock_location
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_parts_in__stock_location
+#: model_terms:ir.ui.view,arch_db:diligo_device.view_diligo_device_extra_form
+#: model_terms:ir.ui.view,arch_db:diligo_device.view_diligo_device_main_form
+#: model_terms:ir.ui.view,arch_db:diligo_device.view_diligo_device_parts_in_form
+msgid "Kho hàng"
+msgstr ""
+
+#. module: diligo_device
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device____last_update
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_extra____last_update
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_extra_image____last_update
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_image____last_update
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main____last_update
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main_image____last_update
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_parts_in____last_update
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_parts_in_image____last_update
+msgid "Last Modified on"
+msgstr "Cập nhật lần cuối vào"
+
+#. module: diligo_device
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device__write_uid
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_extra__write_uid
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_extra_image__write_uid
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_image__write_uid
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main__write_uid
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main_image__write_uid
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_parts_in__write_uid
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_parts_in_image__write_uid
+msgid "Last Updated by"
+msgstr "Cập nhật lần cuối bởi"
+
+#. module: diligo_device
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device__write_date
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_extra__write_date
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_extra_image__write_date
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_image__write_date
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main__write_date
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main_image__write_date
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_parts_in__write_date
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_parts_in_image__write_date
+msgid "Last Updated on"
+msgstr "Cập nhật lần cuối vào"
+
+#. module: diligo_device
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_extra__parts_in_device_ids
+#: model:ir.ui.menu,name:diligo_device.menu_diligo_device_extra
+#: model_terms:ir.ui.view,arch_db:diligo_device.view_diligo_device_extra_form
+msgid "Linh kiện/Vật tư"
+msgstr ""
+
+#. module: diligo_device
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device__location_id
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_extra__location_id
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main__location_id
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_parts_in__location_id
+msgid "Location"
+msgstr "Địa điểm"
+
+#. module: diligo_device
+#: model:ir.model.fields,field_description:diligo_device.field_product_product__device_type
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device__device_type
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_extra__device_type
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main__device_type
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_parts_in__device_type
+msgid "Loại thiết bị"
+msgstr ""
+
+#. module: diligo_device
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device__message_main_attachment_id
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_extra__message_main_attachment_id
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main__message_main_attachment_id
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_parts_in__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "Đính kèm chính"
+
+#. module: diligo_device
+#: model:ir.actions.act_window,name:diligo_device.act_diligo_device_main_view
+#: model:ir.model,name:diligo_device.model_sci_device_main
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main_image__main_device_id
+msgid "Main Device"
+msgstr "Thiết bị chính"
+
+#. module: diligo_device
+#: model:ir.model,name:diligo_device.model_sci_device_main_image
+msgid "Main Device Image"
+msgstr "Ảnh thiết bị chính"
+
+#. module: diligo_device
+#: model_terms:ir.ui.view,arch_db:diligo_device.view_diligo_device_main_form
+msgid "Main Device Images"
+msgstr ""
+
+#. module: diligo_device
+#: model:ir.model.fields,field_description:diligo_device.field_hr_department__main_device_ids
+msgid "Main Device List"
+msgstr ""
+
+#. module: diligo_device
+#: model:res.groups,name:diligo_device.manager_group
+msgid "Manager"
+msgstr "Quản lý"
+
+#. module: diligo_device
+#: model:ir.model.fields,help:diligo_device.field_diligo_device__property_valuation
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_extra__property_valuation
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_main__property_valuation
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_parts_in__property_valuation
+msgid "Manual: The accounting entries to value the inventory are not posted automatically.\n"
+"        Automated: An accounting entry is automatically created to value the inventory when a product enters or leaves the company."
+msgstr "Thủ công: Các bút toán kế toán xuất nhập kho sẽ không được tạo tự động.\n"
+"        Tự động: Một bút toán kế toán sẽ được tạo tự động và vào sổ khi thực hiện hoạt động xuất nhập kho."
+
+#. module: diligo_device
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device__image_medium
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_extra__image_medium
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main__image_medium
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_parts_in__image_medium
+msgid "Medium-sized image"
+msgstr "Hình ảnh kích thước chuẩn"
+
+#. module: diligo_device
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device__message_has_error
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_extra__message_has_error
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main__message_has_error
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_parts_in__message_has_error
+msgid "Message Delivery error"
+msgstr "Thông báo gửi đi gặp lỗi"
+
+#. module: diligo_device
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device__message_ids
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_extra__message_ids
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main__message_ids
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_parts_in__message_ids
+msgid "Messages"
+msgstr "Thông điệp"
+
+#. module: diligo_device
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device__orderpoint_ids
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_extra__orderpoint_ids
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main__orderpoint_ids
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_parts_in__orderpoint_ids
+msgid "Minimum Stock Rules"
+msgstr "Quy tắc tồn kho tối thiểu"
+
+#. module: diligo_device
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device__description
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_extra__description
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main__description
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_parts_in__description
+#: model_terms:ir.ui.view,arch_db:diligo_device.view_diligo_device_extra_form
+#: model_terms:ir.ui.view,arch_db:diligo_device.view_diligo_device_main_form
+#: model_terms:ir.ui.view,arch_db:diligo_device.view_diligo_device_parts_in_form
+msgid "Mô tả"
+msgstr ""
+
+#. module: diligo_device
+#: model_terms:ir.ui.view,arch_db:diligo_device.view_diligo_device_main_search
+msgid "Mất"
+msgstr ""
+
+#. module: diligo_device
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device__name
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_extra__name
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_extra_image__name
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_image__name
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main__name
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main_image__name
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_parts_in__name
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_parts_in_image__name
+msgid "Name"
+msgstr "Tên"
+
+#. module: diligo_device
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device__activity_date_deadline
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_extra__activity_date_deadline
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main__activity_date_deadline
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_parts_in__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "Hạn chót lần hành động kế tiếp"
+
+#. module: diligo_device
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device__activity_summary
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_extra__activity_summary
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main__activity_summary
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_parts_in__activity_summary
+msgid "Next Activity Summary"
+msgstr "Tóm tắt hoạt động tiếp theo"
+
+#. module: diligo_device
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device__activity_type_id
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_extra__activity_type_id
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main__activity_type_id
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_parts_in__activity_type_id
+msgid "Next Activity Type"
+msgstr "Kiểu hành động kế tiếp"
+
+#. module: diligo_device
+#: selection:sci.device.main,maintenance_deadline_type:0
+msgid "Ngày"
+msgstr ""
+
+#. module: diligo_device
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device__date_import
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_extra__date_import
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main__date_import
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_parts_in__date_import
+msgid "Ngày nhập"
+msgstr ""
+
+#. module: diligo_device
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device__first_date_use
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_extra__first_date_use
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main__first_date_use
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_parts_in__first_date_use
+msgid "Ngày tính khấu hao"
+msgstr ""
+
+#. module: diligo_device
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main__maintenance_expire_date
+msgid "Ngày đến hạn"
+msgstr ""
+
+#. module: diligo_device
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main__employee_id
+#: model_terms:ir.ui.view,arch_db:diligo_device.view_diligo_device_main_search
+msgid "Người sử dụng"
+msgstr ""
+
+#. module: diligo_device
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main__partner_id
+msgid "Nhà cung cấp"
+msgstr ""
+
+#. module: diligo_device
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device__message_needaction_counter
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_extra__message_needaction_counter
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main__message_needaction_counter
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_parts_in__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Số lượng Hành động"
+
+#. module: diligo_device
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device__message_has_error_counter
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_extra__message_has_error_counter
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main__message_has_error_counter
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_parts_in__message_has_error_counter
+msgid "Number of error"
+msgstr "Số lỗi"
+
+#. module: diligo_device
+#: model:ir.model.fields,help:diligo_device.field_diligo_device__message_needaction_counter
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_extra__message_needaction_counter
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_main__message_needaction_counter
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_parts_in__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "Số thông điệp cần có hành động"
+
+#. module: diligo_device
+#: model:ir.model.fields,help:diligo_device.field_diligo_device__message_has_error_counter
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_extra__message_has_error_counter
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_main__message_has_error_counter
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_parts_in__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "Số tin gửi đi bị lỗi"
+
+#. module: diligo_device
+#: model:ir.model.fields,help:diligo_device.field_diligo_device__message_unread_counter
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_extra__message_unread_counter
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_main__message_unread_counter
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_parts_in__message_unread_counter
+msgid "Number of unread messages"
+msgstr "Số thông điệp chưa đọc"
+
+#. module: diligo_device
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device__outgoing_qty
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_extra__outgoing_qty
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main__outgoing_qty
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_parts_in__outgoing_qty
+msgid "Outgoing"
+msgstr "Chờ gửi đi"
+
+#. module: diligo_device
+#: model:ir.model,name:diligo_device.model_sci_device_parts_in
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_parts_in_image__parts_in_device_id
+msgid "Parts In Device"
+msgstr "Linh kiện/Phụ kiện"
+
+#. module: diligo_device
+#: model:ir.model,name:diligo_device.model_sci_device_parts_in_image
+msgid "Parts In Device Image"
+msgstr "Ảnh linh kiện/phụ kiện"
+
+#. module: diligo_device
+#: model_terms:ir.ui.view,arch_db:diligo_device.view_diligo_device_parts_in_form
+msgid "Parts In Device Images"
+msgstr ""
+
+#. module: diligo_device
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main__department_id
+#: model_terms:ir.ui.view,arch_db:diligo_device.view_diligo_device_main_search
+msgid "Phòng ban sử dụng"
+msgstr ""
+
+#. module: diligo_device
+#: model_terms:ir.ui.view,arch_db:diligo_device.view_diligo_device_dashboard_kanban
+msgid "Phòng/Ban cấp dưới"
+msgstr ""
+
+#. module: diligo_device
+#: selection:product.product,device_type:0
+msgid "Phụ tùng"
+msgstr ""
+
+#. module: diligo_device
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device__price
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_extra__price
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main__price
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_parts_in__price
+msgid "Price"
+msgstr "Giá"
+
+#. module: diligo_device
+#: model:ir.model.fields,help:diligo_device.field_diligo_device__list_price
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_extra__list_price
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_main__list_price
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_parts_in__list_price
+msgid "Price at which the product is sold to customers."
+msgstr ""
+
+#. module: diligo_device
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device__pricelist_id
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_extra__pricelist_id
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main__pricelist_id
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_parts_in__pricelist_id
+msgid "Pricelist"
+msgstr "Bảng giá"
+
+#. module: diligo_device
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device__pricelist_item_ids
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_extra__pricelist_item_ids
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main__pricelist_item_ids
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_parts_in__pricelist_item_ids
+msgid "Pricelist Item"
+msgstr "Mục báo giá"
+
+#. module: diligo_device
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device__item_ids
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_extra__item_ids
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main__item_ids
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_parts_in__item_ids
+msgid "Pricelist Items"
+msgstr "Chi tiết bảng giá"
+
+#. module: diligo_device
+#: model:ir.model,name:diligo_device.model_product_product
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device__product_variant_id
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_extra__product_variant_id
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main__product_variant_id
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_parts_in__product_variant_id
+msgid "Product"
+msgstr "Sản phẩm"
+
+#. module: diligo_device
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device__attribute_line_ids
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_extra__attribute_line_ids
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main__attribute_line_ids
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_parts_in__attribute_line_ids
+msgid "Product Attributes"
+msgstr "Thuộc tính Sản phẩm"
+
+#. module: diligo_device
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device__categ_id
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_extra__categ_id
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main__categ_id
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_parts_in__categ_id
+msgid "Product Category"
+msgstr "Nhóm sản phẩm"
+
+#. module: diligo_device
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device__packaging_ids
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_extra__packaging_ids
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main__packaging_ids
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_parts_in__packaging_ids
+msgid "Product Packages"
+msgstr "Gói Sản phẩm"
+
+#. module: diligo_device
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device__product_tmpl_id
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_extra__product_tmpl_id
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main__product_tmpl_id
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_parts_in__product_tmpl_id
+msgid "Product Template"
+msgstr "Mẫu sản phẩm"
+
+#. module: diligo_device
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device__type
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_extra__type
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main__type
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_parts_in__type
+msgid "Product Type"
+msgstr "Loại sản phẩm"
+
+#. module: diligo_device
+#: model:ir.model.fields,help:diligo_device.field_diligo_device__product_id
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_extra__product_id
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_main__product_id
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_parts_in__product_id
+msgid "Product-related data of the services"
+msgstr ""
+
+#. module: diligo_device
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device__property_stock_production
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_extra__property_stock_production
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main__property_stock_production
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_parts_in__property_stock_production
+msgid "Production Location"
+msgstr "Địa điểm sản xuất"
+
+#. module: diligo_device
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device__product_variant_ids
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_extra__product_variant_ids
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main__product_variant_ids
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_parts_in__product_variant_ids
+msgid "Products"
+msgstr "Sản phẩm"
+
+#. module: diligo_device
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device__description_purchase
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_extra__description_purchase
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main__description_purchase
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_parts_in__description_purchase
+msgid "Purchase Description"
+msgstr "Mô tả mua hàng"
+
+#. module: diligo_device
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device__uom_po_id
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_extra__uom_po_id
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main__uom_po_id
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_parts_in__uom_po_id
+msgid "Purchase Unit of Measure"
+msgstr "Đơn vị tính mua hàng"
+
+#. module: diligo_device
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device__qty_at_date
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_extra__qty_at_date
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main__qty_at_date
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_parts_in__qty_at_date
+msgid "Quantity"
+msgstr "Số lượng"
+
+#. module: diligo_device
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main__count_extra_device
+msgid "Quantity Of Extra Devices"
+msgstr ""
+
+#. module: diligo_device
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device__qty_available
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_extra__qty_available
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main__qty_available
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_parts_in__qty_available
+msgid "Quantity On Hand"
+msgstr "Số lượng thực tế"
+
+#. module: diligo_device
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_extra__count_parts_in_device
+msgid "Quantity Parts In Devices"
+msgstr ""
+
+#. module: diligo_device
+#: code:addons/diligo_device/models/device/device_extra.py:30
+#: code:addons/diligo_device/models/device/device_parts_in.py:38
+#, python-format
+msgid "Quantity must be greater than 0"
+msgstr "Số lượng phải lớn hơn 0"
+
+#. module: diligo_device
+#: model:ir.model.fields,help:diligo_device.field_diligo_device__incoming_qty
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_extra__incoming_qty
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_main__incoming_qty
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_parts_in__incoming_qty
+msgid "Quantity of planned incoming products.\n"
+"In a context with a single Stock Location, this includes goods arriving to this Location, or any of its children.\n"
+"In a context with a single Warehouse, this includes goods arriving to the Stock Location of this Warehouse, or any of its children.\n"
+"Otherwise, this includes goods arriving to any Stock Location with 'internal' type."
+msgstr ""
+
+#. module: diligo_device
+#: model:ir.model.fields,help:diligo_device.field_diligo_device__outgoing_qty
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_extra__outgoing_qty
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_main__outgoing_qty
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_parts_in__outgoing_qty
+msgid "Quantity of planned outgoing products.\n"
+"In a context with a single Stock Location, this includes goods leaving this Location, or any of its children.\n"
+"In a context with a single Warehouse, this includes goods leaving the Stock Location of this Warehouse, or any of its children.\n"
+"Otherwise, this includes goods leaving any Stock Location with 'internal' type."
+msgstr ""
+
+#. module: diligo_device
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main__parent_id
+msgid "Quản lý"
+msgstr ""
+
+#. module: diligo_device
+#: model:ir.ui.menu,name:diligo_device.menu_diligo_device_management
+msgid "Quản lý thiết bị"
+msgstr ""
+
+#. module: diligo_device
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device__code
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_extra__code
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main__code
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_parts_in__code
+msgid "Reference"
+msgstr "Tham chiếu"
+
+#. module: diligo_device
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device__reordering_max_qty
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_extra__reordering_max_qty
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main__reordering_max_qty
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_parts_in__reordering_max_qty
+msgid "Reordering Max Qty"
+msgstr "Số lượng tái cung ứng tối đa"
+
+#. module: diligo_device
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device__reordering_min_qty
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_extra__reordering_min_qty
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main__reordering_min_qty
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_parts_in__reordering_min_qty
+msgid "Reordering Min Qty"
+msgstr "Số lượng tái cung ứng tối thiểu"
+
+#. module: diligo_device
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device__nbr_reordering_rules
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_extra__nbr_reordering_rules
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main__nbr_reordering_rules
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_parts_in__nbr_reordering_rules
+msgid "Reordering Rules"
+msgstr "Quy tắc tái cung ứng"
+
+#. module: diligo_device
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device__responsible_id
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_extra__responsible_id
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main__responsible_id
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_parts_in__responsible_id
+msgid "Responsible"
+msgstr "Người phụ trách"
+
+#. module: diligo_device
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device__activity_user_id
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_extra__activity_user_id
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main__activity_user_id
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_parts_in__activity_user_id
+msgid "Responsible User"
+msgstr "Người chịu trách nhiệm"
+
+#. module: diligo_device
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device__route_ids
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_extra__route_ids
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main__route_ids
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_parts_in__route_ids
+msgid "Routes"
+msgstr "Tuyến cung ứng"
+
+#. module: diligo_device
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device__description_sale
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_extra__description_sale
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main__description_sale
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_parts_in__description_sale
+msgid "Sale Description"
+msgstr "Mô tả Bán hàng"
+
+#. module: diligo_device
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device__lst_price
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_extra__lst_price
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main__lst_price
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_parts_in__lst_price
+msgid "Sale Price"
+msgstr "Giá bán"
+
+#. module: diligo_device
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device__list_price
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_extra__list_price
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main__list_price
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_parts_in__list_price
+msgid "Sales Price"
+msgstr "Giá bán"
+
+#. module: diligo_device
+#: model:ir.model.fields,help:diligo_device.field_diligo_device__categ_id
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_extra__categ_id
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_main__categ_id
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_parts_in__categ_id
+msgid "Select category for the current product"
+msgstr "Chọn nhóm cho sản phẩm hiện tại"
+
+#. module: diligo_device
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device__sequence
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_extra__sequence
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main__sequence
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_parts_in__sequence
+msgid "Sequence"
+msgstr "Trình tự"
+
+#. module: diligo_device
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main__serial_no
+msgid "Serial Number"
+msgstr "Số sê-ri"
+
+#. module: diligo_device
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device__image_small
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_extra__image_small
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main__image_small
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_parts_in__image_small
+msgid "Small-sized image"
+msgstr "Ảnh cỡ nhỏ"
+
+#. module: diligo_device
+#: model:ir.model.fields,help:diligo_device.field_diligo_device__can_be_expensed
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_extra__can_be_expensed
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_main__can_be_expensed
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_parts_in__can_be_expensed
+msgid "Specify whether the product can be selected in an expense."
+msgstr ""
+
+#. module: diligo_device
+#: model:ir.model.fields,help:diligo_device.field_diligo_device__property_cost_method
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_extra__property_cost_method
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_main__property_cost_method
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_parts_in__property_cost_method
+msgid "Standard Price: The products are valued at their standard cost defined on the product.\n"
+"        Average Cost (AVCO): The products are valued at weighted average cost.\n"
+"        First In First Out (FIFO): The products are valued supposing those that enter the company first will also leave it first."
+msgstr "Giá tiêu chuẩn: Sản phẩm được định giá theo giá tiêu chuẩn khai báo trên form sản phẩm.\n"
+"        Giá Trung bình (AVCO): Sản phẩm được định giá theo phương pháp bình quân.\n"
+"        Nhập trước Xuất trước (FIFO): Sản phẩm được định giá theo phương pháp thực tế với giả định nhập trước xuất trước. Khi kết hợp với sô Lô/Serial thì sẽ thành Thực tế Đích danh."
+
+#. module: diligo_device
+#: model:ir.model.fields,help:diligo_device.field_diligo_device__activity_state
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_extra__activity_state
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_main__activity_state
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_parts_in__activity_state
+msgid "Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr "Trạng thái dựa trên hoạt động\n"
+"Quá hạn: Ngày đến hạn phải được chuyển\n"
+"Hôm nay: Hôm nay là ngày phải thực hiện\n"
+"Kế hoạch: Các hoạt động trong tương lai."
+
+#. module: diligo_device
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device__stock_fifo_manual_move_ids
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_extra__stock_fifo_manual_move_ids
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main__stock_fifo_manual_move_ids
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_parts_in__stock_fifo_manual_move_ids
+msgid "Stock Fifo Manual Move"
+msgstr "Dịch chuyển thủ công FIFO Stock"
+
+#. module: diligo_device
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device__stock_fifo_real_time_aml_ids
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_extra__stock_fifo_real_time_aml_ids
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main__stock_fifo_real_time_aml_ids
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_parts_in__stock_fifo_real_time_aml_ids
+msgid "Stock Fifo Real Time Aml"
+msgstr "Stock FIFO thời gian thực"
+
+#. module: diligo_device
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device__property_stock_account_input
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_extra__property_stock_account_input
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main__property_stock_account_input
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_parts_in__property_stock_account_input
+msgid "Stock Input Account"
+msgstr "Tài khoản nhập kho"
+
+#. module: diligo_device
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device__stock_move_ids
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_extra__stock_move_ids
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main__stock_move_ids
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_parts_in__stock_move_ids
+msgid "Stock Move"
+msgstr "Dịch chuyển kho"
+
+#. module: diligo_device
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device__property_stock_account_output
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_extra__property_stock_account_output
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main__property_stock_account_output
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_parts_in__property_stock_account_output
+msgid "Stock Output Account"
+msgstr "Tài khoản xuất kho"
+
+#. module: diligo_device
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device__stock_quant_ids
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_extra__stock_quant_ids
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main__stock_quant_ids
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_parts_in__stock_quant_ids
+msgid "Stock Quant"
+msgstr "Số lượng tồn kho"
+
+#. module: diligo_device
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device__stock_value_currency_id
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_extra__stock_value_currency_id
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main__stock_value_currency_id
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_parts_in__stock_value_currency_id
+msgid "Stock Value Currency"
+msgstr ""
+
+#. module: diligo_device
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_extra__amount
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_parts_in__amount
+msgid "Số lượng"
+msgstr ""
+
+#. module: diligo_device
+#: model:ir.model.fields,help:diligo_device.field_diligo_device__valid_archived_variant_ids
+#: model:ir.model.fields,help:diligo_device.field_diligo_device__valid_existing_variant_ids
+#: model:ir.model.fields,help:diligo_device.field_diligo_device__valid_product_attribute_ids
+#: model:ir.model.fields,help:diligo_device.field_diligo_device__valid_product_attribute_value_ids
+#: model:ir.model.fields,help:diligo_device.field_diligo_device__valid_product_attribute_value_wnva_ids
+#: model:ir.model.fields,help:diligo_device.field_diligo_device__valid_product_attribute_wnva_ids
+#: model:ir.model.fields,help:diligo_device.field_diligo_device__valid_product_template_attribute_line_ids
+#: model:ir.model.fields,help:diligo_device.field_diligo_device__valid_product_template_attribute_line_wnva_ids
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_extra__valid_archived_variant_ids
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_extra__valid_existing_variant_ids
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_extra__valid_product_attribute_ids
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_extra__valid_product_attribute_value_ids
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_extra__valid_product_attribute_value_wnva_ids
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_extra__valid_product_attribute_wnva_ids
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_extra__valid_product_template_attribute_line_ids
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_extra__valid_product_template_attribute_line_wnva_ids
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_main__valid_archived_variant_ids
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_main__valid_existing_variant_ids
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_main__valid_product_attribute_ids
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_main__valid_product_attribute_value_ids
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_main__valid_product_attribute_value_wnva_ids
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_main__valid_product_attribute_wnva_ids
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_main__valid_product_template_attribute_line_ids
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_main__valid_product_template_attribute_line_wnva_ids
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_parts_in__valid_archived_variant_ids
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_parts_in__valid_existing_variant_ids
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_parts_in__valid_product_attribute_ids
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_parts_in__valid_product_attribute_value_ids
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_parts_in__valid_product_attribute_value_wnva_ids
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_parts_in__valid_product_attribute_wnva_ids
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_parts_in__valid_product_template_attribute_line_ids
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_parts_in__valid_product_template_attribute_line_wnva_ids
+msgid "Technical compute"
+msgstr ""
+
+#. module: diligo_device
+#: model:ir.model.fields,help:diligo_device.field_diligo_device__pricelist_id
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_extra__pricelist_id
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_main__pricelist_id
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_parts_in__pricelist_id
+msgid "Technical field. Used for searching on pricelists, not stored in database."
+msgstr "Trường kỹ thuật. Được sử dụng để tìm kiếm trên bảng giá, không được lưu trữ trong cơ sở dữ liệu."
+
+#. module: diligo_device
+#: model:ir.model.fields,help:diligo_device.field_diligo_device__stock_move_ids
+#: model:ir.model.fields,help:diligo_device.field_diligo_device__stock_quant_ids
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_extra__stock_move_ids
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_extra__stock_quant_ids
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_main__stock_move_ids
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_main__stock_quant_ids
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_parts_in__stock_move_ids
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_parts_in__stock_quant_ids
+msgid "Technical: used to compute quantities."
+msgstr "Kỹ thuật: được sử dụng để tính toán số lượng."
+
+#. module: diligo_device
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device__product_template_attribute_value_ids
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_extra__product_template_attribute_value_ids
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main__product_template_attribute_value_ids
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_parts_in__product_template_attribute_value_ids
+msgid "Template Attribute Values"
+msgstr ""
+
+#. module: diligo_device
+#: model:ir.model.fields,help:diligo_device.field_diligo_device__lst_price
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_extra__lst_price
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_main__lst_price
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_parts_in__lst_price
+msgid "The sale price is managed from the product template. Click on the 'Configure Variants' button to set the extra attribute prices."
+msgstr ""
+
+#. module: diligo_device
+#: model:ir.model.fields,help:diligo_device.field_diligo_device__volume
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_extra__volume
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_main__volume
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_parts_in__volume
+msgid "The volume in m3."
+msgstr "Thể tích tính theo m3."
+
+#. module: diligo_device
+#: model:ir.model.fields,help:diligo_device.field_diligo_device__image_variant
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_extra__image_variant
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_main__image_variant
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_parts_in__image_variant
+msgid "This field holds the image used as image for the product variant, limited to 1024x1024px."
+msgstr "Trường này chứa hình ảnh được sử dụng làm hình cho biến thể sản phẩm, kích thước bị giới hạn đến 1024x1024px."
+
+#. module: diligo_device
+#: model:ir.model.fields,help:diligo_device.field_diligo_device__price_extra
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_extra__price_extra
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_main__price_extra
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_parts_in__price_extra
+msgid "This is the sum of the extra price of all attributes"
+msgstr "Đây là tổng giá cộng thêm của tất cả các thuộc tính"
+
+#. module: diligo_device
+#: model:ir.model.fields,help:diligo_device.field_diligo_device__property_stock_production
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_extra__property_stock_production
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_main__property_stock_production
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_parts_in__property_stock_production
+msgid "This stock location will be used, instead of the default one, as the source location for stock moves generated by manufacturing orders."
+msgstr "Địa điểm kho này sẽ được sử dụng, thay cho địa điểm mặc định, như là địa điểm nguồn cho các dịch chuyển kho được tạo bởi lệnh sản xuất."
+
+#. module: diligo_device
+#: model:ir.model.fields,help:diligo_device.field_diligo_device__property_stock_inventory
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_extra__property_stock_inventory
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_main__property_stock_inventory
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_parts_in__property_stock_inventory
+msgid "This stock location will be used, instead of the default one, as the source location for stock moves generated when you do an inventory."
+msgstr "Thay cho địa điểm mặc định, địa điểm kho này sẽ được sử dụng như là địa điểm nguồn của các dịch chuyển kho được tạo ra khi bạn thực hiện một kiểm kê (kiểm kho)."
+
+#. module: diligo_device
+#: model:ir.model.fields,help:diligo_device.field_diligo_device__responsible_id
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_extra__responsible_id
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_main__responsible_id
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_parts_in__responsible_id
+msgid "This user will be responsible of the next activities related to logistic operations for this product."
+msgstr ""
+
+#. module: diligo_device
+#: model_terms:ir.ui.view,arch_db:diligo_device.view_diligo_device_dashboard_kanban
+msgid "Thiết bị"
+msgstr ""
+
+#. module: diligo_device
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_extra__main_device_id
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_parts_in__main_device_id
+#: model:ir.ui.menu,name:diligo_device.menu_diligo_device_main
+#: selection:product.product,device_type:0
+msgid "Thiết bị chính"
+msgstr ""
+
+#. module: diligo_device
+#: model:ir.ui.menu,name:diligo_device.menu_sci_extra_device
+#: selection:product.product,device_type:0
+msgid "Thiết bị phụ"
+msgstr ""
+
+#. module: diligo_device
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main__extra_device_ids
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_parts_in__extra_device_id
+#: model_terms:ir.ui.view,arch_db:diligo_device.view_diligo_device_main_form
+msgid "Thiết bị phụ tùng"
+msgstr ""
+
+#. module: diligo_device
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main__maintenance_deadline
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main__maintenance_deadline_display
+#: model_terms:ir.ui.view,arch_db:diligo_device.view_diligo_device_main_form
+msgid "Thời hạn bảo dưỡng"
+msgstr ""
+
+#. module: diligo_device
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device__tracking
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_extra__tracking
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main__tracking
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_parts_in__tracking
+msgid "Tracking"
+msgstr "Theo vết"
+
+#. module: diligo_device
+#: model_terms:ir.ui.view,arch_db:diligo_device.view_device_department_tree_inherit
+msgid "Trang thiết bị"
+msgstr ""
+
+#. module: diligo_device
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device__activate
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_extra__activate
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main__activate
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_parts_in__activate
+msgid "Trạng thái"
+msgstr ""
+
+#. module: diligo_device
+#: model_terms:ir.ui.view,arch_db:diligo_device.view_diligo_device_extra_form
+#: model_terms:ir.ui.view,arch_db:diligo_device.view_diligo_device_main_form
+#: model_terms:ir.ui.view,arch_db:diligo_device.view_diligo_device_parts_in_form
+msgid "Tên thiết bị"
+msgstr ""
+
+#. module: diligo_device
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main__maintenance_status
+msgid "Tình trạng"
+msgstr ""
+
+#. module: diligo_device
+#: code:addons/diligo_device/models/device/device_main.py:76
+#, python-format
+msgid "Undefined"
+msgstr ""
+
+#. module: diligo_device
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device__uom_id
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_extra__uom_id
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main__uom_id
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_parts_in__uom_id
+msgid "Unit of Measure"
+msgstr "Đơn vị tính"
+
+#. module: diligo_device
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device__uom_name
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_extra__uom_name
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main__uom_name
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_parts_in__uom_name
+msgid "Unit of Measure Name"
+msgstr ""
+
+#. module: diligo_device
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device__message_unread
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_extra__message_unread
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main__message_unread
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_parts_in__message_unread
+msgid "Unread Messages"
+msgstr "Tin chưa đọc"
+
+#. module: diligo_device
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device__message_unread_counter
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_extra__message_unread_counter
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main__message_unread_counter
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_parts_in__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "Bộ đếm Thông điệp chưa đọc"
+
+#. module: diligo_device
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device__valid_archived_variant_ids
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_extra__valid_archived_variant_ids
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main__valid_archived_variant_ids
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_parts_in__valid_archived_variant_ids
+msgid "Valid Archived Variants"
+msgstr ""
+
+#. module: diligo_device
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device__valid_existing_variant_ids
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_extra__valid_existing_variant_ids
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main__valid_existing_variant_ids
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_parts_in__valid_existing_variant_ids
+msgid "Valid Existing Variants"
+msgstr ""
+
+#. module: diligo_device
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device__valid_product_template_attribute_line_ids
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_extra__valid_product_template_attribute_line_ids
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main__valid_product_template_attribute_line_ids
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_parts_in__valid_product_template_attribute_line_ids
+msgid "Valid Product Attribute Lines"
+msgstr ""
+
+#. module: diligo_device
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device__valid_product_template_attribute_line_wnva_ids
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_extra__valid_product_template_attribute_line_wnva_ids
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main__valid_product_template_attribute_line_wnva_ids
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_parts_in__valid_product_template_attribute_line_wnva_ids
+msgid "Valid Product Attribute Lines Without No Variant Attributes"
+msgstr ""
+
+#. module: diligo_device
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device__valid_product_attribute_value_ids
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_extra__valid_product_attribute_value_ids
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main__valid_product_attribute_value_ids
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_parts_in__valid_product_attribute_value_ids
+msgid "Valid Product Attribute Values"
+msgstr ""
+
+#. module: diligo_device
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device__valid_product_attribute_value_wnva_ids
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_extra__valid_product_attribute_value_wnva_ids
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main__valid_product_attribute_value_wnva_ids
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_parts_in__valid_product_attribute_value_wnva_ids
+msgid "Valid Product Attribute Values Without No Variant Attributes"
+msgstr ""
+
+#. module: diligo_device
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device__valid_product_attribute_ids
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_extra__valid_product_attribute_ids
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main__valid_product_attribute_ids
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_parts_in__valid_product_attribute_ids
+msgid "Valid Product Attributes"
+msgstr ""
+
+#. module: diligo_device
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device__valid_product_attribute_wnva_ids
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_extra__valid_product_attribute_wnva_ids
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main__valid_product_attribute_wnva_ids
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_parts_in__valid_product_attribute_wnva_ids
+msgid "Valid Product Attributes Without No Variant Attributes"
+msgstr ""
+
+#. module: diligo_device
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device__valuation
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_extra__valuation
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main__valuation
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_parts_in__valuation
+msgid "Valuation"
+msgstr "Định giá"
+
+#. module: diligo_device
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device__stock_value
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_extra__stock_value
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main__stock_value
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_parts_in__stock_value
+msgid "Value"
+msgstr "Giá trị"
+
+#. module: diligo_device
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device__image_variant
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_extra__image_variant
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main__image_variant
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_parts_in__image_variant
+msgid "Variant Image"
+msgstr "Hình ảnh biến thể"
+
+#. module: diligo_device
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device__price_extra
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_extra__price_extra
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main__price_extra
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_parts_in__price_extra
+msgid "Variant Price Extra"
+msgstr "Giá cộng thêm cho biến thể"
+
+#. module: diligo_device
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device__variant_seller_ids
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_extra__variant_seller_ids
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main__variant_seller_ids
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_parts_in__variant_seller_ids
+msgid "Variant Seller"
+msgstr "Người bán biến thể"
+
+#. module: diligo_device
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device__supplier_taxes_id
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_extra__supplier_taxes_id
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main__supplier_taxes_id
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_parts_in__supplier_taxes_id
+msgid "Vendor Taxes"
+msgstr "Thuế NCC"
+
+#. module: diligo_device
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device__seller_ids
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_extra__seller_ids
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main__seller_ids
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_parts_in__seller_ids
+msgid "Vendors"
+msgstr "Nhà cung cấp"
+
+#. module: diligo_device
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device__volume
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_extra__volume
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main__volume
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_parts_in__volume
+msgid "Volume"
+msgstr "Thể tích"
+
+#. module: diligo_device
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device__product_id
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_extra__product_id
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main__product_id
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_parts_in__product_id
+msgid "Vật tư"
+msgstr ""
+
+#. module: diligo_device
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_parts_in__location
+msgid "Vị trí"
+msgstr ""
+
+#. module: diligo_device
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device__warehouse_id
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_extra__warehouse_id
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main__warehouse_id
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_parts_in__warehouse_id
+msgid "Warehouse"
+msgstr "Kho hàng"
+
+#. module: diligo_device
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device__website_message_ids
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_extra__website_message_ids
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main__website_message_ids
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_parts_in__website_message_ids
+msgid "Website Messages"
+msgstr "Thông điệp Website"
+
+#. module: diligo_device
+#: model:ir.model.fields,help:diligo_device.field_diligo_device__website_message_ids
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_extra__website_message_ids
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_main__website_message_ids
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_parts_in__website_message_ids
+msgid "Website communication history"
+msgstr "Lịch sử thông tin liên lạc website"
+
+#. module: diligo_device
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device__weight
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_extra__weight
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main__weight
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_parts_in__weight
+msgid "Weight"
+msgstr "Khối lượng"
+
+#. module: diligo_device
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device__weight_uom_id
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_extra__weight_uom_id
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main__weight_uom_id
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_parts_in__weight_uom_id
+msgid "Weight Unit of Measure"
+msgstr "Đơn vị Đo Khối lượng"
+
+#. module: diligo_device
+#: model:ir.model.fields,help:diligo_device.field_diligo_device__weight
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_extra__weight
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_main__weight
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_parts_in__weight
+msgid "Weight of the product, packaging not included. The unit of measure can be changed in the general settings"
+msgstr ""
+
+#. module: diligo_device
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device__weight_uom_name
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_extra__weight_uom_name
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_main__weight_uom_name
+#: model:ir.model.fields,field_description:diligo_device.field_diligo_device_parts_in__weight_uom_name
+msgid "Weight unit of measure label"
+msgstr ""
+
+#. module: diligo_device
+#: model:ir.model.fields,help:diligo_device.field_diligo_device__property_stock_account_input
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_extra__property_stock_account_input
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_main__property_stock_account_input
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_parts_in__property_stock_account_input
+msgid "When doing real-time inventory valuation, counterpart journal items for all incoming stock moves will be posted in this account, unless there is a specific valuation account set on the source location. When not set on the product, the one from the product category is used."
+msgstr "Khi thực hiện định giá tồn kho theo thời gian thực, phát sinh đối ứng cho tất cả các dịch chuyển nhập kho sẽ được ghi nhận vào hệ thống tài khoản, trừ khi có một tài khoản định giá được thiết lập trên địa điểm nguồn. Khi không thiết lập trên sản phẩm, hệ thống sẽ sử dụng thiết lập trên nhóm sản phẩm.\n"
+"Tips: Giá trị sẽ được ghi vào bên Có của tài khoản này."
+
+#. module: diligo_device
+#: model:ir.model.fields,help:diligo_device.field_diligo_device__property_stock_account_output
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_extra__property_stock_account_output
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_main__property_stock_account_output
+#: model:ir.model.fields,help:diligo_device.field_diligo_device_parts_in__property_stock_account_output
+msgid "When doing real-time inventory valuation, counterpart journal items for all outgoing stock moves will be posted in this account, unless there is a specific valuation account set on the destination location. When not set on the product, the one from the product category is used."
+msgstr "Khi thực hiện định giá tồn kho theo thời gian thực, phát sinh đối ứng cho tất cả các dịch chuyển nhập kho sẽ được ghi nhận vào hệ thống tài khoản, trừ khi có một tài khoản định giá được thiết lập trên địa điểm đích. Khi không thiết lập trên một sản phẩm, hệ thống sẽ sử dụng thiết lập trên nhóm sản phẩm.\n"
+"Tips: Giá trị sẽ được ghi vào bên Nợ của tài khoản này."
+
+#. module: diligo_device
+#: code:addons/diligo_device/models/device/device_main.py:69
+#, python-format
+msgid "days"
+msgstr ""
+
+#. module: diligo_device
+#: code:addons/diligo_device/models/device/device_main.py:71
+#, python-format
+msgid "months"
+msgstr ""
+
+#. module: diligo_device
+#: selection:sci.device.main,maintenance_deadline_type:0
+msgid "năm"
+msgstr ""
+
+#. module: diligo_device
+#: model_terms:ir.ui.view,arch_db:diligo_device.view_diligo_device_extra_form
+#: model_terms:ir.ui.view,arch_db:diligo_device.view_diligo_device_main_form
+#: model_terms:ir.ui.view,arch_db:diligo_device.view_diligo_device_parts_in_form
+msgid "sản phẩm"
+msgstr ""
+
+#. module: diligo_device
+#: selection:sci.device.main,maintenance_deadline_type:0
+msgid "tháng"
+msgstr ""
+
+#. module: diligo_device
+#: code:addons/diligo_device/models/device/device_main.py:73
+#, python-format
+msgid "years"
+msgstr ""
+
+#. module: diligo_device
+#: selection:sci.device,activate:0
+#: selection:sci.device.extra,activate:0
+#: selection:sci.device.main,activate:0
+#: selection:sci.device.parts.in,activate:0
+msgid "Đang Hỏng"
+msgstr ""
+
+#. module: diligo_device
+#: model_terms:ir.ui.view,arch_db:diligo_device.view_diligo_device_main_search
+#: selection:sci.device,activate:0
+#: selection:sci.device.extra,activate:0
+#: selection:sci.device.main,activate:0
+#: selection:sci.device.parts.in,activate:0
+msgid "Đang sử dụng"
+msgstr ""
+
+#. module: diligo_device
+#: selection:sci.device,activate:0
+#: selection:sci.device.extra,activate:0
+#: selection:sci.device.main,activate:0
+#: selection:sci.device.parts.in,activate:0
+msgid "Đã bị Mất"
+msgstr ""
+
+#. module: diligo_device
+#: model:ir.model.fields,field_description:diligo_device.field_category_device_area__category_id
+#: model:ir.model.fields,field_description:diligo_device.field_sci_device_main__category
+#: model_terms:ir.ui.view,arch_db:diligo_device.view_device_category_area_form
+msgid "Category"
+msgstr "Loại"
+
+#. module: diligo_device
+#: model:ir.model.fields,field_description:diligo_device.field_category_device__area_id
+#: model:ir.model.fields,field_description:diligo_device.field_sci_device_main__category_area
+msgid "Category area"
+msgstr "Khu vực thể loại"
+
+
+#. module: diligo_device
+#: model:ir.actions.act_window,name:diligo_device.act_device_category_view
+msgid "Device category"
+msgstr "Khu vực sử dụng"
+
+#. module: diligo_device
+#: model:ir.actions.act_window,name:diligo_device.act_device_category_area_view
+msgid "Device category area"
+msgstr "Đơn vị sử dụng"

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<menuitem
+			id="mail.menu_root_discuss"
+			web_icon="pontusinc_icon,static/description/icon_discuss.png"
+		/>
+
+		<menuitem
+			id="calendar.mail_menu_calendar"
+			web_icon="pontusinc_icon,static/description/icon_calendar.png"/>
+
+		<menuitem
+			id="note.menu_note_notes"
+			web_icon="pontusinc_icon,static/description/icon_note.png"/>
+
+		<menuitem
+			id="contacts.menu_contacts"
+			web_icon="pontusinc_icon,static/description/icon_contact.png"/>
+
+		<menuitem
+			id="crm.crm_menu_root"
+			web_icon="pontusinc_icon,static/description/icon_crm.png"/>
+
+		<menuitem
+			id="sale.sale_menu_root"
+			web_icon="pontusinc_icon,static/description/icon_sale.png"/>
+
+		<menuitem
+			id="sale_renting.rental_menu_root"
+			web_icon="pontusinc_icon,static/description/icon_rental.png"/>
+
+		<menuitem
+			id="point_of_sale.menu_point_root"
+			web_icon="pontusinc_icon,static/description/icon_pos.png"/>
+
+		<menuitem
+			id="account_accountant.menu_accounting"
+			web_icon="pontusinc_icon,static/description/icon_accounting.png"/>
+
+		<menuitem
+			id="marketing_automation.marketing_automation_menu"
+			web_icon="pontusinc_icon,static/description/icon_marketing_automation.png"/>
+
+		<menuitem
+			id="mass_mailing.mass_mailing_menu_root"
+			web_icon="pontusinc_icon,static/description/icon_email_marketing.png"/>
+
+		<menuitem
+			id="mass_mailing_sms.mass_mailing_sms_menu_root"
+			web_icon="pontusinc_icon,static/description/icon_sms_marketing.png"/>
+
+		<menuitem
+			id="event.event_main_menu"
+			web_icon="pontusinc_icon,static/description/icon_event.png"/>
+
+		<menuitem
+			id="survey.menu_surveys"
+			web_icon="pontusinc_icon,static/description/icon_survey.png"/>
+
+		<menuitem
+			id="purchase.menu_purchase_root"
+			web_icon="pontusinc_icon,static/description/icon_purchase.png"/>
+
+		<menuitem
+			id="stock.menu_stock_root"
+			web_icon="pontusinc_icon,static/description/icon_stock.png"/>
+
+		<menuitem
+			id="mrp.menu_mrp_root"
+			web_icon="pontusinc_icon,static/description/icon_mrp.png"/>
+
+		<menuitem
+			id="maintenance.menu_maintenance_title"
+			web_icon="pontusinc_icon,static/description/icon_maintenance.png"/>
+
+		<menuitem
+			id="sign.menu_document"
+			web_icon="pontusinc_icon,static/description/icon_signature.png"/>
+
+		<menuitem
+			id="hr.menu_hr_root"
+			web_icon="pontusinc_icon,static/description/icon_hr.png"/>
+
+		<menuitem
+			id="om_hr_payroll.menu_hr_payroll_root"
+			web_icon="pontusinc_icon,static/description/icon_payroll.png"/>
+
+		<menuitem
+			id="hr_attendance.menu_hr_attendance_root"
+			web_icon="pontusinc_icon,static/description/icon_attendance.png"/>
+
+		<menuitem
+			id="hr_recruitment.menu_hr_recruitment_root"
+			web_icon="pontusinc_icon,static/description/icon_hr_recruitment.png"/>
+
+		<menuitem
+			id="hr_expense.menu_hr_expense_root"
+			web_icon="pontusinc_icon,static/description/icon_hr_expense.png"/>
+
+		<menuitem
+			id="im_livechat.menu_livechat_root"
+			web_icon="pontusinc_icon,static/description/icon_chat.png"/>
+
+		<menuitem
+			id="approvals.approvals_menu_root"
+			web_icon="pontusinc_icon,static/description/icon_approvals.png"/>
+
+		<menuitem
+			id="utm.menu_link_tracker_root"
+			web_icon="pontusinc_icon,static/description/icon_utm.png"/>
+
+		<menuitem
+			id="base.menu_management"
+			web_icon="pontusinc_icon,static/description/icon_apps.png"/>
+
+		<menuitem
+			id="hr_timesheet.timesheet_menu_root"
+			web_icon="pontusinc_icon,static/description/icon_timesheet.png"/>
+
+		<menuitem
+			id="planning.planning_menu_root"
+			web_icon="pontusinc_icon,static/description/icon_planning.png"/>
+
+		<menuitem
+			id="website.menu_website_configuration"
+			web_icon="pontusinc_icon,static/description/icon_website.png"/>
+
+		<menuitem
+			id="social.menu_social_global"
+			web_icon="pontusinc_icon,static/description/icon_social.png"/>
+
+
+	</data>
+</odoo>

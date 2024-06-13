@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="report_attendance_detail_template">
+            <field name="name">report.attendance.detail.form</field>
+            <field name="model">report.attendance.detailed</field>
+            <field name="arch" type="xml">
+                <form string="BÁO CÁO CHẤM CÔNG CHI TIET">
+                    <group>
+                        <field name="type" widget="radio"/>
+                        <label for="date_start" string="Period"/>
+                            <div>
+                                <field name="date_start" class="oe_inline"/>
+                                -
+                                <field name="date_end" class="oe_inline"/>
+                            </div>
+                        <field name="employee_id" attrs="{'invisible': [('type', '!=', 'employee')]}"/>
+                        <field name="area" attrs="{'invisible': [('type', '!=', 'area')]}"/>
+                    </group>
+                    <footer>
+                        <button name="report_attendance_detailed" type="object" string="Báo cáo" class="oe_highlight"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="report_attendance_detail_act">
+            <field name="name">Báo cáo chấm công chi tiet</field>
+            <field name="res_model">report.attendance.detailed</field>
+            <!--            <field name="view_type">form</field>-->
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="report_attendance_detail_template"/>
+            <field name="context">{}</field>
+            <field name="target">new</field>
+        </record>
+
+
+
+
+        <menuitem
+                id="menu_report_attendance_detail"
+                name="Báo cáo chấm công chi tiet"
+                parent="attendace_reporting_menu"
+                action="report_attendance_detail_act"
+                />
+    </data>
+</odoo>

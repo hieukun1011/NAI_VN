@@ -1,0 +1,11 @@
+<templates>
+<!--    <t t-name="base_import.ImportView" owl="1" t-inherit-mode="extension" t-inherit="base_import.ImportView">-->
+<!--        <xpath expr="//a[@href='https://www.odoo.com/documentation/16.0/applications/general/export_import_data.html']" position="replace">-->
+<!--        </xpath>-->
+<!--    </t>-->
+
+<!--    <t t-name="base_import.ImportView.side_panel" owl="1" t-inherit-mode="extension" t-inherit="base_import.ImportView.side_panel">-->
+<!--        <xpath expr="//a[@href='https://www.odoo.com/documentation/16.0/applications/general/export_import_data.html']" position="replace">-->
+<!--        </xpath>-->
+<!--    </t>-->
+</templates>

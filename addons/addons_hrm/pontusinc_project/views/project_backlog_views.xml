@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="project_backlog_view_tree" model="ir.ui.view">
+        <field name="name">project.backlog.view.tree</field>
+        <field name="model">project.backlog</field>
+        <field name="arch" type="xml">
+            <tree editable="bottom">
+                <field name="name" width="25%"/>
+                <field name="milestone_id" optional="show" required="1" width="25%"/>
+                <field name="start_date" optional="show" width="25%"/>
+                <field name="end_date" optional="show" width="25%"/>
+                <field name="task_ids" invisible="1"/>
+            </tree>
+        </field>
+    </record>
+
+</odoo>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="shipping_config_company_view_form" model="ir.ui.view">
+        <field name="name">res.company.form.inherit.shipping</field>
+        <field name="model">res.company</field>
+        <field name="inherit_id" ref="base.view_company_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//page[@name='general_info']" position="after">
+                <page name="shipping_config" string="Shipping">
+                    <group>
+                        <group string="shipping information">
+                            <field name="according_product_order"/>
+                            <field name="is_custom"/>
+                            <label for="specific_weight" attrs="{'invisible' :[('is_custom', '=', False)]}"/>
+                            <div attrs="{'invisible' :[('is_custom', '=', False)]}">
+                                <field name="specific_weight" class="oe_inline"/> <span class="ml8">Gam</span>
+                            </div>
+                        </group>
+                        <group string="Setup delivery">
+                            <field name="sync_automation_state"/>
+                            <field name="sync_automation_fee"/>
+                            <label for="late_pick_alert_days"/>
+                            <div>
+                                <field name="late_pick_alert_days" class="oe_inline"/> <span class="ml8">Days</span>
+                            </div>
+                            <label for="late_delivery_alert_days"/>
+                            <div>
+                                <field name="late_delivery_alert_days" class="oe_inline"/> <span class="ml8">Days</span>
+                            </div>
+                        </group>
+                        <div>
+                            <h3>Kích thước</h3>
+                            <label for="length" string="Length"/>
+                            <span>
+                                <field name="length" class="oe_inline o_input_8ch"/>
+                            </span>
+                            <label for="width" string="Width"/>
+                            <span>
+                                <field name="width" class="oe_inline o_input_8ch"/>
+                            </span>
+                            <label for="height" string="Height"/>
+                            <span>
+                                <field name="height" class="oe_inline o_input_8ch"/>
+                            </span>
+<!--                            <field name="length" class="oe_inline"/>-->
+<!--                            <span>Width</span>-->
+<!--                            <field name="width" class="oe_inline"/>-->
+<!--                            <span>Height</span>-->
+<!--                            <field name="height" class="oe_inline"/>-->
+                        </div>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="action_shipping_config_company" model="ir.actions.act_window">
+        <field name="name">Companies</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">res.company</field>
+        <field name="view_mode">tree,kanban,form</field>
+        <field name="domain">[('id', '=', allowed_company_ids)]</field>
+    </record>
+
+</odoo>

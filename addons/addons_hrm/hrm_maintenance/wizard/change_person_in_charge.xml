@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<odoo>
+        <record id="maintenance_request_change_view_form" model="ir.ui.view">
+            <field name="name">maintenance.request.change.form</field>
+            <field name="model">maintenance.request.change</field>
+            <field name="arch" type="xml">
+                <form string="Thay đổi người phụ trách">
+                    <group>
+                        <field name="emp_id" required="1" options="{'no_quick_create':True,'no_create_edit':True, 'no_open':True}"/>
+                        <field name="reason_change" required="1"/>
+                    </group>
+                    <footer>
+                    <button name="modify" string="Modify" type="object" class="btn-primary"/>
+                    <button string="Cancel" class="btn-default" special="cancel"/>
+                </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="maintenance_reason_change_action" model="ir.actions.act_window">
+            <field name="name">Thay đổi người phụ trách</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">maintenance.request.change</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="maintenance_request_change_view_form"/>
+            <field name="target">new</field>
+        </record>
+</odoo>

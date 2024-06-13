@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="shipping_tree_view" model="ir.ui.view">
+        <field name="name">Shipping tree view</field>
+        <field name="model">shipping</field>
+        <field name="arch" type="xml">
+            <tree editable="top" create="0">
+                <field name="partner_id" invisible="1"/>
+                <field name="sale_order_id" options="{'no_create': True}"/>
+                <field name="product_ids" widget="many2many_tags"/>
+                <field name="shipping_unit_id" options="{'no_create': True, 'no_open': True}"/>
+                <field name="company_id"/>
+                <field name="platform"/>
+                <field name="total_price"/>
+                <field name="state_id" options="{'no_create': True, 'no_open': True}" widget="badge"/>
+            </tree>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,1554 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* diligo_maintenance
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-17 04:44+0000\n"
+"PO-Revision-Date: 2022-01-17 04:44+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: diligo_maintenance
+#: model:res.groups,name:diligo_maintenance.group_equipment_user
+msgid " Bảo trì - Nhân viên"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:ir.model.fields,field_description:diligo_maintenance.field_hr_employee__custody_count
+msgid "# Custody"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model_terms:ir.ui.view,arch_db:diligo_maintenance.support_help_submit_ticket
+msgid "256"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model_terms:ir.ui.view,arch_db:diligo_maintenance.hr_equipment_request_view_kanban
+#: model_terms:ir.ui.view,arch_db:diligo_maintenance.hr_equipment_server_request_view_kanban
+msgid "<b>Category:</b>"
+msgstr "<b>Nhóm:</b>"
+
+#. module: diligo_maintenance
+#: model_terms:ir.ui.view,arch_db:diligo_maintenance.hr_equipment_request_view_kanban
+#: model_terms:ir.ui.view,arch_db:diligo_maintenance.hr_equipment_server_request_view_kanban
+msgid "<b>Request to:</b>"
+msgstr "<b>Đề nghị đến:</b>"
+
+#. module: diligo_maintenance
+#: model_terms:ir.ui.view,arch_db:diligo_maintenance.hr_equipment_request_view_kanban
+#: model_terms:ir.ui.view,arch_db:diligo_maintenance.hr_equipment_server_request_view_kanban
+msgid "<i class=\"fa fa-comments\" role=\"img\" aria-label=\"Unread Messages\"/>"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model_terms:ir.ui.view,arch_db:diligo_maintenance.maintenance_team_kanban
+msgid "<i class=\"fa fa-ellipsis-v\" role=\"img\" aria-label=\"Manage\" title=\"Manage\"/>"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model_terms:ir.ui.view,arch_db:diligo_maintenance.hr_equipment_request_view_form
+msgid "<span class=\"ml8\">giờ</span>"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model_terms:ir.ui.view,arch_db:diligo_maintenance.view_maintenance_equipment_category_kanban
+msgid "<strong>Equipments:</strong>"
+msgstr "<strong>Thiết bị:</strong>"
+
+#. module: diligo_maintenance
+#: model_terms:ir.ui.view,arch_db:diligo_maintenance.view_maintenance_equipment_category_kanban
+msgid "<strong>Maintenance:</strong>"
+msgstr "<strong>Bảo trì:</strong>"
+
+#. module: diligo_maintenance
+#: model:ir.model.fields,field_description:diligo_maintenance.field_ems_equipment_export__message_needaction
+#: model:ir.model.fields,field_description:diligo_maintenance.field_sci_maintenance_request__message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:ir.model.fields,field_description:diligo_maintenance.field_sci_maintenance_team__active
+msgid "Active"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:ir.model.fields,field_description:diligo_maintenance.field_sci_maintenance_request__activity_ids
+msgid "Activities"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:ir.model.fields,field_description:diligo_maintenance.field_sci_maintenance_request__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:ir.model.fields,field_description:diligo_maintenance.field_sci_maintenance_request__activity_state
+msgid "Activity State"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:ir.model.fields,field_description:diligo_maintenance.field_sci_maintenance_request__activity_type_icon
+msgid "Activity Type Icon"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model_terms:ir.actions.act_window,help:diligo_maintenance.hr_equipment_action_from_category_form
+msgid "Add a new equipment"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model_terms:ir.actions.act_window,help:diligo_maintenance.hr_equipment_request_action_from_equipment
+#: model_terms:ir.actions.act_window,help:diligo_maintenance.hr_equipment_request_action_from_equipment_2
+msgid "Add a new maintenance request"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model_terms:ir.actions.act_window,help:diligo_maintenance.hr_equipment_stage_action
+msgid "Add a new stage in the maintenance request"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model_terms:ir.actions.act_window,help:diligo_maintenance.maintenance_team_action_settings
+msgid "Add a team in the maintenance request"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:ir.model.fields,field_description:diligo_maintenance.field_sci_maintenance_request__archive
+msgid "Archive"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model_terms:ir.ui.view,arch_db:diligo_maintenance.hr_equipment_request_view_search
+#: model_terms:ir.ui.view,arch_db:diligo_maintenance.maintenance_team_view_search
+msgid "Archived"
+msgstr "Lưu trữ"
+
+#. module: diligo_maintenance
+#: model:ir.actions.act_window,name:diligo_maintenance.area_type_maintenance_request_action
+#: model:ir.ui.menu,name:diligo_maintenance.menu_area_type_maintenance_request
+msgid "Area type maintenance request"
+msgstr "Dịch vụ con"
+
+#. module: diligo_maintenance
+#: model_terms:ir.ui.view,arch_db:diligo_maintenance.hr_equipment_category_view_tree
+msgid "Assign To User"
+msgstr "Giao cho Người dùng"
+
+#. module: diligo_maintenance
+#: model:ir.model.fields,field_description:diligo_maintenance.field_ems_equipment_export__message_attachment_count
+#: model:ir.model.fields,field_description:diligo_maintenance.field_sci_maintenance_request__message_attachment_count
+msgid "Attachment Count"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:ir.model.fields,field_description:diligo_maintenance.field_ems_equipment_export__attachment_ids
+#: model:ir.model.fields,field_description:diligo_maintenance.field_sci_maintenance_request__attachment_ids
+msgid "Attachment Files"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:ir.model.fields,field_description:diligo_maintenance.field_area_type_maintenance_request__the_average_time
+#: model:ir.model.fields,field_description:diligo_maintenance.field_sci_maintenance_request__the_average_time
+msgid "Average time problem solving"
+msgstr "Thời gian cam kết"
+
+#. module: diligo_maintenance
+#: model:ir.model.fields,field_description:diligo_maintenance.field_sci_device_main__category_id
+#: model_terms:ir.ui.view,arch_db:diligo_maintenance.support_help_submit_ticket
+msgid "BP quản lý/bảo trì"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:ir.model.fields.selection,name:diligo_maintenance.selection__sci_maintenance_request__kanban_state__blocked
+msgid "Blocked"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:ir.ui.menu,name:diligo_maintenance.menu_ems_export_sub
+msgid "Bàn giao thiết bị"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:ir.ui.menu,name:diligo_maintenance.maintenance_reporting
+#: model:ir.ui.menu,name:diligo_maintenance.menu_m_reports
+msgid "Báo cáo"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:ir.model.fields.selection,name:diligo_maintenance.selection__sci_maintenance_request__priority__2
+#: model:ir.model.fields.selection,name:diligo_maintenance.selection__sci_maintenance_request__support_rating__3
+#: model_terms:ir.ui.view,arch_db:diligo_maintenance.support_ticket_survey_page
+msgid "Bình thường"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model_terms:ir.ui.view,arch_db:diligo_maintenance.hr_equipment_request_view_form
+msgid "Bạn đã chắc chắn?"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:ir.model.fields.selection,name:diligo_maintenance.selection__sci_maintenance_request__maintenance_type__preventive
+#: model_terms:ir.ui.view,arch_db:diligo_maintenance.view_diligo_device_main_form_2
+msgid "Bảo dưỡng định kỳ"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model_terms:ir.ui.view,arch_db:diligo_maintenance.hr_equipment_category_view_form
+msgid "Bảo trì"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:res.groups,name:diligo_maintenance.group_equipment_manager
+msgid "Bảo trì - Quản lý"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:ir.actions.act_window,name:diligo_maintenance.hr_equipment_category_action
+msgid "Bộ phận quản lý/tiếp nhận yêu cầu"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:ir.model.fields,field_description:diligo_maintenance.field_sci_maintenance_request__category_id
+#: model:ir.model.fields,field_description:diligo_maintenance.field_sci_maintenance_team__maintenance_category_id
+#: model:ir.ui.menu,name:diligo_maintenance.menu_maintenance_cat
+#: model_terms:ir.ui.view,arch_db:diligo_maintenance.hr_equipment_category_view_form
+#: model_terms:ir.ui.view,arch_db:diligo_maintenance.hr_equipment_request_view_search
+msgid "Bộ phận tiếp nhận"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model_terms:ir.ui.view,arch_db:diligo_maintenance.hr_equipment_request_view_kanban
+#: model_terms:ir.ui.view,arch_db:diligo_maintenance.hr_equipment_server_request_view_kanban
+msgid "Bộ phận tiếp nhận:"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:ir.model.fields.selection,name:diligo_maintenance.selection__sci_maintenance_request__priority__3
+msgid "Cao"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:ir.model.fields,field_description:diligo_maintenance.field_sci_maintenance_equipment_category__name
+#: model_terms:ir.ui.view,arch_db:diligo_maintenance.hr_equipment_category_view_search
+msgid "Category Name"
+msgstr "Tên danh mục"
+
+#. module: diligo_maintenance
+#: model_terms:ir.ui.view,arch_db:diligo_maintenance.support_survey_thank_you
+msgid "Chúng tôi sẽ ghi nhận những đóng góp của bạn!!!"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model_terms:ir.ui.view,arch_db:diligo_maintenance.support_thank_you
+msgid "Chúng tôi sẽ liên lạc lại với bạn trong thời gian ngắn"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:ir.model.fields,field_description:diligo_maintenance.field_sci_maintenance_equipment_category__technician_user_id
+#: model:ir.model.fields,field_description:diligo_maintenance.field_sci_maintenance_team__technician_user_id
+msgid "Chịu trách nhiệm"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model_terms:ir.ui.view,arch_db:diligo_maintenance.hr_equipment_request_view_form
+#: model_terms:ir.ui.view,arch_db:diligo_maintenance.view_close_ems_equipment_export_form
+#: model_terms:ir.ui.view,arch_db:diligo_maintenance.view_ems_equipment_export_form
+msgid "Chọn tệp tin"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model_terms:ir.ui.view,arch_db:diligo_maintenance.hr_equipment_request_view_form
+#: model_terms:ir.ui.view,arch_db:diligo_maintenance.hr_equipment_request_view_tree
+#: model_terms:ir.ui.view,arch_db:diligo_maintenance.support_help_submit_ticket
+msgid "Chủ đề"
+msgstr "Chủ đề"
+
+#. module: diligo_maintenance
+#: model:ir.model.fields,field_description:diligo_maintenance.field_sci_maintenance_request__close_comment
+msgid "Close Comment"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:ir.model.fields,field_description:diligo_maintenance.field_website_support_ticket_close__message
+msgid "Close Message"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:ir.model.fields,field_description:diligo_maintenance.field_sci_maintenance_request__closed_by_id
+msgid "Closed By"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:ir.model.fields,field_description:diligo_maintenance.field_area_type_maintenance_request__code
+#: model:ir.model.fields,field_description:diligo_maintenance.field_sci_maintenance_request__code
+#: model:ir.model.fields,field_description:diligo_maintenance.field_sci_maintenance_stage__code
+msgid "Code"
+msgstr "Mã yêu cầu"
+
+#. module: diligo_maintenance
+#: model:ir.model.fields,field_description:diligo_maintenance.field_sci_maintenance_equipment_category__color
+#: model:ir.model.fields,field_description:diligo_maintenance.field_sci_maintenance_request__color
+#: model:ir.model.fields,field_description:diligo_maintenance.field_sci_maintenance_team__color
+msgid "Color Index"
+msgstr "Chỉ số màu"
+
+#. module: diligo_maintenance
+#: model:ir.model.fields,field_description:diligo_maintenance.field_sci_maintenance_equipment_category__note
+msgid "Comments"
+msgstr "Bình luận"
+
+#. module: diligo_maintenance
+#: model:ir.model.fields,field_description:diligo_maintenance.field_ems_equipment_export__company_id
+msgid "Company"
+msgstr "Công ty"
+
+#. module: diligo_maintenance
+#: model:ir.model.fields,field_description:diligo_maintenance.field_area_type_maintenance_request__create_uid
+#: model:ir.model.fields,field_description:diligo_maintenance.field_ems_equipment_export__create_uid
+#: model:ir.model.fields,field_description:diligo_maintenance.field_sci_maintenance_equipment_category__create_uid
+#: model:ir.model.fields,field_description:diligo_maintenance.field_sci_maintenance_request__create_uid
+#: model:ir.model.fields,field_description:diligo_maintenance.field_sci_maintenance_stage__create_uid
+#: model:ir.model.fields,field_description:diligo_maintenance.field_sci_maintenance_team__create_uid
+#: model:ir.model.fields,field_description:diligo_maintenance.field_type_maintenance_request__create_uid
+#: model:ir.model.fields,field_description:diligo_maintenance.field_website_support_ticket_close__create_uid
+msgid "Created by"
+msgstr "Được tạo bởi"
+
+#. module: diligo_maintenance
+#: model:ir.model.fields,field_description:diligo_maintenance.field_area_type_maintenance_request__create_date
+#: model:ir.model.fields,field_description:diligo_maintenance.field_ems_equipment_export__create_date
+#: model:ir.model.fields,field_description:diligo_maintenance.field_sci_maintenance_equipment_category__create_date
+#: model:ir.model.fields,field_description:diligo_maintenance.field_sci_maintenance_request__create_date
+#: model:ir.model.fields,field_description:diligo_maintenance.field_sci_maintenance_stage__create_date
+#: model:ir.model.fields,field_description:diligo_maintenance.field_sci_maintenance_team__create_date
+#: model:ir.model.fields,field_description:diligo_maintenance.field_type_maintenance_request__create_date
+#: model:ir.model.fields,field_description:diligo_maintenance.field_website_support_ticket_close__create_date
+msgid "Created on"
+msgstr "Được tạo ra"
+
+#. module: diligo_maintenance
+#: model:ir.ui.menu,name:diligo_maintenance.menu_maintenance_stage_configuration
+msgid "Các giai đoạn bảo trì"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:ir.ui.menu,name:diligo_maintenance.menu_maintenance_configuration
+msgid "Cấu hình"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:ir.model.fields.selection,name:diligo_maintenance.selection__sci_maintenance_request__type__dms
+#: model:ir.model.fields.selection,name:diligo_maintenance.selection__type_maintenance_request__type__dms
+msgid "DMS"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:ir.model.fields,field_description:diligo_maintenance.field_sci_device_main__custody_ids
+msgid "Danh sách bàn giao"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:ir.model.fields,field_description:diligo_maintenance.field_sci_maintenance_request__supervisor_ids
+msgid "Danh sách nhân sự bảo trì"
+msgstr "Thêm nhân sự"
+
+#. module: diligo_maintenance
+#: model_terms:ir.ui.view,arch_db:diligo_maintenance.hr_equipment_request_view_form
+msgid "Danh sách nhân sự hỗ trợ"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:ir.actions.act_window,name:diligo_maintenance.act_open_ems_equipment_export_view
+msgid "Danh sách phiếu bàn giao thiết bị"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:ir.actions.act_window,name:diligo_maintenance.act_close_ems_equipment_export_view
+msgid "Danh sách phiếu nhận bàn giao thiết bị"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:ir.model.fields,field_description:diligo_maintenance.field_ems_equipment_export__device_ids
+#: model_terms:ir.ui.view,arch_db:diligo_maintenance.view_close_ems_equipment_export_form
+#: model_terms:ir.ui.view,arch_db:diligo_maintenance.view_ems_equipment_export_form
+msgid "Danh sách thiết bị"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:ir.model.fields,help:diligo_maintenance.field_sci_maintenance_request__request_date
+msgid "Date requested for the maintenance to happen"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model_terms:ir.ui.view,arch_db:diligo_maintenance.hr_equipment_request_view_kanban
+#: model_terms:ir.ui.view,arch_db:diligo_maintenance.hr_equipment_server_request_view_kanban
+msgid "Delete"
+msgstr "Xoá"
+
+#. module: diligo_maintenance
+#: model:ir.model.fields,field_description:diligo_maintenance.field_ems_equipment_export__description
+msgid "Description"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:ir.actions.server,name:diligo_maintenance.ir_cron_data_device_update_maintenance_ir_actions_server
+#: model:ir.cron,cron_name:diligo_maintenance.ir_cron_data_device_update_maintenance
+#: model:ir.cron,name:diligo_maintenance.ir_cron_data_device_update_maintenance
+msgid "Device: update maintenance"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:ir.model.fields,field_description:diligo_maintenance.field_area_type_maintenance_request__display_name
+#: model:ir.model.fields,field_description:diligo_maintenance.field_ems_equipment_export__display_name
+#: model:ir.model.fields,field_description:diligo_maintenance.field_sci_maintenance_equipment_category__display_name
+#: model:ir.model.fields,field_description:diligo_maintenance.field_sci_maintenance_request__display_name
+#: model:ir.model.fields,field_description:diligo_maintenance.field_sci_maintenance_stage__display_name
+#: model:ir.model.fields,field_description:diligo_maintenance.field_sci_maintenance_team__display_name
+#: model:ir.model.fields,field_description:diligo_maintenance.field_type_maintenance_request__display_name
+#: model:ir.model.fields,field_description:diligo_maintenance.field_website_support_ticket_close__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: diligo_maintenance
+#: model:ir.model.fields.selection,name:diligo_maintenance.selection__sci_maintenance_request__kanban_state__doing
+msgid "Doing"
+msgstr "Đang làm"
+
+#. module: diligo_maintenance
+#: model_terms:ir.ui.view,arch_db:diligo_maintenance.hr_equipment_request_view_search
+msgid "Done"
+msgstr "Hoàn thành"
+
+#. module: diligo_maintenance
+#: model_terms:ir.ui.view,arch_db:diligo_maintenance.hr_equipment_request_view_kanban
+#: model_terms:ir.ui.view,arch_db:diligo_maintenance.hr_equipment_server_request_view_kanban
+msgid "Dropdown menu"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:ir.model.fields,help:diligo_maintenance.field_sci_maintenance_request__duration
+msgid "Duration in hours and minutes."
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:ir.model.fields.selection,name:diligo_maintenance.selection__ems_equipment_export__state__draft
+msgid "Dự thảo"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model_terms:ir.ui.view,arch_db:diligo_maintenance.hr_equipment_request_view_kanban
+#: model_terms:ir.ui.view,arch_db:diligo_maintenance.hr_equipment_server_request_view_kanban
+msgid "Edit..."
+msgstr "Chỉnh sửa..."
+
+#. module: diligo_maintenance
+#: model:ir.model.fields,field_description:diligo_maintenance.field_sci_maintenance_equipment_category__email
+#: model:ir.model.fields,field_description:diligo_maintenance.field_sci_maintenance_request__email
+#: model:ir.model.fields.selection,name:diligo_maintenance.selection__sci_maintenance_request__channel__email
+#: model_terms:ir.ui.view,arch_db:diligo_maintenance.support_help_submit_ticket
+msgid "Email"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:ir.model,name:diligo_maintenance.model_hr_employee
+msgid "Employee"
+msgstr "Nhân viên"
+
+#. module: diligo_maintenance
+#: model:ir.model.fields,field_description:diligo_maintenance.field_sci_maintenance_equipment_category__equipment_count
+msgid "Equipment"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model_terms:ir.ui.view,arch_db:diligo_maintenance.view_ems_equipment_export_search
+msgid "Equipment Export"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model_terms:ir.ui.view,arch_db:diligo_maintenance.view_close_ems_equipment_export_form
+#: model_terms:ir.ui.view,arch_db:diligo_maintenance.view_close_ems_equipment_export_tree
+#: model_terms:ir.ui.view,arch_db:diligo_maintenance.view_ems_equipment_export_form
+#: model_terms:ir.ui.view,arch_db:diligo_maintenance.view_ems_equipment_export_tree
+msgid "Equipment Exports"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:ir.model,name:diligo_maintenance.model_ems_equipment_export
+msgid "Equipments Export"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:ir.model.fields,field_description:diligo_maintenance.field_sci_maintenance_equipment_category__team_ids
+msgid "Family"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:ir.model.fields,help:diligo_maintenance.field_sci_maintenance_equipment_category__team_ids
+msgid "Family Information"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:ir.model.fields,field_description:diligo_maintenance.field_sci_maintenance_stage__fold
+msgid "Folded in Maintenance Pipe"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model_terms:ir.actions.act_window,help:diligo_maintenance.hr_equipment_request_action_from_equipment
+#: model_terms:ir.actions.act_window,help:diligo_maintenance.hr_equipment_request_action_from_equipment_2
+msgid ""
+"Follow the process of the request and communicate with the collaborator."
+msgstr "Theo dõi chu trình xử lý bảo trì và thông tin liên lạc với đồng sự."
+
+#. module: diligo_maintenance
+#: model:ir.model.fields,field_description:diligo_maintenance.field_ems_equipment_export__message_follower_ids
+#: model:ir.model.fields,field_description:diligo_maintenance.field_sci_maintenance_request__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:ir.model.fields,field_description:diligo_maintenance.field_ems_equipment_export__message_partner_ids
+#: model:ir.model.fields,field_description:diligo_maintenance.field_sci_maintenance_request__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:ir.model.fields,help:diligo_maintenance.field_sci_maintenance_request__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:ir.actions.act_window,name:diligo_maintenance.hr_equipment_stage_action
+msgid "Giai đoạn bảo trì"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model_terms:ir.ui.view,arch_db:diligo_maintenance.hr_equipment_request_view_form
+msgid "Giải pháp/Khắc phục"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model_terms:ir.ui.view,arch_db:diligo_maintenance.hr_equipment_category_view_search
+#: model_terms:ir.ui.view,arch_db:diligo_maintenance.hr_equipment_request_view_search
+msgid "Group by..."
+msgstr "Nhóm theo..."
+
+#. module: diligo_maintenance
+#: model:website.menu,name:diligo_maintenance.support_page_link
+#: model_terms:ir.ui.view,arch_db:diligo_maintenance.support_help_submit_ticket
+msgid "Gửi hỗ trợ"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model_terms:ir.ui.view,arch_db:diligo_maintenance.support_help_submit_ticket
+msgid "Gửi yêu cầu hỗ trợ"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model_terms:ir.ui.view,arch_db:diligo_maintenance.hr_equipment_request_view_form
+msgid "Gửi đánh giá"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:ir.model.fields,field_description:diligo_maintenance.field_ems_equipment_export__has_message
+#: model:ir.model.fields,field_description:diligo_maintenance.field_sci_maintenance_request__has_message
+msgid "Has Message"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:ir.model.fields,field_description:diligo_maintenance.field_sci_maintenance_request__tools_description
+msgid "Hiện trạng"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model_terms:ir.ui.view,arch_db:diligo_maintenance.hr_equipment_request_view_form
+msgid "Hiện trạng/Nguyên nhân"
+msgstr ""
+
+
+#. module: diligo_maintenance
+#: model_terms:ir.ui.view,arch_db:diligo_maintenance.support_help_submit_ticket
+msgid "Họ và Tên"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:ir.model.fields,field_description:diligo_maintenance.field_area_type_maintenance_request__id
+#: model:ir.model.fields,field_description:diligo_maintenance.field_ems_equipment_export__id
+#: model:ir.model.fields,field_description:diligo_maintenance.field_sci_maintenance_equipment_category__id
+#: model:ir.model.fields,field_description:diligo_maintenance.field_sci_maintenance_request__id
+#: model:ir.model.fields,field_description:diligo_maintenance.field_sci_maintenance_stage__id
+#: model:ir.model.fields,field_description:diligo_maintenance.field_sci_maintenance_team__id
+#: model:ir.model.fields,field_description:diligo_maintenance.field_type_maintenance_request__id
+#: model:ir.model.fields,field_description:diligo_maintenance.field_website_support_ticket_close__id
+msgid "ID"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:ir.ui.menu,name:diligo_maintenance.menu_m_request
+#: model:ir.ui.menu,name:diligo_maintenance.menu_maintenance_title
+msgid "IT Helpdesk"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:ir.model.fields,field_description:diligo_maintenance.field_sci_maintenance_request__activity_exception_icon
+msgid "Icon"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:ir.model.fields,help:diligo_maintenance.field_sci_maintenance_request__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:ir.model.fields,help:diligo_maintenance.field_ems_equipment_export__message_needaction
+#: model:ir.model.fields,help:diligo_maintenance.field_ems_equipment_export__message_unread
+#: model:ir.model.fields,help:diligo_maintenance.field_sci_maintenance_request__message_needaction
+#: model:ir.model.fields,help:diligo_maintenance.field_sci_maintenance_request__message_unread
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:ir.model.fields,help:diligo_maintenance.field_ems_equipment_export__message_has_error
+#: model:ir.model.fields,help:diligo_maintenance.field_ems_equipment_export__message_has_sms_error
+#: model:ir.model.fields,help:diligo_maintenance.field_sci_maintenance_request__message_has_error
+#: model:ir.model.fields,help:diligo_maintenance.field_sci_maintenance_request__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:ir.model.fields.selection,name:diligo_maintenance.selection__sci_maintenance_request__kanban_state__normal
+msgid "In Progress"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:ir.model.fields,field_description:diligo_maintenance.field_ems_equipment_export__message_is_follower
+#: model:ir.model.fields,field_description:diligo_maintenance.field_sci_maintenance_request__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:ir.model.fields,field_description:diligo_maintenance.field_sci_maintenance_request__kanban_state
+msgid "Kanban State"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:ir.model.fields.selection,name:diligo_maintenance.selection__sci_maintenance_request__channel__other
+msgid "Khác"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:ir.model.fields.selection,name:diligo_maintenance.selection__sci_maintenance_request__priority__4
+msgid "Khẩn cấp"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:ir.model.fields.selection,name:diligo_maintenance.selection__sci_maintenance_request__maintenance_type__corrective
+msgid "Khắc phục sự cố"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:ir.model.fields,field_description:diligo_maintenance.field_sci_maintenance_request__operations_description
+msgid "Kết quả"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:ir.model.fields,field_description:diligo_maintenance.field_area_type_maintenance_request____last_update
+#: model:ir.model.fields,field_description:diligo_maintenance.field_ems_equipment_export____last_update
+#: model:ir.model.fields,field_description:diligo_maintenance.field_sci_maintenance_equipment_category____last_update
+#: model:ir.model.fields,field_description:diligo_maintenance.field_sci_maintenance_request____last_update
+#: model:ir.model.fields,field_description:diligo_maintenance.field_sci_maintenance_stage____last_update
+#: model:ir.model.fields,field_description:diligo_maintenance.field_sci_maintenance_team____last_update
+#: model:ir.model.fields,field_description:diligo_maintenance.field_type_maintenance_request____last_update
+#: model:ir.model.fields,field_description:diligo_maintenance.field_website_support_ticket_close____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:ir.model.fields,field_description:diligo_maintenance.field_area_type_maintenance_request__write_uid
+#: model:ir.model.fields,field_description:diligo_maintenance.field_ems_equipment_export__write_uid
+#: model:ir.model.fields,field_description:diligo_maintenance.field_sci_maintenance_equipment_category__write_uid
+#: model:ir.model.fields,field_description:diligo_maintenance.field_sci_maintenance_request__write_uid
+#: model:ir.model.fields,field_description:diligo_maintenance.field_sci_maintenance_stage__write_uid
+#: model:ir.model.fields,field_description:diligo_maintenance.field_sci_maintenance_team__write_uid
+#: model:ir.model.fields,field_description:diligo_maintenance.field_type_maintenance_request__write_uid
+#: model:ir.model.fields,field_description:diligo_maintenance.field_website_support_ticket_close__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:ir.model.fields,field_description:diligo_maintenance.field_area_type_maintenance_request__write_date
+#: model:ir.model.fields,field_description:diligo_maintenance.field_ems_equipment_export__write_date
+#: model:ir.model.fields,field_description:diligo_maintenance.field_sci_maintenance_equipment_category__write_date
+#: model:ir.model.fields,field_description:diligo_maintenance.field_sci_maintenance_request__write_date
+#: model:ir.model.fields,field_description:diligo_maintenance.field_sci_maintenance_stage__write_date
+#: model:ir.model.fields,field_description:diligo_maintenance.field_sci_maintenance_team__write_date
+#: model:ir.model.fields,field_description:diligo_maintenance.field_type_maintenance_request__write_date
+#: model:ir.model.fields,field_description:diligo_maintenance.field_website_support_ticket_close__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:ir.model.fields,field_description:diligo_maintenance.field_ems_equipment_export__type
+msgid "Loại bàn giao"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:ir.model.fields,field_description:diligo_maintenance.field_sci_maintenance_request__maintenance_type
+#: model_terms:ir.ui.view,arch_db:diligo_maintenance.hr_equipment_request_view_search
+msgid "Loại bảo trì"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model_terms:ir.ui.view,arch_db:diligo_maintenance.view_diligo_device_main_form_2
+msgid "Loại phiếu"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:ir.model.fields,field_description:diligo_maintenance.field_sci_maintenance_request__schedule_date
+msgid "Lịch hẹn"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:ir.model.fields,field_description:diligo_maintenance.field_ems_equipment_export__message_main_attachment_id
+#: model:ir.model.fields,field_description:diligo_maintenance.field_sci_maintenance_request__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:ir.actions.act_window,name:diligo_maintenance.hr_equipment_action_from_category_form
+#: model:ir.model,name:diligo_maintenance.model_sci_device_main
+msgid "Main Device"
+msgstr "Thiết bị chính"
+
+#. module: diligo_maintenance
+#: model:ir.model.fields,field_description:diligo_maintenance.field_sci_device_main__maintenance_ids
+#: model:ir.model.fields,field_description:diligo_maintenance.field_sci_maintenance_equipment_category__maintenance_ids
+#: model:ir.model.fields.selection,name:diligo_maintenance.selection__sci_maintenance_request__type__maintenance
+#: model:ir.model.fields.selection,name:diligo_maintenance.selection__type_maintenance_request__type__maintenance
+msgid "Maintenance"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:ir.model.fields,field_description:diligo_maintenance.field_sci_maintenance_equipment_category__maintenance_count
+msgid "Maintenance Count"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:ir.model,name:diligo_maintenance.model_sci_maintenance_equipment_category
+msgid "Maintenance Equipment Category"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:ir.model,name:diligo_maintenance.model_sci_maintenance_request
+#: model_terms:ir.ui.view,arch_db:diligo_maintenance.hr_equipment_request_view_form
+msgid "Maintenance Request"
+msgstr "Yêu cầu hỗ trợ"
+
+#. module: diligo_maintenance
+#: model_terms:ir.ui.view,arch_db:diligo_maintenance.hr_equipment_stage_view_tree
+msgid "Maintenance Request Stage"
+msgstr "Giai đoạn Đề nghị Bảo trì"
+
+#. module: diligo_maintenance
+#: model_terms:ir.ui.view,arch_db:diligo_maintenance.hr_equipment_stage_view_search
+msgid "Maintenance Request Stages"
+msgstr "Giai đoạn Đề nghị Bảo trì"
+
+#. module: diligo_maintenance
+#: model:ir.actions.act_window,name:diligo_maintenance.hr_equipment_request_action_from_equipment
+#: model:ir.actions.act_window,name:diligo_maintenance.hr_equipment_request_action_from_equipment_2
+msgid "Maintenance Requests"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:ir.model,name:diligo_maintenance.model_sci_maintenance_stage
+msgid "Maintenance Stage"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model_terms:ir.ui.view,arch_db:diligo_maintenance.maintenance_team_view_form
+#: model_terms:ir.ui.view,arch_db:diligo_maintenance.maintenance_team_view_tree
+msgid "Maintenance Team"
+msgstr "Đội Bảo trì"
+
+#. module: diligo_maintenance
+#: model:ir.model,name:diligo_maintenance.model_sci_maintenance_team
+msgid "Maintenance Teams"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:ir.model.fields,field_description:diligo_maintenance.field_ems_equipment_export__message_has_error
+#: model:ir.model.fields,field_description:diligo_maintenance.field_sci_maintenance_request__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:ir.model.fields,field_description:diligo_maintenance.field_ems_equipment_export__message_ids
+#: model:ir.model.fields,field_description:diligo_maintenance.field_sci_maintenance_request__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:ir.model.fields,field_description:diligo_maintenance.field_sci_maintenance_request__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:ir.model.fields,field_description:diligo_maintenance.field_sci_maintenance_request__description
+#: model_terms:ir.ui.view,arch_db:diligo_maintenance.hr_equipment_request_view_form
+#: model_terms:ir.ui.view,arch_db:diligo_maintenance.support_help_submit_ticket
+#: model_terms:ir.ui.view,arch_db:diligo_maintenance.view_close_ems_equipment_export_form
+#: model_terms:ir.ui.view,arch_db:diligo_maintenance.view_ems_equipment_export_form
+msgid "Mô tả"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model_terms:ir.ui.view,arch_db:diligo_maintenance.hr_equipment_request_view_form
+msgid "Mô tả yêu cầu"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:ir.model.fields,field_description:diligo_maintenance.field_area_type_maintenance_request__name
+#: model:ir.model.fields,field_description:diligo_maintenance.field_sci_maintenance_stage__name
+#: model:ir.model.fields,field_description:diligo_maintenance.field_sci_maintenance_team__name
+#: model_terms:ir.ui.view,arch_db:diligo_maintenance.hr_equipment_category_view_tree
+msgid "Name"
+msgstr "Tên"
+
+#. module: diligo_maintenance
+#: model:ir.model.fields.selection,name:diligo_maintenance.selection__sci_maintenance_request__type__network_infrastructure
+#: model:ir.model.fields.selection,name:diligo_maintenance.selection__type_maintenance_request__type__network_infrastructure
+msgid "Network Infrastructure"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:ir.model.fields,field_description:diligo_maintenance.field_sci_maintenance_request__activity_calendar_event_id
+msgid "Next Activity Calendar Event"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:ir.model.fields,field_description:diligo_maintenance.field_sci_maintenance_request__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:ir.model.fields,field_description:diligo_maintenance.field_sci_maintenance_request__activity_summary
+msgid "Next Activity Summary"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:ir.model.fields,field_description:diligo_maintenance.field_sci_maintenance_request__activity_type_id
+msgid "Next Activity Type"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:ir.model.fields,field_description:diligo_maintenance.field_sci_maintenance_request__channel
+msgid "Nguồn/Kênh"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:ir.model.fields,field_description:diligo_maintenance.field_ems_equipment_export__export_date
+msgid "Ngày bàn giao"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:ir.model.fields,help:diligo_maintenance.field_sci_maintenance_request__close_date
+msgid "Ngày bảo trì hoàn thành. "
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:ir.model.fields,help:diligo_maintenance.field_sci_maintenance_request__schedule_date
+msgid "Ngày nhóm bảo trì lên kế hoạch bảo trì "
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:ir.model.fields,field_description:diligo_maintenance.field_ems_equipment_export__approver_date
+msgid "Ngày nhận"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:ir.model.fields,field_description:diligo_maintenance.field_ems_equipment_export__confirm_date
+msgid "Ngày phê duyệt"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:ir.model.fields,field_description:diligo_maintenance.field_sci_maintenance_request__request_date
+#: model_terms:ir.ui.view,arch_db:diligo_maintenance.hr_equipment_request_view_search
+msgid "Ngày yêu cầu"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model_terms:ir.ui.view,arch_db:diligo_maintenance.hr_equipment_request_view_form
+#: model_terms:ir.ui.view,arch_db:diligo_maintenance.view_close_ems_equipment_export_form
+#: model_terms:ir.ui.view,arch_db:diligo_maintenance.view_ems_equipment_export_form
+msgid "Ngày đính kèm tệp"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:ir.model.fields,field_description:diligo_maintenance.field_sci_maintenance_request__close_date
+msgid "Ngày đóng"
+msgstr "Ngày đóng yêu cầu"
+
+#. module: diligo_maintenance
+#: model:ir.model.fields,field_description:diligo_maintenance.field_ems_equipment_export__employee_id
+#: model_terms:ir.ui.view,arch_db:diligo_maintenance.view_diligo_device_main_form_2
+msgid "Người bàn giao"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:ir.model.fields,field_description:diligo_maintenance.field_ems_equipment_export__approver_id
+msgid "Người nhận"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:ir.model.fields,field_description:diligo_maintenance.field_ems_equipment_export__confirm_id
+msgid "Người phê duyệt"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:ir.model.fields,field_description:diligo_maintenance.field_sci_maintenance_request__user_id
+#: model_terms:ir.ui.view,arch_db:diligo_maintenance.hr_equipment_category_view_search
+#: model_terms:ir.ui.view,arch_db:diligo_maintenance.hr_equipment_request_view_form
+msgid "Người phụ trách"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model_terms:ir.ui.view,arch_db:diligo_maintenance.hr_equipment_request_view_search
+msgid "Người tiếp nhận"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model_terms:ir.ui.view,arch_db:diligo_maintenance.hr_equipment_request_view_form
+#: model_terms:ir.ui.view,arch_db:diligo_maintenance.view_close_ems_equipment_export_form
+#: model_terms:ir.ui.view,arch_db:diligo_maintenance.view_ems_equipment_export_form
+msgid "Người tải"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:ir.model.fields,field_description:diligo_maintenance.field_sci_maintenance_request__person_name
+msgid "Người yêu cầu"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model_terms:ir.ui.view,arch_db:diligo_maintenance.view_close_ems_equipment_export_form
+msgid "Nhân sự bàn giao"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:ir.model.fields,field_description:diligo_maintenance.field_ems_equipment_export__employee_use
+#: model_terms:ir.ui.view,arch_db:diligo_maintenance.view_diligo_device_main_form_2
+msgid "Nhân sự sử dụng"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:ir.model.fields.selection,name:diligo_maintenance.selection__ems_equipment_export__type__import
+#: model:ir.ui.menu,name:diligo_maintenance.menu_close_ems_export_sub
+#: model_terms:ir.ui.view,arch_db:diligo_maintenance.view_close_ems_equipment_export_form
+msgid "Nhận bàn giao"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:ir.model.fields.selection,name:diligo_maintenance.selection__ems_equipment_export__state__approved
+#: model_terms:ir.ui.view,arch_db:diligo_maintenance.view_close_ems_equipment_export_form
+#: model_terms:ir.ui.view,arch_db:diligo_maintenance.view_ems_equipment_export_form
+msgid "Nhận hàng"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:ir.model.fields,field_description:diligo_maintenance.field_ems_equipment_export__message_needaction_counter
+#: model:ir.model.fields,field_description:diligo_maintenance.field_sci_maintenance_request__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:ir.model.fields,field_description:diligo_maintenance.field_sci_maintenance_team__todo_request_count
+msgid "Number of Requests"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:ir.model.fields,field_description:diligo_maintenance.field_sci_maintenance_team__todo_request_count_block
+msgid "Number of Requests Blocked"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:ir.model.fields,field_description:diligo_maintenance.field_sci_maintenance_team__todo_request_count_date
+msgid "Number of Requests Scheduled"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:ir.model.fields,field_description:diligo_maintenance.field_ems_equipment_export__message_has_error_counter
+#: model:ir.model.fields,field_description:diligo_maintenance.field_sci_maintenance_request__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:ir.model.fields,help:diligo_maintenance.field_ems_equipment_export__message_needaction_counter
+#: model:ir.model.fields,help:diligo_maintenance.field_sci_maintenance_request__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:ir.model.fields,help:diligo_maintenance.field_ems_equipment_export__message_has_error_counter
+#: model:ir.model.fields,help:diligo_maintenance.field_sci_maintenance_request__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:ir.model.fields,help:diligo_maintenance.field_ems_equipment_export__message_unread_counter
+#: model:ir.model.fields,help:diligo_maintenance.field_sci_maintenance_request__message_unread_counter
+msgid "Number of unread messages"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:ir.model.fields.selection,name:diligo_maintenance.selection__sci_maintenance_request__type__oracle
+#: model:ir.model.fields.selection,name:diligo_maintenance.selection__type_maintenance_request__type__oracle
+msgid "Oracle"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:ir.model.fields.selection,name:diligo_maintenance.selection__sci_maintenance_request__type__pc
+#: model:ir.model.fields.selection,name:diligo_maintenance.selection__type_maintenance_request__type__pc
+msgid "PC"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:ir.model.fields.selection,name:diligo_maintenance.selection__sci_maintenance_request__channel__phone
+msgid "Phone"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:ir.model.fields,field_description:diligo_maintenance.field_sci_maintenance_request__department
+msgid "Phòng ban"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:ir.model.fields,field_description:diligo_maintenance.field_sci_maintenance_equipment_category__department_id
+msgid "Phòng ban quản lý"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:ir.model.fields,field_description:diligo_maintenance.field_ems_equipment_export__department_id
+msgid "Phòng ban sử dụng"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model_terms:ir.ui.view,arch_db:diligo_maintenance.support_help_submit_ticket
+msgid "Phòng ban/Bộ phận"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:ir.model.fields,field_description:diligo_maintenance.field_ems_equipment_export__category_id
+#: model_terms:ir.ui.view,arch_db:diligo_maintenance.view_close_ems_equipment_export_form
+#: model_terms:ir.ui.view,arch_db:diligo_maintenance.view_ems_equipment_export_form
+msgid "Phòng chủ quản"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model_terms:ir.ui.view,arch_db:diligo_maintenance.support_ticket_survey_page
+#: model_terms:ir.ui.view,arch_db:diligo_maintenance.website_support_ticket_close_view_form
+msgid "Phản hồi"
+msgstr ""
+
+#. module: diligo_maintenance
+#: code:addons/diligo_maintenance/models/equipment_export.py:0
+#, python-format
+msgid "Please Provide valid Code."
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:ir.model.fields,field_description:diligo_maintenance.field_sci_maintenance_request__portal_access_key
+msgid "Portal Access Key"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model_terms:ir.ui.view,arch_db:diligo_maintenance.view_diligo_device_main_form_2
+msgid "Quá trình sử dụng"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:ir.model.fields,field_description:diligo_maintenance.field_ems_equipment_export__parent_id
+msgid "Quản lý"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:ir.model.fields.selection,name:diligo_maintenance.selection__sci_maintenance_request__kanban_state__done
+msgid "Ready for next stage"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:ir.model.fields,field_description:diligo_maintenance.field_sci_maintenance_stage__done
+#: model:ir.model.fields,field_description:diligo_maintenance.field_sci_maintenance_team__request_ids
+#: model_terms:ir.ui.view,arch_db:diligo_maintenance.hr_equipment_request_view_search
+msgid "Request"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:ir.model.fields,field_description:diligo_maintenance.field_sci_maintenance_request__activity_user_id
+msgid "Responsible User"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:ir.model.fields.selection,name:diligo_maintenance.selection__sci_maintenance_request__priority__0
+#: model:ir.model.fields.selection,name:diligo_maintenance.selection__sci_maintenance_request__support_rating__1
+#: model_terms:ir.ui.view,arch_db:diligo_maintenance.support_ticket_survey_page
+msgid "Rất thấp"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:ir.model.fields.selection,name:diligo_maintenance.selection__sci_maintenance_request__support_rating__5
+#: model_terms:ir.ui.view,arch_db:diligo_maintenance.support_ticket_survey_page
+msgid "Rất tốt"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:ir.model.fields,field_description:diligo_maintenance.field_ems_equipment_export__message_has_sms_error
+#: model:ir.model.fields,field_description:diligo_maintenance.field_sci_maintenance_request__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model_terms:ir.ui.view,arch_db:diligo_maintenance.hr_equipment_category_view_search
+#: model_terms:ir.ui.view,arch_db:diligo_maintenance.maintenance_team_view_search
+msgid "Search"
+msgstr "Tìm"
+
+#. module: diligo_maintenance
+#: model:ir.model.fields,field_description:diligo_maintenance.field_sci_maintenance_stage__sequence
+msgid "Sequence"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:ir.model.fields,help:diligo_maintenance.field_sci_maintenance_request__archive
+msgid ""
+"Set archive to true to hide the maintenance request without deleting it."
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:ir.model.fields,help:diligo_maintenance.field_sci_maintenance_request__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:ir.model.fields,field_description:diligo_maintenance.field_sci_maintenance_request__name
+msgid "Subjects"
+msgstr "Nội dung yêu cầu"
+
+#. module: diligo_maintenance
+#: model:ir.model.fields,field_description:diligo_maintenance.field_sci_maintenance_request__support_comment
+msgid "Support Comment"
+msgstr "Phản hồi"
+
+#. module: diligo_maintenance
+#: model:ir.model.fields,field_description:diligo_maintenance.field_sci_base_attachment__equipment_export_id
+#: model:ir.model.fields,field_description:diligo_maintenance.field_sci_base_attachment__support_ticket_id
+msgid "Support ticket"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:ir.model.fields,field_description:diligo_maintenance.field_ems_equipment_export__code
+msgid "Số phiếu"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model_terms:ir.ui.view,arch_db:diligo_maintenance.support_help_submit_ticket
+msgid "Số điện thoại"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:ir.model.fields,field_description:diligo_maintenance.field_sci_maintenance_equipment_category__team_count
+msgid "Team Count"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model_terms:ir.ui.view,arch_db:diligo_maintenance.support_survey_thank_you
+#: model_terms:ir.ui.view,arch_db:diligo_maintenance.support_thank_you
+msgid "Thank You!"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:res.groups,comment:diligo_maintenance.group_equipment_manager
+#: model:res.groups,comment:diligo_maintenance.group_equipment_user
+msgid "The user will be able to manage equipments."
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:ir.model.fields,field_description:diligo_maintenance.field_sci_maintenance_equipment_category__equipment_ids
+msgid "Thiết bị"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:ir.model.fields,field_description:diligo_maintenance.field_sci_maintenance_request__equipment_id
+msgid "Thiết bị/Vật tư"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:ir.model.fields,field_description:diligo_maintenance.field_sci_maintenance_team__member_ids
+msgid "Thành viên"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model_terms:ir.actions.act_window,help:diligo_maintenance.hr_equipment_category_action
+msgid "Thêm bộ phận quản lý/tiếp nhận yêu cầu"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model_terms:ir.actions.act_window,help:diligo_maintenance.hr_equipment_server_request_action
+msgid "Thêm một yêu cầu bảo dưỡng mới"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model_terms:ir.actions.act_window,help:diligo_maintenance.hr_equipment_request_action_cal
+#: model_terms:ir.actions.act_window,help:diligo_maintenance.hr_equipment_request_action_link
+#: model_terms:ir.actions.act_window,help:diligo_maintenance.hr_equipment_todo_request_action_from_dashboard
+#: model_terms:ir.actions.act_window,help:diligo_maintenance.maintenance_request_action_reports
+msgid "Thêm một yêu cầu hỗ trợ"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model_terms:ir.actions.act_window,help:diligo_maintenance.hr_equipment_request_action
+msgid "Thêm một yêu cầu sửa chữa mới"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:ir.model.fields.selection,name:diligo_maintenance.selection__sci_maintenance_request__priority__1
+#: model:ir.model.fields.selection,name:diligo_maintenance.selection__sci_maintenance_request__support_rating__2
+#: model_terms:ir.ui.view,arch_db:diligo_maintenance.support_ticket_survey_page
+msgid "Thấp"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:ir.model.fields,field_description:diligo_maintenance.field_sci_maintenance_request__completion_time
+msgid "Thời gian hoàn thành"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:ir.model.fields,field_description:diligo_maintenance.field_sci_maintenance_request__duration
+msgid "Thời lượng"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:ir.model.fields,field_description:diligo_maintenance.field_website_support_ticket_close__ticket_id
+msgid "Ticket ID"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:ir.model.fields,field_description:diligo_maintenance.field_sci_maintenance_request__time_to_close
+msgid "Time to close (seconds)"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model_terms:ir.ui.view,arch_db:diligo_maintenance.hr_equipment_request_view_search
+msgid "To do"
+msgstr "Cần làm"
+
+#. module: diligo_maintenance
+#: model_terms:ir.ui.view,arch_db:diligo_maintenance.hr_equipment_category_view_form
+msgid "Trang thiết bị"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:ir.model.fields,field_description:diligo_maintenance.field_ems_equipment_export__state
+#: model:ir.model.fields,field_description:diligo_maintenance.field_sci_maintenance_request__stage_id
+#: model_terms:ir.ui.view,arch_db:diligo_maintenance.hr_equipment_request_view_search
+msgid "Trạng thái"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:ir.model.fields,field_description:diligo_maintenance.field_sci_maintenance_request__type
+#: model:ir.model.fields,field_description:diligo_maintenance.field_type_maintenance_request__type
+msgid "Type maintenance"
+msgstr "Loại dịch vụ"
+
+#. module: diligo_maintenance
+#: model:ir.actions.act_window,name:diligo_maintenance.type_maintenance_request_action
+#: model:ir.model.fields,field_description:diligo_maintenance.field_area_type_maintenance_request__type_maintenance_request
+#: model:ir.model.fields,field_description:diligo_maintenance.field_sci_maintenance_request__type_maintenance_request
+#: model:ir.ui.menu,name:diligo_maintenance.menu_type_maintenance_request
+msgid "Type maintenance request"
+msgstr "Dịch vụ chi tiết"
+
+#. module: diligo_maintenance
+#: model:ir.model.fields,help:diligo_maintenance.field_sci_maintenance_request__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr ""
+
+#. module: diligo_maintenance
+#: model_terms:ir.ui.view,arch_db:diligo_maintenance.hr_equipment_category_view_form
+msgid "Tên bộ phận"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model_terms:ir.ui.view,arch_db:diligo_maintenance.view_close_ems_equipment_export_form
+#: model_terms:ir.ui.view,arch_db:diligo_maintenance.view_ems_equipment_export_form
+msgid "Tên thiết bị"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model_terms:ir.ui.view,arch_db:diligo_maintenance.hr_equipment_request_view_form
+#: model_terms:ir.ui.view,arch_db:diligo_maintenance.view_close_ems_equipment_export_form
+#: model_terms:ir.ui.view,arch_db:diligo_maintenance.view_ems_equipment_export_form
+msgid "Tên tệp tin"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model_terms:ir.ui.view,arch_db:diligo_maintenance.maintenance_team_view_form
+msgid "Tên đội"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:ir.model.fields,field_description:diligo_maintenance.field_sci_maintenance_request__status
+msgid "Tình trạng"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model_terms:ir.ui.view,arch_db:diligo_maintenance.support_help_submit_ticket
+#: model_terms:ir.ui.view,arch_db:diligo_maintenance.view_close_ems_equipment_export_form
+#: model_terms:ir.ui.view,arch_db:diligo_maintenance.view_ems_equipment_export_form
+msgid "Tệp đính kèm"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:ir.model.fields.selection,name:diligo_maintenance.selection__sci_maintenance_request__support_rating__4
+#: model_terms:ir.ui.view,arch_db:diligo_maintenance.support_ticket_survey_page
+msgid "Tốt"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:ir.model.fields,field_description:diligo_maintenance.field_sci_device_main__certificate_count
+msgid "Tổng số bảo dưỡng định kỳ"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:ir.model.fields,field_description:diligo_maintenance.field_sci_device_main__maintenance_count
+msgid "Tổng số yêu cầu sửa chữa"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model_terms:ir.ui.view,arch_db:diligo_maintenance.maintenance_team_kanban
+msgid "Tổng được giao"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:ir.model.fields,field_description:diligo_maintenance.field_ems_equipment_export__message_unread
+#: model:ir.model.fields,field_description:diligo_maintenance.field_sci_maintenance_request__message_unread
+#: model_terms:ir.ui.view,arch_db:diligo_maintenance.hr_equipment_request_view_kanban
+#: model_terms:ir.ui.view,arch_db:diligo_maintenance.hr_equipment_server_request_view_kanban
+msgid "Unread Messages"
+msgstr "Tin chưa đọc"
+
+#. module: diligo_maintenance
+#: model:ir.model.fields,field_description:diligo_maintenance.field_ems_equipment_export__message_unread_counter
+#: model:ir.model.fields,field_description:diligo_maintenance.field_sci_maintenance_request__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr ""
+
+#. module: diligo_maintenance
+#: code:addons/diligo_maintenance/models/hr_employee.py:0
+#: model_terms:ir.ui.view,arch_db:diligo_maintenance.custody_hr_employee_inherit_form_view
+#, python-format
+msgid "Vật tư/Thiết bị"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:ir.model.fields.selection,name:diligo_maintenance.selection__sci_maintenance_request__channel__website
+msgid "Website"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:ir.model.fields,field_description:diligo_maintenance.field_ems_equipment_export__website_message_ids
+#: model:ir.model.fields,field_description:diligo_maintenance.field_sci_maintenance_request__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:ir.model.fields,help:diligo_maintenance.field_ems_equipment_export__website_message_ids
+#: model:ir.model.fields,help:diligo_maintenance.field_sci_maintenance_request__website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:ir.model.fields.selection,name:diligo_maintenance.selection__ems_equipment_export__type__export
+msgid "Xuất bàn giao"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:ir.model.fields.selection,name:diligo_maintenance.selection__ems_equipment_export__state__confirm
+#: model_terms:ir.ui.view,arch_db:diligo_maintenance.view_close_ems_equipment_export_form
+#: model_terms:ir.ui.view,arch_db:diligo_maintenance.view_ems_equipment_export_form
+msgid "Xác nhận"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:ir.actions.act_window,name:diligo_maintenance.hr_equipment_server_request_action
+#: model:ir.ui.menu,name:diligo_maintenance.menu_m_server_request_form
+msgid "Yêu cầu bảo trì/bảo dưỡng"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:ir.actions.act_window,name:diligo_maintenance.hr_equipment_request_action_cal
+#: model:ir.actions.act_window,name:diligo_maintenance.hr_equipment_request_action_link
+#: model:ir.actions.act_window,name:diligo_maintenance.hr_equipment_todo_request_action_from_dashboard
+#: model:ir.actions.act_window,name:diligo_maintenance.maintenance_request_action_reports
+#: model:ir.ui.menu,name:diligo_maintenance.maintenance_request_reporting
+msgid "Yêu cầu bảo trì/sửa chữa"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model_terms:ir.ui.view,arch_db:diligo_maintenance.hr_equipment_request_view_search
+msgid "Yêu cầu của tôi"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:ir.ui.menu,name:diligo_maintenance.menu_m_request_form
+#: model_terms:ir.ui.view,arch_db:diligo_maintenance.hr_equipment_request_view_form
+msgid "Yêu cầu hỗ trợ"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:ir.actions.act_window,name:diligo_maintenance.hr_equipment_request_action
+msgid "Yêu cầu hỗ trợ/sửa chữa"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model_terms:ir.ui.view,arch_db:diligo_maintenance.view_diligo_device_main_form_2
+msgid "Yêu cầu sửa chữa"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:ir.model.fields,field_description:diligo_maintenance.field_type_maintenance_request__area
+msgid "area"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:ir.model.fields,field_description:diligo_maintenance.field_sci_maintenance_request__area_type_maintenance_request
+msgid "area type maintenance request"
+msgstr "Dịch vụ con"
+
+#. module: diligo_maintenance
+#: model:ir.model,name:diligo_maintenance.model_area_type_maintenance_request
+msgid "area.type.maintenance.request"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model_terms:ir.ui.view,arch_db:diligo_maintenance.hr_equipment_request_view_tree
+msgid "maintenance Request"
+msgstr "Đề nghị Bảo trì"
+
+#. module: diligo_maintenance
+#: model_terms:ir.ui.view,arch_db:diligo_maintenance.hr_equipment_request_view_search
+msgid "maintenance Request Search"
+msgstr "Tìm kiếm Đề nghị Bảo trì"
+
+#. module: diligo_maintenance
+#: model:ir.model.fields,field_description:diligo_maintenance.field_type_maintenance_request__name
+msgid "name"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:ir.model,name:diligo_maintenance.model_type_maintenance_request
+msgid "type.maintenance.request"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:ir.model,name:diligo_maintenance.model_website_support_ticket_close
+msgid "website.support.ticket.close"
+msgstr ""
+
+
+#. module: diligo_maintenance
+#: model:ir.model.fields,field_description:diligo_maintenance.field_sci_maintenance_request__phone
+msgid "Điện thoại"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:ir.model.fields,field_description:diligo_maintenance.field_sci_maintenance_request__support_rating
+msgid "Đánh giá"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model_terms:ir.ui.view,arch_db:diligo_maintenance.support_ticket_survey_page
+msgid "Đánh giá của bạn về hỗ trợ"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model_terms:ir.ui.view,arch_db:diligo_maintenance.maintenance_team_kanban
+msgid "Đã Hoàn Thành"
+msgstr ""
+
+#. module: diligo_maintenance
+#: code:addons/diligo_maintenance/models/maintenance.py:0
+#, python-format
+msgid "Định danh mã nhân viên đang không tồn tại!"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:ir.model.fields,field_description:diligo_maintenance.field_sci_maintenance_request__priority
+msgid "Độ ưu tiên"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:ir.actions.act_window,name:diligo_maintenance.maintenance_team_action_settings
+#: model_terms:ir.ui.view,arch_db:diligo_maintenance.hr_equipment_category_view_form
+msgid "Đội bảo trì"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:ir.model.fields,field_description:diligo_maintenance.field_sci_device_main__team_id
+#: model_terms:ir.ui.view,arch_db:diligo_maintenance.hr_equipment_category_view_form
+msgid "Đội phụ trách"
+msgstr ""
+
+#. module: diligo_maintenance
+#: model:ir.model.fields,field_description:diligo_maintenance.field_sci_maintenance_request__maintenance_team_id
+msgid "Đội tiếp nhận"
+msgstr ""
+
+#. module: mail
+#: code:addons/mail/wizard/mail_wizard_invite.py:0
+#, python-format
+msgid "%(user_name)s invited you to follow %(document)s document: %(title)s"
+msgstr ""
+"%(user_name)s đã thêm bạn cùng theo dõi %(document)s : %(title)s"
+
+#. module: mail
+#: model_terms:ir.ui.view,arch_db:mail.email_compose_message_wizard_form
+msgid ""
+"<span attrs=\"{'invisible': [('composition_mode', '!=', 'mass_mail')]}\">\n"
+"                                <strong>Email mass mailing</strong> on\n"
+"                                <span attrs=\"{'invisible': [('use_active_domain', '=', True)]}\">the selected records</span>\n"
+"                                <span attrs=\"{'invisible': [('use_active_domain', '=', False)]}\">the current search filter</span>.\n"
+"                            </span>\n"
+"                            <span name=\"document_followers_text\" attrs=\"{'invisible':['|', ('model', '=', False), ('composition_mode', '=', 'mass_mail')]}\">Followers of the document and</span>"
+msgstr ""
+"<span attrs=\"{'invisible': [('composition_mode', '!=', 'mass_mail')]}\">\n"
+"                                <strong>Email mass mailing</strong> cho\n"
+"                                <span attrs=\"{'invisible': [('use_active_domain', '=', True)]}\">dữ liệu đã chọn</span>\n"
+"                                <span attrs=\"{'invisible': [('use_active_domain', '=', False)]}\">bộ lọc hiện tại</span>.\n"
+"                            </span>\n"
+"                            <span name=\"document_followers_text\" attrs=\"{'invisible':['|', ('model', '=', False), ('composition_mode', '=', 'mass_mail')]}\">Thêm người theo dõi</span>"
+
+#. module: diligo_maintenance
+#: model_terms:ir.ui.view,arch_db:diligo_maintenance.maintenance_request_change_view_form
+msgid "Modify"
+msgstr "Lưu"
+
+#. module: diligo_maintenance
+#: model_terms:ir.ui.view,arch_db:diligo_maintenance.maintenance_request_change_view_form
+msgid "Cancel"
+msgstr "Hủy"
+
+#. module: diligo_maintenance
+#: model:ir.model.fields,field_description:diligo_maintenance.field_sci_maintenance_request__completed_process
+msgid "Completed process"
+msgstr "Cảnh báo thời gian"

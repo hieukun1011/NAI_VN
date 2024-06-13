@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="report_attendance_template_form_view">
+            <field name="name">report.attendance.form</field>
+            <field name="model">report.attendance</field>
+            <field name="arch" type="xml">
+                <form string="BÁO CÁO CHẤM CÔNG">
+                    <group>
+<!--                        <field name="total_working"/>-->
+                        <field name="type" widget="radio"/>
+                        <label for="date_start" string="Period"/>
+                            <div>
+                                <field name="date_start" class="oe_inline"/>
+                                -
+                                <field name="date_end" class="oe_inline"/>
+                            </div>
+                        <field name="employee_id" attrs="{'invisible': [('type', '!=', 'employee')]}" string="Nhân viên"/>
+                        <field name="department_id" attrs="{'invisible': [('type', '!=', 'department')]}" string="Phòng ban"/>
+                        <field name="area_id" attrs="{'invisible': [('type', '!=', 'area')]}" string="Khu vực"/>
+                    </group>
+                    <footer>
+                        <button name="report_attendance" type="object" string="Báo cáo" class="oe_highlight"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="report_attendance_act">
+            <field name="name">Báo cáo chấm công</field>
+            <field name="res_model">report.attendance</field>
+            <!--            <field name="view_type">form</field>-->
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="report_attendance_template"/>
+            <field name="context">{}</field>
+            <field name="target">new</field>
+        </record>
+
+        <menuitem id="attendace_reporting_menu" name="Reporting"
+			parent="hr_attendance.menu_hr_attendance_root" sequence="30"
+			 />
+
+<!--            <menuitem-->
+<!--                id="menu_hr_attendance_report"-->
+<!--                name="Reporting"-->
+<!--                sequence="30"-->
+<!--                parent="attendace_reporting_menu"-->
+<!--                action="hr_attendance.hr_attendance_report_action"-->
+<!--                />-->
+
+<!--            <menuitem-->
+<!--                    id="menu_report_attendance_report"-->
+<!--                    name="Báo cáo chấm công"-->
+<!--                    -->
+<!--                    parent="attendace_reporting_menu"-->
+<!--                    action="report_attendance_act"-->
+<!--                    />-->
+    </data>
+</odoo>

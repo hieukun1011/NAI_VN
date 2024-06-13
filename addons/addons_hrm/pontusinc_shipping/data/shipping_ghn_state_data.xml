@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data noupdate="1">
+		<record id="shipping_state_ready_to_pick" model="shipping.state">
+			<field name="name">Shipping order has just been created</field>
+			<field name="code">ready_to_pick</field>
+			<field name="sequence">1</field>
+			<field name="platform_id" ref="pontusinc_shipping.shipping_platform_ghn" />
+		</record>
+
+        <record id="shipping_state_pick" model="shipping.state">
+			<field name="name">Shipper is coming to pick up the goods</field>
+			<field name="code">picking</field>
+			<field name="sequence">1</field>
+            <field name="platform_id" ref="pontusinc_shipping.shipping_platform_ghn" />
+		</record>
+
+		<record id="shipping_state_cancel" model="shipping.state">
+			<field name="name">Shipping order has been cancelled</field>
+			<field name="code">cancel</field>
+			<field name="sequence">2</field>
+            <field name="platform_id" ref="pontusinc_shipping.shipping_platform_ghn" />
+		</record>
+
+		<record id="shipping_state_money_collect_picking" model="shipping.state">
+			<field name="name">Shipper are interacting with the seller</field>
+			<field name="code">money_collect_picking</field>
+			<field name="sequence">3</field>
+            <field name="platform_id" ref="pontusinc_shipping.shipping_platform_ghn" />
+		</record>
+
+		<record id="shipping_state_picked" model="shipping.state">
+			<field name="name">Shipper is picked the goods</field>
+			<field name="code">picked</field>
+			<field name="sequence">4</field>
+            <field name="platform_id" ref="pontusinc_shipping.shipping_platform_ghn" />
+		</record>
+
+		<record id="shipping_state_storing" model="shipping.state">
+			<field name="name">The goods has been shipped to GHN sorting hub</field>
+			<field name="code">storing</field>
+			<field name="sequence">5</field>
+            <field name="platform_id" ref="pontusinc_shipping.shipping_platform_ghn" />
+		</record>
+
+		<record id="shipping_state_transporting" model="shipping.state">
+			<field name="name">The goods are being rotated</field>
+			<field name="code">transporting</field>
+			<field name="sequence">6</field>
+            <field name="platform_id" ref="pontusinc_shipping.shipping_platform_ghn" />
+		</record>
+
+		<record id="shipping_state_sorting" model="shipping.state">
+			<field name="name">The goods are being classified (at the warehouse classification)</field>
+			<field name="code">sorting</field>
+			<field name="sequence">6</field>
+            <field name="platform_id" ref="pontusinc_shipping.shipping_platform_ghn" />
+		</record>
+
+		<record id="shipping_state_delivering" model="shipping.state">
+			<field name="name">Shipper is delivering the goods to customer</field>
+			<field name="code">delivering</field>
+			<field name="sequence">7</field>
+            <field name="platform_id" ref="pontusinc_shipping.shipping_platform_ghn" />
+		</record>
+
+		<record id="shipping_state_money_collect_delivering" model="shipping.state">
+			<field name="name">Shipper is interacting with the buyer</field>
+			<field name="code">money_collect_delivering</field>
+			<field name="sequence">8</field>
+            <field name="platform_id" ref="pontusinc_shipping.shipping_platform_ghn" />
+		</record>
+
+		<record id="shipping_state_delivered" model="shipping.state">
+			<field name="name">The goods has been delivered to customer</field>
+			<field name="code">delivered</field>
+			<field name="sequence">9</field>
+            <field name="platform_id" ref="pontusinc_shipping.shipping_platform_ghn" />
+		</record>
+
+		<record id="shipping_state_delivery_fail" model="shipping.state">
+			<field name="name">The goods hasn't been delivered to customer</field>
+			<field name="code">delivery_fail</field>
+			<field name="sequence">10</field>
+            <field name="platform_id" ref="pontusinc_shipping.shipping_platform_ghn" />
+		</record>
+
+		<record id="shipping_state_waiting_to_return" model="shipping.state">
+			<field name="name">The goods are pending delivery (can be delivered within 24/48h)</field>
+			<field name="code">waiting_to_return</field>
+			<field name="sequence">11</field>
+            <field name="platform_id" ref="pontusinc_shipping.shipping_platform_ghn" />
+		</record>
+
+		<record id="shipping_state_return" model="shipping.state">
+			<field name="name">The goods are waiting to return to seller/merchant after 3 times delivery failed</field>
+			<field name="code">return</field>
+			<field name="sequence">12</field>
+            <field name="platform_id" ref="pontusinc_shipping.shipping_platform_ghn" />
+		</record>
+
+		<record id="shipping_state_return_transporting" model="shipping.state">
+			<field name="name">The goods are being rotated</field>
+			<field name="code">return_transporting</field>
+			<field name="sequence">13</field>
+            <field name="platform_id" ref="pontusinc_shipping.shipping_platform_ghn" />
+		</record>
+
+		<record id="shipping_state_return_sorting" model="shipping.state">
+			<field name="name">The goods are being classified (at the warehouse classification)</field>
+			<field name="code">return_sorting</field>
+			<field name="sequence">14</field>
+            <field name="platform_id" ref="pontusinc_shipping.shipping_platform_ghn" />
+		</record>
+
+		<record id="shipping_state_returning" model="shipping.state">
+			<field name="name">The shipper is returning for seller</field>
+			<field name="code">returning</field>
+			<field name="sequence">15</field>
+            <field name="platform_id" ref="pontusinc_shipping.shipping_platform_ghn" />
+		</record>
+
+		<record id="shipping_state_return_fail" model="shipping.state">
+			<field name="name">The returning is failed</field>
+			<field name="code">return_fail</field>
+			<field name="sequence">16</field>
+            <field name="platform_id" ref="pontusinc_shipping.shipping_platform_ghn" />
+		</record>
+
+		<record id="shipping_state_returned" model="shipping.state">
+			<field name="name">The goods has been returned to seller/merchant</field>
+			<field name="code">returned</field>
+			<field name="sequence">16</field>
+            <field name="platform_id" ref="pontusinc_shipping.shipping_platform_ghn" />
+		</record>
+
+		<record id="shipping_state_exception" model="shipping.state">
+			<field name="name">The goods exception handling</field>
+			<field name="code">exception</field>
+			<field name="sequence">17</field>
+            <field name="platform_id" ref="pontusinc_shipping.shipping_platform_ghn" />
+		</record>
+
+		<record id="shipping_state_damage" model="shipping.state">
+			<field name="name">Damaged goods</field>
+			<field name="code">damage</field>
+			<field name="sequence">18</field>
+            <field name="platform_id" ref="pontusinc_shipping.shipping_platform_ghn" />
+		</record>
+
+		<record id="shipping_state_lost" model="shipping.state">
+			<field name="name">The goods are lost</field>
+			<field name="code">lost</field>
+			<field name="sequence">19</field>
+            <field name="platform_id" ref="pontusinc_shipping.shipping_platform_ghn" />
+		</record>
+
+	</data>
+</odoo>

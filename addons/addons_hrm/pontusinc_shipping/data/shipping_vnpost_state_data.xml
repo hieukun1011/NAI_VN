@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data noupdate="1">
+		<record id="shipping_state_0" model="shipping.state">
+			<field name="name">Save draft</field>
+			<field name="sequence">1</field>
+			<field name="code">0</field>
+			<field name="platform_id" ref="pontusinc_shipping.shipping_platform_vnpost" />
+		</record>
+
+        <record id="shipping_state_1" model="shipping.state">
+			<field name="name">Created</field>
+			<field name="sequence">1</field>
+			<field name="code">1</field>
+            <field name="platform_id" ref="pontusinc_shipping.shipping_platform_vnpost" />
+		</record>
+
+		<record id="shipping_state_2" model="shipping.state">
+			<field name="name">Deliver the message to the postman</field>
+			<field name="code">2</field>
+			<field name="sequence">2</field>
+            <field name="platform_id" ref="pontusinc_shipping.shipping_platform_vnpost" />
+		</record>
+
+		<record id="shipping_state_3" model="shipping.state">
+			<field name="name">Processing</field>
+			<field name="sequence">3</field>
+			<field name="code">3</field>
+            <field name="platform_id" ref="pontusinc_shipping.shipping_platform_vnpost" />
+		</record>
+
+		<record id="shipping_state_4" model="shipping.state">
+			<field name="name">Receiving goods</field>
+			<field name="sequence">4</field>
+			<field name="code">4</field>
+            <field name="platform_id" ref="pontusinc_shipping.shipping_platform_vnpost" />
+		</record>
+
+		<record id="shipping_state_5" model="shipping.state">
+			<field name="name">Retrieving goods failed</field>
+			<field name="sequence">5</field>
+			<field name="code">5</field>
+            <field name="platform_id" ref="pontusinc_shipping.shipping_platform_vnpost" />
+		</record>
+
+		<record id="shipping_state_6" model="shipping.state">
+			<field name="name">Received goods successfully</field>
+			<field name="sequence">6</field>
+			<field name="code">6</field>
+            <field name="platform_id" ref="pontusinc_shipping.shipping_platform_vnpost" />
+		</record>
+
+		<record id="shipping_state_7" model="shipping.state">
+			<field name="name">The post office has received the goods</field>
+			<field name="sequence">7</field>
+			<field name="code">7</field>
+            <field name="platform_id" ref="pontusinc_shipping.shipping_platform_vnpost" />
+		</record>
+
+		<record id="shipping_state_8" model="shipping.state">
+			<field name="name">Retrieve failed</field>
+			<field name="sequence">8</field>
+			<field name="code">8</field>
+            <field name="platform_id" ref="pontusinc_shipping.shipping_platform_vnpost" />
+		</record>
+
+		<record id="shipping_state_9" model="shipping.state">
+			<field name="name">Cancel collection</field>
+			<field name="sequence">9</field>
+			<field name="code">9</field>
+            <field name="platform_id" ref="pontusinc_shipping.shipping_platform_vnpost" />
+		</record>
+
+		<record id="shipping_state_10" model="shipping.state">
+			<field name="name">Being transported</field>
+			<field name="sequence">10</field>
+			<field name="code">10</field>
+            <field name="platform_id" ref="pontusinc_shipping.shipping_platform_vnpost" />
+		</record>
+
+		<record id="shipping_state_11" model="shipping.state">
+			<field name="name">Arrived at the Post Office</field>
+			<field name="sequence">11</field>
+			<field name="code">11</field>
+            <field name="platform_id" ref="pontusinc_shipping.shipping_platform_vnpost" />
+		</record>
+
+		<record id="shipping_state_12" model="shipping.state">
+			<field name="name">Delivering</field>
+			<field name="sequence">12</field>
+			<field name="code">12</field>
+            <field name="platform_id" ref="pontusinc_shipping.shipping_platform_vnpost" />
+		</record>
+
+		<record id="shipping_state_13" model="shipping.state">
+			<field name="name">Forward</field>
+			<field name="sequence">13</field>
+			<field name="code">13</field>
+            <field name="platform_id" ref="pontusinc_shipping.shipping_platform_vnpost" />
+		</record>
+
+		<record id="shipping_state_14" model="shipping.state">
+			<field name="name">Delivered</field>
+			<field name="sequence">14</field>
+			<field name="code">14</field>
+            <field name="platform_id" ref="pontusinc_shipping.shipping_platform_vnpost" />
+		</record>
+
+		<record id="shipping_state_15" model="shipping.state">
+			<field name="name">Delivery failed</field>
+			<field name="sequence">15</field>
+			<field name="code">15</field>
+            <field name="platform_id" ref="pontusinc_shipping.shipping_platform_vnpost" />
+		</record>
+
+		<record id="shipping_state_16" model="shipping.state">
+			<field name="name">Wait for the transfer to complete</field>
+			<field name="sequence">16</field>
+			<field name="code">16</field>
+            <field name="platform_id" ref="pontusinc_shipping.shipping_platform_vnpost" />
+		</record>
+
+		<record id="shipping_state_17" model="shipping.state">
+			<field name="name">Completely approved</field>
+			<field name="sequence">17</field>
+			<field name="code">17</field>
+            <field name="platform_id" ref="pontusinc_shipping.shipping_platform_vnpost" />
+		</record>
+
+		<record id="shipping_state_18" model="shipping.state">
+			<field name="name">Start transferring</field>
+			<field name="sequence">18</field>
+			<field name="code">18</field>
+            <field name="platform_id" ref="pontusinc_shipping.shipping_platform_vnpost" />
+		</record>
+
+		<record id="shipping_state_19" model="shipping.state">
+			<field name="name">Completed successfully</field>
+			<field name="sequence">19</field>
+			<field name="code">19</field>
+            <field name="platform_id" ref="pontusinc_shipping.shipping_platform_vnpost" />
+		</record>
+
+		<record id="shipping_state_20" model="shipping.state">
+			<field name="name">1 part has been returned</field>
+			<field name="sequence">20</field>
+			<field name="code">20</field>
+            <field name="platform_id" ref="pontusinc_shipping.shipping_platform_vnpost" />
+		</record>
+
+		<record id="shipping_state_21" model="shipping.state">
+			<field name="name">Paid COD</field>
+			<field name="sequence">21</field>
+			<field name="code">21</field>
+            <field name="platform_id" ref="pontusinc_shipping.shipping_platform_vnpost" />
+		</record>
+
+		<record id="shipping_state_22" model="shipping.state">
+			<field name="name">Cancel delivery</field>
+			<field name="sequence">22</field>
+			<field name="code">22</field>
+            <field name="platform_id" ref="pontusinc_shipping.shipping_platform_vnpost" />
+		</record>
+
+		<record id="shipping_state_101" model="shipping.state">
+			<field name="name">EMA - Submission accepted</field>
+			<field name="sequence">101</field>
+			<field name="code">101</field>
+            <field name="platform_id" ref="pontusinc_shipping.shipping_platform_vnpost" />
+		</record>
+
+		<record id="shipping_state_102" model="shipping.state">
+			<field name="name">EMB - To the sending country's International Exploitation Center</field>
+			<field name="sequence">102</field>
+			<field name="code">102</field>
+            <field name="platform_id" ref="pontusinc_shipping.shipping_platform_vnpost" />
+		</record>
+
+		<record id="shipping_state_103" model="shipping.state">
+			<field name="name">EMC - Has left the sending country's International Exploitation Center</field>
+			<field name="sequence">103</field>
+			<field name="code">103</field>
+            <field name="platform_id" ref="pontusinc_shipping.shipping_platform_vnpost" />
+		</record>
+
+		<record id="shipping_state_104" model="shipping.state">
+			<field name="name">EMD - Arrived at the receiving country's International Exploitation Center</field>
+			<field name="sequence">104</field>
+			<field name="code">104</field>
+            <field name="platform_id" ref="pontusinc_shipping.shipping_platform_vnpost" />
+		</record>
+
+		<record id="shipping_state_105" model="shipping.state">
+			<field name="name">EME - Being stored at the customs of the receiving country</field>
+			<field name="sequence">105</field>
+			<field name="code">105</field>
+            <field name="platform_id" ref="pontusinc_shipping.shipping_platform_vnpost" />
+		</record>
+
+		<record id="shipping_state_106" model="shipping.state">
+			<field name="name">EMF - Exit from the International Mining Center of the receiving country</field>
+			<field name="sequence">106</field>
+			<field name="code">106</field>
+            <field name="platform_id" ref="pontusinc_shipping.shipping_platform_vnpost" />
+		</record>
+
+		<record id="shipping_state_107" model="shipping.state">
+			<field name="name">EMG - Arrived at the Post Office</field>
+			<field name="sequence">107</field>
+			<field name="code">107</field>
+            <field name="platform_id" ref="pontusinc_shipping.shipping_platform_vnpost" />
+		</record>
+
+		<record id="shipping_state_108" model="shipping.state">
+			<field name="name">EMH - Phat has not been successful</field>
+			<field name="sequence">108</field>
+			<field name="code">108</field>
+            <field name="platform_id" ref="pontusinc_shipping.shipping_platform_vnpost" />
+		</record>
+
+		<record id="shipping_state_109" model="shipping.state">
+			<field name="name">EMI - Transmitted successfully</field>
+			<field name="sequence">109</field>
+			<field name="code">109</field>
+            <field name="platform_id" ref="pontusinc_shipping.shipping_platform_vnpost" />
+		</record>
+
+		<record id="shipping_state_110" model="shipping.state">
+			<field name="name">EMJ - Arrive at the International Mining Transit Center</field>
+			<field name="sequence">110</field>
+			<field name="code">110</field>
+            <field name="platform_id" ref="pontusinc_shipping.shipping_platform_vnpost" />
+		</record>
+
+		<record id="shipping_state_111" model="shipping.state">
+			<field name="name">EMK - Departing from the Transit International Mining Center</field>
+			<field name="sequence">111</field>
+			<field name="code">111</field>
+            <field name="platform_id" ref="pontusinc_shipping.shipping_platform_vnpost" />
+		</record>
+	</data>
+</odoo>

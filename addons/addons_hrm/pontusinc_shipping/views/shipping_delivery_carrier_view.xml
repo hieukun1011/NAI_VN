@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="shipping_delivery_carrier_view_inherit" model="ir.ui.view">
+        <field name="name">Shipping delivery carrier form view</field>
+        <field name="model">delivery.carrier</field>
+        <field name="inherit_id" ref="delivery.view_delivery_carrier_form"/>
+        <field name="arch" type="xml">
+            <page name="pricing" position="after">
+                <page name="shipping_fee" string="Shipping fee">
+                    <field name="shipping_fee_ids" context="{'default_shipping_method_id': active_id}"/>
+                </page>
+            </page>
+            <xpath expr="//field[@name='amount']" position="after">
+                <field name="area_shipping_ids" widget="many2many_tags"/>
+                <field name="city_ids" widget="many2many_tags" domain="[('area_id','in',area_shipping_ids)]"
+                       attrs="{'invisible':[('area_shipping_ids','=',[])]}"/>
+                <field name="district_ids" widget="many2many_tags" domain="[('state_id','in',city_ids)]"
+                       attrs="{'invisible':[('city_ids','=',[])]}"/>
+                <field name="ward_ids" widget="many2many_tags" domain="[('district_id','in',district_ids)]"
+                       attrs="{'invisible':[('district_ids','=',[])]}"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

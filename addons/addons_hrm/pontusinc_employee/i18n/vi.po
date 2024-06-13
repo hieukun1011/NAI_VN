@@ -1,0 +1,115 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* pontusinc_employee
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-03-06 11:06+0000\n"
+"PO-Revision-Date: 2024-03-06 11:06+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: pontusinc_employee
+#. odoo-javascript
+#: code:addons/pontusinc_employee/static/src/xml/insert_face_employee.xml:0
+#, python-format
+msgid "Click to Upload"
+msgstr ""
+
+#. module: pontusinc_employee
+#: model:ir.model,name:pontusinc_employee.model_hr_department
+msgid "Department"
+msgstr "Phòng/Ban"
+
+#. module: pontusinc_employee
+#: model:ir.model.fields,field_description:pontusinc_employee.field_hr_department__deputy_id
+msgid "Deputy department"
+msgstr "Phó phòng"
+
+#. module: pontusinc_employee
+#: model:ir.model,name:pontusinc_employee.model_hr_employee
+msgid "Employee"
+msgstr "Nhân viên"
+
+#. module: pontusinc_employee
+#: model:ir.model.fields,field_description:pontusinc_employee.field_hr_employee__have_face
+msgid "Have face"
+msgstr "Đã có khuôn mặt"
+
+#. module: pontusinc_employee
+#. odoo-javascript
+#: code:addons/pontusinc_employee/static/src/xml/insert_face_employee.xml:0
+#, python-format
+msgid "Image Preview"
+msgstr ""
+
+#. module: pontusinc_employee
+#: model_terms:ir.ui.view,arch_db:pontusinc_employee.view_employee_form_inherit_icomm
+msgid "Insert face"
+msgstr "Cập nhật khuôn mặt"
+
+#. module: pontusinc_employee
+#. odoo-javascript
+#: code:addons/pontusinc_employee/static/src/xml/insert_face_employee.xml:0
+#, python-format
+msgid "Nhận diện ảnh"
+msgstr "Chọn ảnh nhận diện"
+
+#. module: pontusinc_employee
+#. odoo-javascript
+#: code:addons/pontusinc_employee/static/src/xml/insert_face_employee.xml:0
+#, python-format
+msgid "Perform RPC"
+msgstr "Thêm ảnh nhận diện"
+
+#. module: pontusinc_employee
+#: model_terms:ir.ui.view,arch_db:pontusinc_employee.pontusinc_hr_department_view_form
+msgid "Phó phòng"
+msgstr ""
+
+#. module: pontusinc_employee
+#. odoo-javascript
+#: code:addons/pontusinc_employee/static/src/xml/insert_face_employee.xml:0
+#, python-format
+msgid "Upload"
+msgstr ""
+
+#. module: pontusinc_employee
+#. odoo-javascript
+#: code:addons/pontusinc_employee/static/src/xml/insert_face_employee.xml:0
+#, python-format
+msgid "Upload Image"
+msgstr "Tải ảnh dữ liệu"
+
+#. module: pontusinc_employee
+#: model_terms:ir.ui.view,arch_db:pontusinc_employee.view_employee_form_inherit_icomm
+msgid "sync user camera AI"
+msgstr "Tạo người dùng trên camera AI"
+
+#. modules: hr_expense, hr, planning, hr_holidays, om_hr_payroll, approvals,
+#. to_attendance_device, hr_timesheet
+#: model:ir.model.fields,field_description:hr.field_hr_department__manager_id
+msgid "Manager"
+msgstr "Trưởng phòng"
+
+
+#. module: pontusinc_employee
+#: model_terms:ir.ui.view,arch_db:pontusinc_employee.view_employee_form_inherit_icomm
+msgid "Employee Code"
+msgstr "Mã nhân viên"
+
+
+
+#. module: pontusinc_employee
+#: model_terms:ir.ui.view,arch_db:hr_skills.hr_employee_public_view_form_inherit
+#: model_terms:ir.ui.view,arch_db:hr_skills.hr_employee_public_view_search
+#: model_terms:ir.ui.view,arch_db:hr_skills.hr_employee_view_form
+#: model_terms:ir.ui.view,arch_db:hr_skills.hr_employee_view_search
+msgid "Resume"
+msgstr "Sơ yếu lý lịch & kỹ năng"

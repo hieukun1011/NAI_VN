@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="pontusinc_holidays.hr_accrual_level_view_form_inherit" model="ir.ui.view">
+            <field name="name">hr.leave.accrual.leave.inherit</field>
+            <field name="model">hr.leave.accrual.level</field>
+            <field name="inherit_id" ref="hr_holidays.hr_accrual_level_view_form"/>
+            <field name="mode">primary</field>
+            <field name="priority">17</field>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='maximum_leave']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//field[@name='added_value_type']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//label[@for='maximum_leave']" position="before">
+                    <field name="cap_accrued_time" style="width: 9.35rem"/>
+                        <div style="width: 9.35rem"/>
+                        <div  attrs="{'invisible': [('cap_accrued_time','=',False)]}">
+                            <field name="maximum_leave" style="width: 5rem" widget="FloatWithoutTrailingZeros"/>
+                            <field name="added_value_type" style="white-space: nowrap;width: 5rem"/>
+                        </div>
+                </xpath>
+            </field>
+        </record>
+</odoo>

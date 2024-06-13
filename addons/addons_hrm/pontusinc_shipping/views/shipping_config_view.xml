@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="shipping_config_tree_view" model="ir.ui.view">
+        <field name="name">Shipping config tree view</field>
+        <field name="model">shipping.config</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="company_ids" widget="many2many_tags"/>
+                <field name="according_product_order"/>
+                <field name="is_custom"/>
+                <field name="specific_weight" class="oe_inline"/>
+                <field name="sync_automation_state"/>
+                <field name="sync_automation_fee"/>
+                <field name="late_pick_alert_days" class="oe_inline"/>
+                <field name="late_delivery_alert_days" class="oe_inline"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="shipping_config_view_form" model="ir.ui.view">
+        <field name="name">Shipping config view form</field>
+        <field name="model">shipping.config</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <label for="company_ids"/>
+                        <field name="company_ids" widget="many2many_tags"/>
+                        <group string="shipping information">
+                            <field name="according_product_order"/>
+                            <field name="is_custom"/>
+                            <label for="specific_weight" attrs="{'invisible' :[('is_custom', '=', False)]}"/>
+                            <div attrs="{'invisible' :[('is_custom', '=', False)]}">
+                                <field name="specific_weight" class="oe_inline"/> <span class="ml8">Gam</span>
+                            </div>
+                        </group>
+                        <group string="Setup delivery">
+                            <field name="sync_automation_state"/>
+                            <field name="sync_automation_fee"/>
+                            <label for="late_pick_alert_days"/>
+                            <div>
+                                <field name="late_pick_alert_days" class="oe_inline"/> <span class="ml8">Days</span>
+                            </div>
+                            <label for="late_delivery_alert_days"/>
+                            <div>
+                                <field name="late_delivery_alert_days" class="oe_inline"/> <span class="ml8">Days</span>
+                            </div>
+                        </group>
+                        <div>
+                            <h3>Kích thước</h3>
+                            <label for="length" string="Length"/>
+                            <span>
+                                <field name="length" class="oe_inline o_input_8ch"/>
+                            </span>
+                            <label for="width" string="Width"/>
+                            <span>
+                                <field name="width" class="oe_inline o_input_8ch"/>
+                            </span>
+                            <label for="height" string="Height"/>
+                            <span>
+                                <field name="height" class="oe_inline o_input_8ch"/>
+                            </span>
+                        </div>
+                    </group>
+                </sheet>
+            </form>
+
+        </field>
+    </record>
+
+    <record id="action_shipping_config" model="ir.actions.act_window">
+        <field name="name">Shipping config</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">shipping.config</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain"></field>
+    </record>
+
+</odoo>

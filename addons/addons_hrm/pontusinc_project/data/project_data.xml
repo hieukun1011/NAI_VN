@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <record id="project_internal" model="project.project">
+            <field name="name">Project internal</field>
+            <field name="is_internal">True</field>
+            <field name="type_ids" eval="[ref('pontusinc_project.project_task_type_backlog'),
+                                          ref('pontusinc_project.project_task_type_backlog'),
+                                          ref('pontusinc_project.project_task_type_todo'),
+                                          ref('pontusinc_project.project_task_type_in_progress'),
+                                          ref('pontusinc_project.project_task_type_testing'),
+                                          ref('pontusinc_project.project_task_type_done'),
+                                          ref('pontusinc_project.project_task_type_bug'),
+                                          ref('pontusinc_project.project_task_type_draft')]"/>
+        </record>
+
+        <record id="project_api_monitoring" model="project.project">
+            <field name="name">API Monitoring</field>
+            <field name="type_ids" eval="[ref('pontusinc_project.project_task_type_backlog'),
+                                          ref('pontusinc_project.project_task_type_backlog'),
+                                          ref('pontusinc_project.project_task_type_todo'),
+                                          ref('pontusinc_project.project_task_type_in_progress'),
+                                          ref('pontusinc_project.project_task_type_testing'),
+                                          ref('pontusinc_project.project_task_type_done'),
+                                          ref('pontusinc_project.project_task_type_bug'),
+                                          ref('pontusinc_project.project_task_type_draft')]"/>
+        </record>
+
+    </data>
+</odoo>

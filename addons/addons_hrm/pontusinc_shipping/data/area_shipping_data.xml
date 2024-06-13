@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data noupdate="1">
+		<record id="area_shipping_mn" model="area.shipping">
+			<field name="name">Miền nam</field>
+		</record>
+
+		<record id="area_shipping_mb" model="area.shipping">
+			<field name="name">Miền bắc</field>
+		</record>
+
+		<record id="area_shipping_mt" model="area.shipping">
+			<field name="name">Miền trung</field>
+		</record>
+	</data>
+</odoo>

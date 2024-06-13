@@ -1,0 +1,28 @@
+@font-face {
+  font-family: "Ser";
+  src: url("../font/SVN-Servetica Medium.otf") format("truetype");
+}
+.text-center{
+    font-family: "Ser";
+}
+.text {
+  float: left;
+  position: relative;
+  width: 20%;
+  margin: 0 auto;
+}
+.text-s {
+  position: absolute;
+  top:136px;
+  left: 108px;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+.text:hover .text-s {
+  opacity: 1;
+}
+.text-x {
+  color: white ;
+  font-size: 16px;
+}

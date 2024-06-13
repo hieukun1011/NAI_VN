@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="view_device_category_tree" model="ir.ui.view">
+            <field name="name">category.device.view.tree</field>
+            <field name="model">category.device</field>
+            
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name" string="Name"/>
+                    <field name="area_id" widget="many2many_tags" string="Area"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_device_category_form" model="ir.ui.view">
+            <field name="name">category.device.view.form</field>
+            <field name="model">category.device</field>
+            
+            <field name="arch" type="xml">
+                <form >
+                    <sheet>
+                        <h1>Khu Vực Sử Dụng</h1>
+                        <div class="oe_title">
+                            <label for="name" string="Name"/>
+                            <h1><field name="name"/></h1>
+                        </div>
+                        <br/>
+                        <group>
+                            <field name="area_id" widget="many2many_tags" string="Area"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="act_device_category_view">
+            <field name="name">Device category</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">category.device</field>
+            <field name="view_mode">tree,form</field>
+            <field name="context"></field>
+            <field name="domain"></field>
+        </record>
+
+        <record id="view_device_category_area_tree" model="ir.ui.view">
+            <field name="name">category.device.area.view.tree</field>
+            <field name="model">category.device.area</field>
+            
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="category_id" />
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_device_category_area_form" model="ir.ui.view">
+            <field name="name">category.device.area.view.form</field>
+            <field name="model">category.device.area</field>
+            
+            <field name="arch" type="xml">
+                <form >
+                    <sheet>
+                        <h1>Đơn Vị Sử Dụng</h1>
+                        <div class="oe_title">
+                            <label for="name" string="Name"/>
+                            <h1><field name="name"/></h1>
+                        </div>
+                        <br/>
+                        <group>
+                            <field name="category_id" string="Category"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="act_device_category_area_view">
+            <field name="name">Device category area</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">category.device.area</field>
+            <field name="view_mode">tree,form</field>
+            <field name="context"></field>
+            <field name="domain"></field>
+        </record>
+    </data>
+</odoo>
+

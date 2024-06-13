@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data noupdate="1">
+		<record id="reason_membership" model="loyalty.reason.rank">
+			<field name="name">Membership class is initialized</field>
+		</record>
+
+        <record id="reason_up_rank" model="loyalty.reason.rank">
+			<field name="name">Meet all promotion conditions</field>
+		</record>
+
+        <record id="reason_down_rank" model="loyalty.reason.rank">
+			<field name="name">Does not meet the conditions to keep rank</field>
+		</record>
+	</data>
+</odoo>

@@ -1,0 +1,853 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* pontusinc_crm
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-04-08 07:06+0000\n"
+"PO-Revision-Date: 2024-04-08 07:06+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: pontusinc_crm
+#: model_terms:ir.ui.view,arch_db:pontusinc_crm.view_customer_360_form
+msgid "<b attrs=\"{'invisible': [('is_company', '=', False)]}\">Address</b>"
+msgstr ""
+
+#. module: pontusinc_crm
+#: model_terms:ir.ui.view,arch_db:pontusinc_crm.view_customer_360_form
+msgid "<span>Other address for the company (e.g. subsidiary, ...)</span>"
+msgstr "<span>Địa chỉ khác của công ty (ví dụ: công ty con, ...)</span>"
+
+#. module: pontusinc_crm
+#: model_terms:ir.ui.view,arch_db:pontusinc_crm.view_customer_360_form
+msgid ""
+"<span>Preferred address for all deliveries. Selected by default when you "
+"deliver an order that belongs to this company.</span>"
+msgstr "<span>Địa chỉ ưu tiên cho tất cả các lần giao hàng. Được chọn theo mặc định khi bạn giao một đơn đặt hàng của công ty này.</span>"
+
+#. module: pontusinc_crm
+#: model_terms:ir.ui.view,arch_db:pontusinc_crm.view_customer_360_form
+msgid ""
+"<span>Preferred address for all invoices. Selected by default when you "
+"invoice an order that belongs to this company.</span>"
+msgstr "<span>Địa chỉ ưu tiên cho tất cả các hóa đơn. Được chọn theo mặc định khi bạn lập hóa đơn cho một đơn đặt hàng của công ty này.</span>"
+
+#. module: pontusinc_crm
+#: model_terms:ir.ui.view,arch_db:pontusinc_crm.view_customer_360_form
+msgid ""
+"<span>Private addresses are only visible by authorized users and contain "
+"sensitive data (employee home addresses, ...).</span>"
+msgstr "<span>Địa chỉ riêng tư chỉ hiển thị với người dùng được ủy quyền và chứa dữ liệu nhạy cảm (địa chỉ nhà riêng của nhân viên,...).</span>"
+
+#. module: pontusinc_crm
+#: model_terms:ir.ui.view,arch_db:pontusinc_crm.view_customer_360_form
+msgid "<span>SPDV chưa từng sử dụng: 30</span>"
+msgstr ""
+
+#. module: pontusinc_crm
+#: model_terms:ir.ui.view,arch_db:pontusinc_crm.view_customer_360_form
+msgid "<span>SPDV đang sử dụng: 2</span>"
+msgstr ""
+
+#. module: pontusinc_crm
+#: model_terms:ir.ui.view,arch_db:pontusinc_crm.view_customer_360_form
+msgid "<span>SPDV đã từng sử dụng: 3</span>"
+msgstr ""
+
+#. module: pontusinc_crm
+#: model_terms:ir.ui.view,arch_db:pontusinc_crm.view_customer_360_form
+msgid "<span>Tổng sản phẩm dịch vụ: 5</span>"
+msgstr ""
+
+#. module: pontusinc_crm
+#: model_terms:ir.ui.view,arch_db:pontusinc_crm.view_customer_360_form
+msgid ""
+"<span>Use this to organize the contact details of employees of a given "
+"company (e.g. CEO, CFO, ...).</span>"
+msgstr "<span>Sử dụng tính năng này để sắp xếp thông tin liên hệ của nhân viên của một công ty nhất định (ví dụ: Giám đốc Điều hành, Giám đốc Tài chính,...).</span>"
+
+#. module: pontusinc_crm
+#. odoo-javascript
+#: code:addons/pontusinc_crm/static/src/fields/common_one2many.xml:0
+#: code:addons/pontusinc_crm/static/src/xml/log_rank_templates.xml:0
+#, python-format
+msgid "ADD"
+msgstr ""
+
+#. module: pontusinc_crm
+#: model:ir.model.fields,field_description:pontusinc_crm.field_campaign_history__action_mkt
+msgid "Action"
+msgstr "Hành động chiến dịch"
+
+#. module: pontusinc_crm
+#: model:ir.model.fields,field_description:pontusinc_crm.field_interactive_diary__action_interactive
+msgid "Action"
+msgstr "Hành động đã tương tác"
+
+#. module: pontusinc_crm
+#: model:ir.model.fields,field_description:pontusinc_crm.field_res_partner__asset
+#: model:ir.model.fields,field_description:pontusinc_crm.field_res_users__asset
+msgid "Asset"
+msgstr "Tài sản"
+
+#. module: pontusinc_crm
+#: model:ir.model.fields,field_description:pontusinc_crm.field_res_partner__average_income
+#: model:ir.model.fields,field_description:pontusinc_crm.field_res_users__average_income
+msgid "Average income"
+msgstr "Thu nhập trung bình"
+
+#. module: pontusinc_crm
+#: model:ir.model.fields.selection,name:pontusinc_crm.selection__res_partner__company_type__bank
+msgid "Bank"
+msgstr "Ngân hàng"
+
+#. module: pontusinc_crm
+#: model:ir.model.fields,field_description:pontusinc_crm.field_res_partner__birthday
+msgid "Birthday"
+msgstr "Ngày sinh"
+
+#. module: pontusinc_crm
+#: model_terms:ir.ui.view,arch_db:pontusinc_crm.view_customer_360_form
+msgid "Block card"
+msgstr "Khóa thẻ khẩn cấp"
+
+#. module: pontusinc_crm
+#: model:ir.model.fields.selection,name:pontusinc_crm.selection__res_partner__relationship__brother
+msgid "Brother"
+msgstr "Bố"
+
+#. module: pontusinc_crm
+#: model:ir.model.fields.selection,name:pontusinc_crm.selection__res_partner__type_info__cccd
+msgid "CCCD"
+msgstr ""
+
+#. module: pontusinc_crm
+#: model:ir.model.fields.selection,name:pontusinc_crm.selection__res_partner__type_info__cmnd
+msgid "CMND"
+msgstr ""
+
+#. module: pontusinc_crm
+#. odoo-javascript
+#: code:addons/pontusinc_crm/static/src/xml/log_rank_templates.xml:0
+#, python-format
+msgid "CREATE A NEW ENTRY"
+msgstr "Tạo mới"
+
+#. module: pontusinc_crm
+#: model:ir.model.fields,field_description:pontusinc_crm.field_res_partner__campaign_history_ids
+#: model:ir.model.fields,field_description:pontusinc_crm.field_res_users__campaign_history_ids
+msgid "Campaign history"
+msgstr ""
+
+#. module: pontusinc_crm
+#: model:ir.model.fields,field_description:pontusinc_crm.field_res_partner__child_presenter_ids
+#: model:ir.model.fields,field_description:pontusinc_crm.field_res_users__child_presenter_ids
+msgid "Child"
+msgstr ""
+
+#. module: pontusinc_crm
+#: model_terms:ir.ui.view,arch_db:pontusinc_crm.view_customer_360_form
+msgid "City"
+msgstr "Thành phố"
+
+#. module: pontusinc_crm
+#: model_terms:ir.ui.view,arch_db:pontusinc_crm.view_customer_360_form
+msgid "City..."
+msgstr "Thành phố..."
+
+#. module: pontusinc_crm
+#: model:ir.model.fields,field_description:pontusinc_crm.field_campaign_history__code
+#: model:ir.model.fields,field_description:pontusinc_crm.field_interactive_diary__code
+#: model:ir.model.fields,field_description:pontusinc_crm.field_spending_diary__code
+msgid "Code"
+msgstr "Mã"
+
+#. module: pontusinc_crm
+#: model_terms:ir.ui.view,arch_db:pontusinc_crm.view_customer_360_form
+msgid "Commune..."
+msgstr "Phường/xã..."
+
+#. module: pontusinc_crm
+#: model_terms:ir.ui.view,arch_db:pontusinc_crm.view_customer_360_form
+msgid "Company Name..."
+msgstr "Tên công ty..."
+
+#. module: pontusinc_crm
+#: model:ir.model.fields,field_description:pontusinc_crm.field_res_partner__company_type
+#: model:ir.model.fields,field_description:pontusinc_crm.field_res_users__company_type
+msgid "Company Type"
+msgstr "Loại hình Công ty"
+
+#. module: pontusinc_crm
+#: model:ir.ui.menu,name:pontusinc_crm.customer_360_menu_config
+msgid "Configuration"
+msgstr "Cấu hình"
+
+#. module: pontusinc_crm
+#: model:ir.model,name:pontusinc_crm.model_res_partner
+msgid "Contact"
+msgstr "Liên hệ"
+
+#. module: pontusinc_crm
+#: model_terms:ir.ui.view,arch_db:pontusinc_crm.view_customer_360_form
+msgid "Contact / Address"
+msgstr "Liên hệ / Địa chỉ"
+
+#. module: pontusinc_crm
+#: model_terms:ir.ui.view,arch_db:pontusinc_crm.view_customer_360_form
+msgid "Contact Name"
+msgstr "Tên khách hàng"
+
+#. module: pontusinc_crm
+#: model_terms:ir.ui.view,arch_db:pontusinc_crm.view_customer_360_form
+msgid "Contact image"
+msgstr "Hình ảnh"
+
+#. module: pontusinc_crm
+#: model_terms:ir.ui.view,arch_db:pontusinc_crm.view_customer_360_form
+msgid "Contacts & Addresses"
+msgstr "Liên hệ & địa chỉ"
+
+#. module: pontusinc_crm
+#: model:ir.model.fields,field_description:pontusinc_crm.field_interactive_diary__content
+msgid "Content"
+msgstr "Nội dung"
+
+#. module: pontusinc_crm
+#: model_terms:ir.ui.view,arch_db:pontusinc_crm.view_customer_360_form
+msgid "Contract"
+msgstr "Khách hàng"
+
+#. module: pontusinc_crm
+#: model_terms:ir.ui.view,arch_db:pontusinc_crm.view_customer_360_form
+msgid "Country"
+msgstr "Quốc gia"
+
+#. module: pontusinc_crm
+#: model_terms:ir.actions.act_window,help:pontusinc_crm.action_customer_360
+msgid "Create a Contact in your address book"
+msgstr "Tạo một liên hệ trong sổ địa chỉ"
+
+#. module: pontusinc_crm
+#. odoo-javascript
+#: code:addons/pontusinc_crm/static/src/fields/common_one2many.xml:0
+#, python-format
+msgid "Create a new entry"
+msgstr "Tạo mới"
+
+#. module: pontusinc_crm
+#: model_terms:ir.ui.view,arch_db:pontusinc_crm.view_customer_360_form
+msgid "Create company"
+msgstr "Tạo mới công ty"
+
+#. module: pontusinc_crm
+#: model:ir.model.fields,field_description:pontusinc_crm.field_campaign_history__create_uid
+#: model:ir.model.fields,field_description:pontusinc_crm.field_interactive_diary__create_uid
+#: model:ir.model.fields,field_description:pontusinc_crm.field_partner_rank_history__create_uid
+#: model:ir.model.fields,field_description:pontusinc_crm.field_rank_level__create_uid
+#: model:ir.model.fields,field_description:pontusinc_crm.field_rank_partner__create_uid
+#: model:ir.model.fields,field_description:pontusinc_crm.field_res_partner_state__create_uid
+#: model:ir.model.fields,field_description:pontusinc_crm.field_spending_diary__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: pontusinc_crm
+#: model:ir.model.fields,field_description:pontusinc_crm.field_campaign_history__create_date
+#: model:ir.model.fields,field_description:pontusinc_crm.field_interactive_diary__create_date
+#: model:ir.model.fields,field_description:pontusinc_crm.field_partner_rank_history__create_date
+#: model:ir.model.fields,field_description:pontusinc_crm.field_rank_level__create_date
+#: model:ir.model.fields,field_description:pontusinc_crm.field_rank_partner__create_date
+#: model:ir.model.fields,field_description:pontusinc_crm.field_res_partner_state__create_date
+#: model:ir.model.fields,field_description:pontusinc_crm.field_spending_diary__create_date
+msgid "Created on"
+msgstr "Thời gian tạo"
+
+#. module: pontusinc_crm
+#. odoo-javascript
+#: code:addons/pontusinc_crm/static/src/fields/rank_history_one2many.xml:0
+#, python-format
+msgid "Current"
+msgstr "Hiện tại"
+
+#. module: pontusinc_crm
+#: model:ir.ui.menu,name:pontusinc_crm.menu_info_customer
+msgid "Customer"
+msgstr "Khách hàng"
+
+#. module: pontusinc_crm
+#: model:ir.actions.act_window,name:pontusinc_crm.action_customer_360
+#: model:ir.ui.menu,name:pontusinc_crm.menu_customer_360
+msgid "Customer 360"
+msgstr ""
+
+#. module: pontusinc_crm
+#: model:ir.ui.menu,name:pontusinc_crm.menu_config_state
+#: model_terms:ir.ui.view,arch_db:pontusinc_crm.view_customer_360_state_tree
+msgid "Customer journey"
+msgstr ""
+
+#. module: pontusinc_crm
+#: model_terms:ir.ui.view,arch_db:pontusinc_crm.view_customer_360_form
+msgid "Customer relationship diagram"
+msgstr "Sơ đồ MQH khách hàng"
+
+#. module: pontusinc_crm
+#: model_terms:ir.ui.view,arch_db:pontusinc_crm.view_customer_360_form
+msgid "Customer segment expected"
+msgstr "Phân khúc/Phân hạng"
+
+#. module: pontusinc_crm
+#: model_terms:ir.ui.view,arch_db:pontusinc_crm.view_customer_360_form
+msgid "Customer segment history"
+msgstr "Lịch sử sử dụng"
+
+#. module: pontusinc_crm
+#: model_terms:ir.ui.view,arch_db:pontusinc_crm.view_customer_360_form
+msgid "Classification segment"
+msgstr "Phân khúc/phân hạng"
+
+
+#. module: pontusinc_crm
+#: model:ir.model.fields,help:pontusinc_crm.field_res_partner__subordinate_ids
+#: model:ir.model.fields,help:pontusinc_crm.field_res_users__subordinate_ids
+msgid "Direct and indirect subordinates"
+msgstr ""
+
+#. module: pontusinc_crm
+#: model:ir.model.fields,field_description:pontusinc_crm.field_campaign_history__display_name
+#: model:ir.model.fields,field_description:pontusinc_crm.field_interactive_diary__display_name
+#: model:ir.model.fields,field_description:pontusinc_crm.field_partner_rank_history__display_name
+#: model:ir.model.fields,field_description:pontusinc_crm.field_rank_level__display_name
+#: model:ir.model.fields,field_description:pontusinc_crm.field_rank_partner__display_name
+#: model:ir.model.fields,field_description:pontusinc_crm.field_res_partner_state__display_name
+#: model:ir.model.fields,field_description:pontusinc_crm.field_spending_diary__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: pontusinc_crm
+#: model:ir.model.fields,field_description:pontusinc_crm.field_res_partner__district_id
+#: model:ir.model.fields,field_description:pontusinc_crm.field_res_users__district_id
+msgid "District"
+msgstr "Quận/huyện"
+
+#. module: pontusinc_crm
+#: model_terms:ir.ui.view,arch_db:pontusinc_crm.view_customer_360_form
+msgid "District..."
+msgstr "Quận/huyện..."
+
+#. module: pontusinc_crm
+#: model_terms:ir.ui.view,arch_db:pontusinc_crm.view_customer_360_form
+msgid "Document"
+msgstr "Tài liệu hồ sơ"
+
+#. module: pontusinc_crm
+#: model_terms:ir.ui.view,arch_db:pontusinc_crm.view_customer_360_form
+msgid "Economic information"
+msgstr "Thông tin tài chính"
+
+#. module: pontusinc_crm
+#: model:ir.model.fields,field_description:pontusinc_crm.field_res_partner__emergency_contact_id
+#: model:ir.model.fields,field_description:pontusinc_crm.field_res_users__emergency_contact_id
+msgid "Emergency contact"
+msgstr "Người ảnh hưởng"
+
+#. module: pontusinc_crm
+#: model:ir.model.fields,field_description:pontusinc_crm.field_campaign_history__end_date
+#: model:ir.model.fields,field_description:pontusinc_crm.field_spending_diary__end_date
+msgid "End date"
+msgstr "Ngày kết thúc"
+
+#. module: pontusinc_crm
+#: model_terms:ir.ui.view,arch_db:pontusinc_crm.view_customer_360_form
+msgid "Event"
+msgstr "Sự kiện"
+
+#. module: pontusinc_crm
+#: model:ir.model.fields,field_description:pontusinc_crm.field_res_partner__expected_rank_id
+#: model:ir.model.fields,field_description:pontusinc_crm.field_res_users__expected_rank_id
+msgid "Expected rank"
+msgstr "Phân khúc dự kiến"
+
+#. module: pontusinc_crm
+#: model:ir.model.fields,field_description:pontusinc_crm.field_res_partner__expiration_date
+#: model:ir.model.fields,field_description:pontusinc_crm.field_res_users__expiration_date
+msgid "Expiration date"
+msgstr "Ngày hết hạn"
+
+#. module: pontusinc_crm
+#: model:ir.model.fields.selection,name:pontusinc_crm.selection__res_partner__relationship__father
+msgid "Father"
+msgstr "Bố"
+
+#. module: pontusinc_crm
+#: model_terms:ir.ui.view,arch_db:pontusinc_crm.view_customer_360_form
+msgid "Financial goals"
+msgstr "Mục tiêu tài chính"
+
+#. module: pontusinc_crm
+#: model_terms:ir.ui.view,arch_db:pontusinc_crm.view_customer_360_form
+msgid "General information"
+msgstr "Thông tin chung"
+
+#. module: pontusinc_crm
+#: model:ir.model.fields,field_description:pontusinc_crm.field_res_partner__hometown_district_id
+#: model:ir.model.fields,field_description:pontusinc_crm.field_res_users__hometown_district_id
+msgid "Homeland District"
+msgstr "Địa chỉ"
+
+#. module: pontusinc_crm
+#: model:ir.model.fields,field_description:pontusinc_crm.field_res_partner__hometown_address
+#: model:ir.model.fields,field_description:pontusinc_crm.field_res_users__hometown_address
+msgid "Homeland address"
+msgstr "Địa chỉ"
+
+#. module: pontusinc_crm
+#: model:ir.model.fields,field_description:pontusinc_crm.field_res_partner__hometown_city_id
+#: model:ir.model.fields,field_description:pontusinc_crm.field_res_users__hometown_city_id
+msgid "Homeland city"
+msgstr "Quê quán"
+
+#. module: pontusinc_crm
+#: model:ir.model.fields,field_description:pontusinc_crm.field_res_partner__hometown_ward_id
+#: model:ir.model.fields,field_description:pontusinc_crm.field_res_users__hometown_ward_id
+msgid "Homeland ward"
+msgstr ""
+
+#. module: pontusinc_crm
+#: model_terms:ir.ui.view,arch_db:pontusinc_crm.view_customer_360_form
+msgid "Hometown city..."
+msgstr "Tỉnh/Thành phố..."
+
+#. module: pontusinc_crm
+#: model_terms:ir.ui.view,arch_db:pontusinc_crm.view_customer_360_form
+msgid "Hometown commune..."
+msgstr "Phường/xã..."
+
+#. module: pontusinc_crm
+#: model_terms:ir.ui.view,arch_db:pontusinc_crm.view_customer_360_form
+msgid "Hometown district..."
+msgstr "Quận/huyện..."
+
+#. module: pontusinc_crm
+#: model:ir.model.fields.selection,name:pontusinc_crm.selection__res_partner__relationship__husband
+msgid "Husband"
+msgstr "Chồng"
+
+#. module: pontusinc_crm
+#: model:ir.model.fields,field_description:pontusinc_crm.field_campaign_history__id
+#: model:ir.model.fields,field_description:pontusinc_crm.field_interactive_diary__id
+#: model:ir.model.fields,field_description:pontusinc_crm.field_partner_rank_history__id
+#: model:ir.model.fields,field_description:pontusinc_crm.field_rank_level__id
+#: model:ir.model.fields,field_description:pontusinc_crm.field_rank_partner__id
+#: model:ir.model.fields,field_description:pontusinc_crm.field_res_partner_state__id
+#: model:ir.model.fields,field_description:pontusinc_crm.field_spending_diary__id
+msgid "ID"
+msgstr ""
+
+#. module: pontusinc_crm
+#: model:ir.model.fields,field_description:pontusinc_crm.field_res_partner__identification_code
+#: model:ir.model.fields,field_description:pontusinc_crm.field_res_users__identification_code
+msgid "Identification code"
+msgstr "Số ID"
+
+#. module: pontusinc_crm
+#: model:ir.model.fields,field_description:pontusinc_crm.field_res_partner__impact_level
+#: model:ir.model.fields,field_description:pontusinc_crm.field_res_users__impact_level
+msgid "Impact level"
+msgstr "Mức độ ảnh hưởng"
+
+#. module: pontusinc_crm
+#: model:ir.model.fields,field_description:pontusinc_crm.field_res_partner__child_all_count
+#: model:ir.model.fields,field_description:pontusinc_crm.field_res_users__child_all_count
+msgid "Indirect Subordinates Count"
+msgstr ""
+
+#. module: pontusinc_crm
+#: model_terms:ir.ui.view,arch_db:pontusinc_crm.view_customer_360_form
+msgid "Interact"
+msgstr "Tương tác"
+
+#. module: pontusinc_crm
+#: model_terms:ir.ui.view,arch_db:pontusinc_crm.view_customer_360_form
+msgid "Interactive"
+msgstr "Thông tin tài chính"
+
+#. module: pontusinc_crm
+#: model:ir.model.fields,field_description:pontusinc_crm.field_res_partner__interactive_diary_ids
+#: model:ir.model.fields,field_description:pontusinc_crm.field_res_users__interactive_diary_ids
+msgid "Interactive diary"
+msgstr "Lịch sử tương tác"
+
+#. module: pontusinc_crm
+#: model_terms:ir.ui.view,arch_db:pontusinc_crm.view_customer_360_form
+msgid "Interactive information"
+msgstr "Thông tin tương tác"
+
+#. module: pontusinc_crm
+#: model_terms:ir.ui.view,arch_db:pontusinc_crm.view_customer_360_form
+msgid "Internal notes..."
+msgstr "Ghi chú nội bộ..."
+
+#. module: pontusinc_crm
+#: model:ir.model.fields,field_description:pontusinc_crm.field_res_partner__is_bank
+#: model:ir.model.fields,field_description:pontusinc_crm.field_res_users__is_bank
+msgid "Is bank"
+msgstr "Là khách hàng ngân hàng"
+
+#. module: pontusinc_crm
+#: model:ir.model.fields,field_description:pontusinc_crm.field_partner_rank_history__is_expected
+msgid "Is expected"
+msgstr ""
+
+#. module: pontusinc_crm
+#: model:ir.model.fields,field_description:pontusinc_crm.field_campaign_history____last_update
+#: model:ir.model.fields,field_description:pontusinc_crm.field_interactive_diary____last_update
+#: model:ir.model.fields,field_description:pontusinc_crm.field_partner_rank_history____last_update
+#: model:ir.model.fields,field_description:pontusinc_crm.field_rank_level____last_update
+#: model:ir.model.fields,field_description:pontusinc_crm.field_rank_partner____last_update
+#: model:ir.model.fields,field_description:pontusinc_crm.field_res_partner_state____last_update
+#: model:ir.model.fields,field_description:pontusinc_crm.field_spending_diary____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: pontusinc_crm
+#: model:ir.model.fields,field_description:pontusinc_crm.field_campaign_history__write_uid
+#: model:ir.model.fields,field_description:pontusinc_crm.field_interactive_diary__write_uid
+#: model:ir.model.fields,field_description:pontusinc_crm.field_partner_rank_history__write_uid
+#: model:ir.model.fields,field_description:pontusinc_crm.field_rank_level__write_uid
+#: model:ir.model.fields,field_description:pontusinc_crm.field_rank_partner__write_uid
+#: model:ir.model.fields,field_description:pontusinc_crm.field_res_partner_state__write_uid
+#: model:ir.model.fields,field_description:pontusinc_crm.field_spending_diary__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: pontusinc_crm
+#: model:ir.model.fields,field_description:pontusinc_crm.field_campaign_history__write_date
+#: model:ir.model.fields,field_description:pontusinc_crm.field_interactive_diary__write_date
+#: model:ir.model.fields,field_description:pontusinc_crm.field_partner_rank_history__write_date
+#: model:ir.model.fields,field_description:pontusinc_crm.field_rank_level__write_date
+#: model:ir.model.fields,field_description:pontusinc_crm.field_rank_partner__write_date
+#: model:ir.model.fields,field_description:pontusinc_crm.field_res_partner_state__write_date
+#: model:ir.model.fields,field_description:pontusinc_crm.field_spending_diary__write_date
+msgid "Last Updated on"
+msgstr "Thời gian cập nhật"
+
+#. module: pontusinc_crm
+#: model:ir.model.fields,field_description:pontusinc_crm.field_interactive_diary__last_interaction
+msgid "Last interaction"
+msgstr "Tương tác mới nhất"
+
+#. module: pontusinc_crm
+#: model:ir.model.fields,field_description:pontusinc_crm.field_rank_level__name
+#: model:ir.model.fields,field_description:pontusinc_crm.field_rank_partner__level_ids
+msgid "Level"
+msgstr ""
+
+#. module: pontusinc_crm
+#: model:ir.model.fields,field_description:pontusinc_crm.field_partner_rank_history__level_id
+msgid "Level rank"
+msgstr "Hạng"
+
+#. module: pontusinc_crm
+#: model_terms:ir.ui.view,arch_db:pontusinc_crm.view_customer_360_form
+msgid "Lịch sử sử dụng"
+msgstr ""
+
+#. module: pontusinc_crm
+#: model_terms:ir.ui.view,arch_db:pontusinc_crm.view_customer_360_form
+msgid "Mobile:"
+msgstr "Điện thoại:"
+
+#. module: pontusinc_crm
+#: model:ir.model.fields.selection,name:pontusinc_crm.selection__res_partner__relationship__mother
+msgid "Mother"
+msgstr "Mẹ"
+
+#. module: pontusinc_crm
+#: model:ir.model.fields,field_description:pontusinc_crm.field_res_partner_state__name
+msgid "Name"
+msgstr "Tên"
+
+#. module: pontusinc_crm
+#: model:ir.model.fields,field_description:pontusinc_crm.field_interactive_diary__note
+#: model:ir.model.fields,field_description:pontusinc_crm.field_spending_diary__note
+msgid "Note"
+msgstr "Ghi chú"
+
+#. module: pontusinc_crm
+#: model_terms:ir.actions.act_window,help:pontusinc_crm.action_customer_360
+msgid "Odoo helps you track all activities related to your contacts."
+msgstr ""
+
+#. module: pontusinc_crm
+#: model_terms:ir.ui.view,arch_db:pontusinc_crm.view_customer_360_form
+msgid "Organization Chart"
+msgstr "Sơ đồ mối quan hệ khách hàng"
+
+#. module: pontusinc_crm
+#. odoo-javascript
+#: code:addons/pontusinc_crm/static/src/views/rank_list_renderer.js:0
+#, python-format
+msgid "Other"
+msgstr "Khác"
+
+#. module: pontusinc_crm
+#: model:ir.model.fields.selection,name:pontusinc_crm.selection__campaign_history__state__outgoing
+msgid "Outgoing"
+msgstr ""
+
+#. module: pontusinc_crm
+#: model:ir.model.fields,field_description:pontusinc_crm.field_campaign_history__partner_id
+#: model:ir.model.fields,field_description:pontusinc_crm.field_interactive_diary__partner_id
+#: model:ir.model.fields,field_description:pontusinc_crm.field_partner_rank_history__partner_id
+#: model:ir.model.fields,field_description:pontusinc_crm.field_spending_diary__partner_id
+msgid "Partner"
+msgstr "Khách hàng"
+
+#. module: pontusinc_crm
+#: model:ir.model.fields,field_description:pontusinc_crm.field_res_partner__history_rank_ids
+#: model:ir.model.fields,field_description:pontusinc_crm.field_res_users__history_rank_ids
+msgid "Partner rank history"
+msgstr "Lịch sử thay đổi phân khúc"
+
+#. module: pontusinc_crm
+#: model:ir.model.fields.selection,name:pontusinc_crm.selection__res_partner__type_info__passport
+msgid "Passport"
+msgstr "Hộ chiếu"
+
+#. module: pontusinc_crm
+#: model_terms:ir.ui.view,arch_db:pontusinc_crm.view_customer_360_form
+msgid "Personal information"
+msgstr "Thông tin cá nhân"
+
+#. module: pontusinc_crm
+#: model_terms:ir.ui.view,arch_db:pontusinc_crm.view_customer_360_form
+msgid "Phone:"
+msgstr "Điện thoại:"
+
+#. module: pontusinc_crm
+#: model:ir.model.fields,field_description:pontusinc_crm.field_res_partner__presenter_id
+#: model:ir.model.fields,field_description:pontusinc_crm.field_res_users__presenter_id
+#: model:ir.model.fields,field_description:pontusinc_crm.field_spending_diary__presenter_id
+#: model_terms:ir.ui.view,arch_db:pontusinc_crm.view_customer_360_form
+msgid "Presenter"
+msgstr "Người giới thiệu"
+
+#. module: pontusinc_crm
+#: model:ir.model.fields,field_description:pontusinc_crm.field_spending_diary__price
+msgid "Price"
+msgstr "Dư nợ có"
+
+#. module: pontusinc_crm
+#: model_terms:ir.ui.view,arch_db:pontusinc_crm.view_customer_360_form
+msgid "Product/Service"
+msgstr "Sản phẩm/dịch vụ"
+
+#. module: pontusinc_crm
+#: model:ir.model.fields,field_description:pontusinc_crm.field_partner_rank_history__rank_id
+msgid "Rank partner"
+msgstr "Phân khúc"
+
+#. module: pontusinc_crm
+#: model:ir.model.fields,field_description:pontusinc_crm.field_res_partner__relationship
+#: model:ir.model.fields,field_description:pontusinc_crm.field_res_users__relationship
+msgid "Relationship"
+msgstr "Mối quan hệ"
+
+#. module: pontusinc_crm
+#: model:ir.actions.act_window,name:pontusinc_crm.act_res_partner_state_view
+msgid "Res partner state"
+msgstr "Trạng thái khách hàng"
+
+#. module: pontusinc_crm
+#: model_terms:ir.ui.view,arch_db:pontusinc_crm.view_customer_360_form
+msgid "Reset PIN code"
+msgstr "Lấy lại mã PIN"
+
+#. module: pontusinc_crm
+#: model:ir.model.fields,field_description:pontusinc_crm.field_campaign_history__responded
+msgid "Responded"
+msgstr "Đã phản hồi"
+
+#. module: pontusinc_crm
+#: model_terms:ir.ui.view,arch_db:pontusinc_crm.view_customer_360_form
+msgid "Search CIC"
+msgstr "Tra cứu CIC"
+
+#. module: pontusinc_crm
+#: model:ir.model.fields.selection,name:pontusinc_crm.selection__campaign_history__state__send
+msgid "Send"
+msgstr "Đã gửi"
+
+#. module: pontusinc_crm
+#: model:ir.model.fields,field_description:pontusinc_crm.field_campaign_history__source_id
+#: model:ir.model.fields,field_description:pontusinc_crm.field_interactive_diary__source
+msgid "Source"
+msgstr "Nguồn"
+
+#. module: pontusinc_crm
+#: model:ir.model.fields,field_description:pontusinc_crm.field_interactive_diary__count_interactive
+msgid "Count interactive"
+msgstr "Số lần tương tác"
+
+#. module: pontusinc_crm
+#: model:ir.model.fields,field_description:pontusinc_crm.field_interactive_diary__interaction_results
+msgid "Interaction results"
+msgstr "Kết quả tương tác"
+
+#. module: pontusinc_crm
+#: model:ir.model.fields,field_description:pontusinc_crm.field_interactive_diary__passive
+msgid "Is passive"
+msgstr "Chủ động/bị động"
+
+#. module: pontusinc_crm
+#: model:ir.model.fields,field_description:pontusinc_crm.field_campaign_history__campaign_id
+msgid "Campaign"
+msgstr "Chiến dịch"
+
+#. module: pontusinc_crm
+#: model:ir.model.fields,field_description:pontusinc_crm.field_res_partner__spending_diary_ids
+#: model:ir.model.fields,field_description:pontusinc_crm.field_res_users__spending_diary_ids
+msgid "Spending diary"
+msgstr "Lịch sử chi tiêu"
+
+#. module: pontusinc_crm
+#: model:ir.model.fields,field_description:pontusinc_crm.field_partner_rank_history__start
+msgid "Start"
+msgstr "Ngày bắt đầu"
+
+#. module: pontusinc_crm
+#: model:ir.model.fields,field_description:pontusinc_crm.field_campaign_history__start_date
+#: model:ir.model.fields,field_description:pontusinc_crm.field_spending_diary__start_date
+msgid "Start date"
+msgstr "Ngày bắt đầu"
+
+#. module: pontusinc_crm
+#: model:ir.model.fields,field_description:pontusinc_crm.field_campaign_history__state
+#: model:ir.model.fields,field_description:pontusinc_crm.field_res_partner__stage_id
+#: model:ir.model.fields,field_description:pontusinc_crm.field_res_users__stage_id
+#: model_terms:ir.ui.view,arch_db:pontusinc_crm.view_customer_360_form
+msgid "State"
+msgstr "Trạng thái"
+
+#. module: pontusinc_crm
+#: model:ir.model.fields,field_description:pontusinc_crm.field_partner_rank_history__stop
+msgid "Stop"
+msgstr "Ngày hết hạn"
+
+#. module: pontusinc_crm
+#: model_terms:ir.ui.view,arch_db:pontusinc_crm.view_customer_360_form
+msgid "Street 2..."
+msgstr ""
+
+#. module: pontusinc_crm
+#: model_terms:ir.ui.view,arch_db:pontusinc_crm.view_customer_360_form
+msgid "Street..."
+msgstr ""
+
+#. module: pontusinc_crm
+#: model:ir.model.fields,field_description:pontusinc_crm.field_res_partner__subordinate_ids
+#: model:ir.model.fields,field_description:pontusinc_crm.field_res_users__subordinate_ids
+msgid "Subordinates"
+msgstr ""
+
+#. module: pontusinc_crm
+#: model_terms:ir.ui.view,arch_db:pontusinc_crm.view_customer_360_form
+msgid "Sản phẩm dịch vụ phù hợp"
+msgstr ""
+
+#. module: pontusinc_crm
+#: model:ir.model.fields,field_description:pontusinc_crm.field_interactive_diary__name
+msgid "Title"
+msgstr "Loại tương tác"
+
+#. module: pontusinc_crm
+#: model:ir.model.fields,field_description:pontusinc_crm.field_res_partner__type_info
+#: model:ir.model.fields,field_description:pontusinc_crm.field_res_users__type_info
+msgid "Type info"
+msgstr "Loại ID"
+
+#. module: pontusinc_crm
+#: model:ir.model.fields,field_description:pontusinc_crm.field_spending_diary__name
+msgid "Type spending"
+msgstr "Loại tài chính"
+
+#. module: pontusinc_crm
+#: model:ir.model.fields,field_description:pontusinc_crm.field_interactive_diary__user_id
+msgid "User"
+msgstr "Người dùng"
+
+#. module: pontusinc_crm
+#: model:ir.model.fields,field_description:pontusinc_crm.field_res_partner__ward_id
+#: model:ir.model.fields,field_description:pontusinc_crm.field_res_users__ward_id
+msgid "Ward"
+msgstr "Phường/xã"
+
+#. module: pontusinc_crm
+#: model:ir.model.fields.selection,name:pontusinc_crm.selection__res_partner__relationship__wife
+msgid "Wife"
+msgstr "Vợ"
+
+#. module: pontusinc_crm
+#: model_terms:ir.ui.view,arch_db:pontusinc_crm.view_customer_360_form
+msgid "ZIP"
+msgstr ""
+
+#. module: pontusinc_crm
+#: model:ir.model,name:pontusinc_crm.model_campaign_history
+msgid "campaign.history"
+msgstr ""
+
+#. module: pontusinc_crm
+#: model_terms:ir.ui.view,arch_db:pontusinc_crm.view_customer_360_form
+msgid "e.g. BE0477472701"
+msgstr ""
+
+#. module: pontusinc_crm
+#: model:ir.model,name:pontusinc_crm.model_interactive_diary
+msgid "interactive.diary"
+msgstr ""
+
+#. module: pontusinc_crm
+#: model:ir.model.fields,field_description:pontusinc_crm.field_rank_partner__name
+msgid "name"
+msgstr "Tên"
+
+#. module: pontusinc_crm
+#: model:ir.model,name:pontusinc_crm.model_partner_rank_history
+msgid "partner.rank.history"
+msgstr ""
+
+#. module: pontusinc_crm
+#: model:ir.model,name:pontusinc_crm.model_rank_level
+msgid "rank.level"
+msgstr ""
+
+#. module: pontusinc_crm
+#: model:ir.model,name:pontusinc_crm.model_rank_partner
+msgid "rank.partner"
+msgstr ""
+
+#. module: pontusinc_crm
+#: model:ir.model,name:pontusinc_crm.model_res_partner_state
+msgid "res.partner.state"
+msgstr ""
+
+#. module: pontusinc_crm
+#: model:ir.model,name:pontusinc_crm.model_spending_diary
+msgid "spending.diary"
+msgstr ""
+
+#. module: pontusinc_crm
+#. odoo-javascript
+#: code:addons/pontusinc_crm/static/src/fields/rank_history_one2many.xml:0
+#, python-format
+msgid "Đang hoạt động"
+msgstr ""

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="undeliverable_area_tree_view" model="ir.ui.view">
+        <field name="name">Undeliverable area tree view</field>
+        <field name="model">undeliverable.area</field>
+        <field name="arch" type="xml">
+            <tree editable="top">
+                <field name="company_id" options="{'no_create': '1', 'no_open': '1'}"/>
+                <field name="platform_id"/>
+                <field name="city_id" domain="[('country_id', '=', %(base.vn)s)]"/>
+                <field name="district_id" domain="[('state_id','=',city_id)]"/>
+                <field name="ward_id" domain="[('district_id','=',district_id)]"/>
+                <field name="create_uid"/>
+                <field name="create_date"/>
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="act_undeliverable_area_view">
+        <field name="name">Undeliverable area</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">undeliverable.area</field>
+        <field name="view_mode">tree</field>
+        <field name="context"></field>
+        <field name="domain"></field>
+<!--        <field name="help" type="html">-->
+<!--            <p class="o_view_nocontent_smiling_face">-->
+<!--                Thêm một vận đơn mới-->
+<!--            </p>-->
+<!--        </field>-->
+    </record>
+</odoo>
