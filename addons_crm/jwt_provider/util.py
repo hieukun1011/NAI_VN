@@ -34,6 +34,10 @@ def sign_token(payload):
     Generally sign a jwt token
     """
     _logger.info('jwt %s', dir(jwt))
+    _logger.info('payload %s', payload)
+    _logger.info('key() %s', key())
+    print(payload)
+    print(key())
     token = jwt.encode(
         payload,
         key(),
