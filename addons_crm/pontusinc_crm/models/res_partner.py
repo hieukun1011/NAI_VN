@@ -1,4 +1,6 @@
 from odoo import fields, models, api, _
+from itertools import groupby
+from operator import itemgetter
 
 TYPEINFO = [('cccd', 'CCCD'), ('cmnd', 'CMND'), ('passport', 'Passport')]
 RELATIONSHIP = [('mother', 'Mother'),
@@ -89,3 +91,13 @@ class PontusincPartner(models.Model):
             else:
                 partner.company_type = 'person'
 
+    @api.model_create_multi
+    def create(self, vals_list):
+        counts = {}
+        for vals in vals_list:
+            phone = vals.get("phone")
+            counts[phone] = counts.get(phone, 0) + 1
+            if counts[phone] > 1:
+                vals_list.remove(vals)
+        res = super().create(vals_list)
+        return res
