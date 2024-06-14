@@ -80,7 +80,7 @@ class DynamicDashboard(http.Controller):
         # data = request.env['dashboard.menu'].read_embed_code(action_id)
         user_social_care = request.env['user.social.care'].sudo().search([('user_id', '=', request.env.uid)], limit=1)
         token = self.get_token(user_social_care.login, user_social_care.password)
-        return "https://staging.pontusinc.com/sbeat/global-news-dashboard?token=" + token['access_token']
+        return "https://staging.pontusinc.com/customer360/fanList?token=" + token['access_token']
 
 
     def get_token(self, user_name, password):

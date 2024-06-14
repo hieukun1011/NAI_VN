@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
-    <menuitem name="Customer 360"
-        id="menu_customer_360"
-        sequence="10"
-        web_icon="pontusinc_crm,static/description/consumer_research.png"/>
+<!--    <menuitem name="Customer 360"-->
+<!--        id="menu_customer_360"-->
+<!--        sequence="10"-->
+<!--        web_icon="pontusinc_crm,static/description/consumer_research.png"/>-->
 
-        <menuitem id="menu_info_customer"
-            name="Customer"
-            parent="menu_customer_360"
-            action="pontusinc_crm.action_customer_360"
-            sequence="0"/>
+<!--        <menuitem id="menu_info_customer"-->
+<!--            name="Customer"-->
+<!--            parent="menu_customer_360"-->
+<!--            action="pontusinc_crm.action_customer_360"-->
+<!--            sequence="0"/>-->
 
-        <menuitem id="customer_360_menu_config"
-            name="Configuration"
-            parent="menu_customer_360"/>
+<!--        <menuitem id="customer_360_menu_config"-->
+<!--            name="Configuration"-->
+<!--            parent="menu_customer_360"/>-->
 
-            <menuitem id="menu_config_state"
-                name="Customer journey"
-                parent="customer_360_menu_config"
-                action="pontusinc_crm.act_res_partner_state_view"
-                sequence="0"/>
+<!--            <menuitem id="menu_config_state"-->
+<!--                name="Customer journey"-->
+<!--                parent="customer_360_menu_config"-->
+<!--                action="pontusinc_crm.act_res_partner_state_view"-->
+<!--                sequence="0"/>-->
 </odoo>
