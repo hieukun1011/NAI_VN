@@ -10,7 +10,7 @@
     'author': 'Duong Trung Hieu',
     'company': 'Pontusinc',
     'website': "",
-    'depends': ['crm', 'contacts', 'web', 'base_unit_vn', 'customer_relationship_diagram'],
+    'depends': ['crm', 'contacts', 'web', 'base_unit_vn', 'customer_relationship_diagram', 'website'],
     'data': [
         'security/ir.model.access.csv',
         # 'data/data_tag_profiling.xml',
