@@ -21,7 +21,7 @@ _logger = logging.getLogger(__name__)
 
 class HistoryContactController(http.Controller):
 
-    @jwt_request.middlewares('jwt')
+    # @jwt_request.middlewares('jwt')
     @http.route("/api/v1/get-aciton-partner", type="json", auth='public', csrf=False, cors='*', methods=['GET'])
     def api_get_action_partner(self, **payload):
         try:
@@ -33,7 +33,7 @@ class HistoryContactController(http.Controller):
             return jwt_request.response_500(result)
         return jwt_request.response(payload)
 
-    @jwt_request.middlewares('jwt')
+    # @jwt_request.middlewares('jwt')
     @http.route("/api/v1/get-history-action-partner", type="json", auth='public', csrf=False, cors='*', methods=['GET'])
     def api_get_history_action_partner(self, **payload):
         try:
@@ -74,7 +74,7 @@ class HistoryContactController(http.Controller):
             return jwt_request.response_500(result)
         return jwt_request.response(payload)
 
-    @jwt_request.middlewares('jwt')
+    # @jwt_request.middlewares('jwt')
     @http.route("/api/v1/post-aciton-partner", type="json", auth='public', csrf=False, cors='*', methods=['POST'])
     def api_post_action_partner(self, **payload):
         try:

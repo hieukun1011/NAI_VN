@@ -11,7 +11,7 @@ _logger = logging.getLogger(__name__)
 
 class APICustomerJourney(http.Controller):
 
-    @jwt_request.middlewares('jwt')
+    # @jwt_request.middlewares('jwt')
     @http.route("/api/v1/get_info_partner", type="json", auth='public', csrf=False, cors='*', methods=['GET'])
     def api_get_info_partner(self, **payload):
         try:
@@ -41,7 +41,7 @@ class APICustomerJourney(http.Controller):
             return jwt_request.response_500(result)
         return jwt_request.response(payload)
 
-    @jwt_request.middlewares('jwt')
+    # @jwt_request.middlewares('jwt')
     @http.route("/api/v1/update_info_partner", type="json", auth='public', csrf=False, cors='*', methods=['POST'])
     def api_update_info_partner(self, **payload):
         try:
@@ -65,7 +65,7 @@ class APICustomerJourney(http.Controller):
                     'partner_id': payload['partner_id'],
                 }
                 value_update.update(payload)
-                request.env['update.partner'].create(value_update)
+                request.env['update.partner'].sudo().create(value_update)
                 result = response.response_200("SUCCESS!", "update success partner %s" % partner.name)
                 return result
         except Exception as ie:
@@ -74,7 +74,7 @@ class APICustomerJourney(http.Controller):
             return jwt_request.response_500(result)
         return jwt_request.response(payload)
 
-    @jwt_request.middlewares('jwt')
+    # @jwt_request.middlewares('jwt')
     @http.route("/api/v1/create-partner", type="json", auth='public', csrf=False, cors='*', methods=['POST'])
     def api_create_partner(self, **payload):
         try:
@@ -99,7 +99,7 @@ class APICustomerJourney(http.Controller):
                 if partner:
                     result = {"status": 400, "message": "Data invalid! Partner already exist!!!"}
                     return jwt_request.response(result)
-            partner = request.env['res.partner'].create([payload])
+            partner = request.env['res.partner'].sudo().create([payload])
             result = response.response_200("SUCCESS!", "Create success partner %s" % partner.name)
             return result
         except Exception as ie:
