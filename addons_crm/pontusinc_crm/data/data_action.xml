@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data noupdate="1">
+		<record id="action_partner_checkin" model="action.partner">
+			<field name="code">checkin</field>
+			<field name="name">Checkin</field>
+		</record>
+
+		<record id="action_partner_access" model="action.partner">
+			<field name="code">access_web</field>
+			<field name="name">Access website</field>
+		</record>
+
+	</data>
+</odoo>

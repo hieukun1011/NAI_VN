@@ -38,6 +38,7 @@ class PontusincPartner(models.Model):
     interactive_diary_ids = fields.One2many('interactive.diary', 'partner_id', string='Interactive diary')
     campaign_history_ids = fields.One2many('campaign.history', 'partner_id', string='Campaign history')
     child_presenter_ids = fields.One2many('res.partner', 'presenter_id', string='Child')
+    search_profiling = fields.Char('Search profiling', tracking=True)
     child_all_count = fields.Integer(
         'Indirect Subordinates Count',
         compute='_compute_subordinates', recursive=True, store=False,
@@ -45,6 +46,12 @@ class PontusincPartner(models.Model):
     subordinate_ids = fields.One2many('res.partner', string='Subordinates', compute='_compute_subordinates',
                                       help="Direct and indirect subordinates",
                                       compute_sudo=True)
+    facebook_id = fields.Char('Facebook ID')
+    company_name = fields.Char('Company Name')
+    school_name = fields.Char('School Name')
+    province = fields.Char('Province')
+    hometown = fields.Char('Hometown')
+    checkin_location = fields.Char('Checkin location')
 
     def _get_subordinates(self, parents=None):
         """

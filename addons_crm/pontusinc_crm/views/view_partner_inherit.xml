@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="action_partner_history_tree_view" model="ir.ui.view">
+        <field name="name">Action partner history tree view</field>
+        <field name="model">history.contact</field>
+        <field name="arch" type="xml">
+            <tree create="false" delete="0" export_xlsx="false" default_order="create_date desc"
+                  class="o_history_partner_screen">
+                <field name="action_id" optional="show"/>
+                <field name="location"/>
+                <field name="description"/>
+                <field name="source_url"/>
+                <field name="platform_id"/>
+                <field name="employee_id"/>
+                <field name="updated_time"/>
+                <field name="created_time"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_partner_history_search" model="ir.ui.view">
+        <field name="name">Action partner history search</field>
+        <field name="model">history.contact</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="action_id"/>
+                <filter name="group_action" string="Action" context="{'group_by':'action_id'}"/>
+                <filter name="group_create_date" string="Datetime" context="{'group_by':'create_date:day'}"/>
+
+            </search>
+        </field>
+    </record>
+
+    <record id="pontusinc_res_partner_view_search" model="ir.ui.view">
+        <field name="name">pontusinc.res.partner.search.inherit</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_res_partner_filter"/>
+        <field name="arch" type="xml">
+            <xpath expr="//filter[@name='inactive']" position="before">
+               <filter string="Khách hàng" name="is_customer" domain="[('user_ids','=', False)]"/>
+               <separator/>
+            </xpath>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="pontusinc_view_partner_tree">
+        <field name="name">pontusinc.res.partner.tree.view.inherit</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='phone']" position="attributes">
+                <attribute name="widget">phone_tree</attribute>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="contacts.action_contacts" model="ir.actions.act_window">
+        <field name="context">{'default_is_company': True, 'search_default_is_customer': 1}</field>
+    </record>
+
+    <record id="contacts.action_contacts_view_kanban" model="ir.actions.act_window.view">
+        <field name="sequence" eval="1"/>
+    </record>
+    <record id="contacts.action_contacts_view_tree" model="ir.actions.act_window.view">
+        <field name="sequence" eval="0"/>
+    </record>
+</odoo>

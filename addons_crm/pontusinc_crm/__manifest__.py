@@ -13,10 +13,17 @@
     'depends': ['crm', 'contacts', 'web', 'base_unit_vn', 'customer_relationship_diagram'],
     'data': [
         'security/ir.model.access.csv',
+        # 'data/data_tag_profiling.xml',
         'views/res_partner_view.xml',
         'views/res_partner_rank_view.xml',
         'views/res_partner_state_view.xml',
+        'views/view_history_partner.xml',
+        'views/view_partner_inherit.xml',
+        'views/view_tag_profiling.xml',
+        'views/update_product_view.xml',
         'views/menu_item.xml',
+        'wizard/view_search_profiling.xml',
+        'data/data_action.xml',
     ],
     'assets': {
         'web.assets_backend': [

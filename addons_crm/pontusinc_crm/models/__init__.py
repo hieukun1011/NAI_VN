@@ -5,3 +5,6 @@ from . import bank_card
 from . import campaign_history
 from . import interactive_diary
 from . import spending_diary
+from . import history_contact
+from . import action_partner
+from . import tag_profiling
