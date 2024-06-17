@@ -1,6 +1,5 @@
 from odoo import fields, models, api, _
-from itertools import groupby
-from operator import itemgetter
+from odoo.exceptions import ValidationError
 
 TYPEINFO = [('cccd', 'CCCD'), ('cmnd', 'CMND'), ('passport', 'Passport')]
 RELATIONSHIP = [('mother', 'Mother'),
@@ -8,6 +7,20 @@ RELATIONSHIP = [('mother', 'Mother'),
                 ('brother', 'Brother'),
                 ('husband', 'Husband'),
                 ('wife', 'Wife')]
+
+
+def convert_sdt(sdt):
+    if sdt:
+        sdt_numeric = ''.join(c for c in sdt if c.isdigit())
+        if len(sdt_numeric) == 9:
+            sdt_numeric = '0' + sdt_numeric
+        if len(sdt_numeric) == 10:
+            formatted_sdt = "+84" + sdt_numeric[1:]
+            return formatted_sdt
+        else:
+            return sdt
+    else:
+        return False
 
 
 class PontusincPartner(models.Model):
@@ -100,11 +113,10 @@ class PontusincPartner(models.Model):
 
     @api.model_create_multi
     def create(self, vals_list):
-        counts = {}
         for vals in vals_list:
-            phone = vals.get("phone")
-            counts[phone] = counts.get(phone, 0) + 1
-            if counts[phone] > 1:
-                vals_list.remove(vals)
-        res = super().create(vals_list)
+            phone = convert_sdt(vals.get('phone'))
+            partner = self.sudo().search([('phone', '=', phone)], limit=1)
+            if partner:
+                raise ValidationError(_("The phone number %s already exists in the partner %s!!!", phone, partner.name))
+        res = super(PontusincPartner, self).create([])
         return res

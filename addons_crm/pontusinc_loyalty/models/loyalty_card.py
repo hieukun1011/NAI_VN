@@ -1,5 +1,6 @@
 from odoo import fields, models, api, _
 
+
 class LoyaltyCard(models.Model):
     _name = 'pontusinc.loyalty.card'
 
@@ -18,5 +19,23 @@ class LoyaltyCard(models.Model):
     rank_id = fields.Many2one('loyalty.rank', string='Rank')
 
 
+class LoyaltyCard(models.Model):
+    _inherit = 'loyalty.card'
 
-
+    @api.model_create_multi
+    def create(self, vals_list):
+        for vals in vals_list:
+            if vals.get('partner_id'):
+                loyalty_card = self.env['loyalty.customer'].sudo().search([('partner_id', '=', vals.get('partner_id'))],
+                                                                          limit=1)
+                if loyalty_card:
+                    loyalty_card.write({
+                        'score': vals.get('points')
+                    })
+                # else:
+                #     self.env['loyalty.customer'].sudo().create([{
+                #         'name': self.env['res.partner'].sudo().browse(vals.get('partner_id')).name,
+                #         'phone':
+                #     }])
+        res = super().create(vals_list)
+        return res

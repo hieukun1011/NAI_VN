@@ -41,6 +41,7 @@ class LoyaltyCustomer(models.Model):
     partner_id = fields.Many2one('res.partner', string='Partner')
     company_id = fields.Many2one('res.company', string='Company', default=lambda self: self.env.company)
     currency_id = fields.Many2one('res.currency', related='company_id.currency_id')
+    sale_order_ids = fields.One2many('sale.order', 'loyalty_customer_id', string='Sale order')
 
     score = fields.Integer('Score', tracking=True)
     total_order = fields.Integer('Total order')
@@ -57,6 +58,7 @@ class LoyaltyCustomer(models.Model):
                               ('activated', 'Activated'),
                               ('exclude', 'Exclude')],
                              default='unactivated', string='State')
+
 
     def create_log(self, vals):
         if self.env.context.get('log_change_score'):
@@ -152,7 +154,10 @@ class LoyaltyCustomer(models.Model):
 
     @api.model_create_multi
     def create(self, vals_list):
+        config_active_card = self.env['ir.config_parameter'].sudo().get_param('pontusinc_loyalty.auto_active')
         for vals in vals_list:
+            if config_active_card == 'auto_activate_card':
+                vals['state'] = 'activated'
             if vals.get('phone') and not vals.get('partner_id'):
                 partner = self.env['res.partner'].search([('phone', 'ilike', convert_sdt(vals.get('phone')))],
                                                          limit=1)
@@ -162,6 +167,10 @@ class LoyaltyCustomer(models.Model):
                         'phone': vals['phone']
                     }]).id
         res = super().create(vals_list)
+        return res
+
+    def write(self, vals):
+        res = super().write(vals)
         return res
 
     @api.onchange('phone')

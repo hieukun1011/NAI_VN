@@ -24,37 +24,25 @@
                     </div>
                     <h2>Activate loyalty card</h2>
                     <div class="row mt16 o_settings_container">
-                        <div class="col-lg-6 o_setting_box">
-                            <div class="o_setting_left_pane">
-                                <field name="have_orders"/>
-                            </div>
-                            <div class="o_setting_right_pane">
-                                <label for="have_orders"/>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 o_setting_box">
-                            <div class="o_setting_left_pane">
-                                <field name="auto_activate_card"/>
-                            </div>
-                            <div class="o_setting_right_pane">
-                                <label for="auto_activate_card"/>
-                            </div>
+                        <div class="o_col col-lg-6" style="display: inline-flex;align-items: baseline;">
+                            <field name="auto_active" class="oe_inline" widget="radio" options="{'horizontal': true}"
+                                   />
                         </div>
                     </div>
-                    <div class="row mt16 o_settings_container">
+                    <div class="row mt16 o_settings_container" invisible="auto_active != 'have_orders'">
                         <div class="o_col col-lg-6" style="display: inline-flex;align-items: baseline;">
                             <separator string="Proviso" style="margin-right: 40px; font-size: inherit;"/>
                             <field name="proviso" class="oe_inline" widget="radio" options="{'horizontal': true}"
-                                   required="True"/>
+                                   />
                         </div>
                     </div>
-                    <div class="row mt16 o_settings_container">
+                    <div class="row mt16 o_settings_container" invisible="auto_active != 'have_orders'">
                         <label for="minimum_quantity" string="Minimum quantity:" class="col-2"/>
                         <field name="minimum_quantity" class="text-center oe_inline"/>
                         <field name="type_minimum_quantity" class="oe_inline" widget="radio" options="{'horizontal': true}"
-                           required="True" style="margin-left: 5%;"/>
+                            style="margin-left: 5%;"/>
                     </div>
-                    <div class="row mt16 o_settings_container">
+                    <div class="row mt16 o_settings_container" invisible="auto_active != 'have_orders'">
                         <label for="minimum_spending" string="Minimum spending:" class="col-2"/>
                         <field name="minimum_spending" widget="monetary" options="{'currency_field': 'currency_id'}" class="text-center oe_inline"/>
                         <span class="oe_inline">Tax included</span>

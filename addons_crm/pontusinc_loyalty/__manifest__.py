@@ -25,8 +25,8 @@
     ],
     'assets': {
         'web.assets_backend': [
-            # 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css',
-            # 'pontusinc_loyalty/static/src/css/style.css',
+            'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css',
+            'pontusinc_loyalty/static/src/css/style.css',
             # 'pontusinc_loyalty/static/src/css/dashboard_views.scss',
             # 'pontusinc_loyalty/static/src/css/dashboard.css',
             # 'pontusinc_loyalty/static/src/css/style.scss',

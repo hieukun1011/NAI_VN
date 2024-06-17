@@ -6,3 +6,4 @@ from . import loyalty_program
 from . import loyalty_log
 from . import res_company
 from . import res_config_setting
+from . import sale_order
