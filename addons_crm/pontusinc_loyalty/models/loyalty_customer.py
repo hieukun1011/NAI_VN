@@ -154,10 +154,10 @@ class LoyaltyCustomer(models.Model):
 
     @api.model_create_multi
     def create(self, vals_list):
-        config_active_card = self.env['ir.config_parameter'].sudo().get_param('pontusinc_loyalty.auto_active')
+        # config_active_card = self.env['ir.config_parameter'].sudo().get_param('pontusinc_loyalty.auto_active')
         for vals in vals_list:
-            if config_active_card == 'auto_activate_card':
-                vals['state'] = 'activated'
+            # if config_active_card == 'auto_activate_card':
+            #     vals['state'] = 'activated'
             if vals.get('phone') and not vals.get('partner_id'):
                 partner = self.env['res.partner'].search([('phone', 'ilike', convert_sdt(vals.get('phone')))],
                                                          limit=1)
