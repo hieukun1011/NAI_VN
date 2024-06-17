@@ -390,7 +390,7 @@ class WebsiteVisitor(models.Model):
                 SELECT id, upsert from visitor;
             """).format(query=sql.SQL(query))
         if create_values.get('partner_id') and create_values.get('url'):
-            action = request.env.ref('history_contact.action_partner_access').sudo()
+            action = request.env.ref('pontusinc_crm.action_partner_access').sudo()
             self.env['history.contact'].sudo().create_history_contact(create_values.get('partner_id'), action,
                                                                       location=create_values.get('url'))
         self.env.cr.execute(query, create_values)
@@ -406,7 +406,7 @@ class WebsiteTrack(models.Model):
             if vals.get('product_id'):
                 visitor = self.env['website.visitor'].sudo().browse(vals.get('visitor_id'))
                 if visitor.partner_id:
-                    action = request.env.ref('history_contact.action_partner_access').sudo()
+                    action = request.env.ref('pontusinc_crm.action_partner_access').sudo()
                     product = self.env['product.product'].sudo().browse(vals.get('product_id'))
                     self.env['history.contact'].sudo().create_history_contact(visitor.partner_id.id, action,
                                                                               product_id=product)
