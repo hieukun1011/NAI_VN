@@ -13,7 +13,7 @@ class ResConfigSettings(models.TransientModel):
     have_orders = fields.Boolean(related='company_id.have_orders',  readonly=False)
     auto_activate_card = fields.Boolean(related='company_id.auto_activate_card',  readonly=False)
     proviso = fields.Selection(related='company_id.proviso',  readonly=False)
-    auto_active = fields.Selection(related='company_id.auto_active',  readonly=False)
+    # auto_active = fields.Selection(related='company_id.auto_active',  readonly=False)
     minimum_quantity = fields.Integer(related='company_id.minimum_quantity',  readonly=False)
     type_minimum_quantity = fields.Selection(related='company_id.type_minimum_quantity',  readonly=False)
     minimum_spending = fields.Float(related='company_id.minimum_spending',  readonly=False)
