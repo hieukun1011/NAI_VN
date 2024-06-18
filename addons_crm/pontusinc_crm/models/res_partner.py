@@ -115,8 +115,8 @@ class PontusincPartner(models.Model):
     def create(self, vals_list):
         for vals in vals_list:
             phone = convert_sdt(vals.get('phone'))
-            partner = self.sudo().search([('phone', '=', phone)], limit=1)
+            partner = self.sudo().search([('phone', '=', phone), ('phone', '!=', False)], limit=1)
             if partner:
                 raise ValidationError(_("The phone number %s already exists in the partner %s!!!", phone, partner.name))
-        res = super(PontusincPartner, self).create([])
+        res = super(PontusincPartner, self).create(vals_list)
         return res

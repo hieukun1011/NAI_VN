@@ -64,7 +64,8 @@
                     </div>
                     <group>
                         <group name="accumulated_point_information" string="Accumulated point information">
-                            <field name="partner_id"/>
+                            <field name="sale_order_ids" widget="many2many_tags"/>
+                            <field name="partner_id" invisible="1"/>
                             <field name="rank_id" required="1"/>
                             <field name="next_rank_id"/>
                             <field name="currency_id" invisible="1"/>
@@ -76,8 +77,8 @@
                             <field name="expiration_date_score"/>
                         </group>
                         <group name="information_member" string="Member information ">
-                            <field name="phone" required="1" widget="phone" invisible="display_phone != False"/>
-                            <field name="display_phone" widget="phone" invisible="phone != False"/>
+                            <field name="phone" widget="phone" invisible="display_phone != False"/>
+                            <field name="display_phone" widget="phone" invisible="phone == False"/>
                             <field name="activation_date" readonly="1"/>
                             <field name="last_rating_date"/>
                         </group>

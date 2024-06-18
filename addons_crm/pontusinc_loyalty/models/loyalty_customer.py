@@ -57,8 +57,40 @@ class LoyaltyCustomer(models.Model):
     state = fields.Selection([('unactivated', 'unactivated'),
                               ('activated', 'Activated'),
                               ('exclude', 'Exclude')],
-                             default='unactivated', string='State')
+                             compute='_compute_auto_active_card', string='State', store=True)
 
+    @api.depends('sale_order_ids', 'sale_order_ids.state')
+    def _compute_auto_active_card(self):
+        for record in self:
+            state = 'unactivated'
+            if record.company_id and record.company_id.x_auto_active == 'have_orders':
+                type_minimum_quantity = record.company_id.type_minimum_quantity
+                if record.sale_order_ids:
+                    qty_product = 0
+                    qty_so = 0
+                    total_money = 0
+                    for rec in record.sale_order_ids:
+                        if rec.state == 'sale':
+                            total_money += rec.amount_total
+                            qty_so += 1
+                            qty_product += sum(line.product_uom_qty for line in rec.order_line)
+                    if type_minimum_quantity == 'product':
+                        if record.company_id.proviso == 'or':
+                            if record.company_id.minimum_quantity <= qty_product or total_money >= record.company_id.minimum_spending:
+                                state = 'activated'
+                        else:
+                            if record.company_id.minimum_quantity <= qty_product and total_money >= record.company_id.minimum_spending:
+                                state = 'activated'
+                    else:
+                        if record.company_id.proviso == 'or':
+                            if record.company_id.minimum_quantity <= qty_so or total_money >= record.company_id.minimum_spending:
+                                state = 'activated'
+                        else:
+                            if record.company_id.minimum_quantity <= qty_so and total_money >= record.company_id.minimum_spending:
+                                state = 'activated'
+            else:
+                state = 'activated'
+            record.state = state
 
     def create_log(self, vals):
         if self.env.context.get('log_change_score'):
@@ -154,22 +186,25 @@ class LoyaltyCustomer(models.Model):
 
     @api.model_create_multi
     def create(self, vals_list):
-        # config_active_card = self.env['ir.config_parameter'].sudo().get_param('pontusinc_loyalty.auto_active')
+        config_active_card = self.env['ir.config_parameter'].sudo().get_param('pontusinc_loyalty.x_auto_active')
         for vals in vals_list:
             # if config_active_card == 'auto_activate_card':
             #     vals['state'] = 'activated'
-            if vals.get('phone') and not vals.get('partner_id'):
-                partner = self.env['res.partner'].search([('phone', 'ilike', convert_sdt(vals.get('phone')))],
-                                                         limit=1)
+            if not vals.get('partner_id'):
+                partner = self.env['res.partner'].search([('phone', '=', convert_sdt(vals.get('phone'))),
+                                                          ('phone', '!=', False)], limit=1)
                 if not partner:
-                    vals['partner_id'] = self.env['res.partner'].sudo().create([{
+                    partner = self.env['res.partner'].create({
                         'name': vals['name'],
-                        'phone': vals['phone']
-                    }]).id
+                        'phone': vals.get('phone')
+                    })
+                vals['partner_id'] = partner.id
         res = super().create(vals_list)
         return res
 
     def write(self, vals):
+        if vals.get('sale_order_ids'):
+            print()
         res = super().write(vals)
         return res
 

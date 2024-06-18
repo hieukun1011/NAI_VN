@@ -1,4 +1,4 @@
-from odoo import fields, models, api, _
+from odoo import fields, models, api
 
 
 class LoyaltyCard(models.Model):
@@ -32,10 +32,26 @@ class LoyaltyCard(models.Model):
                     loyalty_card.write({
                         'score': vals.get('points')
                     })
-                # else:
-                #     self.env['loyalty.customer'].sudo().create([{
-                #         'name': self.env['res.partner'].sudo().browse(vals.get('partner_id')).name,
-                #         'phone':
-                #     }])
+                else:
+                    self.env['loyalty.customer'].sudo().create([{
+                        'partner_id': vals.get('partner_id'),
+                        'score': vals.get('points')
+                    }])
         res = super().create(vals_list)
+        return res
+
+    def write(self, vals):
+        if vals.get('points'):
+            loyalty_card = self.env['loyalty.customer'].sudo().search([('partner_id', '=', self.partner_id.id)],
+                                                                      limit=1)
+            if loyalty_card:
+                loyalty_card.write({
+                    'score': vals.get('points')
+                })
+            else:
+                self.env['loyalty.customer'].sudo().create([{
+                    'partner_id': vals.get('partner_id'),
+                    'score': vals.get('points')
+                }])
+        res = super().write(vals)
         return res

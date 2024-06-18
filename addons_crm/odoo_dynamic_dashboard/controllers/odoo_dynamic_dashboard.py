@@ -19,10 +19,13 @@
 #    If not, see <http://www.gnu.org/licenses/>.
 #
 #############################################################################
+import json
+
+import requests
+
 from odoo import http
 from odoo.http import request
-import requests
-import json
+
 # Get token search profiling
 URL_TOKEN = 'https://staging.pontusinc.com/api/admin-mgt/v1/account/login_v2'
 
@@ -81,7 +84,6 @@ class DynamicDashboard(http.Controller):
         user_social_care = request.env['user.social.care'].sudo().search([('user_id', '=', request.env.uid)], limit=1)
         token = self.get_token(user_social_care.login, user_social_care.password)
         return "https://staging.pontusinc.com/customer360/fanList?token=" + token['access_token']
-
 
     def get_token(self, user_name, password):
         url = URL_TOKEN
