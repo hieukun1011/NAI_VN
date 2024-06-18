@@ -134,7 +134,7 @@ class PopupProfiling(models.TransientModel):
                     _("No further information is available %s: %s" % ([i.name for i in self.tag_ids], input_str)))
 
     def action_open_popup_result_profiling(self, result):
-        tree_id = self.env.ref('history_contact.popup_result_profiling_tree_view').id
+        tree_id = self.env.ref('pontusinc_crm.popup_result_profiling_tree_view').id
         return {
             'name': _("Result profiling"),
             'type': 'ir.actions.act_window',

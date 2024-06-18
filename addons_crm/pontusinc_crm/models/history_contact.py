@@ -133,8 +133,8 @@ class ResPartner(models.Model):
 
     def action_popup_history_tracking(self):
         self.ensure_one()
-        tree_id = self.env.ref('history_contact.action_partner_history_tree_view').id
-        search_view_id = self.env.ref('history_contact.action_partner_history_search').id
+        tree_id = self.env.ref('pontusinc_crm.action_partner_history_tree_view').id
+        search_view_id = self.env.ref('pontusinc_crm.action_partner_history_search').id
         return {
             'name': _("History action"),
             'type': 'ir.actions.act_window',
@@ -152,7 +152,7 @@ class ResPartner(models.Model):
 
     def action_open_popup_profiling(self):
         self.ensure_one()
-        form_id = self.env.ref('history_contact.popup_profiling_form_view').id
+        form_id = self.env.ref('pontusinc_crm.popup_profiling_form_view').id
         return {
             'name': _("Search profiling"),
             'type': 'ir.actions.act_window',
@@ -171,7 +171,7 @@ class ResPartner(models.Model):
 
     def action_open_update_partner(self):
         self.ensure_one()
-        view_id = self.env.ref('history_contact.update_partner_tree_view').id
+        view_id = self.env.ref('pontusinc_crm.update_partner_tree_view').id
         return {
             'name': _("Request update info partner"),
             'type': 'ir.actions.act_window',
@@ -187,7 +187,7 @@ class ResPartner(models.Model):
 
     def action_open_shipping(self):
         self.ensure_one()
-        view_id = self.env.ref('history_contact.shipping_tree_view').id
+        view_id = self.env.ref('pontusinc_crm.shipping_tree_view').id
         return {
             'name': _("Shipping"),
             'type': 'ir.actions.act_window',
@@ -313,7 +313,7 @@ class ResPartner(models.Model):
                 #     _("No further information is available %s: %s" % (key, value)))
 
     def action_open_popup_result_profiling(self, result):
-        tree_id = self.env.ref('history_contact.popup_result_profiling_tree_view').id
+        tree_id = self.env.ref('pontusinc_crm.popup_result_profiling_tree_view').id
         return {
             'name': _("Result profiling"),
             'type': 'ir.actions.act_window',
