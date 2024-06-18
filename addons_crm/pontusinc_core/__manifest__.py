@@ -23,7 +23,7 @@
                 'pontusinc_core/static/src/xml/base_import.xml',
                 'pontusinc_core/static/src/dialog/dialog.js',
                 'pontusinc_core/static/src/search/search_bar.js',
-                'pontusinc_core/static/src/notification_alert/notification_alert.xml',
+                # 'pontusinc_core/static/src/notification_alert/notification_alert.xml',
             ],
         },
     'installable': True,
