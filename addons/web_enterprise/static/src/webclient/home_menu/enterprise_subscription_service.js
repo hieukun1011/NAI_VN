@@ -23,12 +23,14 @@ export class SubscriptionManager {
         this.rpc = rpc;
         this.orm = orm;
         this.notification = notification;
-        if (session.expiration_date) {
-            this.expirationDate = deserializeDateTime(session.expiration_date);
-        } else {
-            // If no date found, assume 1 month and hope for the best
-            this.expirationDate = DateTime.utc().plus({ days: 3000000 });
-        }
+        console.log('this.expirationDate:', this.expirationDate);
+        this.expirationDate = DateTime.utc().plus({ days: 3000000 });
+//        if (session.expiration_date) {
+//            this.expirationDate = deserializeDateTime(session.expiration_date);
+//        } else {
+//            // If no date found, assume 1 month and hope for the best
+//            this.expirationDate = DateTime.utc().plus({ days: 3000000 });
+//        }
         this.expirationReason = session.expiration_reason;
         // Hack: we need to know if there is at least one app installed (except from App and
         // Settings). We use mail to do that, as it is a dependency of almost every addon. To
