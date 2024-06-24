@@ -32,7 +32,7 @@ export class ExpirationPanel extends Component {
         if (this.subscription.lastRequestStatus === "success") {
             return "success";
         }
-        const { daysLeft } = this.subscription;
+        const { daysLeft } = 1000;
         if (daysLeft <= 6) {
             return "danger";
         } else if (daysLeft <= 16) {
@@ -42,7 +42,7 @@ export class ExpirationPanel extends Component {
     }
 
     get expirationMessage() {
-        const { daysLeft } = this.subscription;
+        const { daysLeft } = 1000;
         if (daysLeft <= 0) {
             return _t("This database has expired. ");
         }
