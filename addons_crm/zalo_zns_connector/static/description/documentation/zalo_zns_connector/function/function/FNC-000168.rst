@@ -1,0 +1,42 @@
+
+
+==========
+Quản lý tin nhắn đã gửi
+==========
+
+Quản lý tin nhắn đã gửi
+
+Đặc điểm chính của chức năng:
+===============
+
+.. list-table::
+   :widths: 20 80
+   :header-rows: 1
+
+   * - Đặc điểm
+     - Diễn giải
+   
+
+
+Chức năng quản lý và theo dõi các tin nhắn đã gửi:
+===============
+
+.. list-table:: 
+   :widths: 100
+   :header-rows: 1
+
+   * - quản lý và theo dõi các tin nhắn đã gửi
+   * - .. image:: media/function_111.png
+        :align: center
+        :width: 100%  
+
+       quản lý và theo dõi các tin nhắn đã gửi
+
+       
+
+   * - 
+       
+       
+
+
+
