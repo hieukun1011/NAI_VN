@@ -1,40 +1,38 @@
 version: '3.1'
 services:
   db:
-    container_name: postgresql_phoenix_crm
+    container_name: postgresql
     image: postgres:15
     user: root
     environment:
-      - POSTGRES_USER=icomm_crm
-      - POSTGRES_PASSWORD=icomm_2023
+      - POSTGRES_USER=nai_crm
+      - POSTGRES_PASSWORD=naicrm@2025
       - POSTGRES_DB=postgres
     ports:
       - "5423:5432"
     restart: always             # run as a service
     volumes:
-      - db-erp:/var/lib/postgresql/data
+      - db-nai:/var/lib/postgresql/data
   odoo17:
     image: odoo:17
-    container_name: odoo17_enterprise
+    container_name: odoo17_nai
     user: root
     ports:
-      - "17000:8069"
-      - "20019:8072" # live chat
+      - "8069:8069"
+      - "8072:8072" # live chat
     tty: true
     command: --
     environment:
       - HOST=db
-      - USER=icomm_crm
-      - PASSWORD=icomm_2023
+      - USER=nai_crm
+      - PASSWORD=naicrm@2025
     volumes:
-      #- /etc/timezone:/etc/timezone:ro
-      #- /etc/localtime:/etc/localtime:ro
       - ./entrypoint.sh:/entrypoint.sh   # if you want to install additional Python packages, uncomment this line!
       - ./addons:/mnt/extra-addons
-      - ./addons_crm:/mnt/crm-addons
+      - ./addons_NAI_VN:/mnt/nai-addons
       - ./etc:/etc/odoo
       - odoo-web-data:/var/lib/odoo
     restart: always             # run as a service
 volumes:
-  db-erp:
+  db-nai:
   odoo-web-data:
