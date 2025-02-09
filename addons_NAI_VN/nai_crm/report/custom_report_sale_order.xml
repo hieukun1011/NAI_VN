@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="custom_quotation_report" name="Custom Quotation Report">
+        <t t-call="web.html_container">
+            <t t-call="web.external_layout">
+                <div class="header">
+                    <div class="company_logo">
+                        <img t-if="company_id.logo" t-att-src="image_data_uri(company_id.logo)" alt="Company Logo"/>
+                    </div>
+                    <div class="company_details">
+                        <h1>
+                            <t t-esc="company_id.name"/>
+                        </h1>
+                        <p>For Sale/Lease</p>
+                    </div>
+                </div>
+                <div class="building_details">
+                    <h2>
+                        <t t-esc="name"/>
+                    </h2>
+                    <img t-att-src="building_facade_image" alt="Building Facade"/>
+                    <div class="property_features">
+                        <h3>Property Features:</h3>
+                        <p>Location:
+                            <t t-esc="location"/>
+                        </p>
+                        <p>Type:
+                            <span>abc</span>
+<!--                            <t t-esc="building_type"/>-->
+                        </p>
+                        <p>Occupancy Rate:<span>abc</span>%
+                        </p>
+                        <p>Average Rent: US$<span>abc</span>/sqm/month
+                        </p>
+                        <p>Annual Income: US$<span>abc</span>/month
+                        </p>
+                        <p>Area:
+                            <span>abc</span>
+                            sqm
+                        </p>
+                        <p>Green Certificate:
+                            <span>abc</span>
+                        </p>
+                        <p>RBF / RBW:
+                            <span>abc</span>
+                            sqm
+                        </p>
+                    </div>
+                    <div class="additional_information">
+                        <h3>Additional Information:</h3>
+                        <p>
+                            <span>abc</span>
+                        </p>
+                    </div>
+                    <div class="contact_info">
+                        <h3>Contact:</h3>
+                        <p>Website:
+                            <t t-esc="company_id.website"/>
+                        </p>
+                        <p>Office:
+                            <t t-esc="company_id.website"/>
+                        </p>
+                    </div>
+                </div>
+            </t>
+        </t>
+    </template>
+
+    <record id="action_custom_quotation_report" model="ir.actions.report">
+        <field name="name">Custom Quotation Report</field>
+        <field name="model">sale.order</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">nai_crm.custom_quotation_report</field>
+        <field name="report_file">nai_crm.custom_quotation_report</field>
+        <field name="binding_model_id" ref="sale.model_sale_order"/>
+        <field name="binding_type">report</field>
+    </record>
+
+</odoo>

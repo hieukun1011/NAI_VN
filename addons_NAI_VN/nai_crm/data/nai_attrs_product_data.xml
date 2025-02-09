@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data noupdate="1">
+        <record id="attrs_landlord" model="nai.product.attribute">
+            <field name="name">Chủ đầu tư</field>
+        </record>
+
+        <record id="attrs_ac_system" model="nai.product.attribute">
+            <field name="name">Điều hòa</field>
+        </record>
+
+        <record id="attrs_building_grade" model="nai.product.attribute">
+            <field name="name">Hạng tòa nhà</field>
+        </record>
+
+        <record id="attrs_back_up_power" model="nai.product.attribute">
+            <field name="name">Điện dự phòng</field>
+        </record>
+
+        <record id="attrs_floors" model="nai.product.attribute">
+            <field name="name">Quy mô</field>
+        </record>
+
+        <record id="attrs_elevators" model="nai.product.attribute">
+            <field name="name">Thang máy</field>
+        </record>
+
+        <record id="attrs_year_completed" model="nai.product.attribute">
+            <field name="name">Năm hoàn thành</field>
+        </record>
+
+        <record id="attrs_typical_floor" model="nai.product.attribute">
+            <field name="name">Tầng điển hình</field>
+        </record>
+
+        <record id="attrs_working_hours" model="nai.product.attribute">
+            <field name="name">Giờ làm việc</field>
+        </record>
+
+        <record id="attrs_parking" model="nai.product.attribute">
+            <field name="name">Đỗ xe</field>
+        </record>
+
+        <record id="attrs_certification" model="nai.product.attribute">
+            <field name="name">Chứng nhận</field>
+        </record>
+
+        <record id="attrs_service_charge" model="nai.product.attribute">
+            <field name="name">Phí dịch vụ</field>
+        </record>
+
+        <record id="attrs_car_parking" model="nai.product.attribute">
+            <field name="name">Đỗ ô tô</field>
+        </record>
+
+        <record id="attrs_motorbike_parking" model="nai.product.attribute">
+            <field name="name">Đỗ xe máy</field>
+        </record>
+
+        <record id="attrs_lease_term" model="nai.product.attribute">
+            <field name="name">Thời hạn thuê</field>
+        </record>
+
+        <record id="attrs_payment_term" model="nai.product.attribute">
+            <field name="name">Đặt cọc &amp; Thanh toán</field>
+        </record>
+    </data>
+</odoo>

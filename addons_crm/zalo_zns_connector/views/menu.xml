@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<odoo>
-    <menuitem id="zns_template_menu" name="Danh sách template" parent="zalo_configuration.zalo_configuration_base" action="zns_template_act" sequence="60"/>
-    <menuitem id="mail_mail_menu" name="Trạng thái tin nhắn" parent="zalo_configuration.zalo_configuration_base" action="zns_mail_mail_act" sequence="70"/>
-</odoo>
