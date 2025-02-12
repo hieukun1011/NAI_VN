@@ -13,4 +13,4 @@ class PopupSelectFields(models.TransientModel):
             selected_fields.append(rec.name)
         # Gọi phương thức tạo báo cáo với các trường đã chọn
         return self.env.ref('nai_crm.action_custom_quotation_report').report_action(self.sale_order_id, data={
-            'selected_fields': selected_fields})
+            'company_id': self.sale_order_id.company_id})

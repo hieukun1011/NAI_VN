@@ -20,4 +20,8 @@ class NAIAttributeProductLine(models.Model):
 class NAIImageProduct(models.Model):
     _name = 'nai.image.product'
 
+    name = fields.Char('Name', size=100, required=True)
+    image = fields.Binary('Image')
+    product_template_id = fields.Many2one('product.template')
+    description = fields.Text('Description', size=600)
 
