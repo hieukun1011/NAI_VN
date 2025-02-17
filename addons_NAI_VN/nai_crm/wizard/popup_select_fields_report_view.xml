@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
 	<data>
+
+		<record id="popup_select_fields_report_tree_view" model="ir.ui.view">
+			<field name="name">popup.select.fields.report.tree</field>
+			<field name="model">popup.select.fields.report</field>
+			<field name="arch" type="xml">
+				<tree>
+					<field name="name" />
+				</tree>
+			</field>
+		</record>
+
 		<record id="popup_select_fields_report_form_view" model="ir.ui.view">
 			<field name="name">popup.select.fields.report.form</field>
 			<field name="model">popup.select.fields.report</field>
@@ -8,10 +19,12 @@
 				<form string="Select fields report">
 					<sheet>
 						<group>
+							<field name="name"/>
 							<field name="sale_order_id" invisible="0"/>
 							<field name="fields_ids" widget="many2many_checkboxes" domain="[('model', '=', 'sale.order'), ('store', '=', True)]"/>
 						</group>
 						<footer>
+							<button string="Save" special="save" data-hotkey="q" class="btn btn-primary" close="1"/>
 							<button string="Generate Report" type="object" name="generate_report" class="btn-primary"/>
 							<button string="Cancel" class="btn-secondary" special="cancel"/>
 						</footer>

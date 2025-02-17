@@ -6,8 +6,9 @@
     'summary': '',
     'author': '',
     'website': '',
-    'depends': ['base', 'sale', 'sale_renting'],
+    'depends': ['base', 'sale', 'sale_renting', 'crm'],
     'data': [
+        'security/module_security.xml',
         'security/ir.model.access.csv',
         'views/nai_product_template_view.xml',
         'views/nai_sale_order_view.xml',

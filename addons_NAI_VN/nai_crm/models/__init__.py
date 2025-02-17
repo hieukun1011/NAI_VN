@@ -1,1 +1,1 @@
-from . import nai_product, nai_product_attribute, nai_sale_order
+from . import nai_product, nai_product_attribute, nai_sale_order, nai_crm_team

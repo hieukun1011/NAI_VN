@@ -1,78 +1,141 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <template id="custom_quotation_report" name="Custom Quotation Report">
-        <t t-call="web.html_container">
-            <t t-call="web.external_layout">
-                <div class="header">
-                    <div class="company_logo">
-                        <img t-if="company_id.logo" t-att-src="image_data_uri(company_id.logo)" alt="Company Logo"/>
-                    </div>
-                    <div class="company_details">
-                        <h1>
-                            <t t-esc="company_id.name"/>
-                        </h1>
-                        <p>For Sale/Lease</p>
-                    </div>
+
+    <template id="custom_quotation_report">
+        <t t-call="web.external_layout">
+            <!-- CSS trực tiếp -->
+            <style>
+                .container-custom-quotation-report {
+                    font-family: Arial, sans-serif;
+                    margin: 20px;
+                }
+                .header {
+                    text-align: center;
+                    margin-bottom: 10px;
+                }
+                .header-img {
+                    width: 150px;
+                    height: auto;
+                }
+                .title {
+                    font-weight: bold;
+                    font-size: 20px;
+                }
+                .property-section, .additional-info, .floor-layout, .contact-section {
+                    margin: 20px 0;
+                }
+                .section-title {
+                    font-style: italic;
+                    color: red;
+                    font-size: 18px;
+                }
+                .contact-box {
+                    background: red;
+                    color: white;
+                    padding: 10px;
+                    font-weight: bold;
+                }
+                .office-location {
+                    font-weight: bold;
+                }
+            </style>
+
+            <div class="container-custom-quotation-report">
+                <!-- Header Image -->
+                <div class="header-background-building">
+                    <t t-if="o.order_line.product_id.building_parent_id.image_1024">
+                        <t t-set="background_image_1024" t-value="o.order_line.product_id.building_parent_id.image_1024.decode('utf-8') if o.order_line.product_id.building_parent_id.image_1024 else default_logo"/>
+                        <img t-att-src="'data:image/png;base64,%s' % background_image_1024" class="floor-img"/>
+                    </t>
+                    <h2 class="title">Building Facade</h2>
                 </div>
-                <div class="building_details">
-                    <h2>
-                        <t t-esc="name"/>
-                    </h2>
-                    <img t-att-src="building_facade_image" alt="Building Facade"/>
-                    <div class="property_features">
-                        <h3>Property Features:</h3>
-                        <p>Location:
-                            <t t-esc="location"/>
-                        </p>
-                        <p>Type:
-                            <span>abc</span>
-<!--                            <t t-esc="building_type"/>-->
-                        </p>
-                        <p>Occupancy Rate:<span>abc</span>%
-                        </p>
-                        <p>Average Rent: US$<span>abc</span>/sqm/month
-                        </p>
-                        <p>Annual Income: US$<span>abc</span>/month
-                        </p>
-                        <p>Area:
-                            <span>abc</span>
-                            sqm
-                        </p>
-                        <p>Green Certificate:
-                            <span>abc</span>
-                        </p>
-                        <p>RBF / RBW:
-                            <span>abc</span>
-                            sqm
-                        </p>
-                    </div>
-                    <div class="additional_information">
-                        <h3>Additional Information:</h3>
-                        <p>
-                            <span>abc</span>
-                        </p>
-                    </div>
-                    <div class="contact_info">
+
+                <!-- Property Features -->
+                <div class="property-section">
+                    <h3 class="section-title">Property Features:</h3>
+                    <p><strong>Location:</strong> <t t-esc="o.order_line.product_id.location or '...'"/></p>
+                    <p><strong>Type:</strong> <t t-esc="o.order_line.product_id.type_building or '...'"/> </p>
+                    <p><strong>Area:</strong> <t t-esc="o.order_line.product_id.area or '...'"/> sqm</p>
+                    <p><strong>Occupancy Rate:</strong> <span>100%</span></p>
+                    <p><strong>Average Rent:</strong> US$  /sqm/month</p>
+                    <p><strong>Annual Income:</strong> US$  /month</p>
+                    <p><strong>Green Certificate:</strong> </p>
+                </div>
+
+                <div class="attribute-section">
+                    <h3 class="section-title">Product Attributes</h3>
+                    <table class="attribute-table">
+                        <thead>
+                            <tr>
+                                <th>Attribute</th>
+                                <th>Value</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <t t-foreach="o.order_line.product_id.nai_attribute_line_ids" t-as="attribute">
+                                <tr>
+                                    <td><t t-esc="attribute.attribute_id.name"/></td>
+                                    <td><t t-esc="attribute.value"/></td>
+                                </tr>
+                            </t>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Additional Information -->
+                <div class="additional-info">
+                    <h3 class="section-title">Additional Information:</h3>
+                    <p><t t-esc="o.note or 'No additional information available.'"/></p>
+                </div>
+
+                <!-- Floor Layout -->
+                <div class="floor-layout">
+                    <t t-set="logo" t-value="o.company_id.logo.decode('utf-8') if o.company_id.logo else default_logo"/>
+                    <img t-att-src="'data:image/jpg;base64,%s' % logo" class="floor-img"/>
+                    <h4>Floor Layout</h4>
+                    <p><strong>Area:</strong> <t t-esc="o.order_line.product_id.area or '...'"/> sqm</p>
+                    <p><strong>RBF / RBW:</strong>  sqm</p>
+                    <p><strong>Asking Price:</strong>  US$</p>
+                </div>
+
+                <!-- Contact Information -->
+                <div class="contact-section">
+                    <div class="contact-box">
                         <h3>Contact:</h3>
-                        <p>Website:
-                            <t t-esc="company_id.website"/>
-                        </p>
-                        <p>Office:
-                            <t t-esc="company_id.website"/>
-                        </p>
+                        <p><strong>Hotline:</strong> <t t-esc="o.company_id.phone or '...'"/></p>
+                        <p><strong>Website:</strong> <t t-esc="o.company_id.website or '...'"/></p>
                     </div>
+                    <p class="office-location">
+                        <strong>Office:</strong><span>Ho Chi Minh City, Vietnam</span>
+                    </p>
                 </div>
+            </div>
+        </t>
+    </template>
+
+
+
+
+    <template id="custom_so_retail_report">
+        <t t-call="web.html_container">
+            <t t-if="docs">
+                <t t-foreach="docs.sale_order_id" t-as="o">
+                    <t t-call="nai_crm.custom_quotation_report" t-lang="o.partner_id.lang"/>
+                </t>
+            </t>
+            <t t-else="">
+                <span>⚠️ Không có dữ liệu</span>
             </t>
         </t>
     </template>
 
     <record id="action_custom_quotation_report" model="ir.actions.report">
         <field name="name">Custom Quotation Report</field>
-        <field name="model">sale.order</field>
+        <field name="model">popup.select.fields.report</field>
         <field name="report_type">qweb-pdf</field>
-        <field name="report_name">nai_crm.custom_quotation_report</field>
-        <field name="report_file">nai_crm.custom_quotation_report</field>
-        <field name="binding_model_id" ref="sale.model_sale_order"/>
+        <field name="report_name">nai_crm.custom_so_retail_report</field>
+        <field name="report_file">nai_crm.custom_so_retail_report</field>
+        <field name="binding_model_id" ref="nai_crm.model_popup_select_fields_report"/>
         <field name="binding_type">report</field>
     </record>
 
