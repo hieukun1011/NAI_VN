@@ -4,112 +4,170 @@
 
     <template id="custom_quotation_report">
         <t t-call="web.external_layout">
-        <style>
-            * {
+            <style>
+                * {
                 padding: 0;
                 margin: 0;
                 box-sizing: border-box;
-            }
-            .container-fluid {
+                }
+                .container-fluid {
                 padding: 20px;
-            }
-            .section-title {
+                }
+                .section-title {
                 color: red;
                 font-size: 18px;
                 font-weight: bold;
-            }
-            .floor-img-background, .floor-img {
+                }
+                .floor-img-background, .floor-img {
                 width: 100%;
                 height: auto;
                 object-fit: cover;
                 display: block;
-            }
-            .floor-img {
+                }
+                .floor-img {
                 border: 2px solid red;
-            }
-            .contact-info {
+                }
+                .contact-info {
                 background-color: red;
                 color: white;
                 padding: 15px;
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
-            }
-            .contact-box h3 {
+                }
+                .contact-box h3 {
                 margin-bottom: 10px;
-            }
-            @media print {
+                }
+                @media print {
                 .contact-info {
-                    padding: 10px;
+                padding: 10px;
                 }
                 .floor-img-background, .floor-img {
-                    height: 250px !important;
+                height: 250px !important;
                 }
                 .section-title {
-                    color: red !important;
-                    font-size: 18px !important;
-                    font-weight: bold !important;
+                color: red !important;
+                font-size: 18px !important;
+                font-weight: bold !important;
                 }
-            }
-        </style>
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-12 text-center">
-                    <t t-if="o.order_line.product_id.building_parent_id.image_1024">
-                        <t t-set="background_image_1024" t-value="o.order_line.product_id.building_parent_id.image_1024.decode('utf-8')"/>
-                        <img t-att-src="'data:image/png;base64,%s' % background_image_1024" class="floor-img-background"/>
-                    </t>
-                </div>
-            </div>
-            <div class="row mt-4">
-                <div class="col-7">
-                    <div class="property-section">
-                        <h2 class="section-title" style="color: red; font-size: 18px; font-weight: bold;">Property Features:</h2>
-                        <p><strong>Location:</strong> <t t-esc="o.order_line.product_id.location or '...'"/></p>
-                        <p><strong>Type:</strong> Office Building</p>
-                        <p><strong>Area:</strong> <t t-esc="o.order_line.product_id.area or '...'"/></p>
-                        <p><strong>Occupancy Rate:</strong> 100%</p>
-                        <p><strong>Average Rent:</strong> US$ 100/sqm/month</p>
-                        <p><strong>Annual Income:</strong> US$ 100/month</p>
-                        <p><strong>Green Certificate:</strong> ...</p>
-                    </div>
-                    <div class="additional-info mt-3">
-                        <h2 class="section-title" style="color: red; font-size: 18px; font-weight: bold;">Additional Information:</h2>
-                        <p><t t-esc="o.note or 'No additional information available.'"/></p>
+                }
+            </style>
+            <t t-set="fields_data" t-value="o.get_sale_order_values(o)"/>
+            <div class="container-fluid">
+                <div class="row">
+                    <t t-esc="name_abc or '...'"/>
+                    <div class="col-12 text-center">
+                        <t t-if="o.image">
+                            <t t-set="background_image_1024" t-value="o.image.decode('utf-8')"/>
+                            <img t-att-src="'data:image/png;base64,%s' % background_image_1024"
+                                 class="floor-img-background"/>
+                        </t>
                     </div>
                 </div>
-                <div class="col-5">
-                    <t t-if="o.order_line.product_id.image_1024">
-                        <t t-set="background_image_product_1024" t-value="o.order_line.product_id.image_1024.decode('utf-8')"/>
-                        <img t-att-src="'data:image/png;base64,%s' % background_image_product_1024" class="floor-img"/>
-                    </t>
-                    <p><strong>Area:</strong> <t t-esc="o.order_line.product_id.area or '...'"/></p>
-                    <p><strong>Occupancy Rate:</strong> 100%</p>
-                    <p><strong>Average Rent:</strong> US$ 100/sqm/month</p>
-                </div>
-            </div>
-            <div class="row contact-info mt-4">
-                <div class="col-8">
-                    <div class="contact-box">
-                        <h3>Contact:</h3>
-                        <p><strong>Hotline:</strong> <t t-esc="o.company_id.phone or '...'"/></p>
-                        <p><strong>Website:</strong> <t t-esc="o.company_id.website or '...'"/></p>
+                <div class="row mt-4">
+                    <div class="col-7">
+                        <div class="property-section">
+                            <h2 class="section-title" style="color: red; font-size: 18px; font-weight: bold;">Property
+                                Features:
+                            </h2>
+                            <p>
+                                <strong>Location:</strong>
+                                <t t-esc="o.sale_order_id.order_line.product_id.location or '...'"/>
+                            </p>
+                            <p>
+                                <strong>Type:</strong>
+                                Office Building
+                            </p>
+                            <p>
+                                <strong>Area:</strong>
+                                <t t-esc="o.sale_order_id.order_line.product_id.area or '...'"/>
+                            </p>
+                            <p>
+                                <strong>Occupancy Rate:</strong>
+                                100%
+                            </p>
+                            <p>
+                                <strong>Average Rent:</strong>
+                                US$ .../sqm/month
+                            </p>
+                            <p>
+                                <strong>Annual Income:</strong>
+                                US$ .../month
+                            </p>
+                            <p>
+                                <strong>Green Certificate:</strong>
+                                ...
+                            </p>
+                        </div>
+                        <div class="additional-info mt-3">
+                            <h2 class="section-title" style="color: red; font-size: 18px; font-weight: bold;">Additional
+                                Information:
+                            </h2>
+                            <div>
+                                <t t-foreach="o.fields_ids" t-as="field">
+                                    <p>
+                                        <strong><t t-esc="field.name"/>:</strong>
+                                        <t t-esc="fields_data.get(field.name, '...')"/>
+                                    </p>
+                                </t>
+                            </div>
+                            <p>
+                                <t t-esc="o.sale_order_id.note or 'No additional information available.'"/>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-5">
+                        <t t-if="o.sale_order_id.order_line.product_id.image_1024">
+                            <t t-set="background_image_product_1024"
+                               t-value="o.sale_order_id.order_line.product_id.image_1024.decode('utf-8')"/>
+                            <img t-att-src="'data:image/png;base64,%s' % background_image_product_1024"
+                                 class="floor-img"/>
+                        </t>
+                        <p>
+                            <strong>Area:</strong>
+                            <t t-esc="o.sale_order_id.order_line.product_id.area or '...'"/>
+                        </p>
+                        <p>
+                            <strong>Occupancy Rate:</strong>
+                            100%
+                        </p>
+                        <p>
+                            <strong>Average Rent:</strong>
+                            US$ 100/sqm/month
+                        </p>
                     </div>
                 </div>
-                <div class="col-4 text-right">
-                    <p><strong>Office:</strong> Ho Chi Minh City, Vietnam</p>
+                <div class="row contact-info mt-4">
+                    <div class="col-8">
+                        <div class="contact-box">
+                            <h3>Contact:</h3>
+                            <p>
+                                <strong>Hotline:</strong>
+                                <t t-esc="o.sale_order_id.company_id.phone or '...'"/>
+                            </p>
+                            <p>
+                                <strong>Website:</strong>
+                                <t t-esc="o.sale_order_id.company_id.website or '...'"/>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-4 text-right">
+                        <p>
+                            <strong>Office:</strong>
+                            Ho Chi Minh City, Vietnam
+                        </p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </t>
+        </t>
     </template>
 
 
     <template id="custom_so_retail_report">
         <t t-call="web.html_container">
             <t t-if="docs">
-                <t t-foreach="docs.sale_order_id" t-as="o">
-                    <t t-call="nai_crm.custom_quotation_report" t-lang="o.partner_id.lang"/>
+                <t t-foreach="docs" t-as="o">
+                    <t t-call="nai_crm.custom_quotation_report" t-lang="o.sale_order_id.partner_id.lang"/>
                 </t>
             </t>
             <t t-else="">

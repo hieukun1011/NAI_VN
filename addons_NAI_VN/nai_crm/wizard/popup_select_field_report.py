@@ -8,6 +8,17 @@ class PopupSelectFields(models.Model):
     fields_ids = fields.Many2many('ir.model.fields')
     image = fields.Image("Variant Image", max_width=1024, max_height=1024)
 
+    def get_sale_order_values(self, sale_order_id):
+        """Lấy dữ liệu từ sale.order dựa vào fields_ids được chọn"""
+        result = {}
+        for rec in self.sale_order_id.order_line:
+            for att in rec.product_id.nai_attribute_line_ids:
+                result[att.name] = att.value
+        for field in self.fields_ids:
+            if field.name in sale_order_id:
+                result[field.name] = sale_order_id[field.name]
+        return result
+
     def generate_report(self):
         data = {}
 
@@ -20,10 +31,7 @@ class PopupSelectFields(models.Model):
                 logo = logo.decode('utf-8')
 
             data = {
-                'logo': logo,
-                'company_id': company.name,
-                'website': company.website,
-                'name': 'abcxyz'
+                'name_abc': '123123'
             }
 
             attr_product = {}
