@@ -13,7 +13,6 @@ class NAISaleOrder(models.Model):
             'default_sale_order_id': self.id,
             'create': False
         }
-        domain = []
         if self.order_line:
             if len(self.order_line) > 1:
                 for rec in self.order_line:
@@ -22,9 +21,8 @@ class NAISaleOrder(models.Model):
             else:
                 context['default_image'] = self.order_line[0].product_id.image_1024
         res_id = False
-        if self.template_report_ids:
-            res_id = self.template_report_ids.filtered(lambda l: l.create_uid == self.env.uid)[-1].id
-
+        if self.template_report_ids.filtered(lambda l: l.create_uid.id == self.env.uid):
+            res_id = self.template_report_ids.filtered(lambda l: l.create_uid.id == self.env.uid)[-1].id
         return {
             'name': _("Print Sale Order"),
             'type': 'ir.actions.act_window',
