@@ -9,6 +9,7 @@
             <field name="arch" type="xml">
                 <xpath expr="//field[@name='list_price']" position="attributes">
                     <attribute name="options">{'currency_field': 'currency_id', 'field_digits': False}</attribute>
+                    <attribute name="readonly">1</attribute>
                 </xpath>
                 <xpath expr="//field[@name='standard_price']" position="attributes">
                     <attribute name="options">{'currency_field': 'currency_id', 'field_digits': False}</attribute>
@@ -26,8 +27,16 @@
                     <field name="type_building"/>
                     <field name="area"/>
                     <field name="building_parent_id"/>
-                    <field name="price_rental"/>
-                    <field name="acreage"/>
+                    <label for="acreage"/>
+                    <div>
+                        <field name="acreage" class="oe_inline"/>
+                        <span class="ml8">m2</span>
+                    </div>
+                    <label for="price_rental"/>
+                    <div>
+                        <field name="price_rental" class="oe_inline"/>
+                        <span class="ml8">/m2</span>
+                    </div>
                 </group>
 
                 <page name="pricing" position="after">

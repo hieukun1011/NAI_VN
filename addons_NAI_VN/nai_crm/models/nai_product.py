@@ -20,8 +20,13 @@ class NAIProduct(models.Model):
     acreage = fields.Float('Acreage')
 
 
-    @api.depends('list_price')
+    @api.depends('list_price', 'acreage')
     def calculate_price_rental(self):
         for record in self:
-            if record.list_price and record.acreage:
+            if record.list_price and record.acreage and not record.price_rental:
                 record.price_rental = record.list_price/record.acreage
+
+    @api.onchange('price_rental', 'acreage')
+    def calculate_list_price_rental(self):
+        if self.price_rental and self.acreage:
+            self.list_price = self.price_rental * self.acreage
