@@ -45,4 +45,4 @@ class NaiSaleOrderLine(models.Model):
         exchange_rate = self.env['ir.config_parameter'].sudo().get_param('nai_crm.exchange_rate', default=25000)
         for record in self:
             if record.price_unit:
-                record.price_vn = record.price_unit * exchange_rate
+                record.price_vn = record.price_unit * int(exchange_rate)
