@@ -1,5 +1,5 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_nai_product_attr_user,access.nai.product.attr.user,model_nai_product_attribute,base.group_user,1,1,1,0
-access_nai_product_attr_user_line,access.nai.product.attr.user.line,model_nai_product_attribute_line,base.group_user,1,1,1,0
-access_nai_popup_select_fields_report_user,access.nai.popup.select.fields.report.user,model_popup_select_fields_report,base.group_user,1,1,1,0
-access_nai_image_product_user,access.nai.image.product.user,model_nai_image_product,base.group_user,1,1,1,0
+access_nai_product_attr_user,access.nai.product.attr.user,model_nai_product_attribute,base.group_user,1,1,1,1
+access_nai_product_attr_user_line,access.nai.product.attr.user.line,model_nai_product_attribute_line,base.group_user,1,1,1,1
+access_nai_popup_select_fields_report_user,access.nai.popup.select.fields.report.user,model_popup_select_fields_report,base.group_user,1,1,1,1
+access_nai_image_product_user,access.nai.image.product.user,model_nai_image_product,base.group_user,1,1,1,1

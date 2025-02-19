@@ -12,7 +12,6 @@ class NAISaleOrder(models.Model):
         context = {
             'default_sale_order_id': self.id,
         }
-
         return {
             'name': _("Print Sale Order"),
             'type': 'ir.actions.act_window',

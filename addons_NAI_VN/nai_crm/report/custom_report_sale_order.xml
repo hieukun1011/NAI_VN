@@ -1,119 +1,168 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
+    <template id="nai_external_layout" inherit_id="web.external_layout_boxed">
+        <!-- support for custom header -->
+        <!--        <div t-attf-class="header o_company_#{company.id}_layout" position="attributes">-->
+        <!--            <attribute name="t-if">not custom_header</attribute>-->
+        <!--        </div>-->
+        <!--        <div t-attf-class="header o_company_#{company.id}_layout" position="after">-->
+        <!--            <div t-attf-class="header o_company_#{company.id}_layout" t-if="custom_header">-->
+        <!--                <div class="o_clean_header">-->
+        <!--                    <t t-call="#{custom_header}"/>-->
+        <!--                </div>-->
+        <!--            </div>-->
+        <!--        </div>-->
+
+        <!--        &lt;!&ndash; support for custom footer &ndash;&gt;-->
+        <!--        <div t-attf-class="footer o_clean_footer o_company_#{company.id}_layout" position="attributes">-->
+        <!--            <attribute name="t-if">not custom_footer</attribute>-->
+        <!--        </div>-->
+        <!--        <div t-attf-class="footer o_clean_footer o_company_#{company.id}_layout" position="after">-->
+        <!--            <div t-attf-class="footer o_clean_footer o_company_#{company.id}_layout" t-if="custom_footer">-->
+        <!--                <t t-out="custom_footer"/>-->
+        <!--            </div>-->
+        <!--        </div>-->
+    </template>
+
     <template id="custom_quotation_report">
         <t t-call="web.external_layout">
             <!-- CSS trực tiếp -->
             <style>
-                .container-custom-quotation-report {
-                    font-family: Arial, sans-serif;
-                    margin: 20px;
+                * {
+                padding: 0;
+                margin: 0;
+                box-sizing: border-box;
                 }
-                .header {
-                    text-align: center;
-                    margin-bottom: 10px;
+                .container-123 {
+                display: flex;
+                position: relative;
+                z-index: 1;
+                min-height: 100px;
+                background-color: white;
+                overflow: hidden;
                 }
-                .header-img {
-                    width: 150px;
-                    height: auto;
+                .container-123::before {
+                content: '';
+                position: absolute;
+                inset: 0;
+                z-index: -1;
+                background-color: red;
+                transform: skewX(-50deg) translateX(-50%);
                 }
-                .title {
-                    font-weight: bold;
-                    font-size: 20px;
+                .column-1 {
+                flex-basis: 60%;
                 }
-                .property-section, .additional-info, .floor-layout, .contact-section {
-                    margin: 20px 0;
-                }
-                .section-title {
-                    font-style: italic;
-                    color: red;
-                    font-size: 18px;
-                }
-                .contact-box {
-                    background: red;
-                    color: white;
-                    padding: 10px;
-                    font-weight: bold;
-                }
-                .office-location {
-                    font-weight: bold;
+                .column-2 {
+                flex-basis: 40%;
                 }
             </style>
-
             <div class="container-custom-quotation-report">
-                <!-- Header Image -->
-                <div class="header-background-building">
-                    <t t-if="o.order_line.product_id.building_parent_id.image_1024">
-                        <t t-set="background_image_1024" t-value="o.order_line.product_id.building_parent_id.image_1024.decode('utf-8') if o.order_line.product_id.building_parent_id.image_1024 else default_logo"/>
-                        <img t-att-src="'data:image/png;base64,%s' % background_image_1024" class="floor-img"/>
-                    </t>
-                    <h2 class="title">Building Facade</h2>
-                </div>
-
-                <!-- Property Features -->
-                <div class="property-section">
-                    <h3 class="section-title">Property Features:</h3>
-                    <p><strong>Location:</strong> <t t-esc="o.order_line.product_id.location or '...'"/></p>
-                    <p><strong>Type:</strong> <t t-esc="o.order_line.product_id.type_building or '...'"/> </p>
-                    <p><strong>Area:</strong> <t t-esc="o.order_line.product_id.area or '...'"/> sqm</p>
-                    <p><strong>Occupancy Rate:</strong> <span>100%</span></p>
-                    <p><strong>Average Rent:</strong> US$  /sqm/month</p>
-                    <p><strong>Annual Income:</strong> US$  /month</p>
-                    <p><strong>Green Certificate:</strong> </p>
-                </div>
-
-                <div class="attribute-section">
-                    <h3 class="section-title">Product Attributes</h3>
-                    <table class="attribute-table">
-                        <thead>
-                            <tr>
-                                <th>Attribute</th>
-                                <th>Value</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <t t-foreach="o.order_line.product_id.nai_attribute_line_ids" t-as="attribute">
-                                <tr>
-                                    <td><t t-esc="attribute.attribute_id.name"/></td>
-                                    <td><t t-esc="attribute.value"/></td>
-                                </tr>
-                            </t>
-                        </tbody>
-                    </table>
-                </div>
-
-                <!-- Additional Information -->
-                <div class="additional-info">
-                    <h3 class="section-title">Additional Information:</h3>
-                    <p><t t-esc="o.note or 'No additional information available.'"/></p>
-                </div>
-
-                <!-- Floor Layout -->
-                <div class="floor-layout">
-                    <t t-set="logo" t-value="o.company_id.logo.decode('utf-8') if o.company_id.logo else default_logo"/>
-                    <img t-att-src="'data:image/jpg;base64,%s' % logo" class="floor-img"/>
-                    <h4>Floor Layout</h4>
-                    <p><strong>Area:</strong> <t t-esc="o.order_line.product_id.area or '...'"/> sqm</p>
-                    <p><strong>RBF / RBW:</strong>  sqm</p>
-                    <p><strong>Asking Price:</strong>  US$</p>
-                </div>
-
-                <!-- Contact Information -->
-                <div class="contact-section">
-                    <div class="contact-box">
-                        <h3>Contact:</h3>
-                        <p><strong>Hotline:</strong> <t t-esc="o.company_id.phone or '...'"/></p>
-                        <p><strong>Website:</strong> <t t-esc="o.company_id.website or '...'"/></p>
+                <div class="row">
+                    <div class="header-background-building" style="text-align: center;">
+                        <t t-if="o.order_line.product_id.building_parent_id.image_1024">
+                            <t t-set="background_image_1024"
+                               t-value="o.order_line.product_id.building_parent_id.image_1024.decode('utf-8')"/>
+                            <img t-att-src="'data:image/png;base64,%s' % background_image_1024" class="floor-img"/>
+                        </t>
                     </div>
-                    <p class="office-location">
-                        <strong>Office:</strong><span>Ho Chi Minh City, Vietnam</span>
-                    </p>
+                    <div class="col-1"></div>
+                    <div class="col-6">
+                        <div class="property-section">
+                            <h2 class="section-title">Property Features:</h2>
+                            <p>
+                                <strong>Location:</strong>
+                                <t t-esc="o.order_line.product_id.location or '...'"/>
+                            </p>
+                            <p>
+                                <strong>Type:</strong>
+                                Office Building
+                            </p>
+                            <p>
+                                <strong>Area:</strong>
+                                <t t-esc="o.order_line.product_id.area or '...'"/>
+                            </p>
+                            <p>
+                                <strong>Occupancy Rate:</strong>
+                                <span>100%</span>
+                            </p>
+                            <p>
+                                <strong>Average Rent:</strong>
+                                US$
+                                <span>100/sqm/month</span>
+                            </p>
+                            <p>
+                                <strong>Annual Income:</strong>
+                                US$
+                                <span>100/month</span>
+                            </p>
+                            <p>
+                                <strong>Green Certificate:</strong>
+                                <span>abcxyz</span>
+                            </p>
+                        </div>
+                        <!-- Additional Information -->
+                        <div class="additional-info">
+                            <h2 class="section-title">Additional Information:</h2>
+                            <p>
+                                <t t-esc="o.note or 'No additional information available.'"/>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="header-background-building" style="">
+                            <t t-if="o.order_line.product_id.building_parent_id.image_1024">
+                                <t t-set="background_image_1024"
+                                   t-value="o.order_line.product_id.building_parent_id.image_1024.decode('utf-8')"/>
+                                <img t-att-src="'data:image/png;base64,%s' % background_image_1024" class="floor-img"/>
+                            </t>
+                        </div>
+                        <p>
+                            <strong>Area:</strong>
+                            <t t-esc="o.order_line.product_id.area or '...'"/>
+                        </p>
+                        <p>
+                            <strong>Occupancy Rate:</strong>
+                            <span>100%</span>
+                        </p>
+                        <p>
+                            <strong>Average Rent:</strong>
+                            US$
+                            <span>100/sqm/month</span>
+                        </p>
+                    </div>
+                    <div class="col-1"></div>
                 </div>
+                <div class="row contact-info" style="display: flex">
+                    <div class="col-1"></div>
+                    <div class="col-10 container-123">
+                        <div class="column-1">
+                            <div class="contact-section">
+                                <div class="contact-box">
+                                    <h3>Contact:</h3>
+                                    <p>
+                                        <strong>Hotline:</strong>
+                                        <t t-esc="o.company_id.phone or '...'"/>
+                                    </p>
+                                    <p>
+                                        <strong>Website:</strong>
+                                        <t t-esc="o.company_id.website or '...'"/>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column-2">
+                            <p class="office-location">
+                                <strong>Office:</strong>
+                                <span>Ho Chi Minh City, Vietnam</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </t>
     </template>
-
-
 
 
     <template id="custom_so_retail_report">

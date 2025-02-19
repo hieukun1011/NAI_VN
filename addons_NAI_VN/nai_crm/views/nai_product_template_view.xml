@@ -1,6 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <data>
+
+        <record id="nai_inherit_product_template_form_view" model="ir.ui.view">
+            <field name="name">nai.product.template.form.inherit</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref="product.product_template_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='list_price']" position="attributes">
+                    <attribute name="options">{'currency_field': 'currency_id', 'field_digits': False}</attribute>
+                </xpath>
+                <xpath expr="//field[@name='standard_price']" position="attributes">
+                    <attribute name="options">{'currency_field': 'currency_id', 'field_digits': False}</attribute>
+                </xpath>
+            </field>
+        </record>
+
         <record id="nai_product_template_form_view_rental" model="ir.ui.view">
             <field name="name">NAI.product.template.form.inherit.rental</field>
             <field name="model">product.template</field>
@@ -8,18 +23,22 @@
             <field name="arch" type="xml">
                 <group name="group_general" position="inside">
                     <field name="location"/>
+                    <field name="type_building"/>
+                    <field name="area"/>
+                    <field name="building_parent_id"/>
                 </group>
+
                 <page name="pricing" position="after">
                     <page string="Building information" name="nai_attrs_product" invisible="not rent_ok">
                         <field name="nai_attribute_line_ids" nolabel="0">
-                                <tree editable="bottom">
-                                    <control>
-                                        <create name="add_product_attribute" string="Add a attribute"/>
-                                    </control>
-                                    <field name="attribute_id" string="Name"/>
-                                    <field name="value"/>
-                                </tree>
-                            </field>
+                            <tree editable="bottom">
+                                <control>
+                                    <create name="add_product_attribute" string="Add a attribute"/>
+                                </control>
+                                <field name="attribute_id" string="Name"/>
+                                <field name="value"/>
+                            </tree>
+                        </field>
                     </page>
                     <page name="des_img" string="Image description">
                         <field name="image_ids" mode="kanban"

@@ -33,5 +33,14 @@
 			</field>
 		</record>
 
+		<record id="popup_select_fields_report_action" model="ir.actions.act_window">
+            <field name="name">Print Sale Order</field>
+            <field name="res_model">popup.select.fields.report</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[('sale_order_id', '=', active_id)]</field>
+            <field name="view_id" eval="False"/>
+			<field name="target">inline</field>
+        </record>
+
 	</data>
 </odoo>

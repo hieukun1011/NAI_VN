@@ -6,6 +6,10 @@
         <field name="inherit_id" ref="sale_renting.rental_order_primary_form_view"/>
         <field name="arch" type="xml">
             <xpath expr="//header" position="inside">
+<!--                <button type="action" class="btn" string="Print sale order"-->
+<!--                        name="%(nai_crm.popup_select_fields_report_action)d"-->
+<!--                        context="{'default_sale_order_id': id}"-->
+<!--                        invisible="state != 'sale'"/>-->
                 <button type="object" class="btn" string="Print sale order"
                         name="action_print_so"
                         invisible="state != 'sale'"/>
