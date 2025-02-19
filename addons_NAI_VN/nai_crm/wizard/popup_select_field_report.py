@@ -14,9 +14,12 @@ class PopupSelectFields(models.Model):
         for rec in self.sale_order_id.order_line:
             for att in rec.product_id.nai_attribute_line_ids:
                 result[att.name] = att.value
-        for field in self.fields_ids:
-            if field.name in sale_order_id:
-                result[field.name] = sale_order_id[field.name]
+        for rec in self.fields_ids:
+            field_value = getattr(self.sale_order_id, rec.name, False)
+            if rec.ttype not in ['many2one', 'many2many', 'one2many']:
+                result[rec.field_description] = field_value
+            elif field_value:
+                result[rec.field_description] = field_value.display_name if rec.ttype == 'many2one' else field_value.mapped('display_name')
         return result
 
     def generate_report(self):

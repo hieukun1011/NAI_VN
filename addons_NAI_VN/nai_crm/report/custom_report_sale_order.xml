@@ -104,10 +104,12 @@
                                 Information:
                             </h2>
                             <div>
-                                <t t-foreach="o.fields_ids" t-as="field">
+                                <t t-set="fields_data" t-value="o.get_sale_order_values(o)"/>
+                                <t t-foreach="fields_data.items()" t-as="field">
                                     <p>
-                                        <strong><t t-esc="field.name"/>:</strong>
-                                        <t t-esc="fields_data.get(field.name, '...')"/>
+                                        <strong><t t-esc="field[0]"/>:
+                                        </strong>
+                                        <t t-esc="field[1] or '...'"/>
                                     </p>
                                 </t>
                             </div>
