@@ -1,29 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
-    <template id="nai_external_layout" inherit_id="web.external_layout_boxed">
-        <!-- support for custom header -->
-        <!--        <div t-attf-class="header o_company_#{company.id}_layout" position="attributes">-->
-        <!--            <attribute name="t-if">not custom_header</attribute>-->
-        <!--        </div>-->
-        <!--        <div t-attf-class="header o_company_#{company.id}_layout" position="after">-->
-        <!--            <div t-attf-class="header o_company_#{company.id}_layout" t-if="custom_header">-->
-        <!--                <div class="o_clean_header">-->
-        <!--                    <t t-call="#{custom_header}"/>-->
-        <!--                </div>-->
-        <!--            </div>-->
-        <!--        </div>-->
-
-        <!--        &lt;!&ndash; support for custom footer &ndash;&gt;-->
-        <!--        <div t-attf-class="footer o_clean_footer o_company_#{company.id}_layout" position="attributes">-->
-        <!--            <attribute name="t-if">not custom_footer</attribute>-->
-        <!--        </div>-->
-        <!--        <div t-attf-class="footer o_clean_footer o_company_#{company.id}_layout" position="after">-->
-        <!--            <div t-attf-class="footer o_clean_footer o_company_#{company.id}_layout" t-if="custom_footer">-->
-        <!--                <t t-out="custom_footer"/>-->
-        <!--            </div>-->
-        <!--        </div>-->
-    </template>
 
     <template id="custom_quotation_report">
         <t t-call="web.external_layout">

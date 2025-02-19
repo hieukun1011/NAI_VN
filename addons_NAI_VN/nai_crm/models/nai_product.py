@@ -16,3 +16,12 @@ class NAIProduct(models.Model):
     type_building = fields.Selection(type_building, string='Type building', default='office_building')
     area = fields.Selection(AREA, string='Area')
     building_parent_id = fields.Many2one('product.template', string='Building parent')
+    price_rental = fields.Float("Price rental", compute='calculate_price_rental', store=True, readonly=False)
+    acreage = fields.Float('Acreage')
+
+
+    @api.depends('list_price')
+    def calculate_price_rental(self):
+        for record in self:
+            if record.list_price and record.acreage:
+                record.price_rental = record.list_price/record.acreage

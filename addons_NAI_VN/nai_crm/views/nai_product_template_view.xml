@@ -26,6 +26,8 @@
                     <field name="type_building"/>
                     <field name="area"/>
                     <field name="building_parent_id"/>
+                    <field name="price_rental"/>
+                    <field name="acreage"/>
                 </group>
 
                 <page name="pricing" position="after">
