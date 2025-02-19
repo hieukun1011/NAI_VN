@@ -4,8 +4,7 @@ from odoo import fields, models, _
 class NAISaleOrder(models.Model):
     _inherit = 'sale.order'
 
-    template_report_id = fields.One2many('popup.select.fields.report', 'sale_order_id')
-
+    template_report_ids = fields.One2many('popup.select.fields.report', 'sale_order_id')
 
     def action_print_so(self):
         self.ensure_one()
@@ -22,14 +21,17 @@ class NAISaleOrder(models.Model):
                         context['default_image'] = rec.product_id.image_1024
             else:
                 context['default_image'] = self.order_line[0].product_id.image_1024
+        res_id = False
+        if self.template_report_ids:
+            res_id = self.template_report_ids.filtered(lambda l: l.create_uid == self.env.uid)[-1].id
+
         return {
             'name': _("Print Sale Order"),
             'type': 'ir.actions.act_window',
             'views': [(view_form_id, 'form')],
             'res_model': 'popup.select.fields.report',
             'view_mode': 'form',
-            'res_id': self.template_report_id[-1].id if self.template_report_id else False,
+            'res_id': res_id,
             'target': 'new',
             'context': context
         }
-
