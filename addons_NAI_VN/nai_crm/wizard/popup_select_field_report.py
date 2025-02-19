@@ -6,6 +6,7 @@ class PopupSelectFields(models.Model):
     name = fields.Char('Name')
     sale_order_id = fields.Many2one('sale.order')
     fields_ids = fields.Many2many('ir.model.fields')
+    image = fields.Binary('Image layout')
 
     def generate_report(self):
         data = {}

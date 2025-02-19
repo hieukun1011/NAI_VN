@@ -19,8 +19,9 @@
 				<form string="Select fields report">
 					<sheet>
 						<group>
+							<field name="image" widget="image" class="oe_avatar"/>
 							<field name="name"/>
-							<field name="sale_order_id" invisible="0"/>
+							<field name="sale_order_id" invisible="1"/>
 							<field name="fields_ids" widget="many2many_checkboxes" domain="[('model', '=', 'sale.order'), ('store', '=', True)]"/>
 						</group>
 						<footer>

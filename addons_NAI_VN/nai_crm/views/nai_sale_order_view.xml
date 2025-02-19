@@ -11,8 +11,7 @@
 <!--                        context="{'default_sale_order_id': id}"-->
 <!--                        invisible="state != 'sale'"/>-->
                 <button type="object" class="btn" string="Print sale order"
-                        name="action_print_so"
-                        invisible="state != 'sale'"/>
+                        name="action_print_so"/>
             </xpath>
         </field>
     </record>
