@@ -1,4 +1,4 @@
-from odoo import fields, models, _
+from odoo import fields, models, api, _
 
 
 class NAISaleOrder(models.Model):
@@ -33,3 +33,16 @@ class NAISaleOrder(models.Model):
             'target': 'new',
             'context': context
         }
+
+
+class NaiSaleOrderLine(models.Model):
+    _inherit = 'sale.order.line'
+
+    price_vn = fields.Float('VND', compute='calculate_price_vn')
+
+    @api.depends('price_unit')
+    def calculate_price_vn(self):
+        exchange_rate = self.env['ir.config_parameter'].sudo().get_param('nai_crm.exchange_rate', default=25000)
+        for record in self:
+            if record.price_unit:
+                record.price_vn = record.price_unit * exchange_rate

@@ -13,6 +13,7 @@
         'wizard/popup_select_fields_report_view.xml',
         'views/nai_product_template_view.xml',
         'views/nai_sale_order_view.xml',
+        'views/res_config_settings.xml',
         'report/custom_report_sale_order.xml',
         'data/nai_attrs_product_data.xml',
     ],

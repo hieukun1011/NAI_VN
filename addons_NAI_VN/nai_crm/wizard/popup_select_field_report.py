@@ -6,7 +6,7 @@ class PopupSelectFields(models.Model):
     name = fields.Char('Name')
     sale_order_id = fields.Many2one('sale.order')
     fields_ids = fields.Many2many('ir.model.fields')
-    image = fields.Image("Variant Image", max_width=1024, max_height=1024)
+    image = fields.Image("Variant Image", max_width=1024, max_height=250)
 
     def get_sale_order_values(self, sale_order_id):
         """Lấy dữ liệu từ sale.order dựa vào fields_ids được chọn"""

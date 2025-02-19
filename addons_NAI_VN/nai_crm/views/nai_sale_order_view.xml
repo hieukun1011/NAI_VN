@@ -9,6 +9,10 @@
                 <button type="object" class="btn" string="Print sale order"
                         name="action_print_so"/>
             </xpath>
+            <xpath expr="//notebook/page[@name='order_lines']/field/tree/field[@name='price_unit']"
+                   position='after'>
+                <field name="price_vn" options="{'field_digits': True}"/>
+            </xpath>
         </field>
     </record>
 </odoo>
