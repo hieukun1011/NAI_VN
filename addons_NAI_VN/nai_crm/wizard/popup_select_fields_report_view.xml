@@ -40,7 +40,7 @@
             <field name="view_mode">tree,form</field>
             <field name="domain">[('sale_order_id', '=', active_id)]</field>
             <field name="view_id" eval="False"/>
-			<field name="target">inline</field>
+			<field name="target">new</field>
         </record>
 
 	</data>
