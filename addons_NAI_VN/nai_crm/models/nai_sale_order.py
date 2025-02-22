@@ -1,5 +1,5 @@
 from odoo import fields, models, api, _
-
+from odoo import Command
 
 class NAISaleOrder(models.Model):
     _inherit = 'sale.order'
@@ -34,6 +34,30 @@ class NAISaleOrder(models.Model):
             'context': context
         }
 
+    @api.model_create_multi
+    def create(self, vals_list):
+        for vals in vals_list:
+            order_lines = vals.get('order_line', [])
+            new_lines = []
+
+            for line in order_lines:
+                product_id = line[2].get('product_id') if isinstance(line, (list, tuple)) and len(line) > 2 else None
+                if product_id:
+                    product = self.env['product.product'].browse(product_id).exists()
+                    if product.expense_ids:
+                        for expense in product.expense_ids:
+                            new_line = (0, 0, {
+                                'product_id': expense.self_id.id,
+                                'product_uom_qty': product.acreage,  # Hoặc có thể set số lượng theo nhu cầu
+                                'price_unit': expense.expense,  # Giá sản phẩm
+                            })
+                            new_lines.append(new_line)
+
+            # Thêm các dòng sản phẩm expense_ids vào order_line
+            vals['order_line'].extend(new_lines)
+
+        return super(NAISaleOrder, self).create(vals_list)
+
 
 class NaiSaleOrderLine(models.Model):
     _inherit = 'sale.order.line'
@@ -46,3 +70,9 @@ class NaiSaleOrderLine(models.Model):
         for record in self:
             if record.price_unit:
                 record.price_vn = record.price_unit * float(exchange_rate)
+            else:
+                record.price_vn = 0
+
+    @api.model_create_multi
+    def create(self, vals_list):
+        return super().create(vals_list)

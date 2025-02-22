@@ -2,6 +2,19 @@
 <odoo>
     <data>
 
+        <record id="nai_building_child_action" model="ir.actions.act_window">
+            <field name="name">Building child</field>
+            <field name="res_model">product.template</field>
+            <field name="view_mode">kanban,tree,form</field>
+            <field name="context">{'default_building_parent_id': active_id}</field>
+            <field name="domain">[('building_parent_id', '=', active_id)]</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Create a new product
+                </p>
+            </field>
+        </record>
+
         <record id="nai_inherit_product_template_form_view" model="ir.ui.view">
             <field name="name">nai.product.template.form.inherit</field>
             <field name="model">product.template</field>
@@ -9,13 +22,21 @@
             <field name="arch" type="xml">
                 <xpath expr="//field[@name='list_price']" position="attributes">
                     <attribute name="options">{'currency_field': 'currency_id', 'field_digits': False}</attribute>
-                    <attribute name="readonly">1</attribute>
+                    <attribute name="readonly">0</attribute>
                 </xpath>
                 <xpath expr="//field[@name='standard_price']" position="attributes">
                     <attribute name="options">{'currency_field': 'currency_id', 'field_digits': False}</attribute>
                 </xpath>
+                <xpath expr="//div[hasclass('oe_button_box')]" position="inside">
+                    <button name="%(nai_building_child_action)d"
+                            type="action" class="oe_stat_button order-12" icon="fa-building-o">
+                        <field name="count_building_child" widget="statinfo" string="Building child"/>
+                    </button>
+                </xpath>
             </field>
         </record>
+
+
 
         <record id="nai_product_template_form_view_rental" model="ir.ui.view">
             <field name="name">NAI.product.template.form.inherit.rental</field>
@@ -26,7 +47,7 @@
                     <field name="location"/>
                     <field name="type_building"/>
                     <field name="area"/>
-                    <field name="building_parent_id"/>
+                    <field name="building_parent_id" domain="[('id', '!=', id)]"/>
                     <label for="acreage"/>
                     <div>
                         <field name="acreage" class="oe_inline"/>
@@ -34,7 +55,7 @@
                     </div>
                     <label for="price_rental"/>
                     <div>
-                        <field name="price_rental" class="oe_inline"/>
+                        <field name="price_rental" widget="monetary" class="oe_inline" options="{'currency_field': 'currency_id', 'field_digits': True}"/>
                         <span class="ml8">/m2</span>
                     </div>
                 </group>
@@ -48,6 +69,21 @@
                                 </control>
                                 <field name="attribute_id" string="Name"/>
                                 <field name="value"/>
+                            </tree>
+                        </field>
+                    </page>
+                    <page string="Expense building" name="expense_ids" invisible="not rent_ok">
+                        <field name="expense_ids" nolabel="0">
+                            <tree editable="bottom">
+                                <control>
+                                    <create name="add_expense" string="Add a expense building"/>
+                                </control>
+                                <field name="self_id" column_invisible="False"/>
+                                <field name="product_id" column_invisible="True"/>
+                                <field name="currency_id" column_invisible="True"/>
+                                <field name="name"/>
+                                <field name="expense" widget="monetary" options="{'currency_field': 'currency_id', 'field_digits': True}"/>
+                                <field name="str_uom"/>
                             </tree>
                         </field>
                     </page>
