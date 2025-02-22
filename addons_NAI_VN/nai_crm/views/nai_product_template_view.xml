@@ -37,7 +37,6 @@
         </record>
 
 
-
         <record id="nai_product_template_form_view_rental" model="ir.ui.view">
             <field name="name">NAI.product.template.form.inherit.rental</field>
             <field name="model">product.template</field>
@@ -55,7 +54,8 @@
                     </div>
                     <label for="price_rental"/>
                     <div>
-                        <field name="price_rental" widget="monetary" class="oe_inline" options="{'currency_field': 'currency_id', 'field_digits': True}"/>
+                        <field name="price_rental" widget="monetary" class="oe_inline"
+                               options="{'currency_field': 'currency_id', 'field_digits': True}"/>
                         <span class="ml8">/m2</span>
                     </div>
                 </group>
@@ -82,7 +82,8 @@
                                 <field name="product_id" column_invisible="True"/>
                                 <field name="currency_id" column_invisible="True"/>
                                 <field name="name"/>
-                                <field name="expense" widget="monetary" options="{'currency_field': 'currency_id', 'field_digits': True}"/>
+                                <field name="expense" widget="monetary"
+                                       options="{'currency_field': 'currency_id', 'field_digits': True}"/>
                                 <field name="str_uom"/>
                             </tree>
                         </field>
@@ -139,6 +140,10 @@
                     </page>
                 </page>
             </field>
+        </record>
+
+        <record id="sale_renting.rental_product_template_action" model="ir.actions.act_window">
+            <field name="domain">[('detailed_type','!=', 'expense')]</field>
         </record>
 
     </data>
