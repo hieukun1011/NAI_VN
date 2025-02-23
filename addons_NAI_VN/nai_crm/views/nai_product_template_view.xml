@@ -78,7 +78,7 @@
                                 <control>
                                     <create name="add_expense" string="Add a expense building"/>
                                 </control>
-                                <field name="self_id" column_invisible="True"/>
+                                <field name="self_id" column_invisible="False"/>
                                 <field name="product_id" column_invisible="True"/>
                                 <field name="currency_id" column_invisible="True"/>
                                 <field name="name"/>

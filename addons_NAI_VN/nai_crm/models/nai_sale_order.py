@@ -46,17 +46,18 @@ class NAISaleOrder(models.Model):
                     product = self.env['product.product'].browse(product_id).exists()
                     if product.expense_ids:
                         for expense in product.expense_ids:
-                            new_line = (0, 0, {
-                                'product_id': expense.self_id.id,
-                                'product_uom_qty': product.acreage,  # Hoặc có thể set số lượng theo nhu cầu
-                                'price_unit': expense.expense,  # Giá sản phẩm
-                            })
-                            new_lines.append(new_line)
+                            if expense.self_id:
+                                new_line = (0, 0, {
+                                    'product_id': expense.self_id.product_variant_id.id,
+                                    'product_uom_qty': product.acreage if expense.str_uom == '/m2' else 1,
+                                    'price_unit': expense.expense,  # Giá sản phẩm
+                                })
+                                new_lines.append(new_line)
 
             # Thêm các dòng sản phẩm expense_ids vào order_line
             vals['order_line'].extend(new_lines)
-
-        return super(NAISaleOrder, self).create(vals_list)
+        res = super(NAISaleOrder, self).create(vals_list)
+        return res
 
 
 class NaiSaleOrderLine(models.Model):

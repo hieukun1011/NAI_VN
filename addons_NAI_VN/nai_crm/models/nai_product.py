@@ -25,7 +25,7 @@ class NAIProduct(models.Model):
     acreage = fields.Float('Acreage')
     child_product_ids = fields.One2many('product.template', 'building_parent_id', string='Child product')
     count_building_child = fields.Integer(compute='calculate_count_building_child')
-    expense_ids = fields.One2many('nai.expense.product', 'product_id', string='Expense building')
+    expense_ids = fields.One2many('nai.expense.product', 'product_id', string='Expense building', copy=True, tracking=True)
 
     detailed_type = fields.Selection(
         selection_add=[('expense', 'Expense')],
