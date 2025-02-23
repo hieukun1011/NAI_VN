@@ -71,7 +71,7 @@ class PopupSelectFields(models.Model):
                                 result[att.name] = att.value
                         for expense in rec.product_id.expense_ids:
                             if expense.name in proposal:
-                                result[expense.name] = expense.expense + ' ' + expense.str_uom
+                                result[expense.name] = str(expense.expense) + ' ' + str(expense.str_uom)
             else:
                 for rec in self.sale_order_id.order_line:
                     if rec.product_id.detailed_type != 'expense':
@@ -80,7 +80,7 @@ class PopupSelectFields(models.Model):
                                 result[att.name] = att.value
                         for expense in rec.product_id.expense_ids:
                             if expense.name == opt.name:
-                                result[expense.name] = str(expense.expense) + ' ' + expense.str_uom
+                                result[expense.name] = str(expense.expense) + ' ' + str(expense.str_uom)
             if opt.name == 'Building name':
                 result_1['Building name'] = self.sale_order_id.order_line[0].product_id.name
             if opt.name == 'Address':
