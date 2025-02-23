@@ -22,7 +22,8 @@
 							<field name="image" widget="image" class="oe_avatar"/>
 							<field name="name"/>
 							<field name="sale_order_id" invisible="1"/>
-							<field name="fields_ids" widget="many2many_checkboxes" domain="[('model', '=', 'sale.order'), ('store', '=', True)]"/>
+<!--							<field name="fields_ids" widget="many2many_checkboxes" domain="[('model', '=', 'sale.order'), ('store', '=', True)]"/>-->
+							<field name="option_ids" widget="many2many_checkboxes"/>
 						</group>
 						<footer>
 							<button string="Save" special="save" data-hotkey="q" class="btn btn-primary" close="1"/>

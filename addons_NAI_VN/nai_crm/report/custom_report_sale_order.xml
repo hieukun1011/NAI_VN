@@ -52,10 +52,11 @@
                 }
                 }
             </style>
-            <t t-set="fields_data" t-value="o.get_sale_order_values(o)"/>
+            <t t-set="result" t-value="o.get_sale_order_values()"/>
+            <t t-set="fields_data" t-value="result[0]"/>
+            <t t-set="info_building" t-value="result[1]"/>
             <div class="container-fluid">
                 <div class="row">
-                    <t t-esc="name_abc or '...'"/>
                     <div class="col-12 text-center">
                         <t t-if="o.image">
                             <t t-set="background_image_1024" t-value="o.image.decode('utf-8')"/>
@@ -71,32 +72,14 @@
                                 Features:
                             </h2>
                             <p>
-                                <strong>Location:</strong>
-                                <t t-esc="o.sale_order_id.order_line.product_id.location or '...'"/>
+                                <p>Location: <t t-esc="fields_data.get('Address') or '...'"/></p>
                             </p>
                             <p>
-                                <strong>Type:</strong>
-                                Office Building
+                                <p>Type: <t t-esc="fields_data.get('type') or 'Office Building'"/></p>
+
                             </p>
                             <p>
-                                <strong>Area:</strong>
-                                <t t-esc="o.sale_order_id.order_line.product_id.area or '...'"/>
-                            </p>
-                            <p>
-                                <strong>Occupancy Rate:</strong>
-                                100%
-                            </p>
-                            <p>
-                                <strong>Average Rent:</strong>
-                                US$ .../sqm/month
-                            </p>
-                            <p>
-                                <strong>Annual Income:</strong>
-                                US$ .../month
-                            </p>
-                            <p>
-                                <strong>Green Certificate:</strong>
-                                ...
+                                <p>Area: <t t-esc="fields_data.get('area') or '...'"/></p>
                             </p>
                         </div>
                         <div class="additional-info mt-3">
@@ -104,8 +87,8 @@
                                 Information:
                             </h2>
                             <div>
-                                <t t-set="fields_data" t-value="o.get_sale_order_values(o)"/>
-                                <t t-foreach="fields_data.items()" t-as="field">
+
+                                <t t-foreach="info_building.items()" t-as="field">
                                     <p>
                                         <strong><t t-esc="field[0]"/>:
                                         </strong>
@@ -119,15 +102,14 @@
                         </div>
                     </div>
                     <div class="col-5">
-                        <t t-if="o.sale_order_id.order_line.product_id.image_1024">
+                        <t t-if="o.sale_order_id.order_line[0].product_id.image_1024">
                             <t t-set="background_image_product_1024"
-                               t-value="o.sale_order_id.order_line.product_id.image_1024.decode('utf-8')"/>
+                               t-value="o.sale_order_id.order_line[0].product_id.image_1024.decode('utf-8')"/>
                             <img t-att-src="'data:image/png;base64,%s' % background_image_product_1024"
                                  class="floor-img"/>
                         </t>
                         <p>
-                            <strong>Area:</strong>
-                            <t t-esc="o.sale_order_id.order_line.product_id.area or '...'"/>
+                            <p>Area: <t t-esc="fields_data.get('area') or '...'"/></p>
                         </p>
                         <p>
                             <strong>Occupancy Rate:</strong>
