@@ -1,25 +1,25 @@
 from odoo import fields, models, api
 
-list_proposal = [('all', 'ALL'),
-                 ('name', 'Building name'),
-                 ('location', 'Address'),
-                 ('landlord', 'Landlord'),
-                 ('year_completed', 'Year completed'),
-                 ('grade', 'Grade'),
-                 ('green_certification', 'Green Certification'),
-                 ('nlc', 'NLA'),
-                 ('building_structure', 'Building structure'),
-                 ('typical_floor', 'Typical floor'),
-                 ('offered_area', 'Offered area'),
-                 ('availability', 'Availability'),
-                 ('asking_rent', 'Asking Rent'),
-                 ('service_charge', 'Service charge'),
-                 ('parking_area', 'Parking area'),
-                 ('ac_system', 'AC system'),
-                 ('elevator', 'Elevator'),
-                 ('ceiling_height', 'Ceiling height'),
-                 ('other', 'Other'),
-                 ('note', 'Note')]
+list_proposal_1 = [('name', 'Building name'),
+                   ('location', 'Address'),
+                   ('landlord', 'Landlord'),
+                   ('year_completed', 'Year completed'),
+                   ('grade', 'Grade'),
+                   ('green_certification', 'Green Certification'),
+                   ('nlc', 'NLA'),
+                   ('building_structure', 'Building structure'),
+                   ('typical_floor', 'Typical floor')]
+
+list_proposal_2 = [('offered_area', 'Offered area'),
+                   ('availability', 'Availability'),
+                   ('asking_rent', 'Asking Rent'),
+                   ('service_charge', 'Service charge'),
+                   ('parking_area', 'Parking area'),
+                   ('ac_system', 'AC system'),
+                   ('elevator', 'Elevator'),
+                   ('ceiling_height', 'Ceiling height'),
+                   ('other', 'Other'),
+                   ('note', 'Note')]
 
 proposal = ['Building name',
             'Location',
@@ -41,6 +41,7 @@ proposal = ['Building name',
             'Other',
             'Note']
 
+
 class PopupSelectFields(models.Model):
     _name = 'popup.select.fields.report'
 
@@ -48,11 +49,53 @@ class PopupSelectFields(models.Model):
     sale_order_id = fields.Many2one('sale.order')
     fields_ids = fields.Many2many('ir.model.fields')
     image = fields.Image("Variant Image", max_width=1024, max_height=250)
-    list_proposal = fields.Selection(list_proposal)
-    option_ids = fields.Many2many('ir.model.fields.selection',
-                                  domain=[('field_id.model', '=', 'popup.select.fields.report'),
-                                          ('field_id.name', '=', 'list_proposal')],
-                                  string="Options")
+    list_proposal_1 = fields.Selection(list_proposal_1)
+    list_proposal_2 = fields.Selection(list_proposal_2)
+    option_1_ids = fields.Many2many(
+        'ir.model.fields.selection',
+        'popup_select_fields_report_option_1_rel',  # Tên bảng trung gian riêng
+        'report_id',  # Tên cột liên kết với model chính
+        'selection_id',  # Tên cột liên kết với model Many2many
+        domain=[('field_id.model', '=', 'popup.select.fields.report'),
+                ('field_id.name', '=', 'list_proposal_1')],
+        string="Options"
+    )
+
+    option_2_ids = fields.Many2many(
+        'ir.model.fields.selection',
+        'popup_select_fields_report_option_2_rel',  # Tên bảng trung gian riêng
+        'report_id',
+        'selection_id',
+        domain=[('field_id.model', '=', 'popup.select.fields.report'),
+                ('field_id.name', '=', 'list_proposal_2')],
+        string="Options"
+    )
+
+    option_ids = fields.Many2many(
+        'ir.model.fields.selection',
+        'popup_select_fields_report_option_rel',  # Tên bảng trung gian riêng
+        'report_id',
+        'selection_id',
+        domain=[('field_id.model', '=', 'popup.select.fields.report'), '|',
+                ('field_id.name', '=', 'list_proposal_2'), ('field_id.name', '=', 'list_proposal_1')],
+        compute='_get_option_ids'
+    )
+    show_all = fields.Boolean('Show all')
+
+    @api.depends('show_all')
+    def _get_option_ids(self):
+        for record in self:
+            if record.show_all:
+                record.option_1_ids = self.env['ir.model.fields.selection'].search(
+                    [('field_id.model', '=', 'popup.select.fields.report'), ('field_id.name', '=', 'list_proposal_1')])
+                record.option_2_ids = self.env['ir.model.fields.selection'].search(
+                    [('field_id.model', '=', 'popup.select.fields.report'), ('field_id.name', '=', 'list_proposal_2')])
+            else:
+                record.option_1_ids = False
+                record.option_2_ids = False
+            record.option_ids = record.option_2_ids + record.option_1_ids
+
+
 
     def get_sale_order_values(self):
         """Lấy dữ liệu từ sale.order dựa vào fields_ids được chọn"""
@@ -90,7 +133,7 @@ class PopupSelectFields(models.Model):
             if opt.name == 'Asking Rent':
                 result_1['Asking Rent'] = self.sale_order_id.order_line[0].price_unit
             if opt.name == 'Note':
-                result_1['Note'] = self.sale_order_id.order_line[0].product_id.note
+                result_1['Note'] = self.sale_order_id.order_line[0].product_id.description
         return result_1, result
 
     def generate_report(self):
@@ -121,6 +164,3 @@ class PopupSelectFields(models.Model):
                 data[rec.name] = field_value.name if rec.ttype == 'many2one' else field_value.mapped('name')
 
         return self.env.ref('nai_crm.action_custom_quotation_report').report_action(self)
-
-
-

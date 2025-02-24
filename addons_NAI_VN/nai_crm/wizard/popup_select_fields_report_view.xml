@@ -18,12 +18,23 @@
 			<field name="arch" type="xml">
 				<form string="Select fields report">
 					<sheet>
+						<field name="image" widget="image" class="oe_avatar"/>
+						<div class="oe_title">
+							<label for="name"/>
+							<h1>
+								<field name="name" placeholder="e.g. Procurement"/>
+							</h1>
+						</div>
 						<group>
-							<field name="image" widget="image" class="oe_avatar"/>
-							<field name="name"/>
 							<field name="sale_order_id" invisible="1"/>
-<!--							<field name="fields_ids" widget="many2many_checkboxes" domain="[('model', '=', 'sale.order'), ('store', '=', True)]"/>-->
-							<field name="option_ids" widget="many2many_checkboxes"/>
+							<field name="show_all" widget="boolean_toggle" />
+							<field name="option_ids" widget="many2many_checkboxes" invisible="True"/>
+							<group>
+								<field name="option_1_ids" widget="many2many_checkboxes"/>
+							</group>
+							<group>
+								<field name="option_2_ids" widget="many2many_checkboxes"/>
+							</group>
 						</group>
 						<footer>
 							<button string="Save" special="save" data-hotkey="q" class="btn btn-primary" close="1"/>
