@@ -25,14 +25,18 @@
 								<field name="name" placeholder="e.g. Procurement"/>
 							</h1>
 						</div>
+						<label for="show_all" string="Show all"/>
+							<div>
+								<field name="show_all" widget="boolean_toggle" />
+							</div>
 						<group>
 							<field name="sale_order_id" invisible="1"/>
-							<field name="show_all" widget="boolean_toggle" />
 							<field name="option_ids" widget="many2many_checkboxes" invisible="True"/>
-							<group>
+
+							<group string="Partition 1">
 								<field name="option_1_ids" widget="many2many_checkboxes"/>
 							</group>
-							<group>
+							<group string="Partition 2">
 								<field name="option_2_ids" widget="many2many_checkboxes"/>
 							</group>
 						</group>
