@@ -8,6 +8,18 @@
 			<field name="arch" type="xml">
 				<tree>
 					<field name="name" />
+					<button string="Generate Report" type="object" name="generate_report" class="btn-primary"/>
+					<button string="Detail" type="object" name="detail_template" class="btn-primary"/>
+				</tree>
+			</field>
+		</record>
+
+		<record id="template_print_sale_order_tree_view" model="ir.ui.view">
+			<field name="name">popup.select.fields.report.tree</field>
+			<field name="model">popup.select.fields.report</field>
+			<field name="arch" type="xml">
+				<tree>
+					<field name="name" />
 				</tree>
 			</field>
 		</record>
@@ -54,10 +66,20 @@
             <field name="name">Print Sale Order</field>
             <field name="res_model">popup.select.fields.report</field>
             <field name="view_mode">tree,form</field>
-            <field name="domain">[('sale_order_id', '=', active_id)]</field>
             <field name="view_id" eval="False"/>
-			<field name="target">new</field>
         </record>
+
+		<record id="popup_select_fields_report_action_tree_view" model="ir.actions.act_window.view">
+			<field name="view_mode">tree</field>
+			<field name="view_id" ref="template_print_sale_order_tree_view"/>
+			<field name="act_window_id" ref="popup_select_fields_report_action"/>
+		</record>
+
+		<menuitem id="menu_template_print_sale_order"
+			name="Templates print sale order"
+			parent="sale_renting.menu_rental_config"
+			action="popup_select_fields_report_action"
+			sequence="30"/>
 
 	</data>
 </odoo>

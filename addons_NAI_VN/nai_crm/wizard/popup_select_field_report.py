@@ -1,4 +1,4 @@
-from odoo import fields, models, api
+from odoo import fields, models, api, _
 
 list_proposal_1 = [('name', 'Building name'),
                    ('location', 'Address'),
@@ -138,23 +138,23 @@ class PopupSelectFields(models.Model):
 
     def generate_report(self):
         data = {}
+        if not self.sale_order_id:
+            self.sale_order_id = self.env.context['active_id']
+        company = self.sale_order_id.company_id
+        logo = company.logo  # Lấy logo
 
-        if self.sale_order_id:
-            company = self.sale_order_id.company_id
-            logo = company.logo  # Lấy logo
+        # 🛠 Kiểm tra kiểu dữ liệu logo để tránh lỗi decode
+        if logo and isinstance(logo, bytes):
+            logo = logo.decode('utf-8')
 
-            # 🛠 Kiểm tra kiểu dữ liệu logo để tránh lỗi decode
-            if logo and isinstance(logo, bytes):
-                logo = logo.decode('utf-8')
+        data = {
+            'name_abc': '123123'
+        }
 
-            data = {
-                'name_abc': '123123'
-            }
-
-            attr_product = {}
-            for rec in self.sale_order_id.order_line.mapped('product_id.nai_attribute_line_ids'):
-                attr_product[rec.name] = rec.value
-            data['attr_product'] = attr_product
+        attr_product = {}
+        for rec in self.sale_order_id.order_line.mapped('product_id.nai_attribute_line_ids'):
+            attr_product[rec.name] = rec.value
+        data['attr_product'] = attr_product
 
         for rec in self.fields_ids:
             field_value = getattr(self.sale_order_id, rec.name, False)
@@ -164,3 +164,29 @@ class PopupSelectFields(models.Model):
                 data[rec.name] = field_value.name if rec.ttype == 'many2one' else field_value.mapped('name')
 
         return self.env.ref('nai_crm.action_custom_quotation_report').report_action(self)
+
+
+    def detail_template(self):
+        self.ensure_one()
+        view_form_id = self.env.ref('nai_crm.popup_select_fields_report_form_view').id
+        context = {
+            'default_sale_order_id': self.sale_order_id.id,
+            'create': False
+        }
+        if self.sale_order_id.order_line:
+            if len(self.sale_order_id.order_line) > 1:
+                for rec in self.sale_order_id.order_line:
+                    if not rec.product_id.building_parent_id:
+                        context['default_image'] = rec.product_id.image_1024
+            else:
+                context['default_image'] = self.sale_order_id.order_line[0].product_id.image_1024
+
+        return {
+            'name': _("Print Sale Order"),
+            'type': 'ir.actions.act_window',
+            'views': [(view_form_id, 'form')],
+            'res_model': 'popup.select.fields.report',
+            'view_mode': 'form',
+            'res_id': self.id,
+            'context': context
+        }
