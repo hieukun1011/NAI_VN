@@ -91,8 +91,9 @@ class PopupSelectFields(models.Model):
                 record.option_2_ids = self.env['ir.model.fields.selection'].search(
                     [('field_id.model', '=', 'popup.select.fields.report'), ('field_id.name', '=', 'list_proposal_2')])
             else:
-                record.option_1_ids = False
-                record.option_2_ids = False
+                if len(record.option_1_ids) == 9 and len(record.option_2_ids) == 10:
+                    record.option_1_ids = False
+                    record.option_2_ids = False
             record.option_ids = record.option_2_ids + record.option_1_ids
 
 
