@@ -10,6 +10,9 @@
                     margin: 0;
                     box-sizing: border-box;
                 }
+                .pt-5 {
+                    display: none;
+                }
                 .container-fluid {
                     padding: 20px;
                 }
