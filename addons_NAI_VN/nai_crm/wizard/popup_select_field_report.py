@@ -138,16 +138,8 @@ class PopupSelectFields(models.Model):
         return result_1, result
 
     def generate_report(self):
-        data = {}
         if not self.sale_order_id:
             self.sale_order_id = self.env.context['active_id']
-        company = self.sale_order_id.company_id
-        logo = company.logo  # Lấy logo
-
-        # 🛠 Kiểm tra kiểu dữ liệu logo để tránh lỗi decode
-        if logo and isinstance(logo, bytes):
-            logo = logo.decode('utf-8')
-
         data = {
             'name_abc': '123123'
         }

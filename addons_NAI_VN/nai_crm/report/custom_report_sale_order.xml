@@ -65,6 +65,13 @@
                             <img t-att-src="'data:image/png;base64,%s' % background_image_1024"
                                  class="floor-img-background"/>
                         </t>
+                        <t t-else="">
+                            <t t-if="o.sale_order_id.order_line[0].product_id.building_parent_id">
+                                <t t-set="background_image_1024" t-value="o.sale_order_id.order_line[0].product_id.building_parent_id.image_1024.decode('utf-8')"/>
+                                <img t-att-src="'data:image/png;base64,%s' % background_image_1024"
+                                     class="floor-img-background"/>
+                            </t>
+                        </t>
                     </div>
                 </div>
                 <div class="row mt-4">
