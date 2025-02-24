@@ -58,6 +58,9 @@ class NaiSaleOrderLine(models.Model):
                 else:
                     record.price_vn = 0
 
-    @api.model_create_multi
-    def create(self, vals_list):
-        return super().create(vals_list)
+    @api.model
+    def _update_exchange_rate(self, new_exchange_rate):
+        sale_order_lines = self.search([('state', 'not in', ['sale', 'sent'])])  # Lấy tất cả sale order line (hoặc có thể lọc theo điều kiện)
+        for line in sale_order_lines:
+            line.exchange_rate = line.price_unit * float(new_exchange_rate)
+        print(f"Updated exchange rate in sale.order.line: {new_exchange_rate}")
