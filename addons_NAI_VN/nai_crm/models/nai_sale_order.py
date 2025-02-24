@@ -52,10 +52,11 @@ class NaiSaleOrderLine(models.Model):
     def calculate_price_vn(self):
         exchange_rate = self.env['ir.config_parameter'].sudo().get_param('nai_crm.exchange_rate', default=25000)
         for record in self:
-            if record.price_unit:
-                record.price_vn = record.price_unit * float(exchange_rate)
-            else:
-                record.price_vn = 0
+            if record.order_id and record.order_id.state not in ['sale', 'sent']:
+                if record.price_unit:
+                    record.price_vn = record.price_unit * float(exchange_rate)
+                else:
+                    record.price_vn = 0
 
     @api.model_create_multi
     def create(self, vals_list):
