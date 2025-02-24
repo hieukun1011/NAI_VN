@@ -1,0 +1,118 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* bi_crm_task
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0+e-20241013\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-11-12 03:47+0000\n"
+"PO-Revision-Date: 2024-11-12 03:47+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: bi_crm_task
+#: model_terms:ir.ui.view,arch_db:bi_crm_task.crm_inherit_form
+msgid "&gt;"
+msgstr ""
+
+#. module: bi_crm_task
+#: model:ir.model.fields,field_description:bi_crm_task.field_crm_task_wizard__user_ids
+msgid "Assignees"
+msgstr ""
+
+#. module: bi_crm_task
+#: model:ir.model,name:bi_crm_task.model_crm_task_wizard
+msgid "CRM Task Wizard"
+msgstr ""
+
+#. module: bi_crm_task
+#: model:ir.actions.act_window,name:bi_crm_task.action_view_crm_task_form
+#: model_terms:ir.ui.view,arch_db:bi_crm_task.crm_inherit_form
+#: model_terms:ir.ui.view,arch_db:bi_crm_task.view_crm_task_form
+msgid "Create Task"
+msgstr "Tạo nhiệm vụ"
+
+#. module: bi_crm_task
+#: model:ir.model.fields,field_description:bi_crm_task.field_crm_task_wizard__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: bi_crm_task
+#: model:ir.model.fields,field_description:bi_crm_task.field_crm_task_wizard__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: bi_crm_task
+#: model:ir.model.fields,field_description:bi_crm_task.field_crm_task_wizard__dead_line
+msgid "Deadline"
+msgstr ""
+
+#. module: bi_crm_task
+#: model:ir.model.fields,field_description:bi_crm_task.field_crm_task_wizard__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: bi_crm_task
+#: model:ir.model.fields,field_description:bi_crm_task.field_crm_task_wizard__id
+msgid "ID"
+msgstr ""
+
+#. module: bi_crm_task
+#: model:ir.model.fields,field_description:bi_crm_task.field_crm_task_wizard__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: bi_crm_task
+#: model:ir.model.fields,field_description:bi_crm_task.field_crm_task_wizard__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: bi_crm_task
+#: model:ir.model,name:bi_crm_task.model_crm_lead
+msgid "Lead/Opportunity"
+msgstr ""
+
+#. module: bi_crm_task
+#: model_terms:ir.actions.act_window,help:bi_crm_task.action_view_task_id
+msgid ""
+"Odoo's project management allows you to manage the pipeline of your tasks "
+"efficiently. You can track progress, discuss on tasks, attach documents, "
+"etc."
+msgstr ""
+
+#. module: bi_crm_task
+#: model:ir.model.fields,field_description:bi_crm_task.field_project_task__lead_id
+msgid "Opportunity"
+msgstr ""
+
+#. module: bi_crm_task
+#: model:ir.model.fields,field_description:bi_crm_task.field_crm_task_wizard__project_id
+msgid "Project"
+msgstr ""
+
+#. module: bi_crm_task
+#: model_terms:ir.ui.view,arch_db:bi_crm_task.view_crm_task_form
+msgid "Project Task"
+msgstr ""
+
+#. module: bi_crm_task
+#: model:ir.model,name:bi_crm_task.model_project_task
+msgid "Task"
+msgstr ""
+
+#. module: bi_crm_task
+#: model:ir.model.fields,field_description:bi_crm_task.field_crm_task_wizard__name
+msgid "Task Name"
+msgstr ""
+
+#. module: bi_crm_task
+#: model:ir.actions.act_window,name:bi_crm_task.action_view_task_id
+#: model:ir.model.fields,field_description:bi_crm_task.field_crm_lead__task_number
+#: model_terms:ir.ui.view,arch_db:bi_crm_task.crm_inherit_form
+msgid "Tasks"
+msgstr ""
