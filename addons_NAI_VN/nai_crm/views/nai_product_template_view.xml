@@ -44,8 +44,8 @@
             <field name="arch" type="xml">
                 <group name="group_general" position="inside">
                     <field name="location"/>
-                    <field name="partner_latitude"/>
-                    <field name="partner_longitude"/>
+                    <field name="partner_latitude" invisible="1"/>
+                    <field name="partner_longitude" invisible="1"/>
                     <field name="type_building"/>
                     <field name="area"/>
                     <field name="building_parent_id" domain="[('id', '!=', id)]"/>
