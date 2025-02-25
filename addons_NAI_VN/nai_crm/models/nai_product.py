@@ -1,5 +1,6 @@
 from odoo import fields, models, api, _
-
+from odoo.tools import config
+from odoo.exceptions import UserError, ValidationError
 type_building = [('office_building', 'Office Building'),
                  ('shopping_mall', 'Shopping Mall'),
                  ('shophouse', 'Shophouse'),
@@ -15,8 +16,8 @@ class NAIProduct(models.Model):
     nai_attribute_line_ids = fields.One2many('nai.product.attribute.line', 'product_tmpl_id', 'Buildings Attributes',
                                              copy=True)
     location = fields.Char('Location', copy=True)
-    partner_latitude = fields.Float(string='Geo Latitude', digits=(10, 7))
-    partner_longitude = fields.Float(string='Geo Longitude', digits=(10, 7))
+    partner_latitude = fields.Float(string='Geo Latitude', digits=(10, 7), compute='geo_localize', store=True)
+    partner_longitude = fields.Float(string='Geo Longitude', digits=(10, 7), compute='geo_localize', store=True)
     image_ids = fields.One2many('nai.image.product', 'product_template_id', string='Image')
     type_building = fields.Selection(type_building, string='Type building', default='office_building')
     area = fields.Selection(AREA, string='Area')
@@ -32,10 +33,52 @@ class NAIProduct(models.Model):
         ondelete={'expense': 'set service'}  # Chuyển thành 'service' khi bị xóa
     )
 
+    @api.model
+    def search_fetch(self, domain, field_names, offset=0, limit=None, order=None):
+        index = 0
+        for rec in domain:
+            index += 1
+            if rec[0] == 'location':
+                geo_obj = self.env['base.geocoder']
+                result = geo_obj.geo_find(rec[2])
+                if result:
+                    domain_test = self._search_by_location(result[0], result[1])
+                    # domain[index-1] = self._search_by_location(result[0], result[1])
+                    return super().search_fetch(domain_test, field_names, offset, limit, order)
+        return super().search_fetch(domain, field_names, offset, limit, order)
+
     def _detailed_type_mapping(self):
         type_mapping = super()._detailed_type_mapping()
         type_mapping['expense'] = 'service'
         return type_mapping
+
+    @api.depends('location')
+    def geo_localize(self):
+        for record in self:
+            geo_obj = self.env['base.geocoder']
+            result = geo_obj.geo_find(record.location)
+            if result:
+                record.partner_latitude = result[0]
+                record.partner_longitude = result[1]
+            else:
+                record.partner_latitude = False
+                record.partner_longitude = False
+
+    @api.model
+    def _search_by_location(self, latitude, longitude, radius_km=5):
+        """Tìm các record trong bán kính radius_km tính từ (latitude, longitude)"""
+        query = """
+                SELECT id FROM product_template
+                WHERE ( 6371 * acos(
+                    cos(radians(%s)) * cos(radians(partner_latitude)) *
+                    cos(radians(partner_longitude) - radians(%s)) +
+                    sin(radians(%s)) * sin(radians(partner_latitude))
+                ) ) <= %s
+            """
+        self.env.cr.execute(query, (latitude, longitude, latitude, radius_km))
+        result_ids = [row[0] for row in self.env.cr.fetchall()]
+        return [('id', 'in', result_ids)]
+
 
 
     def calculate_count_building_child(self):
