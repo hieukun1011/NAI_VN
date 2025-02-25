@@ -33,19 +33,19 @@ class NAIProduct(models.Model):
         ondelete={'expense': 'set service'}  # Chuyển thành 'service' khi bị xóa
     )
 
-    @api.model
-    def search_fetch(self, domain, field_names, offset=0, limit=None, order=None):
-        index = 0
-        for rec in domain:
-            index += 1
-            if rec[0] == 'location':
-                geo_obj = self.env['base.geocoder']
-                result = geo_obj.geo_find(rec[2])
-                if result:
-                    domain_test = self._search_by_location(result[0], result[1])
-                    # domain[index-1] = self._search_by_location(result[0], result[1])
-                    return super().search_fetch(domain_test, field_names, offset, limit, order)
-        return super().search_fetch(domain, field_names, offset, limit, order)
+    # @api.model
+    # def search_fetch(self, domain, field_names, offset=0, limit=None, order=None):
+    #     index = 0
+    #     for rec in domain:
+    #         index += 1
+    #         if rec[0] == 'location':
+    #             geo_obj = self.env['base.geocoder']
+    #             result = geo_obj.geo_find(rec[2])
+    #             if result:
+    #                 domain_test = self._search_by_location(result[0], result[1])
+    #                 # domain[index-1] = self._search_by_location(result[0], result[1])
+    #                 return super().search_fetch(domain_test, field_names, offset, limit, order)
+    #     return super().search_fetch(domain, field_names, offset, limit, order)
 
     def _detailed_type_mapping(self):
         type_mapping = super()._detailed_type_mapping()
